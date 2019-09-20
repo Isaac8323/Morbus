@@ -47,7 +47,8 @@ public class Acciones_menu : MonoBehaviour
         string usuario, contraseña;
         usuario = Inputfield_ini_us.text;
         contraseña = Inputfield_ini_con.text;
-
+        Inputfield_ini_us.text = "";
+        Inputfield_ini_con.text = "";
         MySqlDataReader select2;
         MySqlCommand cmd = conn.CreateCommand();
         cmd.CommandText = "SELECT * FROM usuarios WHERE usuario LIKE '" + usuario + "';";
@@ -62,6 +63,7 @@ public class Acciones_menu : MonoBehaviour
             {
                 select3.Close();
                 Debug.Log("si esta");
+                escena(); 
             }
             else
             {
@@ -88,46 +90,52 @@ public class Acciones_menu : MonoBehaviour
         usuario = Inputfield_usuario.text;
         contraseña = Inputfield_contraseña.text;
         conf_contraseña = Inputfield_conf_contraseña.text;
-        if (contraseña != conf_contraseña)
+        Inputfield_usuario.text = "";
+        Inputfield_contraseña.text = "";
+        Inputfield_conf_contraseña.text = "";
+        if (contraseña != "" && usuario != "")
         {
-            Debug.Log("Contraseñas diferentes");
-        }
-        else
-        {
-            MySqlDataReader select;
-            MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT * FROM usuarios WHERE usuario LIKE '" + usuario + "';";
-            select = cmd.ExecuteReader();
-            if (select.HasRows)
+            if (contraseña != conf_contraseña)
             {
-                select.Close();
-                repetido = "si esta";
+                Debug.Log("Contraseñas diferentes");
             }
             else
             {
-                select.Close();
-                repetido = "no esta we";
-            }
-            MySqlDataReader select1;
-            cmd.CommandText = "SELECT * FROM usuarios WHERE contraseña LIKE '" + contraseña + "';";
-            select1 = cmd.ExecuteReader();
-            if (select1.HasRows)
-            {
-                select1.Close();
-                repetido = "si esta";
-            }
-            else
-            {
-                select1.Close();
-            }
-            if (repetido == "si esta")
-            {
-                Debug.Log("ya te ganaron ese usuario o contraseña karnal");
-            }
-            else
-            {
-                cmd.CommandText = "insert into usuarios values (null,'" + usuario + "','" + contraseña + "');"; ;
-                cmd.ExecuteNonQuery();
+                MySqlDataReader select;
+                string comando = "SELECT * FROM usuarios WHERE usuario LIKE '" + usuario + "';";
+                MySqlCommand cmd = new MySqlCommand(comando,conn);
+                select = cmd.ExecuteReader();
+                if (select.HasRows)
+                {
+                    select.Close();
+                    repetido = "si esta";
+                }
+                else
+                {
+                    select.Close();
+                    repetido = "no esta we";
+                }
+                MySqlDataReader select1;
+                cmd.CommandText = "SELECT * FROM usuarios WHERE contraseña LIKE '" + contraseña + "';";
+                select1 = cmd.ExecuteReader();
+                if (select1.HasRows)
+                {
+                    select1.Close();
+                    repetido = "si esta";
+                }
+                else
+                {
+                    select1.Close();
+                }
+                if (repetido == "si esta")
+                {
+                    Debug.Log("ya te ganaron ese usuario o contraseña karnal");
+                }
+                else
+                {
+                    cmd.CommandText = "insert into usuarios values (null,'" + usuario + "','" + contraseña + "');"; ;
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }
