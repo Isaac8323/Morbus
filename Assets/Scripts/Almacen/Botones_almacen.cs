@@ -12,6 +12,7 @@ using System.Data.Sql;
 using System.Data;
 public class Botones_almacen : MonoBehaviour
 {
+    public GameObject errorPersonaje;
    //Externo bd o archivo {
     public MySqlConnection conn1;
     public Text botontexto;
@@ -24,12 +25,12 @@ public class Botones_almacen : MonoBehaviour
     public GameObject pan;
     GameObject whiteboton;
     String Usuario, buscador_perso;
-    String[,] Personajes = new String[25, 4];
+    String[,] Personajes = new String[25, 5];
     String[] non = new String[6];
     //}
     //filtros{
     Image UIImage;
-    Text cantidad;
+    Text cantidad,nombre;
   public  GameObject panelcoleccion;
     int panelcolcc=0;
     //}
@@ -107,6 +108,7 @@ public class Botones_almacen : MonoBehaviour
         }
         else
         {
+            errorPersonaje.SetActive(false);
             pan.SetActive(true);
             for (; contadorboron <= 6; contadorboron++)
             {
@@ -147,7 +149,7 @@ public class Botones_almacen : MonoBehaviour
     {
         limpiarverificadores();
         buscador_perso = serch.text;
-        int o = 0;
+        int o = 0,mensj=0;
         limpiarpanelpersonajes();
         for (int i = 0; i < 25; i++)
         {
@@ -155,37 +157,89 @@ public class Botones_almacen : MonoBehaviour
             {
                 if (buscador_perso == "sulfasalazina")
                 {
-                    UIImage = GameObject.Find("Image" + o.ToString()).GetComponentInChildren<Image>();
-                    UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
-                    cantidad = GameObject.Find("Text" + o.ToString()).GetComponentInChildren<Text>();
-                    cantidad.text = Personajes[i, 2];
-                    verificadores[o, 0] = Personajes[i, 0];
-                    verificadores[o, 1] = Personajes[i, 3];
-                    verificadores[o, 2] = Personajes[i, 0];
-                    if (o == 1)
+                    if (Personajes[i, 2] == "0")
                     {
-                        UIImage.sprite = Resources.Load<Sprite>("h_" + Personajes[i, 0].ToString());
-                        cantidad.text = Personajes[i, 2];
-                        verificadores[o, 0] = "h_" + Personajes[i, 0];
+                        UIImage = GameObject.Find("Image" + o.ToString()).GetComponentInChildren<Image>();
+                        UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
+                        cantidad = GameObject.Find("Text" + o.ToString()).GetComponentInChildren<Text>();
+                        verificadores[o, 0] = Personajes[i, 0];
                         verificadores[o, 1] = Personajes[i, 3];
                         verificadores[o, 2] = Personajes[i, 0];
-
+                        nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
+                        nombre.text = Personajes[i, 0];
+                    }
+                    else
+                    {
+                        UIImage = GameObject.Find("Image" + o.ToString()).GetComponentInChildren<Image>();
+                        UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
+                        cantidad = GameObject.Find("Text" + o.ToString()).GetComponentInChildren<Text>();
+                        cantidad.text = Personajes[i, 2];
+                        verificadores[o, 0] = Personajes[i, 0];
+                        verificadores[o, 1] = Personajes[i, 3];
+                        verificadores[o, 2] = Personajes[i, 0];
+                        nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
+                        nombre.text = Personajes[i, 0];
+                    }
+                    if (o == 1)
+                    {
+                        if (Personajes[i, 2] == "0")
+                        {
+                            UIImage.sprite = Resources.Load<Sprite>("h_g" + Personajes[i, 0].ToString());
+                            cantidad.text = Personajes[i, 2];
+                            verificadores[o, 0] = Personajes[i, 0];
+                            verificadores[o, 1] = Personajes[i, 3];
+                            verificadores[o, 2] = Personajes[i, 0];
+                            nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
+                            nombre.text = Personajes[i, 0];
+                        }
+                        else
+                        {
+                            UIImage.sprite = Resources.Load<Sprite>("h_" + Personajes[i, 0].ToString());
+                            cantidad.text = Personajes[i, 2];
+                            verificadores[o, 0] = "h_" + Personajes[i, 0];
+                            verificadores[o, 1] = Personajes[i, 3];
+                            verificadores[o, 2] = Personajes[i, 0];
+                            nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
+                            nombre.text = Personajes[i, 0];
+                        }
                     }
                     o++;
                 }
                 else
                 {
-                    UIImage = GameObject.Find("Image" + o.ToString()).GetComponentInChildren<Image>();
-                    UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
-                    cantidad = GameObject.Find("Text" + o.ToString()).GetComponentInChildren<Text>();
-                    cantidad.text = Personajes[i, 2];
-                    verificadores[o, 0] =  Personajes[i, 0];
-                    verificadores[o, 1] = Personajes[i, 3];
-                    verificadores[o, 2] = Personajes[i, 0];
+                    if (Personajes[i, 2] == "0")
+                    {
+                        UIImage = GameObject.Find("Image" + o.ToString()).GetComponentInChildren<Image>();
+                        UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
+                        cantidad = GameObject.Find("Text" + o.ToString()).GetComponentInChildren<Text>();
+                        nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
+                        nombre.text = Personajes[i, 0];
+                        verificadores[o, 0] = Personajes[i, 0];
+                        verificadores[o, 1] = Personajes[i, 3];
+                        verificadores[o, 2] = Personajes[i, 0];
+                    }
+                    else
+                    {
+                        UIImage = GameObject.Find("Image" + o.ToString()).GetComponentInChildren<Image>();
+                        UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
+                        cantidad = GameObject.Find("Text" + o.ToString()).GetComponentInChildren<Text>();
+                        nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
+                        nombre.text = Personajes[i, 0];
+                        verificadores[o, 0] = Personajes[i, 0];
+                        verificadores[o, 1] = Personajes[i, 3];
+                        verificadores[o, 2] = Personajes[i, 0];
+                    }
                 }
+                mensj++;
+                cantidad.text = null;
             }
+            
         }
+        if(mensj<=0){
+        Thread.Sleep(1000);
+        errorPersonaje.SetActive(true);
         pan.SetActive(false);
+    }
     }
     //
     //Personajes:
@@ -206,24 +260,54 @@ public class Botones_almacen : MonoBehaviour
         {
             if (i == 22)
             {
+                if (Personajes[i, 2] == "0")
+                {
+                    UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>("h_g" + Personajes[i, 0].ToString());
+                    cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
+                    nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
+                    nombre.text = Personajes[i, 0];
+                    verificadores[i, 0] = "h_" + Personajes[i, 0];
+                    verificadores[i, 1] = Personajes[i, 3];
+                    verificadores[i, 2] = Personajes[i, 0];
+                }
+                else{
                 UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
                 UIImage.sprite = Resources.Load<Sprite>("h_"+Personajes[i, 0].ToString());
                 cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
-                cantidad.text = Personajes[i, 2];
+                nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
+                    nombre.text = Personajes[i, 0];
                 verificadores[i, 0] = "h_" + Personajes[i, 0];
                 verificadores[i, 1] = Personajes[i, 3];
                 verificadores[i, 2] = Personajes[i, 0];
+                    }
             }
             else
             {
-                UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
-                UIImage.sprite = Resources.Load<Sprite>(""+Personajes[i, 0].ToString());
-                cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
-                cantidad.text = Personajes[i, 2];
-                verificadores[i, 0] = Personajes[i, 0];
-                verificadores[i, 1] = Personajes[i, 3];
-                verificadores[i, 2] = Personajes[i, 0];
+                if (Personajes[i, 2] == "0")
+                {
+                    UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
+                    cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
+                    nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
+                    nombre.text = Personajes[i, 0];
+                    verificadores[i, 0] = Personajes[i, 0];
+                    verificadores[i, 1] = Personajes[i, 3];
+                    verificadores[i, 2] = Personajes[i, 0];  
+                }
+                else
+                {
+                    UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
+                    cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
+                    nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
+                    nombre.text = Personajes[i, 0];
+                    verificadores[i, 0] = Personajes[i, 0];
+                    verificadores[i, 1] = Personajes[i, 3];
+                    verificadores[i, 2] = Personajes[i, 0];
+                }
             }
+            cantidad.text = null;
         }
         
     }
@@ -235,6 +319,8 @@ public class Botones_almacen : MonoBehaviour
             UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(null);
             cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
+            nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
+            nombre.text = null;
             cantidad.text = null;
         }
     }
@@ -258,13 +344,30 @@ public class Botones_almacen : MonoBehaviour
         limpiarverificadores();
         for (int i = 0; i < 7; i++)
         {
-            UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
-            UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
-            cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
-            cantidad.text = Personajes[i, 2];
-            verificadores[i, 0] = Personajes[i, 0];
-            verificadores[i, 1] = Personajes[i, 3];
-            verificadores[i, 2] = Personajes[i, 0];
+            if (Personajes[i, 2] == "0")
+            {
+                UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
+                UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
+                cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
+                nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
+                nombre.text = Personajes[i, 0];
+                verificadores[i, 0] = Personajes[i, 0];
+                verificadores[i, 1] = Personajes[i, 3];
+                verificadores[i, 2] = Personajes[i, 0];
+            }
+            else
+            {
+                UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
+                UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
+                cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
+                cantidad.text = Personajes[i, 2];
+                nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
+                nombre.text = Personajes[i, 0];
+                verificadores[i, 0] = Personajes[i, 0];
+                verificadores[i, 1] = Personajes[i, 3];
+                verificadores[i, 2] = Personajes[i, 0];
+            }
+            cantidad.text = null;
         }
         panelcoleccion.SetActive(false);
         panelcolcc = 0;
@@ -276,14 +379,32 @@ public class Botones_almacen : MonoBehaviour
         int position = 0;
         for (int i = 7; i < 20; i++)
         {
-            UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
-            UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
-            cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
-            cantidad.text = Personajes[i, 2];
-            verificadores[position, 0] = Personajes[i, 0];
-            verificadores[position, 1] = Personajes[i, 3];
-            verificadores[position, 2] = Personajes[i, 0];
+            if (Personajes[i, 2] == "0")
+            {
+                UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
+                UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
+                cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
+                nombre = GameObject.Find("Nombre" + position.ToString()).GetComponentInChildren<Text>();
+                nombre.text = Personajes[i, 0];
+                verificadores[position, 0] = Personajes[i, 0];
+                verificadores[position, 1] = Personajes[i, 3];
+                verificadores[position, 2] = Personajes[i, 0];
+               
+            }
+            else
+            {
+                UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
+                UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
+                cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
+                cantidad.text = Personajes[i, 2];
+                nombre = GameObject.Find("Nombre" + position.ToString()).GetComponentInChildren<Text>();
+                nombre.text = Personajes[i, 0];
+                verificadores[position, 0] = Personajes[i, 0];
+                verificadores[position, 1] = Personajes[i, 3];
+                verificadores[position, 2] = Personajes[i, 0];
+            }
             position++;
+            cantidad.text = null;
         }
         panelcoleccion.SetActive(false);
         panelcolcc = 0;
@@ -296,24 +417,57 @@ public class Botones_almacen : MonoBehaviour
         for (int i = 20; i < 25; i++)
         {
             if(i==22){
-                UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
-                UIImage.sprite = Resources.Load<Sprite>("h_" + Personajes[i, 0].ToString());
-                cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
-                cantidad.text = Personajes[i, 2];
-                verificadores[position, 0] = "h_"+Personajes[i, 0];
-                verificadores[position, 1] = Personajes[i, 3];
-                verificadores[position, 2] = Personajes[i, 0];
+                if (Personajes[i, 2] == "0")
+                {
+                    UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>("h_g" + Personajes[i, 0].ToString());
+                    cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
+                    nombre = GameObject.Find("Nombre" + position.ToString()).GetComponentInChildren<Text>();
+                    nombre.text = Personajes[i, 0];
+                    verificadores[position, 0] = Personajes[i, 0];
+                    verificadores[position, 1] = Personajes[i, 3];
+                    verificadores[position, 2] = Personajes[i, 0];
+                }
+                else
+                {
+                    UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>("h_" + Personajes[i, 0].ToString());
+                    cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
+                    cantidad.text = Personajes[i, 2];
+                    nombre = GameObject.Find("Nombre" + position.ToString()).GetComponentInChildren<Text>();
+                    nombre.text = Personajes[i, 0];
+                    verificadores[position, 0] = "h_" + Personajes[i, 0];
+                    verificadores[position, 1] = Personajes[i, 3];
+                    verificadores[position, 2] = Personajes[i, 0];
+                }
             }
             else{
-            UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
-            UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
-            cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
-            cantidad.text = Personajes[i, 2];
-            verificadores[position, 0] = Personajes[i, 0];
-            verificadores[position, 1] = Personajes[i, 3];
-            verificadores[position, 2] = Personajes[i, 0];
+                if (Personajes[i, 2] == "0")
+                {
+                    UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
+                    cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
+                    nombre = GameObject.Find("Nombre" + position.ToString()).GetComponentInChildren<Text>();
+                    nombre.text = Personajes[i, 0];
+                    verificadores[position, 0] = Personajes[i, 0];
+                    verificadores[position, 1] = Personajes[i, 3];
+                    verificadores[position, 2] = Personajes[i, 0];
+                }
+                else
+                {
+                    UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>("" + Personajes[i, 0].ToString());
+                    cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
+                    cantidad.text = Personajes[i, 2];
+                    nombre = GameObject.Find("Nombre" + position.ToString()).GetComponentInChildren<Text>();
+                    nombre.text = Personajes[i, 0];
+                    verificadores[position, 0] = Personajes[i, 0];
+                    verificadores[position, 1] = Personajes[i, 3];
+                    verificadores[position, 2] = Personajes[i, 0];
+                }
             }
             position++;
+            cantidad.text = null;
         }
         panelcoleccion.SetActive(false);
         panelcolcc = 0;
@@ -350,6 +504,8 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[pos, 1] = Personajes[i, 3];
                     verificadores[pos, 2] = Personajes[i, 0];
                 }
+                nombre = GameObject.Find("Nombre" + pos.ToString()).GetComponentInChildren<Text>();
+                nombre.text = Personajes[i, 0];
                 pos++;
             }
         }
@@ -760,5 +916,9 @@ public class Botones_almacen : MonoBehaviour
         }
     }
     //
+    public void mapainicial()
+    {
+        SceneManager.LoadScene("Mapajuego");
+    }
 }
   

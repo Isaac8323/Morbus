@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -20,6 +20,7 @@ public class Archivos : MonoBehaviour
     {
         
     }
+    //crea un archivo con los siguientes elementos
     public void Crear()
     {
         if (File.Exists(Application.persistentDataPath + "/Datos.d"))
@@ -136,18 +137,106 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[22, 3] = "Se utiliza principalmente como agente antiinflamatorio en el tratamiento de la enfermedad inflamatoria intestinal y el artritis reumatoide";
             Datos.Personajes[23, 3] = "	Actúa como antiinflamatorio e inmunosupresor";
             Datos.Personajes[24, 3] = "También se le llama cobalamina gracias a que tiene un elemento muy especial, el cual es el cobalto. Ésta es una vitamina muy importante para el funcionamiento normal del sistema nervioso y de varias proteínas";
-          
+          //Estructuracion
+            Datos.Personajes[0, 4] = "C9H8O4";
+            Datos.Personajes[1, 4] = "C8H9NO2";
+            Datos.Personajes[2, 4] = "C16H19N3O5S";
+            Datos.Personajes[3, 4] = "C19H18N3ClO5S";
+            Datos.Personajes[4, 4] = "C19H25N4O4B";
+            Datos.Personajes[5, 4] = "C13H13N3O3";
+            Datos.Personajes[6, 4] = "C14H20N2O3";
+            Datos.Personajes[7, 4] = "C8H9NO5";
+            Datos.Personajes[8, 4] = "C16H18N2O4S";
+            Datos.Personajes[9, 4] = "C37H67NO13";
+            Datos.Personajes[10, 4] = "C18H20N3FO4";
+            Datos.Personajes[11, 4] = "C37H67NO12";
+            Datos.Personajes[12, 4] = "C14H22N3ClO2";
+            Datos.Personajes[13, 4] = "C13H18O2";
+            Datos.Personajes[14, 4] = "C18H14N4O5S";
+            Datos.Personajes[15, 4] = "C21H26O5";
+            Datos.Personajes[16, 4] = "C21H30O5";
+            Datos.Personajes[17, 4] = "C16H18N3O4S";
+            Datos.Personajes[18, 4] = "C23H26N5O7S";
+            Datos.Personajes[19, 4] = "C10H12N4O5S";
+            Datos.Personajes[20, 4] = "C22H30O5";
+            Datos.Personajes[21, 4] = "C18H26ClN3O";
+            Datos.Personajes[22, 4] = "C18H14N4O5S";
+            Datos.Personajes[23, 4] = "C22H29FO5";
+            Datos.Personajes[24, 4] = "C63H88CoN14O14P";
+            //Nombre Elemento
+            Datos.Elementos[0, 0] = "Carbono";
+            Datos.Elementos[1, 0] = "Hidrógeno";
+            Datos.Elementos[2, 0] = "Oxígeno";
+            Datos.Elementos[3, 0] = "Nitrógeno";
+            Datos.Elementos[4, 0] = "Azufre";
+            Datos.Elementos[5, 0] = "Radio";
+            Datos.Elementos[6, 0] = "Flúor";
+            Datos.Elementos[7, 0] = "Cloro";
+            Datos.Elementos[8, 0] = "Cobalto";
+            Datos.Elementos[9, 0] = "Fósforo";
+            Datos.Elementos[10, 4] = "Boro";
+            //Cantidad Elemento
+            Datos.Elementos[0, 1] = "100";
+            Datos.Elementos[1, 1] = "500";
+            Datos.Elementos[2, 1] = "130";
+            Datos.Elementos[3, 1] = "800";
+            Datos.Elementos[4, 1] = "900";
+            Datos.Elementos[5, 1] = "600";
+            Datos.Elementos[6, 1] = "200";
+            Datos.Elementos[7, 1] = "100";
+            Datos.Elementos[8, 1] = "700";
+            Datos.Elementos[9, 1] = "300";
+            Datos.Elementos[10, 4] = "150";
+            //Descripcion Elemento
+            Datos.Elementos[0, 2] = "elemntin1";
+            Datos.Elementos[1, 2] = "elemntin2";
+            Datos.Elementos[2, 2] = "elemntin3";
+            Datos.Elementos[3, 2] = "elemntin4";
+            Datos.Elementos[4, 2] = "elemntin5";
+            Datos.Elementos[5, 2] = "elemntin6";
+            Datos.Elementos[6, 2] = "elemntin7";
+            Datos.Elementos[7, 2] = "elemntin8";
+            Datos.Elementos[8, 2] = "elemntin9";
+            Datos.Elementos[9, 2] = "elemntin10";
+            Datos.Elementos[10, 4] = "elementin11";
+            //Costo
+            Datos.Elementos[0, 3] = "100";
+            Datos.Elementos[1, 3] = "100";
+            Datos.Elementos[2, 3] = "100";
+            Datos.Elementos[3, 3] = "100";
+            Datos.Elementos[4, 3] = "500";
+            Datos.Elementos[5, 3] = "15000";
+            Datos.Elementos[6, 3] = "15000";
+            Datos.Elementos[7, 3] = "25000";
+            Datos.Elementos[8, 3] = "50000";
+            Datos.Elementos[9, 3] = "50000";
+            Datos.Elementos[10, 4] = "100";
+            //Sigla
+            Datos.Elementos[0, 4] = "C";
+            Datos.Elementos[1, 4] = "H";
+            Datos.Elementos[2, 4] = "O";
+            Datos.Elementos[3, 4] = "N";
+            Datos.Elementos[4, 4] = "S";
+            Datos.Elementos[5, 4] = "Ra";
+            Datos.Elementos[6, 4] = "F";
+            Datos.Elementos[7, 4] = "Cl";
+            Datos.Elementos[8, 4] = "Co";
+            Datos.Elementos[9, 4] = "P";
+            Datos.Elementos[10, 4] = "B";
             fb.Serialize(Informacion, Datos);
             Informacion.Close();
             Debug.Log("Guarde");
         }
     }
+    //mete los datos dentro del archivo
     public void Guardar()
     {
         fb.Serialize(Informacion, Datos);
         Informacion.Close();
         Debug.Log("Guarde");
     }
+    //funciones de cargar{
+    //funcion para cargar datos en la escena del almacen
     public void Cargar_Almacen(String Usuario, String [,] Personajes)
     {
         if (File.Exists(Application.persistentDataPath + "/Datos.d"))
@@ -157,7 +246,7 @@ public class Archivos : MonoBehaviour
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             //texto = Datos.Text;
             Usuario = Datos.Usuario;
-            for (int x = 0; x <4; x++)
+            for (int x = 0; x <5; x++)
             {
                 for (int i = 0; i < 25; i++)
                 {
@@ -166,6 +255,26 @@ public class Archivos : MonoBehaviour
             }
         }
     }
+    //funcion para cargar datos en la escena del almacen
+    public void Cargar_Laboratorio(String[,] Elementos)
+    {
+        if (File.Exists(Application.persistentDataPath + "/Datos.d"))
+        {
+            fb = new BinaryFormatter();
+            FileStream Informacion = File.OpenRead(Application.persistentDataPath + "/Datos.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            //texto = Datos.Text;
+            for (int x = 0; x < 5; x++)
+            {
+                for (int i = 0; i < 11; i++)
+                {
+                    Elementos[i, x] = Datos.Elementos[i, x];
+                }
+            }
+        }
+    }
+    //}
+    //borra el archivo existente con el nombre Datos.d
     public void Borrar()
     {
 
@@ -180,9 +289,11 @@ public class Archivos : MonoBehaviour
     }
 }
 
+   //son las variables que tiene el archivo
 [Serializable()]
 class DatosdeJuego : System.Object
 {
     public String Usuario;
-    public String [,] Personajes = new String[25, 4];
+    public String [,] Personajes = new String[25, 5];
+    public String[,] Elementos = new String[11, 5];
 }
