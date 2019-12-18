@@ -18,7 +18,7 @@ public class botones_laboratorio : MonoBehaviour
     String[,] Elementos = new String[11, 5];
     String[,] verificadores = new String[11, 4];
     String[,] plussless = new String[11, 2];
-    String cargarformula;
+    public String cargarformula;
     Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados;
     public GameObject panel_elementos_seleccion;
     Text elementin;
@@ -26,12 +26,11 @@ public class botones_laboratorio : MonoBehaviour
     int tefaltamas = 0, tesobran = 0;
     int[] elemento = new int[11];
     int[] conjunto = new int[25];
+    Archivos archivo_almacen;
     // Start is called before the first frame update
     void Start()
     {
-        Archivos archivo_almacen = GameObject.Find("Laboratorio").GetComponent<Archivos>();
-        archivo_almacen.Borrar();
-        archivo_almacen.Crear();
+         archivo_almacen = GameObject.Find("Laboratorio").GetComponent<Archivos>();
         archivo_almacen.Cargar_Laboratorio(Elementos);
         ElementrosAdquiridos();
     }
@@ -792,6 +791,7 @@ public class botones_laboratorio : MonoBehaviour
             {
                 Debug.Log("Aspirina");
                 cargarformula = "ifs_aspirina";
+             
             }
             if (conjunto[1] == 4)
             {
@@ -806,22 +806,27 @@ public class botones_laboratorio : MonoBehaviour
             if (conjunto[3] == 6)
             {
                 Debug.Log("Cloxacilina");
+                cargarformula = "ifs_cloxacilina";
             }
             if (conjunto[4] == 5)
             {
                 Debug.Log("Bortezomib");
+                cargarformula = "ifs_bortezomib";
             }
             if (conjunto[5] == 4)
             {
                 Debug.Log("Lenalidomida");
+                cargarformula = "ifs_lenalidomida";
             }
             if (conjunto[6] == 4)
             {
                 Debug.Log("Vorinostat");
+                cargarformula = "ifs_vorinostat";
             }
             if (conjunto[7] == 4)
             {
                 Debug.Log("Clavulanato");
+                cargarformula = "ifs_clavulanato";
             }
             if (conjunto[8] == 5)
             {
