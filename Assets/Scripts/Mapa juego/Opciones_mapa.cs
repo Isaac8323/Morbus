@@ -26,6 +26,14 @@ public class Opciones_mapa : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");
     }
+    public void Tienda()
+    {
+        SceneManager.LoadScene("Tienda");
+    }
+    public void Laboratorio()
+    {
+        SceneManager.LoadScene("Laboratorio");
+    }
     public void Salir()
     {
         Application.Quit();
