@@ -1805,6 +1805,7 @@ RectTransform:
   - {fileID: 629616952}
   - {fileID: 927948288}
   - {fileID: 644627728}
+  - {fileID: 622122521}
   m_Father: {fileID: 467068133}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2708,7 +2709,6 @@ RectTransform:
   - {fileID: 563399419}
   - {fileID: 2070683461}
   - {fileID: 1134007950}
-  - {fileID: 622122521}
   m_Father: {fileID: 1479942553}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3942,12 +3942,12 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 467068133}
-  m_RootOrder: 4
+  m_Father: {fileID: 328671205}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 527.6, y: 359.50006}
+  m_AnchoredPosition: {x: 522.69995, y: 359.50006}
   m_SizeDelta: {x: 349.6, y: 49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &622122522
@@ -3983,7 +3983,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ll
+  m_Text: Perro
 --- !u!222 &622122523
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13395,7 +13395,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2114539383}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5189746
+  m_Size: 0.51897466
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:

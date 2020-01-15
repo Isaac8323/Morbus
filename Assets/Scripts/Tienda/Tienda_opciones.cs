@@ -28,7 +28,8 @@ public class Tienda_opciones : MonoBehaviour
         archivo_tienda.Borrar();
         archivo_tienda.Crear();
         archivo_tienda.Cargar_Tienda(Personajes, Elementos);
-        archivo_tienda.carga_pendejo(moneda , leve );
+        UITexto = GameObject.Find("cantidad").GetComponentInChildren<Text>();
+        UITexto.text = archivo_tienda.carga_pendejo(moneda, leve);
         personajes();
     }
 

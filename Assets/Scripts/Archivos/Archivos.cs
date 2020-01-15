@@ -25,7 +25,7 @@ public class Archivos : MonoBehaviour
     //crea un archivo con los siguientes elementos
     public void Crear()
     {
-        
+        Debug.Log(Application.persistentDataPath);
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
             Debug.Log("Ya tienes un archivo we");
@@ -115,7 +115,7 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[23, 2] = "100";
             Datos.Personajes[24, 2] = "100";
             //Descripciones
-            Datos.Personajes[0, 3] = "Más comúnmente conocida como aspirina, nombre de una marca que se popularizó. Aspirina es de gran ayuda contra el dolor, fiebre e inflamación";
+            Datos.Personajes[0, 3] = "Aspirina es el nombre de una marca que se popularizó. Aspirina es de gran ayuda contra el dolor, fiebre e inflamación";
             Datos.Personajes[1, 3] = "El paracetamol cuenta con propiedades analgésicas, ayuda también contra el dolor, ya sea leve o moderado, es bueno contra los malestares";
             Datos.Personajes[2, 3] = "Amoxicilina es un antibiótico derivado de la penicilina, es útil para combatir un gran número de espectros de bacterias, se utiliza mayormente para tratar infecciones";
             Datos.Personajes[3, 3] = "Es un antibiótico perteneciente al grupo de las penicilinas, útil para uso intramuscular";
@@ -138,7 +138,7 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[20, 3] = "Se utiliza en medicina por sus propiedades inmunosupresoras y antiinflamatorias. Por lo que resulta de gran utilidad ante casos de inflamación, hinchazón, calor, enrojecimiento y dolor";
             Datos.Personajes[21, 3] = "Se utiliza para reducir la inflamación en el tratamiento de la artritis reumatoide y del Lupus. Se diferencia de la cloroquina por la presencia de un grupo hidroxilo en el extremo de la cadena lateral";
             Datos.Personajes[22, 3] = "Se utiliza principalmente como agente antiinflamatorio en el tratamiento de la enfermedad inflamatoria intestinal y el artritis reumatoide";
-            Datos.Personajes[23, 3] = "	Actúa como antiinflamatorio e inmunosupresor";
+            Datos.Personajes[23, 3] = "Actúa como antiinflamatorio e inmunosupresor";
             Datos.Personajes[24, 3] = "También se le llama cobalamina gracias a que tiene un elemento muy especial, el cual es el cobalto. Ésta es una vitamina muy importante para el funcionamiento normal del sistema nervioso y de varias proteínas";
           //Estructuracion
             Datos.Personajes[0, 4] = "C9H8O4";
@@ -241,7 +241,7 @@ public class Archivos : MonoBehaviour
             Datos.level[0] = "3";
             fb.Serialize(Informacion, Datos);
             Informacion.Close();
-            Debug.Log("Guarde");
+            Debug.Log("Guardé");
         }
     }
     //mete los datos dentro del archivo
@@ -276,7 +276,7 @@ public class Archivos : MonoBehaviour
             }
         }
     }
-    public void carga_pendejo(String mon, String lev)
+    public String carga_pendejo(String mon, String lev)
     {
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
@@ -285,7 +285,9 @@ public class Archivos : MonoBehaviour
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             mon = Datos.monedas[0];
             lev = Datos.level[0];
+            return mon;
         }
+        return "";
     }
     //}
     //funcion para cargar datos en la escena del almacen
