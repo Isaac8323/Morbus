@@ -184,7 +184,7 @@ public class Botones_almacen : MonoBehaviour
                     {
                         if (Personajes[i, 2] == "0")
                         {
-                            UIImage.sprite = Resources.Load<Sprite>("h_g" + Personajes[i, 0].ToString());
+                            UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
                             cantidad.text = Personajes[i, 2];
                             verificadores[o, 0] = Personajes[i, 0];
                             verificadores[o, 1] = Personajes[i, 3];
@@ -194,9 +194,9 @@ public class Botones_almacen : MonoBehaviour
                         }
                         else
                         {
-                            UIImage.sprite = Resources.Load<Sprite>("h_" + Personajes[i, 0].ToString());
+                            UIImage.sprite = Resources.Load<Sprite>(Personajes[i, 0].ToString());
                             cantidad.text = Personajes[i, 2];
-                            verificadores[o, 0] = "h_" + Personajes[i, 0];
+                            verificadores[o, 0] =  Personajes[i, 0];
                             verificadores[o, 1] = Personajes[i, 3];
                             verificadores[o, 2] = Personajes[i, 0];
                             nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
@@ -263,21 +263,21 @@ public class Botones_almacen : MonoBehaviour
                 if (Personajes[i, 2] == "0")
                 {
                     UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
-                    UIImage.sprite = Resources.Load<Sprite>("h_g" + Personajes[i, 0].ToString());
+                    UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
                     cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
                     nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
                     nombre.text = Personajes[i, 0];
-                    verificadores[i, 0] = "h_" + Personajes[i, 0];
+                    verificadores[i, 0] =  Personajes[i, 0];
                     verificadores[i, 1] = Personajes[i, 3];
                     verificadores[i, 2] = Personajes[i, 0];
                 }
                 else{
                 UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
-                UIImage.sprite = Resources.Load<Sprite>("h_"+Personajes[i, 0].ToString());
+                UIImage.sprite = Resources.Load<Sprite>(Personajes[i, 0].ToString());
                 cantidad = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
                 nombre = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
                     nombre.text = Personajes[i, 0];
-                verificadores[i, 0] = "h_" + Personajes[i, 0];
+                verificadores[i, 0] = Personajes[i, 0];
                 verificadores[i, 1] = Personajes[i, 3];
                 verificadores[i, 2] = Personajes[i, 0];
                     }
@@ -420,7 +420,7 @@ public class Botones_almacen : MonoBehaviour
                 if (Personajes[i, 2] == "0")
                 {
                     UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
-                    UIImage.sprite = Resources.Load<Sprite>("h_g" + Personajes[i, 0].ToString());
+                    UIImage.sprite = Resources.Load<Sprite>("g" + Personajes[i, 0].ToString());
                     cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
                     nombre = GameObject.Find("Nombre" + position.ToString()).GetComponentInChildren<Text>();
                     nombre.text = Personajes[i, 0];
@@ -431,12 +431,12 @@ public class Botones_almacen : MonoBehaviour
                 else
                 {
                     UIImage = GameObject.Find("Image" + position.ToString()).GetComponentInChildren<Image>();
-                    UIImage.sprite = Resources.Load<Sprite>("h_" + Personajes[i, 0].ToString());
+                    UIImage.sprite = Resources.Load<Sprite>( Personajes[i, 0].ToString());
                     cantidad = GameObject.Find("Text" + position.ToString()).GetComponentInChildren<Text>();
                     cantidad.text = Personajes[i, 2];
                     nombre = GameObject.Find("Nombre" + position.ToString()).GetComponentInChildren<Text>();
                     nombre.text = Personajes[i, 0];
-                    verificadores[position, 0] = "h_" + Personajes[i, 0];
+                    verificadores[position, 0] =  Personajes[i, 0];
                     verificadores[position, 1] = Personajes[i, 3];
                     verificadores[position, 2] = Personajes[i, 0];
                 }
@@ -487,10 +487,10 @@ public class Botones_almacen : MonoBehaviour
                 if (i == 22)
                 {
                     UIImage = GameObject.Find("Image" + pos.ToString()).GetComponentInChildren<Image>();
-                    UIImage.sprite = Resources.Load<Sprite>("h_" + Personajes[i, 0].ToString());
+                    UIImage.sprite = Resources.Load<Sprite>( Personajes[i, 0].ToString());
                     cantidad = GameObject.Find("Text" + pos.ToString()).GetComponentInChildren<Text>();
                     cantidad.text = Personajes[i, 2];
-                    verificadores[pos, 0] = "h_"+Personajes[i, 0];
+                    verificadores[pos, 0] = Personajes[i, 0];
                     verificadores[pos, 1] = Personajes[i, 3];
                     verificadores[pos, 2] = Personajes[i, 0];
                 }
