@@ -12,7 +12,7 @@ using System.Data.Sql;
 using System.Data;
 public class Tienda_opciones : MonoBehaviour
 {
-    public GameObject paneldescrip,compra,desbloquear, tienda;
+    public GameObject paneldescrip,compra,desbloquear, tienda,cuadro_imagen;
     Image UIImage,Imagepanel;
     Text UITexto, titulotext;
     String[,] Personajes = new String[25, 6];
@@ -64,7 +64,7 @@ public class Tienda_opciones : MonoBehaviour
     }
     public void personajes()
     {
- 
+       
             UITexto = GameObject.Find("cantidad").GetComponentInChildren<Text>();
          //   UITexto.text = moneda.ToString();
             limpiarceldas();
@@ -132,37 +132,38 @@ public class Tienda_opciones : MonoBehaviour
     }
     public void intercambio()
     {
-        int x=0;
-        limpiarceldas();
-        for (int i = 0; i < 25; i++ ){
-            if (!Personajes[i, 2].Equals("0"))
-            {
-                Personajes_que_tengo[x,0] = Personajes[i, 0];
-                Personajes_que_tengo[x, 1] = Personajes[i, 1];
-                x++;
-            }
-        }
-        for (int i = 0; i < x; i++)
-        {
-            UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
-            UIImage.sprite = Resources.Load<Sprite>(Personajes_que_tengo[i, 0].ToString()); 
-            UITexto = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
-            UITexto.text = Personajes_que_tengo[i,0];
-            UITexto = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
-            if (Personajes_que_tengo[i, 1].Equals("easy"))
-            {
-                UITexto.text = "50";
-            }
-            else if (Personajes_que_tengo[i, 1].Equals("Complex"))
-            {
-                UITexto.text = "250";
-            }
-            else  if (Personajes_que_tengo[i, 1].Equals("Hard"))
-            {
-                UITexto.text = "500 1Bi";
-            }
-        }
-            pestañas = 3;
+         int x=0;
+         limpiarceldas();
+         for (int i = 0; i < 25; i++ ){
+             if (!Personajes[i, 2].Equals("0"))
+             {
+                 Personajes_que_tengo[x,0] = Personajes[i, 0];
+                 Personajes_que_tengo[x, 1] = Personajes[i, 1];
+                 x++;
+             }
+         }
+         for (int i = 0; i < x; i++)
+         {
+             UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
+             UIImage.sprite = Resources.Load<Sprite>(Personajes_que_tengo[i, 0].ToString()); 
+             UITexto = GameObject.Find("Nombre" + i.ToString()).GetComponentInChildren<Text>();
+             UITexto.text = Personajes_que_tengo[i,0];
+             UITexto = GameObject.Find("Text" + i.ToString()).GetComponentInChildren<Text>();
+             if (Personajes_que_tengo[i, 1].Equals("easy"))
+             {
+                 UITexto.text = "50";
+             }
+             else if (Personajes_que_tengo[i, 1].Equals("Complex"))
+             {
+                 UITexto.text = "250";
+             }
+             else  if (Personajes_que_tengo[i, 1].Equals("Hard"))
+             {
+                 UITexto.text = "500 1Bi";
+             }
+         }
+                 
+        pestañas = 3;
     }
     public void limpiar_panel()
     {
@@ -180,6 +181,7 @@ public class Tienda_opciones : MonoBehaviour
     public void comprar()
     {        
         int objeto_comprar, dinero_actual;
+        String tit;
         UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
         if (UITexto.text.Equals("Comprar"))
         {
@@ -190,29 +192,32 @@ public class Tienda_opciones : MonoBehaviour
             if ((dinero_actual- objeto_comprar) >= 0)
             {
                 titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
-                Debug.Log(titulotext.text);
+                tit = titulotext.text;
+                Debug.Log(tit);
                 for (int i = 0; i < 11; i++)
                 {
-                    if (titulotext.text.Equals(Elementos[i,0]))
+                    if (tit.Equals(Elementos[i,0]))
                     {
-                        i = 11;
                         int suma_de_cura;
-                        suma_de_cura = Int32.Parse(Personajes[i, 1]);
+                       suma_de_cura = Int32.Parse(Elementos[i, 1]);
                         suma_de_cura = suma_de_cura + 1;
-                        Personajes[i, 1] = suma_de_cura.ToString();
+                        Elementos[i, 1] = suma_de_cura.ToString();
+                        Debug.Log("entre elementos");
                         Debug.Log(Elementos[i, 1]);
+                        i = 11;
                     }
                 }
                 for (int i = 0; i < 25; i++)
                 {
-                    if (titulotext.text.Equals(Personajes[i,0]))
+                    if (tit.Equals(Personajes[i,0]))
                     {
-                        i = 25;
                         int suma_de_cura;
                         suma_de_cura=Int32.Parse(Personajes[i,2]);
                         suma_de_cura = suma_de_cura+1;
                         Personajes[i,2]= suma_de_cura.ToString();
+                        Debug.Log("entre curas");
                         Debug.Log(Personajes[i, 2]);
+                        i = 25;
                     }
                 }
                 dinero_actual = dinero_actual - objeto_comprar;
@@ -285,6 +290,7 @@ public class Tienda_opciones : MonoBehaviour
             paneldescrip.SetActive(true);
             limpiar_panel();
             compra.SetActive(true);
+            /*
             UIImage = GameObject.Find("Image0").GetComponentInChildren<Image>();
             Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             Imagepanel.sprite = UIImage.sprite;
@@ -293,7 +299,7 @@ public class Tienda_opciones : MonoBehaviour
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text0").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            titulotext.text = UITexto.text;*/
             UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
                 UITexto.text="Intercambiar";
         }

@@ -199,7 +199,7 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[7, 1] = "100";
             Datos.Elementos[8, 1] = "100";
             Datos.Elementos[9, 1] = "100";
-            Datos.Elementos[10, 4] = "100";
+            Datos.Elementos[10, 4]= "100";
             //Descripcion Elemento
             Datos.Elementos[0, 2] = "elemntin1";
             Datos.Elementos[1, 2] = "elemntin2";
