@@ -12,7 +12,7 @@ using System.Data.Sql;
 using System.Data;
 public class Tienda_opciones : MonoBehaviour
 {
-    public GameObject paneldescrip,compra,desbloquear;
+    public GameObject paneldescrip,compra,desbloquear, tienda;
     Image UIImage,Imagepanel;
     Text UITexto, titulotext;
     String[,] Personajes = new String[25, 6];
@@ -178,7 +178,7 @@ public class Tienda_opciones : MonoBehaviour
     }
 
     public void comprar()
-    {
+    {        
         int objeto_comprar, dinero_actual;
         UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
         if (UITexto.text.Equals("Comprar"))
