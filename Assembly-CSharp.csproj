@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Estructuracion\funciones_estructuracion.cs" />
     <Compile Include="Assets\Scripts\Laboratorio\botones_laboratorio.cs" />
     <Compile Include="Assets\Scripts\Mapa juego\Opciones_mapa.cs" />
+    <Compile Include="Assets\Scripts\Organismo\Actions.cs" />
     <Compile Include="Assets\Scripts\Pantalla_menu\Acciones_menu.cs" />
     <Compile Include="Assets\Scripts\Pantalla_menu\Alertdialog_menu.cs" />
     <Compile Include="Assets\Scripts\Tienda\Tienda_opciones.cs" />
