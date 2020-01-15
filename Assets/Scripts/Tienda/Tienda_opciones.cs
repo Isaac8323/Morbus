@@ -12,15 +12,15 @@ using System.Data.Sql;
 using System.Data;
 public class Tienda_opciones : MonoBehaviour
 {
-    public GameObject paneldescrip,compra;
+    public GameObject paneldescrip,compra,desbloquear;
     Image UIImage,Imagepanel;
     Text UITexto, titulotext;
     String[,] Personajes = new String[25, 6];
     String[,] Elementos= new String[25, 5];
     String[,] Personajes_que_tengo = new String[25,2];
-    String leve;
+    String leve,lv;
     String  moneda;
-    int pestañas = 0;
+    int pestañas = 0,nivel=0;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +29,10 @@ public class Tienda_opciones : MonoBehaviour
         archivo_tienda.Crear();
         archivo_tienda.Cargar_Tienda(Personajes, Elementos);
         UITexto = GameObject.Find("cantidad").GetComponentInChildren<Text>();
-        UITexto.text = archivo_tienda.carga_pendejo(moneda, leve);
+        UITexto.text = archivo_tienda.carga_monedas(moneda);
+        moneda = UITexto.text;
+        String leve = archivo_tienda.carga_level(lv);
+        nivel = Int32.Parse(leve);
         personajes();
     }
 
@@ -39,9 +42,25 @@ public class Tienda_opciones : MonoBehaviour
         
 
     }
+
     public void cerrarpanel()
     {
-        paneldescrip.SetActive(false);
+        try
+        {
+            desbloquear.SetActive(true);
+            UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+            UITexto.text = null;
+            compra.SetActive(true);
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = null;
+            compra.SetActive(false);
+            desbloquear.SetActive(false);
+            paneldescrip.SetActive(false);
+        }
+        catch (Exception e)
+        {
+
+        }
     }
     public void personajes()
     {
@@ -155,13 +174,65 @@ public class Tienda_opciones : MonoBehaviour
          UITexto.text = null;
          UITexto = GameObject.Find("fototext").GetComponentInChildren<Text>();
          UITexto.text = null;
+        
+    }
+
+    public void comprar()
+    {
+        int objeto_comprar, dinero_actual;
+        UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+        if (UITexto.text.Equals("Comprar"))
+        {
+            UITexto = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            objeto_comprar = Int32.Parse(UITexto.text);
+            UITexto = GameObject.Find("cantidad").GetComponentInChildren<Text>();
+            dinero_actual = Int32.Parse(UITexto.text);
+            if ((dinero_actual- objeto_comprar) >= 0)
+            {
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                Debug.Log(titulotext.text);
+                for (int i = 0; i < 11; i++)
+                {
+                    if (titulotext.text.Equals(Elementos[i,0]))
+                    {
+                        i = 11;
+                        int suma_de_cura;
+                        suma_de_cura = Int32.Parse(Personajes[i, 1]);
+                        suma_de_cura = suma_de_cura + 1;
+                        Personajes[i, 1] = suma_de_cura.ToString();
+                        Debug.Log(Elementos[i, 1]);
+                    }
+                }
+                for (int i = 0; i < 25; i++)
+                {
+                    if (titulotext.text.Equals(Personajes[i,0]))
+                    {
+                        i = 25;
+                        int suma_de_cura;
+                        suma_de_cura=Int32.Parse(Personajes[i,2]);
+                        suma_de_cura = suma_de_cura+1;
+                        Personajes[i,2]= suma_de_cura.ToString();
+                        Debug.Log(Personajes[i, 2]);
+                    }
+                }
+                dinero_actual = dinero_actual - objeto_comprar;
+                UITexto = GameObject.Find("cantidad").GetComponentInChildren<Text>();
+                UITexto.text = dinero_actual.ToString();
+            }
+        }
+        else if (UITexto.text.Equals("Intercambiar"))
+        {
+        }
     }
     public void celda0()
     {
-        paneldescrip.SetActive(true);
-        limpiar_panel();
         if (pestañas == 1)
         {
+            paneldescrip.SetActive(true);
+            limpiar_panel();
+            compra.SetActive(true);
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Comprar";
             UIImage = GameObject.Find("Image0").GetComponentInChildren<Image>();
             Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             Imagepanel.sprite = UIImage.sprite;
@@ -171,31 +242,71 @@ public class Tienda_opciones : MonoBehaviour
             UITexto = GameObject.Find("Text0").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
         }
         if (pestañas == 2)
         {
-            UITexto = GameObject.Find("Elemento0").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            if (nivel > 0)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento0").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre0").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text0").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 1";
+                UITexto = GameObject.Find("Elemento0").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre0").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text0").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
+            paneldescrip.SetActive(true);
+            limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image0").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre0").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text0").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text="Intercambiar";
         }
     }
     public void celda1()
     {
-        paneldescrip.SetActive(true);
-        limpiar_panel();
         if (pestañas == 1)
         {
+            paneldescrip.SetActive(true);
+            limpiar_panel();
+            compra.SetActive(true);
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Comprar";
             UIImage = GameObject.Find("Image1").GetComponentInChildren<Image>();
             Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             Imagepanel.sprite = UIImage.sprite;
@@ -205,31 +316,72 @@ public class Tienda_opciones : MonoBehaviour
             UITexto = GameObject.Find("Text1").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
         }
         if (pestañas == 2)
         {
-            UITexto = GameObject.Find("Elemento1").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            if (nivel > 0)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento1").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre1").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text1").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+     
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 1";
+                UITexto = GameObject.Find("Elemento1").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre1").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text1").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
+            paneldescrip.SetActive(true);
+            limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image1").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre1").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text1").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda2()
     {
-        paneldescrip.SetActive(true);
-        limpiar_panel();
         if (pestañas == 1)
         {
+            paneldescrip.SetActive(true);
+            limpiar_panel();
+            compra.SetActive(true);
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Comprar";
             UIImage = GameObject.Find("Image2").GetComponentInChildren<Image>();
             Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             Imagepanel.sprite = UIImage.sprite;
@@ -239,31 +391,73 @@ public class Tienda_opciones : MonoBehaviour
             UITexto = GameObject.Find("Text2").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
+         
         }
         if (pestañas == 2)
         {
-            UITexto = GameObject.Find("Elemento2").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            if (nivel > 0)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento2").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre2").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text2").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 1";
+                UITexto = GameObject.Find("Elemento2").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre2").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text2").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
+            paneldescrip.SetActive(true);
+            limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image2").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre2").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text2").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda3()
     {
-        paneldescrip.SetActive(true);
-        limpiar_panel();
+
         if (pestañas == 1)
         {
+            paneldescrip.SetActive(true);
+            limpiar_panel();
+            compra.SetActive(true);
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Comprar";
             UIImage = GameObject.Find("Image3").GetComponentInChildren<Image>();
             Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             Imagepanel.sprite = UIImage.sprite;
@@ -273,46 +467,117 @@ public class Tienda_opciones : MonoBehaviour
             UITexto = GameObject.Find("Text3").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
         }
         if (pestañas == 2)
         {
-            UITexto = GameObject.Find("Elemento3").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            if (nivel > 0)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento3").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre3").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text3").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 1";
+                UITexto = GameObject.Find("Elemento3").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre3").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text3").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
+            paneldescrip.SetActive(true);
+            limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image3").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre3").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text3").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda4()
     {
         if (pestañas == 2)
         {
+            if (nivel > 0)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento4").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre4").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text4").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 1";
+                UITexto = GameObject.Find("Elemento4").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre4").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text4").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
             paneldescrip.SetActive(true);
             limpiar_panel();
-            UITexto = GameObject.Find("Elemento4").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image4").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre4").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text4").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
-            paneldescrip.SetActive(true);
-            limpiar_panel();
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda5()
@@ -320,23 +585,57 @@ public class Tienda_opciones : MonoBehaviour
 
         if (pestañas == 2)
         {
+            if (nivel > 5)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento5").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre5").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text5").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 6";
+                UITexto = GameObject.Find("Elemento5").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre5").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text5").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
             paneldescrip.SetActive(true);
             limpiar_panel();
-            UITexto = GameObject.Find("Elemento5").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image5").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre5").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text5").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
-            paneldescrip.SetActive(true);
-            limpiar_panel();
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda6()
@@ -344,23 +643,58 @@ public class Tienda_opciones : MonoBehaviour
 
         if (pestañas == 2)
         {
+            if (nivel > 5)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento6").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre6").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text6").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 6";
+                UITexto = GameObject.Find("Elemento6").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre6").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text6").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
             paneldescrip.SetActive(true);
             limpiar_panel();
-            UITexto = GameObject.Find("Elemento6").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image6").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre6").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text6").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
-            paneldescrip.SetActive(true);
-            limpiar_panel();
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda7()
@@ -369,23 +703,57 @@ public class Tienda_opciones : MonoBehaviour
 
         if (pestañas == 2)
         {
+            if (nivel > 5)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento7").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre7").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text7").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 6";
+                UITexto = GameObject.Find("Elemento7").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre7").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text7").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
             paneldescrip.SetActive(true);
             limpiar_panel();
-            UITexto = GameObject.Find("Elemento7").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image7").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre7").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text7").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
-            paneldescrip.SetActive(true);
-            limpiar_panel();
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda8()
@@ -393,23 +761,57 @@ public class Tienda_opciones : MonoBehaviour
 
         if (pestañas == 2)
         {
+            if (nivel > 5)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento8").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre8").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text8").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 6";
+                UITexto = GameObject.Find("Elemento8").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre8").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text8").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
             paneldescrip.SetActive(true);
             limpiar_panel();
-            UITexto = GameObject.Find("Elemento8").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image8").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre8").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text8").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
-            paneldescrip.SetActive(true);
-            limpiar_panel();
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda9()
@@ -417,21 +819,57 @@ public class Tienda_opciones : MonoBehaviour
 
         if (pestañas == 2)
         {
+            if (nivel > 7)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento9").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre9").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text9").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 8";
+                UITexto = GameObject.Find("Elemento9").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre9").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text9").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
             paneldescrip.SetActive(true);
             limpiar_panel();
-            UITexto = GameObject.Find("Elemento9").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image9").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre9").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text9").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda10()
@@ -439,21 +877,57 @@ public class Tienda_opciones : MonoBehaviour
 
         if (pestañas == 2)
         {
+            if (nivel > 7)
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                compra.SetActive(true);
+                UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+                UITexto.text = "Comprar";
+                UITexto = GameObject.Find("Elemento10").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre10").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text10").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+            else
+            {
+                paneldescrip.SetActive(true);
+                limpiar_panel();
+                desbloquear.SetActive(true);
+                UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+                UITexto.text = "Desbloqueable a partir del nivel 8";
+                UITexto = GameObject.Find("Elemento10").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Nombre10").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+                UITexto = GameObject.Find("Text10").GetComponentInChildren<Text>();
+                titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+                titulotext.text = UITexto.text;
+            }
+        }
+        if (pestañas == 3)
+        {
             paneldescrip.SetActive(true);
             limpiar_panel();
-            UITexto = GameObject.Find("Elemento10").GetComponentInChildren<Text>();
-            titulotext = GameObject.Find("fototext").GetComponentInChildren<Text>();
-            titulotext.text = UITexto.text;
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image10").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
             UITexto = GameObject.Find("Nombre10").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
             UITexto = GameObject.Find("Text10").GetComponentInChildren<Text>();
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
-            compra.SetActive(true);
-        }
-        if (pestañas == 3)
-        {
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda11()
@@ -462,6 +936,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image11").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre11").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text11").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda12()
@@ -470,6 +956,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image12").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre12").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text12").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda13()
@@ -478,6 +976,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image13").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre13").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text13").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda14()
@@ -486,6 +996,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image14").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre14").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text14").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda15()
@@ -494,6 +1016,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image15").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre15").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text15").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda16()
@@ -502,6 +1036,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image16").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre16").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text16").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda17()
@@ -510,6 +1056,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image17").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre17").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text17").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda18()
@@ -518,6 +1076,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image18").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre18").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text18").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda19()
@@ -526,6 +1096,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image19").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre19").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text19").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda20()
@@ -534,6 +1116,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image20").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre20").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text20").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda21()
@@ -542,6 +1136,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image21").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre21").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text21").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda22()
@@ -550,6 +1156,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image22").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre22").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text22").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda23()
@@ -558,6 +1176,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image23").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre23").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text23").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
     public void celda24()
@@ -566,6 +1196,18 @@ public class Tienda_opciones : MonoBehaviour
         {
             paneldescrip.SetActive(true);
             limpiar_panel();
+            compra.SetActive(true);
+            UIImage = GameObject.Find("Image24").GetComponentInChildren<Image>();
+            Imagepanel = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+            Imagepanel.sprite = UIImage.sprite;
+            UITexto = GameObject.Find("Nombre24").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text;
+            UITexto = GameObject.Find("Text24").GetComponentInChildren<Text>();
+            titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+            titulotext.text = UITexto.text ;
+            UITexto = GameObject.Find("compratext").GetComponentInChildren<Text>();
+            UITexto.text = "Intercambiar";
         }
     }
 }

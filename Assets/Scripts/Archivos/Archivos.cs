@@ -276,7 +276,7 @@ public class Archivos : MonoBehaviour
             }
         }
     }
-    public String carga_pendejo(String mon, String lev)
+    public String carga_monedas(String mon)
     {
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
@@ -284,8 +284,19 @@ public class Archivos : MonoBehaviour
             FileStream Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             mon = Datos.monedas[0];
-            lev = Datos.level[0];
             return mon;
+        }
+        return "";
+    }
+    public String carga_level(String lev)
+    {
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            FileStream Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            lev = Datos.level[0];
+            return lev;
         }
         return "";
     }
