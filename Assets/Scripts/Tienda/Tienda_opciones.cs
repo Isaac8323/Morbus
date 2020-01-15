@@ -12,7 +12,7 @@ using System.Data.Sql;
 using System.Data;
 public class Tienda_opciones : MonoBehaviour
 {
-    public GameObject paneldescrip,compra,desbloquear, tienda,cuadro_imagen;
+    public GameObject paneldescrip,compra,desbloquear, tienda,cuadro_imagen, intercambiopanel;
     Image UIImage,Imagepanel;
     Text UITexto, titulotext;
     String[,] Personajes = new String[25, 6];
@@ -130,8 +130,16 @@ public class Tienda_opciones : MonoBehaviour
             UIImage.sprite = null;
         }
     }
+
+    public void closeIntercambio()
+    {
+        intercambiopanel.gameObject.SetActive(false);
+    }
+
     public void intercambio()
     {
+        intercambiopanel.gameObject.SetActive(true);
+        /*
          int x=0;
          limpiarceldas();
          for (int i = 0; i < 25; i++ ){
@@ -163,7 +171,7 @@ public class Tienda_opciones : MonoBehaviour
              }
          }
                  
-        pestañas = 3;
+        pestañas = 3;*/
     }
     public void limpiar_panel()
     {

@@ -11,13 +11,13 @@ public class Acciones_menu : MonoBehaviour
     public InputField Inputfield_usuario, Inputfield_contraseña, Inputfield_conf_contraseña, Inputfield_ini_us, Inputfield_ini_con;
     public MySqlConnection conn;
     public Text errores;
-    Archivos archivo_menu;
     void Start()
     {
         AdminMYSQL adminmysql = GameObject.Find("Administrador_de_bd").GetComponent<AdminMYSQL>();
-        archivo_menu = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
         conn = adminmysql.ConectarConServidorBaseDatos();
-        /*
+        /*ThreadStart delegado = new ThreadStart(CorrerProceso); 
+        Thread hilo = new Thread(delegado); 
+        hilo.Start();
         soundtrack.GetComponent<AudioSource>().Play();*/
     }
 
@@ -37,15 +37,6 @@ public class Acciones_menu : MonoBehaviour
         panel_iniciosesion.SetActive(true);
         menu_principal.SetActive(false);
     }
-    public void Continuar()
-    {
-        archivo_menu.Crear();
-        escena();
-    }
-    public void BorrarDatos()
-    {
-        archivo_menu.Borrar();
-    }
     public void Salir_Windows()
     {
         Application.Quit(); //Sale de la aplicacion cuando se ejecute en la computadora mas no en la prueba de Unity
@@ -58,7 +49,6 @@ public class Acciones_menu : MonoBehaviour
         contraseña = Inputfield_ini_con.text;
         Inputfield_ini_us.text = "";
         Inputfield_ini_con.text = "";
-        
         MySqlDataReader select2;
         MySqlCommand cmd = conn.CreateCommand();
         cmd.CommandText = "SELECT * FROM usuarios WHERE usuario = '"+usuario+"';";
@@ -128,7 +118,7 @@ public class Acciones_menu : MonoBehaviour
                 Alertdialog_menu alert = GameObject.Find("Administrador_de_bd").GetComponent<Alertdialog_menu>();
                 alert.Alerta_inicio_sesion_A();
             }
-          else
+            else
             {
                 MySqlDataReader select;
                 string comando = "SELECT * FROM usuarios WHERE usuario = '" + usuario + "';";
