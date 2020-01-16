@@ -20,13 +20,21 @@ public class Santuario_op : MonoBehaviour
   String[,] Elementos = new String[25, 5];
   Archivos archivo_santuario;
   String bis,bis1;
+    public Animator anim;
+    
     void Start()
     {
         archivo_santuario = GameObject.Find("Santuario").GetComponent<Archivos>();
+//   archivo_santuario.Borrar();
+  //      archivo_santuario.Crear();
         archivo_santuario.Cargar_Tienda(Personajes, Elementos);
         bis = archivo_santuario.carga_bismuto(bis1);
         UITexto = GameObject.Find("bismuto").GetComponentInChildren<Text>();
         UITexto.text = bis+ " Bi";
+        Debug.Log("entre");
+        Debug.Log(Personajes[19, 2]);
+        //var videoPlayer = gameObject.AddComponent<UnityEngine.Video.VideoPlayer>();
+        //videoPlayer.Play();
     }
 
     // Update is called once per frame
@@ -35,7 +43,7 @@ public class Santuario_op : MonoBehaviour
         
     }
     public void empezar()
-    {
+    {        
         int x=1;
         empezar_buton.SetActive(true);
         for (int i = 20; i < 25; i++)
@@ -81,6 +89,7 @@ public class Santuario_op : MonoBehaviour
     }
     public void proceder()
     {
+        anim.SetBool("isTransacting", true);
         titulotext = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
         for (int i = 20; i < 25; i++)
         {

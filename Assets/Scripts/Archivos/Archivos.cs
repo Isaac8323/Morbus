@@ -144,12 +144,12 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[23,1] = "Hard";
             Datos.Personajes[24,1] = "Hard";
             //Cantidad
-            Datos.Personajes[0, 2] = "1";
-            Datos.Personajes[1, 2] = "30";
-            Datos.Personajes[2, 2] = "100";
-            Datos.Personajes[3, 2] = "100";
-            Datos.Personajes[4, 2] = "100";
-            Datos.Personajes[5, 2] = "100";
+            Datos.Personajes[0, 2] = "0";
+            Datos.Personajes[1, 2] = "0";
+            Datos.Personajes[2, 2] = "0";
+            Datos.Personajes[3, 2] = "0";
+            Datos.Personajes[4, 2] = "0";
+            Datos.Personajes[5, 2] = "5";
             Datos.Personajes[6, 2] = "100";
             Datos.Personajes[7, 2] = "100";
             Datos.Personajes[8, 2] ="500";
