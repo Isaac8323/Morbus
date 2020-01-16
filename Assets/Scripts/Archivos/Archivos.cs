@@ -14,15 +14,70 @@ public class Archivos : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+     //   perro=GameObject.Find("Mapa_juego").GetComponent<variables_indestructibles>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
     //crea un archivo con los siguientes elementos
+    public void cargar_variables()
+    {
+        fb = new BinaryFormatter();
+         Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+        Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+        variables_indestructibles.Usuario = Datos.Usuario;
+        variables_indestructibles.monedas[0] = Datos.monedas[0];
+        variables_indestructibles.level[0] = Datos.level[0];
+        variables_indestructibles.bismuto = Datos.bismuto;
+        for (int x = 0; x < 6; x++)
+        {
+            for (int i = 0; i < 25; i++)
+            {
+                variables_indestructibles.Personajes[i, x] = Datos.Personajes[i, x];
+            }
+        }
+
+        for (int x = 0; x < 5; x++)
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                variables_indestructibles.Elementos[i, x] = Datos.Elementos[i, x];
+            }
+        }
+    }
+    public void guardar_variables()
+    {
+     
+        fb = new BinaryFormatter();
+        Informacion = File.Create(Application.persistentDataPath + "/Partida.d");
+        Datos = new DatosdeJuego();
+       Datos.Usuario=  variables_indestructibles.Usuario;
+        Datos.monedas[0]= variables_indestructibles.monedas[0] ;
+        Datos.level[0] =variables_indestructibles.level[0] ;
+      Datos.bismuto=  variables_indestructibles.bismuto ;
+        for (int x = 0; x < 6; x++)
+        {
+            for (int i = 0; i < 25; i++)
+            {
+               Datos.Personajes[i, x]= variables_indestructibles.Personajes[i, x] ;
+            }
+        }
+
+        for (int x = 0; x < 5; x++)
+        {
+            for (int i = 0; i < 11; i++)
+            {
+             Datos.Elementos[i, x]=   variables_indestructibles.Elementos[i, x] ;
+            }
+        }
+        fb.Serialize(Informacion, Datos);
+        Informacion.Close();
+        Debug.Log("Guardé funcion guardar");
+    }
     public void Crear()
     {
         Debug.Log(Application.persistentDataPath);
@@ -89,7 +144,7 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[23,1] = "Hard";
             Datos.Personajes[24,1] = "Hard";
             //Cantidad
-            Datos.Personajes[0, 2] = "0";
+            Datos.Personajes[0, 2] = "1";
             Datos.Personajes[1, 2] = "30";
             Datos.Personajes[2, 2] = "100";
             Datos.Personajes[3, 2] = "100";
@@ -238,10 +293,11 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[4, 4] = "B";
 
             Datos.monedas[0] = "15000";
+            Datos.bismuto = "3";
             Datos.level[0] = "3";
             fb.Serialize(Informacion, Datos);
             Informacion.Close();
-            Debug.Log("Guardé");
+            Debug.Log("Guardé ");
         }
     }
     //mete los datos dentro del archivo
@@ -255,7 +311,7 @@ public class Archivos : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
             fb = new BinaryFormatter();
-            FileStream Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+             Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             Debug.Log(Application.persistentDataPath);
 
@@ -274,6 +330,7 @@ public class Archivos : MonoBehaviour
                     Elementos[i, x] = Datos.Elementos[i, x];
                 }
             }
+            Informacion.Close();
         }
     }
     public String carga_monedas(String mon)
@@ -281,10 +338,12 @@ public class Archivos : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
             fb = new BinaryFormatter();
-            FileStream Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             mon = Datos.monedas[0];
+            Informacion.Close();
             return mon;
+
         }
         return "";
     }
@@ -293,10 +352,24 @@ public class Archivos : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
             fb = new BinaryFormatter();
-            FileStream Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+             Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             lev = Datos.level[0];
+            Informacion.Close();
             return lev;
+        }
+        return "";
+    }
+    public String carga_bismuto(String bismuto)
+    {
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+             bismuto = Datos.bismuto;
+            Informacion.Close();
+            return bismuto;
         }
         return "";
     }
@@ -307,7 +380,7 @@ public class Archivos : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
             fb = new BinaryFormatter();
-            FileStream Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             //texto = Datos.Text;
             Usuario = Datos.Usuario;
@@ -318,7 +391,7 @@ public class Archivos : MonoBehaviour
                     Personajes[i, x] = Datos.Personajes[i, x];
                 }
             }
-
+            Informacion.Close();
         }
     }
     //}
@@ -331,7 +404,7 @@ public class Archivos : MonoBehaviour
         {
     
             fb = new BinaryFormatter();
-            FileStream Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+           Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             for (int x = 0; x < 5; x++)
             {
@@ -340,6 +413,7 @@ public class Archivos : MonoBehaviour
                     Elementos[i, x] = Datos.Elementos[i, x];
                 }
             }
+            Informacion.Close();
         }
     }
     //}
@@ -367,4 +441,5 @@ class DatosdeJuego : System.Object
     public String [] monedas = new String [1];
     public String [,] Personajes = new String[25, 6];
     public String[,] Elementos = new String[11, 5];
+    public String bismuto;
 }

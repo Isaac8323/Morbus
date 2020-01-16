@@ -46,9 +46,6 @@ public class Botones_almacen : MonoBehaviour
         //     AdminMYSQL adminmysql = GameObject.Find("Almacen").GetComponent<AdminMYSQL>();
         //    conn1 = adminmysql.ConectarConServidorBaseDatos();
         Archivos archivo_almacen= GameObject.Find("Almacen").GetComponent<Archivos>();
-        
-        archivo_almacen.Borrar();
-        archivo_almacen.Crear();
         archivo_almacen.Cargar_Almacen(Usuario,Personajes);
         personajes();
     }

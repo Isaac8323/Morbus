@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Escenarios/Tienda.unity
+- path: Assets/Escenarios/Mapajuego.unity
   isLoaded: 1
   isActive: 1

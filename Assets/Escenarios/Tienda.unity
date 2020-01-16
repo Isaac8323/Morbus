@@ -320,7 +320,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda3
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 37975830}
   - component: {fileID: 37975829}
   m_Layer: 5
-  m_Name: Imagei3
+  m_Name: img2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1168,7 +1168,7 @@ GameObject:
   - component: {fileID: 60074835}
   - component: {fileID: 60074834}
   m_Layer: 5
-  m_Name: Imagei7
+  m_Name: img6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 60998859}
   - component: {fileID: 60998858}
   m_Layer: 5
-  m_Name: Nombrei2
+  m_Name: nom1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1770,7 +1770,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda9
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2018,7 +2018,7 @@ GameObject:
   - component: {fileID: 125077518}
   - component: {fileID: 125077517}
   m_Layer: 5
-  m_Name: Imagei8
+  m_Name: img7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2198,7 +2198,7 @@ GameObject:
   - component: {fileID: 150820142}
   - component: {fileID: 150820141}
   m_Layer: 5
-  m_Name: Nombrei13
+  m_Name: nom12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2599,7 +2599,7 @@ GameObject:
   - component: {fileID: 164465785}
   - component: {fileID: 164465784}
   m_Layer: 5
-  m_Name: Nombrei9
+  m_Name: nom8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2942,7 +2942,7 @@ GameObject:
   - component: {fileID: 181668775}
   - component: {fileID: 181668774}
   m_Layer: 5
-  m_Name: Imagei2
+  m_Name: img1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3576,7 +3576,7 @@ GameObject:
   - component: {fileID: 222123591}
   - component: {fileID: 222123590}
   m_Layer: 5
-  m_Name: Nombrei3
+  m_Name: nom2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3734,7 +3734,7 @@ GameObject:
   - component: {fileID: 235649137}
   - component: {fileID: 235649136}
   m_Layer: 5
-  m_Name: Nombrei5
+  m_Name: nom4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3814,7 +3814,7 @@ GameObject:
   - component: {fileID: 237269248}
   - component: {fileID: 237269247}
   m_Layer: 5
-  m_Name: Imagei20
+  m_Name: img19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4136,7 +4136,7 @@ GameObject:
   - component: {fileID: 266571837}
   - component: {fileID: 266571836}
   m_Layer: 5
-  m_Name: Nombrei1
+  m_Name: nom0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4369,7 +4369,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda20
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4507,7 +4507,7 @@ GameObject:
   - component: {fileID: 318401091}
   - component: {fileID: 318401090}
   m_Layer: 5
-  m_Name: Imagei4
+  m_Name: img3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4612,7 +4612,7 @@ GameObject:
   - component: {fileID: 318561788}
   - component: {fileID: 318561787}
   m_Layer: 5
-  m_Name: Nombrei20
+  m_Name: nom19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4800,7 +4800,7 @@ GameObject:
   - component: {fileID: 326504714}
   - component: {fileID: 326504713}
   m_Layer: 5
-  m_Name: Imagei10
+  m_Name: img9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4905,7 +4905,7 @@ GameObject:
   - component: {fileID: 328050319}
   - component: {fileID: 328050318}
   m_Layer: 5
-  m_Name: Nombrei4
+  m_Name: nom3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5189,7 +5189,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda1
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5357,7 +5357,7 @@ GameObject:
   - component: {fileID: 370022591}
   - component: {fileID: 370022590}
   m_Layer: 5
-  m_Name: Nombrei21
+  m_Name: nom20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5543,7 +5543,7 @@ GameObject:
   - component: {fileID: 376919001}
   - component: {fileID: 376919000}
   m_Layer: 5
-  m_Name: Imagei13
+  m_Name: img12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5728,7 +5728,7 @@ GameObject:
   - component: {fileID: 384387887}
   - component: {fileID: 384387886}
   m_Layer: 5
-  m_Name: Imagei16
+  m_Name: img15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7261,7 +7261,7 @@ GameObject:
   - component: {fileID: 524728852}
   - component: {fileID: 524728851}
   m_Layer: 5
-  m_Name: Nombrei7
+  m_Name: nom6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7341,7 +7341,7 @@ GameObject:
   - component: {fileID: 530627625}
   - component: {fileID: 530627624}
   m_Layer: 5
-  m_Name: Imagei22
+  m_Name: img21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7526,7 +7526,7 @@ GameObject:
   - component: {fileID: 553875933}
   - component: {fileID: 553875932}
   m_Layer: 5
-  m_Name: Imagei5
+  m_Name: img4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9080,7 +9080,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda13
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9263,7 +9263,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda10
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9740,7 +9740,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda8
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9802,7 +9802,7 @@ GameObject:
   - component: {fileID: 750648001}
   - component: {fileID: 750648000}
   m_Layer: 5
-  m_Name: Nombrei10
+  m_Name: nom9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9927,7 +9927,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda22
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10253,7 +10253,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda16
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10657,7 +10657,7 @@ GameObject:
   - component: {fileID: 840077076}
   - component: {fileID: 840077075}
   m_Layer: 5
-  m_Name: Nombrei6
+  m_Name: nom5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10812,7 +10812,7 @@ GameObject:
   - component: {fileID: 851093863}
   - component: {fileID: 851093862}
   m_Layer: 5
-  m_Name: Imagei23
+  m_Name: img22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10992,7 +10992,7 @@ GameObject:
   - component: {fileID: 858290737}
   - component: {fileID: 858290736}
   m_Layer: 5
-  m_Name: Nombrei19
+  m_Name: nom18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12067,7 +12067,7 @@ GameObject:
   - component: {fileID: 943109672}
   - component: {fileID: 943109671}
   m_Layer: 5
-  m_Name: Imagei1
+  m_Name: img0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12248,7 +12248,7 @@ GameObject:
   - component: {fileID: 961106411}
   - component: {fileID: 961106410}
   m_Layer: 5
-  m_Name: Imagei17
+  m_Name: img16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13481,7 +13481,7 @@ GameObject:
   - component: {fileID: 1100196569}
   - component: {fileID: 1100196568}
   m_Layer: 5
-  m_Name: Imagei25
+  m_Name: img24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13777,7 +13777,7 @@ GameObject:
   - component: {fileID: 1108656670}
   - component: {fileID: 1108656669}
   m_Layer: 5
-  m_Name: Imagei18
+  m_Name: img17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14467,7 +14467,7 @@ GameObject:
   - component: {fileID: 1140634822}
   - component: {fileID: 1140634821}
   m_Layer: 5
-  m_Name: Nombrei11
+  m_Name: nom10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14776,7 +14776,7 @@ GameObject:
   - component: {fileID: 1154915435}
   - component: {fileID: 1154915434}
   m_Layer: 5
-  m_Name: Imagei9
+  m_Name: img8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15429,7 +15429,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda11
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16372,7 +16372,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda12
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16758,7 +16758,7 @@ GameObject:
   - component: {fileID: 1259066870}
   - component: {fileID: 1259066869}
   m_Layer: 5
-  m_Name: Nombrei22
+  m_Name: nom21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16991,7 +16991,7 @@ GameObject:
   - component: {fileID: 1271382780}
   - component: {fileID: 1271382779}
   m_Layer: 5
-  m_Name: Nombrei16
+  m_Name: nom15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17445,7 +17445,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda19
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -17825,7 +17825,7 @@ GameObject:
   - component: {fileID: 1336465509}
   - component: {fileID: 1336465508}
   m_Layer: 5
-  m_Name: Nombrei25
+  m_Name: nom24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17980,7 +17980,7 @@ GameObject:
   - component: {fileID: 1346108791}
   - component: {fileID: 1346108790}
   m_Layer: 5
-  m_Name: Nombrei12
+  m_Name: nom11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18553,7 +18553,7 @@ GameObject:
   - component: {fileID: 1382737813}
   - component: {fileID: 1382737812}
   m_Layer: 5
-  m_Name: Imagei21
+  m_Name: img20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18751,6 +18751,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391833162}
+  m_CullTransparentMesh: 0
+--- !u!1 &1397235318
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1397235319}
+  - component: {fileID: 1397235321}
+  - component: {fileID: 1397235320}
+  m_Layer: 5
+  m_Name: texto_monedas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1397235319
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397235318}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1937040269}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 331, y: -319}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1397235320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397235318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1397235321
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1397235318}
   m_CullTransparentMesh: 0
 --- !u!1 &1401034215
 GameObject:
@@ -19059,7 +19138,7 @@ GameObject:
   - component: {fileID: 1407970916}
   - component: {fileID: 1407970915}
   m_Layer: 5
-  m_Name: Imagei6
+  m_Name: img5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19165,7 +19244,7 @@ GameObject:
   - component: {fileID: 1409779361}
   - component: {fileID: 1409779360}
   m_Layer: 5
-  m_Name: Imagei12
+  m_Name: img11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19316,7 +19395,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda23
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -19894,7 +19973,7 @@ GameObject:
   - component: {fileID: 1473271803}
   - component: {fileID: 1473271802}
   m_Layer: 5
-  m_Name: Nombrei23
+  m_Name: nom22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20182,7 +20261,7 @@ GameObject:
   - component: {fileID: 1488099814}
   - component: {fileID: 1488099813}
   m_Layer: 5
-  m_Name: Nombrei8
+  m_Name: nom7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20285,8 +20364,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000019073, y: -346}
-  m_SizeDelta: {x: 580.5, y: 124.2}
+  m_AnchoredPosition: {x: -0.000034332, y: -354}
+  m_SizeDelta: {x: 467, y: 124.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508085197
 MonoBehaviour:
@@ -20366,7 +20445,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 467068134}
-        m_MethodName: comprar
+        m_MethodName: intercambiar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20378,6 +20457,85 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1528380681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1528380682}
+  - component: {fileID: 1528380684}
+  - component: {fileID: 1528380683}
+  m_Layer: 5
+  m_Name: texto_bi
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1528380682
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528380681}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1937040269}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 331, y: -354}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1528380683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528380681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1528380684
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1528380681}
+  m_CullTransparentMesh: 0
 --- !u!1 &1528798280
 GameObject:
   m_ObjectHideFlags: 0
@@ -20496,7 +20654,7 @@ GameObject:
   - component: {fileID: 1533037868}
   - component: {fileID: 1533037867}
   m_Layer: 5
-  m_Name: Nombrei15
+  m_Name: nom14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20917,7 +21075,7 @@ GameObject:
   - component: {fileID: 1569725403}
   - component: {fileID: 1569725402}
   m_Layer: 5
-  m_Name: Nombrei17
+  m_Name: nom16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21042,7 +21200,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda6
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21369,7 +21527,7 @@ GameObject:
   - component: {fileID: 1635141530}
   - component: {fileID: 1635141529}
   m_Layer: 5
-  m_Name: Imagei14
+  m_Name: img13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21916,7 +22074,7 @@ GameObject:
   - component: {fileID: 1659064595}
   - component: {fileID: 1659064594}
   m_Layer: 5
-  m_Name: Imagei24
+  m_Name: img23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22100,7 +22258,7 @@ GameObject:
   - component: {fileID: 1672424740}
   - component: {fileID: 1672424739}
   m_Layer: 5
-  m_Name: Nombrei14
+  m_Name: nom13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22180,7 +22338,7 @@ GameObject:
   - component: {fileID: 1672520021}
   - component: {fileID: 1672520020}
   m_Layer: 5
-  m_Name: Imagei15
+  m_Name: img14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22610,7 +22768,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda17
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -23159,7 +23317,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda7
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -23920,7 +24078,7 @@ GameObject:
   - component: {fileID: 1780901598}
   - component: {fileID: 1780901597}
   m_Layer: 5
-  m_Name: Nombrei18
+  m_Name: nom17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24124,7 +24282,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda24
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -24628,7 +24786,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 881880332}
   m_Direction: 2
   m_Value: 0.99405855
-  m_Size: 0.10486354
+  m_Size: 0.10486355
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -24825,7 +24983,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda21
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -25275,7 +25433,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda18
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -25337,7 +25495,7 @@ GameObject:
   - component: {fileID: 1857699534}
   - component: {fileID: 1857699533}
   m_Layer: 5
-  m_Name: compratext
+  m_Name: intercambiotext
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25523,7 +25681,7 @@ GameObject:
   - component: {fileID: 1869835682}
   - component: {fileID: 1869835681}
   m_Layer: 5
-  m_Name: Imagei19
+  m_Name: img18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25734,7 +25892,7 @@ GameObject:
   - component: {fileID: 1881579215}
   - component: {fileID: 1881579214}
   m_Layer: 5
-  m_Name: Nombrei24
+  m_Name: nom23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25859,7 +26017,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda5
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -26080,7 +26238,7 @@ GameObject:
   - component: {fileID: 1910685629}
   - component: {fileID: 1910685628}
   m_Layer: 5
-  m_Name: Imagei11
+  m_Name: img10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26313,6 +26471,8 @@ RectTransform:
   - {fileID: 1508085196}
   - {fileID: 1340408432}
   - {fileID: 1106620551}
+  - {fileID: 1397235319}
+  - {fileID: 1528380682}
   m_Father: {fileID: 1479942553}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26840,7 +27000,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2114539383}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5189746
+  m_Size: 0.51897466
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -27205,7 +27365,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda15
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27528,7 +27688,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda14
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -27765,7 +27925,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda4
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -28023,7 +28183,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 467068134}
-          m_MethodName: celda0
+          m_MethodName: celda2
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -28465,8 +28625,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: mapainicial
+        - m_Target: {fileID: 467068134}
+          m_MethodName: Volver
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

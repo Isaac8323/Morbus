@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenarios/Almacen.unity
     guid: b73ccc726a658e343a61ee78f2bb54fe
+  - enabled: 1
+    path: Assets/Escenarios/Tienda.unity
+    guid: 89d54b49b6323134c9f4866eefda42ae
+  - enabled: 1
+    path: Assets/Escenarios/Santuario.unity
+    guid: 35fe54c032ccfee4593e691026776be0
   m_configObjects: {}

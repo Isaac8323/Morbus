@@ -10,7 +10,8 @@ public class Opciones_mapa : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Archivos archivo_mapa = GameObject.Find("Mapa_juego").GetComponent<Archivos>();
+        archivo_mapa.cargar_variables();
     }
 
     // Update is called once per frame
@@ -25,6 +26,10 @@ public class Opciones_mapa : MonoBehaviour
     public void Tutoriales()
     {
         SceneManager.LoadScene("Tutorial");
+    }
+    public void Santuario()
+    {
+        SceneManager.LoadScene("Santuario");
     }
     public void Tienda()
     {

@@ -167,7 +167,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -278,7 +278,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -537,7 +537,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -722,7 +722,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -833,7 +833,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -1074,10 +1074,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -2607.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &152560962
 CanvasRenderer:
@@ -1216,7 +1216,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -1307,10 +1307,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -2813.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &219728640
 CanvasRenderer:
@@ -1375,7 +1375,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -1466,10 +1466,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -3019.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &227975770
 CanvasRenderer:
@@ -1534,7 +1534,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -1793,7 +1793,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -2052,7 +2052,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -2143,10 +2143,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -4873.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &283306513
 CanvasRenderer:
@@ -2241,8 +2241,8 @@ GameObject:
   - component: {fileID: 310158396}
   - component: {fileID: 310158401}
   - component: {fileID: 310158400}
-  - component: {fileID: 310158397}
   - component: {fileID: 310158399}
+  - component: {fileID: 310158397}
   - component: {fileID: 310158398}
   m_Layer: 5
   m_Name: Santuario
@@ -2262,6 +2262,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1749775956}
   - {fileID: 1260120474}
   m_Father: {fileID: 1603248630}
   m_RootOrder: 0
@@ -2280,11 +2281,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 310158395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a53e2a9eb27244c4caf25e8396bee0ee, type: 3}
+  m_Script: {fileID: 11500000, guid: bf6d701d0506d794ba53f892d5199cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cargarformula: 
-  panel_elementos_seleccion: {fileID: 0}
+  empezar_buton: {fileID: 1260120473}
+  confirmacion: {fileID: 927586585}
 --- !u!114 &310158398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2303,7 +2304,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 310158397}
-          m_MethodName: desactivarpanel
+          m_MethodName: cerrar_paneles
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2341,14 +2342,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4a1f7de320406af4c88ab053223c2182, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2568,7 +2569,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -2679,7 +2680,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -2872,7 +2873,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -2963,10 +2964,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -4255.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &424433567
 CanvasRenderer:
@@ -3327,7 +3328,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -3492,10 +3493,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -3225.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &544970154
 CanvasRenderer:
@@ -3560,7 +3561,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -3873,10 +3874,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -4461.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &638464998
 CanvasRenderer:
@@ -3941,7 +3942,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -4007,6 +4008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 670806359}
   - component: {fileID: 670806361}
+  - component: {fileID: 670806360}
   m_Layer: 5
   m_Name: c1
   m_TagString: Untagged
@@ -4032,11 +4034,42 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: 70.04001}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
+--- !u!114 &670806360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670806358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 310158397}
+          m_MethodName: celda0
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!222 &670806361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4174,7 +4207,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -4285,7 +4318,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -4396,7 +4429,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -4464,6 +4497,7 @@ GameObject:
   - component: {fileID: 700587588}
   - component: {fileID: 700587587}
   - component: {fileID: 700587586}
+  - component: {fileID: 700587589}
   m_Layer: 0
   m_Name: panel
   m_TagString: Untagged
@@ -4541,6 +4575,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700587584}
   m_CullTransparentMesh: 0
+--- !u!114 &700587589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700587584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 310158397}
+          m_MethodName: cerrar_confirmacion
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &703667275
 GameObject:
   m_ObjectHideFlags: 0
@@ -4596,7 +4661,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -4687,7 +4752,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -882.30005, y: 503.8}
+  m_AnchoredPosition: {x: -882.2999, y: 503.8}
   m_SizeDelta: {x: 100.4, y: 42.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &720236961
@@ -4707,8 +4772,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
-          m_MethodName: mapainicial
+        - m_Target: {fileID: 310158397}
+          m_MethodName: voler
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4734,7 +4799,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4800,10 +4865,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -1165.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &729442126
 CanvasRenderer:
@@ -4868,7 +4933,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -4959,10 +5024,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -1371.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &760776171
 CanvasRenderer:
@@ -4972,6 +5037,164 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760776169}
   m_CullTransparentMesh: 1
+--- !u!1 &785518208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 785518209}
+  - component: {fileID: 785518211}
+  - component: {fileID: 785518210}
+  m_Layer: 5
+  m_Name: bismuto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &785518209
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785518208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1603248630}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -852.4999, y: 448.4}
+  m_SizeDelta: {x: 160, y: 68.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &785518210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785518208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 50
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &785518211
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785518208}
+  m_CullTransparentMesh: 0
+--- !u!1 &786860499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 786860500}
+  - component: {fileID: 786860502}
+  - component: {fileID: 786860501}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &786860500
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786860499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1749775956}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &786860501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786860499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 80
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Comenzar
+--- !u!222 &786860502
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786860499}
+  m_CullTransparentMesh: 0
 --- !u!1 &789859646
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,10 +5412,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -3431.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &802186482
 CanvasRenderer:
@@ -5311,10 +5534,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -2195.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &864997975
 CanvasRenderer:
@@ -5359,10 +5582,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -2401.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &867080287
 CanvasRenderer:
@@ -5407,10 +5630,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -3843.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &885171393
 CanvasRenderer:
@@ -5549,7 +5772,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -5660,7 +5883,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -5728,6 +5951,7 @@ GameObject:
   - component: {fileID: 927586589}
   - component: {fileID: 927586588}
   - component: {fileID: 927586587}
+  - component: {fileID: 927586590}
   m_Layer: 5
   m_Name: "Confirmaci\xF3n"
   m_TagString: Untagged
@@ -5755,7 +5979,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00036621094}
+  m_AnchoredPosition: {x: 0, y: 0.00024414062}
   m_SizeDelta: {x: -1046.4001, y: -204.59631}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &927586587
@@ -5816,6 +6040,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 927586585}
   m_CullTransparentMesh: 0
+--- !u!114 &927586590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927586585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &987835045
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,7 +6112,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -5937,6 +6178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 991691889}
   - component: {fileID: 991691890}
+  - component: {fileID: 991691891}
   m_Layer: 5
   m_Name: c5
   m_TagString: Untagged
@@ -5962,10 +6204,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -753.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &991691890
 CanvasRenderer:
@@ -5975,6 +6217,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991691888}
   m_CullTransparentMesh: 1
+--- !u!114 &991691891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991691888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 310158397}
+          m_MethodName: celda4
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1003367349
 GameObject:
   m_ObjectHideFlags: 0
@@ -6030,7 +6303,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -6215,7 +6488,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -6306,10 +6579,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -4667.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1044135789
 CanvasRenderer:
@@ -6448,7 +6721,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -6884,6 +7157,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1114196877}
   - component: {fileID: 1114196878}
+  - component: {fileID: 1114196879}
   m_Layer: 5
   m_Name: c2
   m_TagString: Untagged
@@ -6909,10 +7183,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -135.95999}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1114196878
 CanvasRenderer:
@@ -6922,6 +7196,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114196876}
   m_CullTransparentMesh: 1
+--- !u!114 &1114196879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114196876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 310158397}
+          m_MethodName: celda1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1117433589
 GameObject:
   m_ObjectHideFlags: 0
@@ -7051,7 +7356,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -7162,7 +7467,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -7229,13 +7534,15 @@ GameObject:
   - component: {fileID: 1260120474}
   - component: {fileID: 1260120476}
   - component: {fileID: 1260120475}
+  - component: {fileID: 1260120478}
+  - component: {fileID: 1260120477}
   m_Layer: 0
   m_Name: panel_compuestos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1260120474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7249,7 +7556,7 @@ RectTransform:
   m_Children:
   - {fileID: 138357733}
   m_Father: {fileID: 310158396}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7293,6 +7600,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1260120473}
   m_CullTransparentMesh: 0
+--- !u!114 &1260120477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260120473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!223 &1260120478
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260120473}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1260969170
 GameObject:
   m_ObjectHideFlags: 0
@@ -7328,10 +7673,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -1783.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1260969172
 CanvasRenderer:
@@ -7652,10 +7997,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -1989.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1307622881
 CanvasRenderer:
@@ -7720,7 +8065,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -7885,10 +8230,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -1577.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1338501962
 CanvasRenderer:
@@ -7953,7 +8298,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -8064,7 +8409,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -8364,7 +8709,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -8475,7 +8820,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -8646,7 +8991,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1457241990}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 310158397}
+        m_MethodName: proceder
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1476980326
@@ -8758,10 +9114,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -959.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1478756181
 CanvasRenderer:
@@ -8900,7 +9256,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -9040,6 +9396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1559941404}
   - component: {fileID: 1559941405}
+  - component: {fileID: 1559941406}
   m_Layer: 5
   m_Name: c3
   m_TagString: Untagged
@@ -9065,10 +9422,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -341.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1559941405
 CanvasRenderer:
@@ -9078,6 +9435,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559941403}
   m_CullTransparentMesh: 1
+--- !u!114 &1559941406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559941403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 310158397}
+          m_MethodName: celda2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1577609116
 GameObject:
   m_ObjectHideFlags: 0
@@ -9133,7 +9521,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -9244,7 +9632,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -9310,6 +9698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592857323}
   - component: {fileID: 1592857324}
+  - component: {fileID: 1592857325}
   m_Layer: 5
   m_Name: c4
   m_TagString: Untagged
@@ -9335,10 +9724,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -547.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1592857324
 CanvasRenderer:
@@ -9348,6 +9737,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592857322}
   m_CullTransparentMesh: 1
+--- !u!114 &1592857325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592857322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 310158397}
+          m_MethodName: celda3
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1603248626
 GameObject:
   m_ObjectHideFlags: 0
@@ -9441,6 +9861,7 @@ RectTransform:
   - {fileID: 310158396}
   - {fileID: 927586586}
   - {fileID: 720236960}
+  - {fileID: 785518209}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9578,7 +9999,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -9755,7 +10176,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -9940,7 +10361,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -9995,6 +10416,135 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731758751}
+  m_CullTransparentMesh: 0
+--- !u!1 &1749775955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749775956}
+  - component: {fileID: 1749775959}
+  - component: {fileID: 1749775958}
+  - component: {fileID: 1749775957}
+  m_Layer: 5
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1749775956
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749775955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 786860500}
+  m_Father: {fileID: 310158396}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.5, y: 5.2}
+  m_SizeDelta: {x: 360.5, y: 66}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1749775957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749775955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1749775958}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 310158397}
+        m_MethodName: empezar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1749775958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749775955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1749775959
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749775955}
   m_CullTransparentMesh: 0
 --- !u!1 &1779352367
 GameObject:
@@ -10125,7 +10675,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -10216,10 +10766,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -4049.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1782163301
 CanvasRenderer:
@@ -10358,7 +10908,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -10691,7 +11241,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -10802,7 +11352,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -10992,7 +11542,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -11177,7 +11727,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -11288,7 +11838,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -11379,10 +11929,10 @@ RectTransform:
   m_Father: {fileID: 2084881842}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 1.5, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3312, y: -3637.96}
+  m_SizeDelta: {x: 828, y: 206}
   m_Pivot: {x: 4, y: 1.34}
 --- !u!222 &1973416625
 CanvasRenderer:
@@ -11447,7 +11997,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -11535,8 +12085,8 @@ RectTransform:
   m_Father: {fileID: 1408623890}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.7180855}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -1.26, y: 0}
   m_SizeDelta: {x: 22.52, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -11780,7 +12330,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
@@ -12124,7 +12674,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 310158397}
+        - m_Target: {fileID: 0}
           m_MethodName: ElementrosAdquirido_Celda1
           m_Mode: 1
           m_Arguments:
