@@ -19,6 +19,7 @@ public class Botones_almacen : MonoBehaviour
     BinaryFormatter fb;
     FileStream Informacion;
     DatosdeJuego Datos;
+    String named;
     //}
     //gameobject del buscador y recursos del buscador{
     public InputField serch;
@@ -39,15 +40,13 @@ public class Botones_almacen : MonoBehaviour
 //}
     //descripciones{
     public GameObject paneldescrip;
-    String[,] verificadores = new String[25,3];
+    String[,] verificadores = new String[25,4];
 //}
     void Start()
     {
         //     AdminMYSQL adminmysql = GameObject.Find("Almacen").GetComponent<AdminMYSQL>();
         //    conn1 = adminmysql.ConectarConServidorBaseDatos();
         Archivos archivo_almacen= GameObject.Find("Almacen").GetComponent<Archivos>();
-        archivo_almacen.Borrar();
-        archivo_almacen.Crear();
         archivo_almacen.Cargar_Almacen(Usuario,Personajes);
         personajes();
     }
@@ -244,7 +243,7 @@ public class Botones_almacen : MonoBehaviour
     //Personajes:
     public void limpiarverificadores()
     {
-        for (int rep = 0; rep < 3; rep++)
+        for (int rep = 0; rep < 4; rep++)
         {
             for (int i = 0; i < 25; i++)
             {
@@ -269,6 +268,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[i, 0] =  Personajes[i, 0];
                     verificadores[i, 1] = Personajes[i, 3];
                     verificadores[i, 2] = Personajes[i, 0];
+                    verificadores[i, 3] = "g" + Personajes[i, 0];
                 }
                 else{
                 UIImage = GameObject.Find("Image" + i.ToString()).GetComponentInChildren<Image>();
@@ -292,7 +292,8 @@ public class Botones_almacen : MonoBehaviour
                     nombre.text = Personajes[i, 0];
                     verificadores[i, 0] = Personajes[i, 0];
                     verificadores[i, 1] = Personajes[i, 3];
-                    verificadores[i, 2] = Personajes[i, 0];  
+                    verificadores[i, 2] = Personajes[i, 0];
+                    verificadores[i, 3] = "g" + Personajes[i, 0];
                 }
                 else
                 {
@@ -353,6 +354,7 @@ public class Botones_almacen : MonoBehaviour
                 verificadores[i, 0] = Personajes[i, 0];
                 verificadores[i, 1] = Personajes[i, 3];
                 verificadores[i, 2] = Personajes[i, 0];
+                verificadores[i, 3] = "g" + Personajes[i, 0];
             }
             else
             {
@@ -388,6 +390,7 @@ public class Botones_almacen : MonoBehaviour
                 verificadores[position, 0] = Personajes[i, 0];
                 verificadores[position, 1] = Personajes[i, 3];
                 verificadores[position, 2] = Personajes[i, 0];
+                verificadores[position, 3] = "g" + Personajes[i, 0];
                
             }
             else
@@ -426,6 +429,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[position, 0] = Personajes[i, 0];
                     verificadores[position, 1] = Personajes[i, 3];
                     verificadores[position, 2] = Personajes[i, 0];
+                    verificadores[position, 3] = "g" + Personajes[i, 0];
                 }
                 else
                 {
@@ -451,6 +455,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[position, 0] = Personajes[i, 0];
                     verificadores[position, 1] = Personajes[i, 3];
                     verificadores[position, 2] = Personajes[i, 0];
+                    verificadores[position, 3] = "g" + Personajes[i, 0];
                 }
                 else
                 {
@@ -492,6 +497,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[pos, 0] = Personajes[i, 0];
                     verificadores[pos, 1] = Personajes[i, 3];
                     verificadores[pos, 2] = Personajes[i, 0];
+
                 }
                 else
                 {
@@ -512,12 +518,20 @@ public class Botones_almacen : MonoBehaviour
     //
     //onclickceldas
     public void celda0() {
-        paneldescrip.SetActive(true);
-        if (verificadores[0, 0] == "")
+        if (!verificadores[0, 3].Equals(""))
+        {
+            named = verificadores[0, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[0, 0] == "" || named.Equals("g"))
         {
         }
         else
         {
+            paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[0, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
@@ -532,7 +546,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda1()
     {
-        if (verificadores[1, 0] == "")
+        if (!verificadores[1, 3].Equals(""))
+        {
+            named = verificadores[1, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[1, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -548,7 +570,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda2()
     {
-        if (verificadores[2, 0] == "")
+        if (!verificadores[2, 3].Equals(""))
+        {
+            named = verificadores[2, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[2, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -564,7 +594,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda3()
     {
-        if (verificadores[3, 0] == "")
+        if (!verificadores[3, 3].Equals(""))
+        {
+            named = verificadores[3, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[3, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -580,7 +618,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda4()
     {
-        if (verificadores[4, 0] == "")
+        if (!verificadores[4, 3].Equals(""))
+        {
+            named = verificadores[4, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[4, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -596,7 +642,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda5()
     {
-        if (verificadores[5, 0] == "")
+        if (!verificadores[5, 3].Equals(""))
+        {
+            named = verificadores[5, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[5, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -612,7 +666,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda6()
     {
-        if (verificadores[6, 0] == "")
+        if (!verificadores[6, 3].Equals(""))
+        {
+            named = verificadores[6, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[6, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -628,7 +690,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda7()
     {
-        if (verificadores[7, 0] == "")
+        if (!verificadores[7, 3].Equals(""))
+        {
+            named = verificadores[7, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[7, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -644,7 +714,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda8()
     {
-        if (verificadores[8, 0] == "")
+        if (!verificadores[8, 3].Equals(""))
+        {
+            named = verificadores[8, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[8, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -660,7 +738,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda9()
     {
-        if (verificadores[9, 0] == "")
+        if (!verificadores[9, 3].Equals(""))
+        {
+            named = verificadores[9, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[9, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -676,7 +762,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda10()
     {
-        if (verificadores[10, 0] == "")
+        if (!verificadores[10, 3].Equals(""))
+        {
+            named = verificadores[10, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[10, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -692,7 +786,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda11()
     {
-        if (verificadores[11, 0] == "")
+        if (!verificadores[11, 3].Equals(""))
+        {
+            named = verificadores[11, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[11, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -708,7 +810,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda12()
     {
-        if (verificadores[12, 0] == "")
+        if (!verificadores[12, 3].Equals(""))
+        {
+            named = verificadores[12, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[12, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -724,7 +834,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda13()
     {
-        if (verificadores[13, 0] == "")
+        if (!verificadores[13, 3].Equals(""))
+        {
+            named = verificadores[13, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[13, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -740,7 +858,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda14()
     {
-        if (verificadores[14, 0] == "")
+        if (!verificadores[14, 3].Equals(""))
+        {
+            named = verificadores[14, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[14, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -756,7 +882,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda15()
     {
-        if (verificadores[15, 0] == "")
+        if (!verificadores[15, 3].Equals(""))
+        {
+            named = verificadores[15, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[15, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -772,7 +906,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda16()
     {
-        if (verificadores[16, 0] == "")
+        if (!verificadores[16, 3].Equals(""))
+        {
+            named = verificadores[16, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[16, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -788,7 +930,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda17()
     {
-        if (verificadores[17, 0] == "")
+        if (!verificadores[17, 3].Equals(""))
+        {
+            named = verificadores[17, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[17, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -804,7 +954,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda18()
     {
-        if (verificadores[18, 0] == "")
+        if (!verificadores[18, 3].Equals(""))
+        {
+            named = verificadores[18, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[18, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -820,7 +978,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda19()
     {
-        if (verificadores[19, 0] == "")
+        if (!verificadores[19, 3].Equals(""))
+        {
+            named = verificadores[19, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[19, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -836,7 +1002,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda20()
     {
-        if (verificadores[20, 0] == "")
+        if (!verificadores[20, 3].Equals(""))
+        {
+            named = verificadores[20, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[20, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -852,7 +1026,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda21()
     {
-        if (verificadores[21, 0] == "")
+        if (!verificadores[21, 3].Equals(""))
+        {
+            named = verificadores[21, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[21, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -868,7 +1050,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda22()
     {
-        if (verificadores[22, 0] == "")
+        if (!verificadores[22, 3].Equals(""))
+        {
+            named = verificadores[22, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[22, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -884,7 +1074,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda23()
     {
-        if (verificadores[23, 0] == "")
+        if (!verificadores[23, 3].Equals(""))
+        {
+            named = verificadores[23, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[23, 0] == "" || named.Equals("g"))
         {
         }
         else
@@ -900,7 +1098,15 @@ public class Botones_almacen : MonoBehaviour
     }
     public void celda24()
     {
-        if (verificadores[24, 0] == "")
+        if (!verificadores[24, 3].Equals(""))
+        {
+            named = verificadores[24, 3].Substring(0, 1);
+        }
+        else
+        {
+            named = "";
+        }
+        if (verificadores[24, 0] == "" || named.Equals("g"))
         {
         }
         else

@@ -20,6 +20,9 @@ public class Santuario_op : MonoBehaviour
   String[,] Elementos = new String[25, 5];
   Archivos archivo_santuario;
   String bis,bis1;
+  public Text Tiempotext;
+  public float tiemp ;
+    int startTime;
     public Animator anim;
     
     void Start()
@@ -40,29 +43,46 @@ public class Santuario_op : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (startTime == 1)
+        {
+                tiemp -= Time.deltaTime;
+                Tiempotext.text = "" + tiemp.ToString("f0");
+                if (tiemp <= 1)
+                {
+                    startTime = 0;
+                    Tiempotext.text = "";
+                    tiemp = 30;
+                    anim.SetBool("isTransacting", false);
+                }
+        }
     }
     public void empezar()
-    {        
-        int x=1;
-        empezar_buton.SetActive(true);
-        for (int i = 20; i < 25; i++)
+    {
+        if (startTime != 1)
         {
-            if (!Personajes[i, 2].Equals("0"))
+            int x = 1;
+            empezar_buton.SetActive(true);
+            for (int i = 20; i < 25; i++)
             {
-                UIImage = GameObject.Find("imgcomp" + x.ToString()).GetComponentInChildren<Image>();
-                UIImage.sprite = Resources.Load<Sprite>(Personajes[i,0]);
-                UITexto = GameObject.Find("txtcompuesto" + x.ToString()).GetComponentInChildren<Text>();
-                UITexto.text = Personajes[i, 0];
-                UITexto = GameObject.Find("txtcant" + x.ToString()).GetComponentInChildren<Text>();
-                UITexto.text = Personajes[i, 2]+" unidades";
-                x++;
+                if (!Personajes[i, 2].Equals("0"))
+                {
+                    UIImage = GameObject.Find("imgcomp" + x.ToString()).GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>(Personajes[i, 0]);
+                    UITexto = GameObject.Find("txtcompuesto" + x.ToString()).GetComponentInChildren<Text>();
+                    UITexto.text = Personajes[i, 0];
+                    UITexto = GameObject.Find("txtcant" + x.ToString()).GetComponentInChildren<Text>();
+                    UITexto.text = Personajes[i, 2] + " unidades";
+                    x++;
+                }
             }
         }
     }
     public void voler()
     {
-        SceneManager.LoadScene("Mapajuego");
+        if (startTime != 1)
+        {
+            SceneManager.LoadScene("Mapajuego");
+        }
     }
     public void cerrar_paneles()
     {
@@ -113,6 +133,10 @@ public class Santuario_op : MonoBehaviour
                 i = 25;
             }
         }
+        startTime = 1;
+    }
+    public void tim()
+    {
     }
     public void celda0()
     {

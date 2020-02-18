@@ -21,6 +21,7 @@ public class Tienda_opciones : MonoBehaviour
     String[,] Personajes_que_tengo = new String[25,2];
     String leve,lv,nombre_intercambio;
     String  moneda;
+    String bis, bis1;
     Archivos archivo_tienda;
     int pestañas = 0,nivel=0;
     // Start is called before the first frame update
@@ -29,10 +30,13 @@ public class Tienda_opciones : MonoBehaviour
         
        archivo_tienda  = GameObject.Find("Tienda").GetComponent<Archivos>();
         archivo_tienda.Cargar_Tienda(Personajes, Elementos);
+        bis = archivo_tienda.carga_bismuto(bis1);
         Debug.Log(Personajes[0, 2]);
         UITexto = GameObject.Find("cantidad").GetComponentInChildren<Text>();
         UITexto.text = archivo_tienda.carga_monedas(moneda);
         moneda = UITexto.text;
+        UITexto = GameObject.Find("cantidad_bi").GetComponentInChildren<Text>();
+        UITexto.text = bis;
         String leve = archivo_tienda.carga_level(lv);
         nivel = Int32.Parse(leve);
         personajes();
@@ -192,10 +196,13 @@ public class Tienda_opciones : MonoBehaviour
         for(int i=0; i<25; i++){
             if(nombre_intercambio.Equals(Personajes[i,0])){
                 int cant =Int32.Parse(Personajes[i, 2]);
+                int cantbi;
                 cant = cant - 1;
                 Personajes[i, 2] = cant.ToString();
                 UITexto = GameObject.Find("cantidad").GetComponentInChildren<Text>();
                 moneda = UITexto.text;
+                UITexto = GameObject.Find("cantidad_bi").GetComponentInChildren<Text>();
+                bis = UITexto.text;
                 if(Personajes[i,1].Equals("easy")){
                     cant = Int32.Parse(moneda);
                     cant = cant + 50;
@@ -211,8 +218,13 @@ public class Tienda_opciones : MonoBehaviour
                 if(Personajes[i,1].Equals("Hard")){
                     cant = Int32.Parse(moneda);
                     cant = cant + 500;
+                    cantbi = Int32.Parse(bis);
+                    cantbi = cantbi + 1;
                     UITexto = GameObject.Find("cantidad").GetComponentInChildren<Text>();
                     UITexto.text = cant.ToString();
+                    UITexto = GameObject.Find("cantidad_bi").GetComponentInChildren<Text>();
+                    UITexto.text = cantbi.ToString();
+                    variables_indestructibles.bismuto = cantbi.ToString();
                 }
                 variables_indestructibles.monedas[0] = cant.ToString();
                 variables_indestructibles.Personajes[i, 2] = Personajes[i, 2];

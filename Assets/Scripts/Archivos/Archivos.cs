@@ -11,6 +11,7 @@ public class Archivos : MonoBehaviour
     DatosdeJuego Datos;
     String[] cantidades_formulas = new String[25];
     String[] cantidades_elementos = new String[11];
+    int prueba;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +39,11 @@ public class Archivos : MonoBehaviour
             for (int i = 0; i < 25; i++)
             {
                 variables_indestructibles.Personajes[i, x] = Datos.Personajes[i, x];
+                if (variables_indestructibles.Personajes[i, x] == null)
+                {
+                    prueba = 1;
+                    Debug.Log("Personaje "+x.ToString() + " fila " + i.ToString());
+                }
             }
         }
 
@@ -46,7 +52,21 @@ public class Archivos : MonoBehaviour
             for (int i = 0; i < 11; i++)
             {
                 variables_indestructibles.Elementos[i, x] = Datos.Elementos[i, x];
+                if (variables_indestructibles.Elementos[i, x] == null)
+                {
+                    prueba = 1;
+                    Debug.Log("Elemento "+x.ToString() + " fila " + i.ToString());
+                    Debug.Log(Datos.Elementos[i, x]);
+                }
             }
+        }
+        Debug.Log("entre2");
+        Debug.Log(Datos.Personajes[19, 2]);
+        Informacion.Close();
+        if(prueba==1){
+            prueba = 0;
+            Borrar();
+            Crear();
         }
     }
     public void guardar_variables()
@@ -230,19 +250,23 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[4, 5] = "50";
             Datos.Personajes[5, 5] = "250";
             Datos.Personajes[6, 5] = "500 1Bi";
+            for (int i = 7; i <= 24; i++)
+            {
+                Datos.Personajes[i, 5] = "";
+            }
 
-            //Nombre Elemento
+                //Nombre Elemento
             Datos.Elementos[0, 0] = "Carbono";
             Datos.Elementos[1, 0] = "Hidrógeno";
             Datos.Elementos[2, 0] = "Oxígeno";
             Datos.Elementos[3, 0] = "Nitrógeno";
+            Datos.Elementos[4, 0] = "Boro";
             Datos.Elementos[5, 0] = "Azufre";
             Datos.Elementos[6, 0] = "Radio";
             Datos.Elementos[7, 0] = "Flúor";
             Datos.Elementos[8, 0] = "Cloro";
             Datos.Elementos[9, 0] = "Cobalto";
             Datos.Elementos[10, 0] = "Fósforo";
-            Datos.Elementos[4, 0] = "Boro";
             //Cantidad Elemento
             Datos.Elementos[0, 1] = "100";
             Datos.Elementos[1, 1] = "100";
@@ -254,7 +278,7 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[7, 1] = "100";
             Datos.Elementos[8, 1] = "100";
             Datos.Elementos[9, 1] = "100";
-            Datos.Elementos[10, 4]= "100";
+            Datos.Elementos[10, 1]= "100";
             //Descripcion Elemento
             Datos.Elementos[0, 2] = "elemntin1";
             Datos.Elementos[1, 2] = "elemntin2";
@@ -266,7 +290,7 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[7, 2] = "elemntin8";
             Datos.Elementos[8, 2] = "elemntin9";
             Datos.Elementos[9, 2] = "elemntin10";
-            Datos.Elementos[10, 4] = "elementin11";
+            Datos.Elementos[10, 2] = "elementin11";
             //Costo elemento
             Datos.Elementos[0, 3] = "100";
             Datos.Elementos[1, 3] = "100";
