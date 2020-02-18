@@ -26,6 +26,7 @@ public class botones_laboratorio : MonoBehaviour
     int tefaltamas = 0, tesobran = 0;
     int[] elemento = new int[11];
     int[] conjunto = new int[25];
+    string dest;
     Archivos archivo_almacen;
     // Start is called before the first frame update
     void Start()
@@ -80,7 +81,15 @@ public class botones_laboratorio : MonoBehaviour
                     add = GameObject.Find("textnombre_destino" + i.ToString()).GetComponentInChildren<Text>();
                     add.text = celdas_elementos_adquiridos.text;
                     cantidad_panel_seleccionados = GameObject.Find("txtcantidad_destino" + i.ToString()).GetComponentInChildren<Text>();
-                    sumapanelseleccionados = Int16.Parse(cantidad_panel_seleccionados.text);
+                    if (cantidad_panel_seleccionados.text.Equals(""))
+                    {
+                        dest = "0";
+                    }
+                    else
+                    {
+                        dest = cantidad_panel_seleccionados.text;
+                    }
+                    sumapanelseleccionados = Int16.Parse(dest);
                     sumapanelseleccionados++;
                     cantidad_panel_seleccionados.text = sumapanelseleccionados.ToString();
                     for (; busqueda < 11; busqueda++)
@@ -2648,6 +2657,10 @@ public class botones_laboratorio : MonoBehaviour
                 }
             }
         }
+    }
+    public void Mapa()
+    {
+        SceneManager.LoadScene("Mapajuego");
     }
 }
 
