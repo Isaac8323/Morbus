@@ -11,6 +11,7 @@ public class Dialog_manager : MonoBehaviour
     Queue<string> sentences; //Listado de oraciones que cambia constantemente
 
     public GameObject panelDialogo; //Espacio en donde se mostrará el texto 
+    public GameObject clara;
     public TextMeshProUGUI displayText; //Texto que representará el conjunto de oraciones
     string activeSentence; //Valor de la oración actual
     public float typingSpeed; //rapidez de desplazamiento de texto
@@ -71,6 +72,15 @@ public class Dialog_manager : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && displayText.text == activeSentence) //Detecta el clic izquierdo del ratón y verifica que la oración anterior haya terminado
         {            
             DisplayNextSentence();
+            if (cont == 4)
+            {
+                Debug.Log("Aquí aparece la flecha");
+
+            }
+            if (cont == 6)
+            {
+                Debug.Log("Aquí desaparece");
+            }
             if (cont < 15)
             {
                 cont++;

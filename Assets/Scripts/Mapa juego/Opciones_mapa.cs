@@ -49,6 +49,10 @@ public class Opciones_mapa : MonoBehaviour
     {
         SceneManager.LoadScene("Laboratorio");
     }
+    public void Centro()
+    {
+        SceneManager.LoadScene("CentroEntrenamiento");
+    }
     public void Salir()
     {
         Application.Quit();
