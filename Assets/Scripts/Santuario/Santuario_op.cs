@@ -28,16 +28,12 @@ public class Santuario_op : MonoBehaviour
     void Start()
     {
         archivo_santuario = GameObject.Find("Santuario").GetComponent<Archivos>();
-//   archivo_santuario.Borrar();
-  //      archivo_santuario.Crear();
         archivo_santuario.Cargar_Tienda(Personajes, Elementos);
         bis = archivo_santuario.carga_bismuto(bis1);
         UITexto = GameObject.Find("bismuto").GetComponentInChildren<Text>();
         UITexto.text = bis+ " Bi";
         Debug.Log("entre");
         Debug.Log(Personajes[19, 2]);
-        //var videoPlayer = gameObject.AddComponent<UnityEngine.Video.VideoPlayer>();
-        //videoPlayer.Play();
     }
 
     // Update is called once per frame

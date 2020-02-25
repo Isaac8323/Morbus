@@ -375,8 +375,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1148552524}
   m_HandleRect: {fileID: 1148552523}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.2819144
+  m_Value: 0.99971014
+  m_Size: 0.17901127
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2767,8 +2767,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1662534227}
-          m_MethodName: Volver
+        - m_Target: {fileID: 1662534233}
+          m_MethodName: mapa
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3387,7 +3387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 2
 --- !u!222 &504813609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3673,8 +3673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000038147, y: -1173.6749}
-  m_SizeDelta: {x: 826.4, y: 3268.9}
+  m_AnchoredPosition: {x: 0.0000038147, y: -2112}
+  m_SizeDelta: {x: 826, y: 5148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &581457381
 MonoBehaviour:
@@ -6761,7 +6761,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1662534233}
           m_MethodName: celda0
           m_Mode: 1
           m_Arguments:
@@ -7872,7 +7872,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1662534227}
+        - m_Target: {fileID: 0}
           m_MethodName: Volver
           m_Mode: 1
           m_Arguments:
@@ -9194,8 +9194,8 @@ GameObject:
   - component: {fileID: 1662534231}
   - component: {fileID: 1662534230}
   - component: {fileID: 1662534229}
-  - component: {fileID: 1662534227}
   - component: {fileID: 1662534228}
+  - component: {fileID: 1662534233}
   m_Layer: 5
   m_Name: Tienda
   m_TagString: Untagged
@@ -9203,24 +9203,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1662534227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1662534226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be152fbed5df1b148af4970f0669e072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paneldescrip: {fileID: 0}
-  compra: {fileID: 0}
-  desbloquear: {fileID: 0}
-  tienda: {fileID: 0}
-  cuadro_imagen: {fileID: 0}
-  intercambiopanel: {fileID: 0}
 --- !u!114 &1662534228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9250,7 +9232,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1662534227}
+        - m_Target: {fileID: 0}
           m_MethodName: cerrarpanel
           m_Mode: 1
           m_Arguments:
@@ -9322,6 +9304,19 @@ RectTransform:
   m_AnchoredPosition: {x: -0.00005722, y: 0.000058996}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1662534233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662534226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da409f4d4f6d5fe43b4e37479bd07db8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel_confirmar: {fileID: 1533478843}
 --- !u!1 &1674837396
 GameObject:
   m_ObjectHideFlags: 0

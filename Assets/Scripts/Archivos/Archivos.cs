@@ -34,7 +34,7 @@ public class Archivos : MonoBehaviour
         variables_indestructibles.monedas[0] = Datos.monedas[0];
         variables_indestructibles.level[0] = Datos.level[0];
         variables_indestructibles.bismuto = Datos.bismuto;
-        for (int x = 0; x < 6; x++)
+        for (int x = 0; x < 7; x++)
         {
             for (int i = 0; i < 25; i++)
             {
@@ -254,7 +254,32 @@ public class Archivos : MonoBehaviour
             {
                 Datos.Personajes[i, 5] = "";
             }
-
+            //Numero de entrenamiento 
+            Datos.Personajes[0, 6] = "1";
+            Datos.Personajes[1, 6] = "1";
+            Datos.Personajes[2, 6] = "1";
+            Datos.Personajes[3, 6] = "1";
+            Datos.Personajes[4, 6] = "1";
+            Datos.Personajes[5, 6] = "1";
+            Datos.Personajes[6, 6] = "1";
+            Datos.Personajes[7, 6] = "1";
+            Datos.Personajes[8, 6] = "1";
+            Datos.Personajes[9, 6] = "1";
+            Datos.Personajes[10, 6] = "1";
+            Datos.Personajes[11, 6] = "1";
+            Datos.Personajes[12, 6] = "1";
+            Datos.Personajes[13, 6] = "1";
+            Datos.Personajes[14, 6] = "1";
+            Datos.Personajes[15, 6] = "1";
+            Datos.Personajes[16, 6] = "1";
+            Datos.Personajes[17, 6] = "1";
+            Datos.Personajes[18, 6] = "1";
+            Datos.Personajes[19, 6] = "1";
+            Datos.Personajes[20, 6] = "1";
+            Datos.Personajes[21, 6] = "1";
+            Datos.Personajes[22, 6] = "1";
+            Datos.Personajes[23, 6] = "1";
+            Datos.Personajes[24, 6] = "1";
                 //Nombre Elemento
             Datos.Elementos[0, 0] = "Carbono";
             Datos.Elementos[1, 0] = "Hidrógeno";
@@ -339,7 +364,7 @@ public class Archivos : MonoBehaviour
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             Debug.Log(Application.persistentDataPath);
 
-            for (int x = 0; x < 6; x++)
+            for (int x = 0; x < 7; x++)
             {
                 for (int i = 0; i < 25; i++)
                 {
@@ -463,7 +488,7 @@ class DatosdeJuego : System.Object
     public String Usuario;
     public String [] level = new String [1];
     public String [] monedas = new String [1];
-    public String [,] Personajes = new String[25, 6];
+    public String [,] Personajes = new String[25, 7];
     public String[,] Elementos = new String[11, 5];
     public String bismuto;
 }

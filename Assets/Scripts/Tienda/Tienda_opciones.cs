@@ -16,7 +16,7 @@ public class Tienda_opciones : MonoBehaviour
     public GameObject paneldescrip,compra,desbloquear, tienda,cuadro_imagen, intercambiopanel;
     Image UIImage,Imagepanel;
     Text UITexto, titulotext;
-    String[,] Personajes = new String[25, 6];
+    String[,] Personajes = new String[25, 7];
     String[,] Elementos= new String[25, 5];
     String[,] Personajes_que_tengo = new String[25,2];
     String leve,lv,nombre_intercambio;
