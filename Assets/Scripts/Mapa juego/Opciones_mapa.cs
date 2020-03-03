@@ -13,7 +13,7 @@ using System.Data;
 public class Opciones_mapa : MonoBehaviour
 {
     // Start is called before the first frame update
-    String[,] Personajes = new String[25, 6];
+    String[,] Personajes = new String[25, 7];
     String[,] Elementos = new String[25, 5];
     void Start()
     {
@@ -21,7 +21,7 @@ public class Opciones_mapa : MonoBehaviour
         archivo_mapa.cargar_variables();
         archivo_mapa.Cargar_Tienda(Personajes, Elementos);
         Debug.Log("entre");
-        Debug.Log(Personajes[19, 2]);
+        Debug.Log(Personajes[0, 6]);
     }
 
     // Update is called once per frame

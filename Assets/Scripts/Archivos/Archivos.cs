@@ -79,7 +79,7 @@ public class Archivos : MonoBehaviour
         Datos.monedas[0]= variables_indestructibles.monedas[0] ;
         Datos.level[0] =variables_indestructibles.level[0] ;
       Datos.bismuto=  variables_indestructibles.bismuto ;
-        for (int x = 0; x < 6; x++)
+        for (int x = 0; x < 7; x++)
         {
             for (int i = 0; i < 25; i++)
             {

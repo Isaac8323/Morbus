@@ -535,7 +535,6 @@ public class Botones_almacen : MonoBehaviour
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[0, 0]);
             UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
-            UIImage.sprite = .Load
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[0, 1];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
