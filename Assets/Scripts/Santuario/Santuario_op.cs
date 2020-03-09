@@ -13,25 +13,25 @@ using System.Data;
 public class Santuario_op : MonoBehaviour
 {
     // Start is called before the first frame update
-  public  GameObject empezar_buton, confirmacion;
-  Image UIImage, Imagepanel;
-  Text UITexto, titulotext;
-  String[,] Personajes = new String[25, 7];
-  String[,] Elementos = new String[25, 5];
-  Archivos archivo_santuario;
-  String bis,bis1;
-  public Text Tiempotext;
-  public float tiemp ;
+    public GameObject empezar_buton, confirmacion;
+    Image UIImage, Imagepanel;
+    Text UITexto, titulotext;
+    String[,] Personajes = new String[25, 7];
+    String[,] Elementos = new String[25, 5];
+    Archivos archivo_santuario;
+    String bis, bis1;
+    public Text Tiempotext;
+    public float tiemp;
     int startTime;
     public Animator anim;
-    
+
     void Start()
     {
         archivo_santuario = GameObject.Find("Santuario").GetComponent<Archivos>();
         archivo_santuario.Cargar_Tienda(Personajes, Elementos);
         bis = archivo_santuario.carga_bismuto(bis1);
         UITexto = GameObject.Find("bismuto").GetComponentInChildren<Text>();
-        UITexto.text = bis+ " Bi";
+        UITexto.text = bis + " Bi";
         Debug.Log("entre");
         Debug.Log(Personajes[19, 2]);
     }
@@ -41,15 +41,15 @@ public class Santuario_op : MonoBehaviour
     {
         if (startTime == 1)
         {
-                tiemp -= Time.deltaTime;
-                Tiempotext.text = "" + tiemp.ToString("f0");
-                if (tiemp <= 1)
-                {
-                    startTime = 0;
-                    Tiempotext.text = "";
-                    tiemp = 30;
-                    anim.SetBool("isTransacting", false);
-                }
+            tiemp -= Time.deltaTime;
+            Tiempotext.text = "" + tiemp.ToString("f0");
+            if (tiemp <= 1)
+            {
+                startTime = 0;
+                Tiempotext.text = "";
+                tiemp = 30;
+                anim.SetBool("isTransacting", false);
+            }
         }
     }
     public void empezar()
@@ -87,14 +87,14 @@ public class Santuario_op : MonoBehaviour
         for (int i = 20; i < 25; i++)
         {
 
-                UIImage = GameObject.Find("imgcomp" + x.ToString()).GetComponentInChildren<Image>();
-                UIImage.sprite = null;
-                UITexto = GameObject.Find("txtcompuesto" + x.ToString()).GetComponentInChildren<Text>();
-                UITexto.text = null;
-                UITexto = GameObject.Find("txtcant" + x.ToString()).GetComponentInChildren<Text>();
-                UITexto.text = null;
-                x++;
-            
+            UIImage = GameObject.Find("imgcomp" + x.ToString()).GetComponentInChildren<Image>();
+            UIImage.sprite = null;
+            UITexto = GameObject.Find("txtcompuesto" + x.ToString()).GetComponentInChildren<Text>();
+            UITexto.text = null;
+            UITexto = GameObject.Find("txtcant" + x.ToString()).GetComponentInChildren<Text>();
+            UITexto.text = null;
+            x++;
+
         }
         empezar_buton.SetActive(false);
         confirmacion.SetActive(false);
@@ -110,7 +110,7 @@ public class Santuario_op : MonoBehaviour
         for (int i = 20; i < 25; i++)
         {
             if ((titulotext.text).Equals(Personajes[i, 0]))
-            { 
+            {
                 int decremento;
                 decremento = Int32.Parse(Personajes[i, 2]);
                 decremento = decremento - 1;
@@ -122,10 +122,10 @@ public class Santuario_op : MonoBehaviour
                 bis = decremento.ToString();
                 variables_indestructibles.bismuto = bis;
                 UITexto = GameObject.Find("bismuto").GetComponentInChildren<Text>();
-                UITexto.text = bis+" Bi";
+                UITexto.text = bis + " Bi";
                 archivo_santuario.guardar_variables();
                 titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
-                titulotext.text= Personajes[i,2]+" unidades";
+                titulotext.text = Personajes[i, 2] + " unidades";
                 i = 25;
             }
         }
@@ -150,7 +150,7 @@ public class Santuario_op : MonoBehaviour
             titulotext = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             titulotext.text = UITexto.text;
         }
-        
+
     }
     public void celda1()
     {
