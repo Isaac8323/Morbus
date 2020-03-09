@@ -9,7 +9,7 @@ public class Actions : MonoBehaviour
     int flagdelay;
     public int turnoj;
     public int turnoa;
-    public GameObject character, atck01, atck02, atck03, atck04;
+    public GameObject character, boss, atck01, atck02, atck03, atck04, damage, damaged;
     public int BossLife;
     public int AspirinaLife;
     Archivos healthpoints;
@@ -17,6 +17,8 @@ public class Actions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        damage.SetActive(false);
+        damaged.SetActive(false);
         Deactivate();
         turnoj = 1;        
         healthpoints = GameObject.Find("Canvas").GetComponent<Archivos>();
@@ -32,18 +34,29 @@ public class Actions : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (turnoj == 1)
+        if (BossLife > 0)
         {
-            Deactivate();
-            delay += Time.deltaTime;
-            if (delay > 3)
+            if (turnoj == 1)
             {
-                status.text = "Cefalea utilizo: Contagion";
-                AspirinaLife = AspirinaLife - 8333;
-                turnoj = 0;
-                delay = 0.0f;
+                Deactivate();
+                delay += Time.deltaTime;
+                if (delay > 3)
+                {
+                    status.text = "Cefalea utilizo: Contagion";
+                    AspirinaLife = AspirinaLife - 8333;
+                    turnoj = 0;
+                    delay = delay - delay;
+                }
             }
         }
+        else
+        {
+            boss.SetActive(false);
+            BossLife = 0;
+            Deactivate();
+            status.text = "Victoria!";
+        }
+        
         if(turnoj == 0)
         {
             delay += Time.deltaTime;
@@ -88,7 +101,7 @@ public class Actions : MonoBehaviour
 
     IEnumerator Attack(int damage)
     {
-        yield return new WaitForSeconds(3);        
+        yield return new WaitForSeconds(2);        
         character.GetComponent<Animator>().Play("Stand");
         if (turnoa < 4)
         {
@@ -105,20 +118,22 @@ public class Actions : MonoBehaviour
 
     public void attackone()
     {
-        status.text = "Aspirina utilizo: Inhibi COX-1";
         character.GetComponent<Animator>().Play("Aspirina_atack01");                
         StartCoroutine(Attack(8350));
     }
     public void attacktwo()
     {
         character.GetComponent<Animator>().Play("Aspirina_atack02");
+        StartCoroutine(Attack(8350));
     }
     public void attackthree()
     {
         character.GetComponent<Animator>().Play("Aspirina_atack03");
+        StartCoroutine(Attack(8350));
     }
     public void attackfour()
     {
         character.GetComponent<Animator>().Play("Aspirina_atack04");
+        StartCoroutine(Attack(8350));
     }
 }
