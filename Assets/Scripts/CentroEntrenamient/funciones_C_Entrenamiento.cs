@@ -15,7 +15,7 @@ public class funciones_C_Entrenamiento : MonoBehaviour
 {
     Image UIImage, Imagepanel;
     Text UITexto, titulotext;
-    String[,] Personajes = new String[25, 7];
+    String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[25, 5];
     Archivos archivo_CE;
     String bis, bis1, cel;

@@ -17,9 +17,9 @@ public class AdminMYSQL : MonoBehaviour
     public MySqlConnection ConectarConServidorBaseDatos()
     {
         datosConexion = "Server=remotemysql.com"
-      + ";Database=xYsD0N8azx"
-      + ";Uid=xYsD0N8azx"
-      + ";Pwd=Ig8z93L5no"
+      + ";Database=ftjULr1Omv"
+      + ";Uid=ftjULr1Omv"
+      + ";Pwd=dsKUdhYh0O"
       + ";";
         conexion = new MySqlConnection(datosConexion);
         try

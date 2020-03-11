@@ -24,13 +24,22 @@ public class Archivos : MonoBehaviour
     {
 
     }
+    public BitArray filetoarraybit()
+    {
+        byte[] data;
+        using (Stream fs = File.OpenRead(Application.persistentDataPath + "/Partida.d"))
+        {
+            data = new byte[fs.Length];
+            fs.Read(data, 0, data.Length);
+        }
+        BitArray bitmap = new BitArray(data);
+        return bitmap;
+    }
     //crea un archivo con los siguientes elementos
     public void cargar_variables()
     {
         fb = new BinaryFormatter();
 
-        File.Delete(Application.persistentDataPath + "/Partida.d");
-        Crear();
 
         Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
 
@@ -39,7 +48,7 @@ public class Archivos : MonoBehaviour
         variables_indestructibles.monedas[0] = Datos.monedas[0];
         variables_indestructibles.level[0] = Datos.level[0];
         variables_indestructibles.bismuto = Datos.bismuto;
-        for (int x = 0; x < 7; x++)
+        for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
             {
@@ -74,6 +83,7 @@ public class Archivos : MonoBehaviour
             Borrar();
             Crear();
         }
+        
     }
     public void guardar_variables()
     {
@@ -84,7 +94,7 @@ public class Archivos : MonoBehaviour
         Datos.monedas[0] = variables_indestructibles.monedas[0];
         Datos.level[0] = variables_indestructibles.level[0];
         Datos.bismuto = variables_indestructibles.bismuto;
-        for (int x = 0; x < 7; x++)
+        for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
             {
@@ -405,13 +415,13 @@ public class Archivos : MonoBehaviour
             Datos.Jefes[7, 2] = "650000";
             Datos.Jefes[8, 2] = "725000";
             Datos.Jefes[9, 2] = "850000";
-            Datos.Jefes[9, 2] = "975000";
-            Datos.Jefes[10, 2] = "1100000";
-            Datos.Jefes[11, 2] = "1225000";
-            Datos.Jefes[12, 2] = "1450000";
-            Datos.Jefes[13, 2] = "1675000";
-            Datos.Jefes[14, 2] = "1900000";
-            Datos.Jefes[15, 2] = "2500000";
+            Datos.Jefes[10, 2] = "975000";
+            Datos.Jefes[11, 2] = "1100000";
+            Datos.Jefes[12, 2] = "1225000";
+            Datos.Jefes[13, 2] = "1450000";
+            Datos.Jefes[14, 2] = "1675000";
+            Datos.Jefes[15, 2] = "1900000";
+            Datos.Jefes[16, 2] = "2500000";
 
             Datos.monedas[0] = "15000";
             Datos.bismuto = "3";

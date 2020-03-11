@@ -13,11 +13,13 @@ using System.Data;
 public class Opciones_mapa : MonoBehaviour
 {
     // Start is called before the first frame update
-    String[,] Personajes = new String[25, 7];
+    String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[25, 5];
     void Start()
     {
         Archivos archivo_mapa = GameObject.Find("Mapa_juego").GetComponent<Archivos>();
+      /*  archivo_mapa.Borrar();
+        archivo_mapa.Crear();*/
         archivo_mapa.cargar_variables();
         archivo_mapa.Cargar_Tienda(Personajes, Elementos);
         Debug.Log("entre");

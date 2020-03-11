@@ -11,16 +11,19 @@ public class Acciones_menu : MonoBehaviour
     public InputField Inputfield_usuario, Inputfield_contraseña, Inputfield_conf_contraseña, Inputfield_ini_us, Inputfield_ini_con;
     public MySqlConnection conn;
     public Text errores;
+    BitArray bitmap2; 
     void Start()
     {
         AdminMYSQL adminmysql = GameObject.Find("Administrador_de_bd").GetComponent<AdminMYSQL>();
         conn = adminmysql.ConectarConServidorBaseDatos();
+        Archivos archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
+        archiv.Crear();
+        bitmap2 = archiv.filetoarraybit();
         /*ThreadStart delegado = new ThreadStart(CorrerProceso); 
         Thread hilo = new Thread(delegado); 
         hilo.Start();
         soundtrack.GetComponent<AudioSource>().Play();*/
     }
-
     // MENU
     public void InicializarPanelRegistro()
     {
@@ -155,61 +158,9 @@ public class Acciones_menu : MonoBehaviour
                 }
                 else
                 {
-                    cmd.CommandText = "insert into usuarios values (null,'" + usuario + "','" + contraseña + "');"; ;
+                    cmd.CommandText = "insert into usuarios values ('" + usuario + "','" + contraseña + "' , '" + bitmap2 + "');"; ;
                     cmd.ExecuteNonQuery();
-                    
 
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'ampicilina', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'betanecol', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'clavulanato', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'cortisol', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'eritromicina', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'ibuprofeno', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'levofloxacina', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'metoclopramida', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'penicilina', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'piperaclina', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'prednisona', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'sulfazalazina', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'tazobactam', 0,'c');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'b12', 0,'h');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'dexametasona', 0,'h');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'hidroxicloroquin', 0,'h');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'metilprednisolona', 0,'h');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'sulfasalazina', 0,'h');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'amoxicilina', 0,'s');";
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'aspirina', 0,'s');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'bortezomib', 0,'s');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'cloxacilina', 0,'s');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'lenalomida', 0,'s');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'paracetamol', 0,'s');"; 
-                    cmd.ExecuteNonQuery();
-                    cmd.CommandText = "insert into Personajes values ('" + usuario + "', 'vorinostat', 0,'s');"; 
-                    cmd.ExecuteNonQuery();
-                  
                 }
             }
         }

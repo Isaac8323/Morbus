@@ -16,7 +16,7 @@ public class Santuario_op : MonoBehaviour
     public GameObject empezar_buton, confirmacion;
     Image UIImage, Imagepanel;
     Text UITexto, titulotext;
-    String[,] Personajes = new String[25, 7];
+    String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[25, 5];
     Archivos archivo_santuario;
     String bis, bis1;

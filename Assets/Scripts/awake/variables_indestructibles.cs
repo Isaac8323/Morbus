@@ -13,7 +13,7 @@ public class variables_indestructibles : MonoBehaviour
     public static String Usuario;
     public static String[] level = new String[1];
     public static String[] monedas = new String[1];
-    public static String[,] Personajes = new String[25, 7];
+    public static String[,] Personajes = new String[25, 8];
     public static String[,] Elementos = new String[11, 5];
     public static String bismuto;
     //

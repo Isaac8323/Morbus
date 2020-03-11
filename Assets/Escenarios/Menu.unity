@@ -1183,6 +1183,7 @@ GameObject:
   - component: {fileID: 575890296}
   - component: {fileID: 575890297}
   - component: {fileID: 575890298}
+  - component: {fileID: 575890299}
   m_Layer: 0
   m_Name: Administrador_de_bd
   m_TagString: Untagged
@@ -1260,6 +1261,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Alertais: {fileID: 76677306}
+--- !u!114 &575890299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575890294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0257ea1fb68a12b4a9f33aabfad2892d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &590705996
 GameObject:
   m_ObjectHideFlags: 0
