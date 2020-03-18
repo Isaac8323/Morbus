@@ -1,22 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using MySql.Data.MySqlClient;
 using System.Threading;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 public class Acciones_menu : MonoBehaviour
 {
     public GameObject menu_principal, panel_registro, panel_iniciosesion, soundtrack;
     public InputField Inputfield_usuario, Inputfield_contraseña, Inputfield_conf_contraseña, Inputfield_ini_us, Inputfield_ini_con;
     public MySqlConnection conn;
     public Text errores;
-    BitArray bitmap2; 
+    byte[] bitmap2 = null;
+    Archivos archiv;
+
     void Start()
     {
         AdminMYSQL adminmysql = GameObject.Find("Administrador_de_bd").GetComponent<AdminMYSQL>();
         conn = adminmysql.ConectarConServidorBaseDatos();
-        Archivos archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
+        archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
         archiv.Crear();
         bitmap2 = archiv.filetoarraybit();
         /*ThreadStart delegado = new ThreadStart(CorrerProceso); 
@@ -54,7 +59,7 @@ public class Acciones_menu : MonoBehaviour
         Inputfield_ini_con.text = "";
         MySqlDataReader select2;
         MySqlCommand cmd = conn.CreateCommand();
-        cmd.CommandText = "SELECT * FROM usuarios WHERE usuario = '"+usuario+"';";
+        cmd.CommandText = "SELECT * FROM usuarios WHERE usuario = '" + usuario + "';";
         select2 = cmd.ExecuteReader();
         if (contraseña != "" && usuario != "")
         {
@@ -159,6 +164,9 @@ public class Acciones_menu : MonoBehaviour
                 else
                 {
                     cmd.CommandText = "insert into usuarios values ('" + usuario + "','" + contraseña + "' , '" + bitmap2 + "');"; ;
+                    archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
+                    archiv.Borrar();
+                    Debug.Log("Borre");
                     cmd.ExecuteNonQuery();
 
                 }
@@ -171,5 +179,19 @@ public class Acciones_menu : MonoBehaviour
             alert.Alerta_inicio_sesion_A();
         }
     }
-}
+    public void Continuar()
+    {
+        String gola = Application.persistentDataPath + "/Partida.d";
+        File.WriteAllBytes(gola, bitmap2);
+        Debug.Log("Generado");
+        /*  MySqlDataReader select1;
+          MySqlCommand cmd = new MySqlCommand("SELECT archiv FROM usuarios WHERE contrasena = yep;", conn);
+          select1 = cmd.ExecuteReader();
+          if(select1.Read()){
+              bitmap2 = select1["archiv"];
 
+          }
+          select1.Close();*/
+        SceneManager.LoadScene("Tutorial");
+    }
+}

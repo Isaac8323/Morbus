@@ -24,6 +24,13 @@ public class Archivos : MonoBehaviour
     {
 
     }
+    public byte[] filetoarraybit()
+    {
+        byte[] data = null;
+        data = File.ReadAllBytes(Application.persistentDataPath + "/Partida.d");
+        return data;
+
+    }
     //crea un archivo con los siguientes elementos
     public void cargar_variables()
     {
@@ -74,7 +81,7 @@ public class Archivos : MonoBehaviour
             Borrar();
             Crear();
         }
-    }
+    }   
     public void guardar_variables()
     {
         fb = new BinaryFormatter();
