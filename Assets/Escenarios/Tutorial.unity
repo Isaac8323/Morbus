@@ -1057,7 +1057,6 @@ GameObject:
   - component: {fileID: 1743496860}
   - component: {fileID: 1743496864}
   - component: {fileID: 1743496863}
-  - component: {fileID: 1743496862}
   - component: {fileID: 1743496861}
   m_Layer: 5
   m_Name: Introduccion
@@ -1098,24 +1097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0257ea1fb68a12b4a9f33aabfad2892d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1743496862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1743496859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be152fbed5df1b148af4970f0669e072, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  paneldescrip: {fileID: 0}
-  compra: {fileID: 0}
-  desbloquear: {fileID: 0}
-  tienda: {fileID: 0}
-  cuadro_imagen: {fileID: 0}
-  intercambiopanel: {fileID: 0}
 --- !u!114 &1743496863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,7 +1114,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1743496862}
+        - m_Target: {fileID: 0}
           m_MethodName: cerrarpanel
           m_Mode: 1
           m_Arguments:

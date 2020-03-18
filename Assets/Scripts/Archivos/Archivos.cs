@@ -24,16 +24,12 @@ public class Archivos : MonoBehaviour
     {
 
     }
-    public BitArray filetoarraybit()
+    public byte [] filetoarraybit()
     {
-        byte[] data;
-        using (Stream fs = File.OpenRead(Application.persistentDataPath + "/Partida.d"))
-        {
-            data = new byte[fs.Length];
-            fs.Read(data, 0, data.Length);
-        }
-        BitArray bitmap = new BitArray(data);
-        return bitmap;
+        byte[] data = null;
+        data = File.ReadAllBytes(Application.persistentDataPath + "/Partida.d");
+        return data;
+    
     }
     //crea un archivo con los siguientes elementos
     public void cargar_variables()
