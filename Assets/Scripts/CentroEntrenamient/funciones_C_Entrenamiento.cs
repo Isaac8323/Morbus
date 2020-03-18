@@ -21,12 +21,12 @@ public class funciones_C_Entrenamiento : MonoBehaviour
     String bis, bis1, cel;
     int startTime;
     String moneda,titulo_panel;
-    public GameObject panel_confirmar, cerrar_panelC;
+    public GameObject panel_confirmar, cerrar_panelC, LoadPanel;
     // Start is called before the first frame update
     void Start()
     {
         archivo_CE = GameObject.Find("Tienda").GetComponent<Archivos>();
-  
+ 
         archivo_CE.Cargar_Tienda(Personajes, Elementos);
         bis = archivo_CE.carga_bismuto(bis1);
         UITexto = GameObject.Find("cantidad_bi").GetComponentInChildren<Text>();
@@ -75,7 +75,8 @@ public class funciones_C_Entrenamiento : MonoBehaviour
     }
     public void mapa()
     {
-        SceneManager.LoadScene("Mapajuego");
+        LoadScene.sceneToLoad = "Mapajuego";
+        LoadPanel.SetActive(true);
     }
     public void celda0()
     {

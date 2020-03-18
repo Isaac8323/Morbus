@@ -13,51 +13,110 @@ using System.Data;
 
 public class Opciones_mapa : MonoBehaviour
 {
-    // Start is called before the first frame update
-    String[,] Personajes = new String[25, 8];
+    public GameObject LoadPanel, organismo, tutorial, tienda, gym, lab, almacen, santuario, exit;
+    String[,] Personajes = new String[25, 7];
     String[,] Elementos = new String[25, 5];
+    Text textin;
     void Start()
     {
+        textin = GameObject.Find("Place").GetComponentInChildren<Text>();
         Archivos archivo_mapa = GameObject.Find("Mapa_juego").GetComponent<Archivos>();
-      /*  archivo_mapa.Borrar();
-        archivo_mapa.Crear();*/
         archivo_mapa.cargar_variables();
         archivo_mapa.Cargar_Tienda(Personajes, Elementos);
         Debug.Log("entre");
         Debug.Log(Personajes[0, 6]);
     }
 
-    // Update is called once per frame
     void Update()
     {
         
     }
+
+    public void OverOrganismo()
+    {
+        textin.text = "Organismo Humano";
+        organismo.SetActive(true);
+    }
     public void Almacen()
     {
-        SceneManager.LoadScene("Almacen");
+        LoadScene.sceneToLoad = "Almacen";
+        LoadPanel.SetActive(true);
+    }
+    public void OverAlmacen()
+    {
+        textin.text = "Almacen";
+        almacen.SetActive(true);
     }
     public void Tutoriales()
     {
-        SceneManager.LoadScene("Tutorial");
+        LoadScene.sceneToLoad = "Tutorial";
+        LoadPanel.SetActive(true);
+    }
+    public void OverTutoriales()
+    {
+        textin.text = "Tutoriales";
+        tutorial.SetActive(true);
     }
     public void Santuario()
     {
-        SceneManager.LoadScene("Santuario_");
+        LoadScene.sceneToLoad = "Santuario_";
+        LoadPanel.SetActive(true);
+    }
+    public void OverSantuario()
+    {
+        textin.text = "Santuario";
+        santuario.SetActive(true);
     }
     public void Tienda()
     {
-        SceneManager.LoadScene("Tienda");
+        LoadScene.sceneToLoad = "Tienda";
+        LoadPanel.SetActive(true);
+    }
+    public void OverTienda()
+    {
+        textin.text = "Tienda";
+        tienda.SetActive(true);
     }
     public void Laboratorio()
     {
-        SceneManager.LoadScene("Laboratorio");
+        LoadScene.sceneToLoad = "Laboratorio";
+        LoadPanel.SetActive(true);
+    }
+    public void OverLaboratorio()
+    {
+        textin.text = "Laboratorio Farmaceutico";
+        lab.SetActive(true);
     }
     public void Centro()
     {
-        SceneManager.LoadScene("CentroEntrenamiento");
+        LoadScene.sceneToLoad = "CentroEntrenamiento";
+        LoadPanel.SetActive(true);
+    }
+    public void OverCentro()
+    {
+        textin.text = "Centro de entrenamiento";
+        gym.SetActive(true);
+    }
+    public void OverExit()
+    {
+        textin.text = "Regresar al menu principal";
+        exit.SetActive(true);
+    }
+    public void NoPlace()
+    {
+        textin.text = "";
+        organismo.SetActive(false);
+        almacen.SetActive(false);
+        tutorial.SetActive(false);
+        santuario.SetActive(false);
+        tienda.SetActive(false);
+        lab.SetActive(false);
+        gym.SetActive(false);
+        exit.SetActive(false);
     }
     public void Salir()
-    {
-        Application.Quit();
+    {        
+        LoadScene.sceneToLoad = "Menu";
+        LoadPanel.SetActive(true);
     }
 }

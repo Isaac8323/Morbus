@@ -2364,6 +2364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7de54a3baad92bf4396723b21d5dfd00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isatckin: 0
   delay: 0
   turnoj: 0
   turnoa: 0
