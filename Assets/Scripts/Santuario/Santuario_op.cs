@@ -13,7 +13,7 @@ using System.Data;
 public class Santuario_op : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject empezar_buton, confirmacion;
+    public GameObject empezar_buton, confirmacion, LoadPanel;
     Image UIImage, Imagepanel;
     Text UITexto, titulotext;
     String[,] Personajes = new String[25, 7];
@@ -77,7 +77,8 @@ public class Santuario_op : MonoBehaviour
     {
         if (startTime != 1)
         {
-            SceneManager.LoadScene("Mapajuego");
+            LoadScene.sceneToLoad = "Mapajuego";
+            LoadPanel.SetActive(true);
         }
     }
     public void cerrar_paneles()

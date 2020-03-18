@@ -20,7 +20,7 @@ public class botones_laboratorio : MonoBehaviour
     String[,] plussless = new String[11, 2];
     public String cargarformula;
     Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados;
-    public GameObject panel_elementos_seleccion;
+    public GameObject panel_elementos_seleccion, LoadPanel;
     Text elementin;
     Text[] element = new Text[11];
     int tefaltamas = 0, tesobran = 0;
@@ -2660,7 +2660,8 @@ public class botones_laboratorio : MonoBehaviour
     }
     public void Mapa()
     {
-        SceneManager.LoadScene("Mapajuego");
+        LoadScene.sceneToLoad = "Mapajuego";
+        LoadPanel.SetActive(true);
     }
 }
 

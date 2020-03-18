@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Almacen\Botones_almacen.cs" />
     <Compile Include="Assets\Scripts\Archivos\Archivos.cs" />
     <Compile Include="Assets\Scripts\awake\variables_indestructibles.cs" />
+    <Compile Include="Assets\Scripts\Carga\LoadScene.cs" />
     <Compile Include="Assets\Scripts\CentroEntrenamient\funciones_C_Entrenamiento.cs" />
     <Compile Include="Assets\Scripts\db\AdminMYSQL.cs" />
     <Compile Include="Assets\Scripts\Estructuracion\funciones_estructuracion.cs" />

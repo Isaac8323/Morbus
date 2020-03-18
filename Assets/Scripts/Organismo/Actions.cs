@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Actions : MonoBehaviour
 {
+    public bool isatckin;
     public float delay;
     int flagdelay;
     public int turnoj;
@@ -56,7 +57,6 @@ public class Actions : MonoBehaviour
             Deactivate();
             status.text = "Victoria!";
         }
-        
         if(turnoj == 0)
         {
             delay += Time.deltaTime;
@@ -86,6 +86,11 @@ public class Actions : MonoBehaviour
                     atck04.SetActive(true);
                 }
             }
+            delay = delay - delay;
+        }
+        if(isatckin == true)
+        {
+
         }
         HPC.text = AspirinaLife.ToString();
         HPB.text = BossLife.ToString();
@@ -118,8 +123,9 @@ public class Actions : MonoBehaviour
 
     public void attackone()
     {
-        character.GetComponent<Animator>().Play("Aspirina_atack01");                
-        StartCoroutine(Attack(8350));
+        character.GetComponent<Animator>().Play("Aspirina_atack01");
+        isatckin = true;
+        //StartCoroutine(Attack(8350));
     }
     public void attacktwo()
     {
