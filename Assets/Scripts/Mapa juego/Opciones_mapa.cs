@@ -14,13 +14,15 @@ using System.Data;
 public class Opciones_mapa : MonoBehaviour
 {
     public GameObject LoadPanel, organismo, tutorial, tienda, gym, lab, almacen, santuario, exit;
-    String[,] Personajes = new String[25, 7];
+    String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[25, 5];
     Text textin;
     void Start()
     {
         textin = GameObject.Find("Place").GetComponentInChildren<Text>();
         Archivos archivo_mapa = GameObject.Find("Mapa_juego").GetComponent<Archivos>();
+        /*archivo_mapa.Borrar();
+        archivo_mapa.Crear();*/
         archivo_mapa.cargar_variables();
         archivo_mapa.Cargar_Tienda(Personajes, Elementos);
         Debug.Log("entre");

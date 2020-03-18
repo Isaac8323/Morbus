@@ -24,12 +24,12 @@ public class Archivos : MonoBehaviour
     {
 
     }
-    public byte [] filetoarraybit()
+    public byte[] filetoarraybit()
     {
         byte[] data = null;
         data = File.ReadAllBytes(Application.persistentDataPath + "/Partida.d");
         return data;
-    
+
     }
     //crea un archivo con los siguientes elementos
     public void cargar_variables()
@@ -79,7 +79,7 @@ public class Archivos : MonoBehaviour
             Borrar();
             Crear();
         }
-        
+
     }
     public void guardar_variables()
     {
@@ -292,15 +292,15 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[23, 6] = "1";
             Datos.Personajes[24, 6] = "1";
             //Puntos de vida de los personajes
-            for(int e = 0; e <= 7; e++)
+            for (int e = 0; e <= 7; e++)
             {
                 Datos.Personajes[e, 7] = "125000";
             }
-            for(int a = 8; a <= 20; a++)
+            for (int a = 8; a <= 20; a++)
             {
                 Datos.Personajes[a, 7] = "450000";
             }
-            for(int o = 21; o <= 24; o++)
+            for (int o = 21; o <= 24; o++)
             {
                 Datos.Personajes[o, 7] = "900000";
             }
