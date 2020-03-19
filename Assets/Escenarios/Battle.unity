@@ -2209,7 +2209,6 @@ GameObject:
   - component: {fileID: 1513590049}
   - component: {fileID: 1513590048}
   - component: {fileID: 1513590054}
-  - component: {fileID: 1513590055}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2376,20 +2375,10 @@ MonoBehaviour:
   atck04: {fileID: 1261359612}
   damage: {fileID: 1818094939}
   damaged: {fileID: 353425446}
+  music: {fileID: 0}
+  vic: {fileID: 0}
   BossLife: 0
   AspirinaLife: 0
---- !u!114 &1513590055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1513590047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0257ea1fb68a12b4a9f33aabfad2892d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1549063952
 GameObject:
   m_ObjectHideFlags: 0

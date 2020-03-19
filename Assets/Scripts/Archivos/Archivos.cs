@@ -33,9 +33,9 @@ public class Archivos : MonoBehaviour
     }
     //crea un archivo con los siguientes elementos
     public void cargar_variables()
-    {
-        fb = new BinaryFormatter();
+    {        
 
+        fb = new BinaryFormatter();        
 
         Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
 

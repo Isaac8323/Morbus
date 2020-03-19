@@ -10,7 +10,7 @@ public class Actions : MonoBehaviour
     int flagdelay;
     public int turnoj;
     public int turnoa;
-    public GameObject character, boss, atck01, atck02, atck03, atck04, damage, damaged;
+    public GameObject character, boss, atck01, atck02, atck03, atck04, damage, damaged, music, vic;
     public int BossLife;
     public int AspirinaLife;
     Archivos healthpoints;
@@ -23,8 +23,8 @@ public class Actions : MonoBehaviour
         Deactivate();
         turnoj = 1;        
         healthpoints = GameObject.Find("Canvas").GetComponent<Archivos>();
-        AspirinaLife = healthpoints.HealthPoints(0);
-        BossLife = healthpoints.BossLife(0);
+        AspirinaLife = 125000;
+        BossLife = 25000;
         HPC = GameObject.Find("Aspirina_life").GetComponentInChildren<Text>();
         HPC.text = AspirinaLife.ToString();
         HPB = GameObject.Find("Cefalea_life").GetComponentInChildren<Text>();
@@ -50,7 +50,7 @@ public class Actions : MonoBehaviour
                 }
             }
         }
-        else
+        if(BossLife <=0)
         {
             boss.SetActive(false);
             BossLife = 0;
@@ -86,12 +86,8 @@ public class Actions : MonoBehaviour
                     atck04.SetActive(true);
                 }
             }
-            delay = delay - delay;
         }
-        if(isatckin == true)
-        {
 
-        }
         HPC.text = AspirinaLife.ToString();
         HPB.text = BossLife.ToString();
     }
@@ -118,14 +114,12 @@ public class Actions : MonoBehaviour
         }
         BossLife = BossLife - damage;
         turnoj = 1;
-        StopAllCoroutines();
     }
 
     public void attackone()
     {
         character.GetComponent<Animator>().Play("Aspirina_atack01");
-        isatckin = true;
-        //StartCoroutine(Attack(8350));
+        StartCoroutine(Attack(8350));
     }
     public void attacktwo()
     {
