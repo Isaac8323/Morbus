@@ -14,7 +14,7 @@ public class Acciones_menu : MonoBehaviour
     public InputField Inputfield_usuario, Inputfield_contraseña, Inputfield_conf_contraseña, Inputfield_ini_us, Inputfield_ini_con;
     public MySqlConnection conn;
     public Text errores;
-    byte[] bitmap2 = null;
+    String bitmap2;
     Archivos archiv;
 
     void Start()
@@ -181,17 +181,17 @@ public class Acciones_menu : MonoBehaviour
     }
     public void Continuar()
     {
-        MySqlDataReader select1;
-        MySqlCommand cmd = new MySqlCommand("SELECT archiv FROM usuarios WHERE contrasena = 'yep';", conn);
-        select1 = cmd.ExecuteReader();
-        if (select1.Read())
-        {
-            bitmap2 = (byte[])select1["archiv"];
-            String gola = Application.persistentDataPath + "/Partida.d";
-            File.WriteAllBytes(gola, bitmap2);
-            Debug.Log("Generado");
-        }
-        select1.Close();
+                        MySqlDataReader select5;
+                string comando = "SELECT * FROM usuarios WHERE usuario = '666';";
+                MySqlCommand cmd = new MySqlCommand(comando, conn);
+                select5 = cmd.ExecuteReader();
+                if (select5.HasRows)
+                {
+                    bitmap2 = select5["archiv"].ToString();
+                }
+                select5.Close();
+                Debug.Log(bitmap2);
+        archiv.Creararchivodebd(bitmap2);
         SceneManager.LoadScene("Tutorial");
     }
 }
