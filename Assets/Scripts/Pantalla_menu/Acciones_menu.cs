@@ -182,15 +182,17 @@ public class Acciones_menu : MonoBehaviour
     public void Continuar()
     {
                         MySqlDataReader select5;
-                string comando = "SELECT * FROM usuarios WHERE usuario = '666';";
+                string comando = "SELECT archiv FROM usuarios WHERE usuario = '666';";
                 MySqlCommand cmd = new MySqlCommand(comando, conn);
                 select5 = cmd.ExecuteReader();
                 if (select5.HasRows)
                 {
-                    bitmap2 = select5["archiv"].ToString();
+                    while (select5.Read()) 
+                    {
+                        bitmap2 = select5["archiv"].ToString();
+                    }
                 }
                 select5.Close();
-                Debug.Log(bitmap2);
         archiv.Creararchivodebd(bitmap2);
         SceneManager.LoadScene("Tutorial");
     }

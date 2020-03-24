@@ -5,6 +5,7 @@ using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Text;
+
 public class Archivos : MonoBehaviour
 {
     BinaryFormatter fb;
@@ -28,22 +29,23 @@ public class Archivos : MonoBehaviour
     public String filetoarraybit()
     {
         Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-        string readText =Convert.ToBase64String(File.ReadAllBytes(Application.persistentDataPath + "/Partida.d"));
-        Debug.Log(readText);
+        var data = System.Text.Encoding.UTF8.GetBytes(File.ReadAllText(Application.persistentDataPath + "/Partida.d"));
+        Debug.Log(data);
         Informacion.Close();
-        return readText;
-
+        return System.Convert.ToBase64String(data);
     }
     public void Creararchivodebd(String readText){
-      //  Informacion.Close();
 
-    //    Informacion = File.Create(Application.persistentDataPath + "/Partida.d");
-
-      //  File.WriteAllBytes(Application.persistentDataPath + "/Partida.d",Convert.FromBase64String(readText));
-        byte[] data = Convert.FromBase64String(readText);
-        readText = Encoding.UTF8.GetString(data);
-        File.AppendAllText(Application.persistentDataPath + "/Partida.d", readText);
-
+            //  Informacion.Close();
+            Debug.Log(readText);
+            //    Informacion = File.Create(Application.persistentDataPath + "/Partida.d");
+            //  File.WriteAllBytes(Application.persistentDataPath + "/Partida.d",Convert.FromBase64String(readText));
+            byte[] data = Convert.FromBase64String(readText);
+                readText = Encoding.UTF8.GetString(data);
+                //readText = System.Text.Encoding.Default.GetString(data);
+                File.AppendAllText(Application.persistentDataPath + "/Partida.d", readText);
+            
+                    
     }
 
     //crea un archivo con los siguientes elementos
@@ -190,7 +192,7 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[23, 1] = "Hard";
             Datos.Personajes[24, 1] = "Hard";
             //Cantidad
-            Datos.Personajes[0, 2] = "1";
+            Datos.Personajes[0, 2] = "0";
             Datos.Personajes[1, 2] = "0";
             Datos.Personajes[2, 2] = "0";
             Datos.Personajes[3, 2] = "0";
