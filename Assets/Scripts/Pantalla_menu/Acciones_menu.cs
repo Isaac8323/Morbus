@@ -14,7 +14,8 @@ public class Acciones_menu : MonoBehaviour
     public InputField Inputfield_usuario, Inputfield_contraseña, Inputfield_conf_contraseña, Inputfield_ini_us, Inputfield_ini_con;
     public MySqlConnection conn;
     public Text errores;
-    String bitmap2;
+    public Text  user_loged;
+  //  String bitmap2;
     Archivos archiv;
 
     void Start()
@@ -23,7 +24,8 @@ public class Acciones_menu : MonoBehaviour
         conn = adminmysql.ConectarConServidorBaseDatos();
         archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
         archiv.Crear();
-        bitmap2 = archiv.filetoarraybit();
+        archiv.cargar_variables();
+    //    bitmap2 = archiv.filetoarraybit();
         /*ThreadStart delegado = new ThreadStart(CorrerProceso); 
         Thread hilo = new Thread(delegado); 
         hilo.Start();
@@ -59,7 +61,7 @@ public class Acciones_menu : MonoBehaviour
         Inputfield_ini_con.text = "";
         MySqlDataReader select2;
         MySqlCommand cmd = conn.CreateCommand();
-        cmd.CommandText = "SELECT * FROM usuarios WHERE usuario = '" + usuario + "';";
+        cmd.CommandText = "SELECT * FROM usuario WHERE nombre_usuario = '" + usuario + "';";
         select2 = cmd.ExecuteReader();
         if (contraseña != "" && usuario != "")
         {
@@ -67,13 +69,14 @@ public class Acciones_menu : MonoBehaviour
             {
                 select2.Close();
                 MySqlDataReader select3;
-                cmd.CommandText = "SELECT * FROM usuarios WHERE contrasena = '" + contraseña + "';";
+                cmd.CommandText = "SELECT * FROM usuario WHERE password_usuario = '" + contraseña + "';";
                 select3 = cmd.ExecuteReader();
                 if (select3.HasRows)
                 {
                     select3.Close();
                     Debug.Log("si esta");
-                    escena();
+                    user_loged.text = usuario;
+                //    escena();
                 }
                 else
                 {
@@ -129,7 +132,7 @@ public class Acciones_menu : MonoBehaviour
             else
             {
                 MySqlDataReader select;
-                string comando = "SELECT * FROM usuarios WHERE usuario = '" + usuario + "';";
+                string comando = "SELECT nombre_usuario FROM usuario WHERE nombre_usuario = '" + usuario + "';";
                 MySqlCommand cmd = new MySqlCommand(comando, conn);
                 select = cmd.ExecuteReader();
                 if (select.HasRows)
@@ -143,7 +146,7 @@ public class Acciones_menu : MonoBehaviour
                     repetido = "no esta we";
                 }
                 MySqlDataReader select1;
-                cmd.CommandText = "SELECT * FROM usuarios WHERE contrasena = '" + contraseña + "';";
+                cmd.CommandText = "SELECT password_usuario FROM usuario WHERE password_usuario = '" + contraseña + "';";
                 select1 = cmd.ExecuteReader();
                 if (select1.HasRows)
                 {
@@ -163,12 +166,34 @@ public class Acciones_menu : MonoBehaviour
                 }
                 else
                 {
-                    cmd.CommandText = "insert into usuarios values ('" + usuario + "','" + contraseña + "' , '" + bitmap2 + "');"; ;
-                    archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
-                    archiv.Borrar();
-                    Debug.Log("Borre");
+                    cmd.CommandText = "insert into usuario values ( 0,'" + usuario + "','" + contraseña + "');"; 
                     cmd.ExecuteNonQuery();
+                    int id_user=0;
+                    MySqlDataReader select11;
+                    cmd.CommandText = "SELECT id_usuario FROM usuario WHERE nombre_usuario = '" + usuario + "';";
+                    select11 = cmd.ExecuteReader();
+                    if (select11.HasRows)
+                    {
+                        while (select11.Read())
+                        {
+                             id_user = Int32.Parse(select11["id_usuario"].ToString());
+                            Debug.Log(id_user.ToString());
 
+                        }
+                    }
+                    select11.Close();
+                    for (int i = 0; i < 25; i++)
+                    {
+                        cmd.CommandText = "insert into personaje values ( 0," + id_user + ", '" + variables_indestructibles.Personajes[i, 0] + "',1,0);";
+                        cmd.ExecuteNonQuery();
+                    }
+                    cmd.CommandText = "insert into estadisticas values ( 0," + id_user + ",1,0,0,0,1,0);";
+                    cmd.ExecuteNonQuery();
+                    for (int i = 0; i < 11; i++)
+                    {
+                        cmd.CommandText = "insert into elementos values ( 0," + id_user + ",'" + variables_indestructibles.Elementos[i, 0] + "',0);";
+                        cmd.ExecuteNonQuery();
+                    }
                 }
             }
         }
@@ -181,7 +206,7 @@ public class Acciones_menu : MonoBehaviour
     }
     public void Continuar()
     {
-                        MySqlDataReader select5;
+     /*                   MySqlDataReader select5;
                 string comando = "SELECT archiv FROM usuarios WHERE usuario = '666';";
                 MySqlCommand cmd = new MySqlCommand(comando, conn);
                 select5 = cmd.ExecuteReader();
@@ -193,7 +218,7 @@ public class Acciones_menu : MonoBehaviour
                     }
                 }
                 select5.Close();
-        archiv.Creararchivodebd(bitmap2);
+        archiv.Creararchivodebd(bitmap2);*/
         SceneManager.LoadScene("Tutorial");
     }
 }

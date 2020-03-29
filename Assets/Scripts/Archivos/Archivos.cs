@@ -26,24 +26,24 @@ public class Archivos : MonoBehaviour
     {
 
     }
-    public String filetoarraybit()
+    public void filetoarraybit()
     {
-        Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+      /*  Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
         var data = System.Text.Encoding.UTF8.GetBytes(File.ReadAllText(Application.persistentDataPath + "/Partida.d"));
         Debug.Log(data);
         Informacion.Close();
-        return System.Convert.ToBase64String(data);
+        return System.Convert.ToBase64String(data);*/
     }
     public void Creararchivodebd(String readText){
 
-            //  Informacion.Close();
+          /*    Informacion.Close();
             Debug.Log(readText);
-            //    Informacion = File.Create(Application.persistentDataPath + "/Partida.d");
-            //  File.WriteAllBytes(Application.persistentDataPath + "/Partida.d",Convert.FromBase64String(readText));
+               Informacion = File.Create(Application.persistentDataPath + "/Partida.d");
+             File.WriteAllBytes(Application.persistentDataPath + "/Partida.d",Convert.FromBase64String(readText));
             byte[] data = Convert.FromBase64String(readText);
                 readText = Encoding.UTF8.GetString(data);
-                //readText = System.Text.Encoding.Default.GetString(data);
-                File.AppendAllText(Application.persistentDataPath + "/Partida.d", readText);
+                readText = System.Text.Encoding.Default.GetString(data);
+                File.AppendAllText(Application.persistentDataPath + "/Partida.d", readText);*/
             
                     
     }
