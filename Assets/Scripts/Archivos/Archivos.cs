@@ -61,6 +61,8 @@ public class Archivos : MonoBehaviour
         variables_indestructibles.monedas[0] = Datos.monedas[0];
         variables_indestructibles.level[0] = Datos.level[0];
         variables_indestructibles.bismuto = Datos.bismuto;
+        variables_indestructibles.experiencia = Datos.experiencia;
+        variables_indestructibles.nivel_organismo_jefes = Datos.nivel_organismo_jefes;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -107,6 +109,8 @@ public class Archivos : MonoBehaviour
         Datos.monedas[0] = variables_indestructibles.monedas[0];
         Datos.level[0] = variables_indestructibles.level[0];
         Datos.bismuto = variables_indestructibles.bismuto;
+        Datos.experiencia = variables_indestructibles.experiencia;
+        Datos.nivel_organismo_jefes = variables_indestructibles.nivel_organismo_jefes;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -439,6 +443,8 @@ public class Archivos : MonoBehaviour
             Datos.monedas[0] = "15000";
             Datos.bismuto = "3";
             Datos.level[0] = "3";
+            Datos.experiencia = "0";
+            Datos.nivel_organismo_jefes = "1";
             fb.Serialize(Informacion, Datos);
             Informacion.Close();
             Debug.Log("Guardé ");
@@ -626,4 +632,6 @@ class DatosdeJuego : System.Object
     public String[,] Elementos = new String[11, 5];
     public String bismuto;
     public String[,] Jefes = new String[17, 3];
+    public String experiencia;
+    public String nivel_organismo_jefes;
 }

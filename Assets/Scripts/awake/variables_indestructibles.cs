@@ -16,6 +16,8 @@ public class variables_indestructibles : MonoBehaviour
     public static String[,] Personajes = new String[25, 8];
     public static String[,] Elementos = new String[11, 5];
     public static String bismuto;
+    public static String nivel_organismo_jefes;
+    public static String experiencia;
     //
     void Start()
     {
