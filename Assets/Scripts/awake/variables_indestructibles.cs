@@ -18,6 +18,7 @@ public class variables_indestructibles : MonoBehaviour
     public static String bismuto;
     public static String nivel_organismo_jefes;
     public static String experiencia;
+    public static String Sesion;
     //
     void Start()
     {

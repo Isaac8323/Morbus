@@ -10,7 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 public class Acciones_menu : MonoBehaviour
 {
-    public GameObject menu_principal, panel_registro, panel_iniciosesion, soundtrack,Borrar_datos,Cargar_datos,Guardar_datos;
+    public GameObject menu_principal, panel_registro, panel_iniciosesion, soundtrack,Borrar_datos,Cargar_datos,Guardar_datos,Cerrar_sesion;
     public InputField Inputfield_usuario, Inputfield_contraseña, Inputfield_conf_contraseña, Inputfield_ini_us, Inputfield_ini_con;
     public MySqlConnection conn;
     public Text errores;
@@ -26,9 +26,22 @@ public class Acciones_menu : MonoBehaviour
         archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
         archiv.Crear();
         archiv.cargar_variables();
-        Borrar_datos.SetActive(false);
-        Cargar_datos.SetActive(false);
-        Guardar_datos.SetActive(false);
+        if (variables_indestructibles.Sesion.Equals(""))
+        {
+            user_loged.text = "no user loged";
+            Borrar_datos.SetActive(false);
+            Cargar_datos.SetActive(false);
+            Guardar_datos.SetActive(false);
+            Cerrar_sesion.SetActive(false);
+        }
+        else
+        {
+            user_loged.text = variables_indestructibles.Sesion;
+            Borrar_datos.SetActive(true);
+            Cargar_datos.SetActive(true);
+            Guardar_datos.SetActive(true);
+            Cerrar_sesion.SetActive(true);
+        }
     //    bitmap2 = archiv.filetoarraybit();
         /*ThreadStart delegado = new ThreadStart(CorrerProceso); 
         Thread hilo = new Thread(delegado); 
@@ -60,6 +73,16 @@ public class Acciones_menu : MonoBehaviour
         Application.Quit(); //Sale de la aplicacion cuando se ejecute en la computadora mas no en la prueba de Unity
     }
     //BASE DE DATOS
+    public void CerrarS()
+    {
+        variables_indestructibles.Sesion = "";
+        archiv.guardar_variables();
+        Borrar_datos.SetActive(false);
+        Cargar_datos.SetActive(false);
+        Guardar_datos.SetActive(false);
+        Cerrar_sesion.SetActive(false);
+        user_loged.text = "no user loged";
+    }
     public void Iniciar_sesion()
     {
         string usuario, contraseña;
@@ -93,6 +116,9 @@ public class Acciones_menu : MonoBehaviour
                     Borrar_datos.SetActive(true);
                     Cargar_datos.SetActive(true);
                     Guardar_datos.SetActive(true);
+                    Cerrar_sesion.SetActive(true);
+                    variables_indestructibles.Sesion = usuario;
+                    archiv.guardar_variables();
                 //    escena();
                 }
                 else
@@ -288,6 +314,7 @@ public class Acciones_menu : MonoBehaviour
         }
         select4.Close();
         archiv.guardar_variables();
+
     }
     public void save_user_progre()
     {
