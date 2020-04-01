@@ -36,6 +36,21 @@ public class Acciones_menu : MonoBehaviour
         }
         else
         {
+            string comando = "SELECT nombre_usuario FROM usuario WHERE nombre_usuario = '" + usuario + "';";
+            MySqlCommand cmd = new MySqlCommand(comando, conn);
+            MySqlDataReader select111;
+            cmd.CommandText = "SELECT id_usuario FROM usuario WHERE nombre_usuario = '" + variables_indestructibles.Sesion + "';";
+            select111 = cmd.ExecuteReader();
+            if (select111.HasRows)
+            {
+                while (select111.Read())
+                {
+                    id_user = Int32.Parse(select111["id_usuario"].ToString());
+                    Debug.Log(id_user.ToString());
+
+                }
+            }
+            select111.Close();
             user_loged.text = variables_indestructibles.Sesion;
             Borrar_datos.SetActive(true);
             Cargar_datos.SetActive(true);
