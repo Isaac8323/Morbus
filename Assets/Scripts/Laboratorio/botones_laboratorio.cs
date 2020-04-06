@@ -19,8 +19,8 @@ public class botones_laboratorio : MonoBehaviour
     String[,] verificadores = new String[11, 4];
     String[,] plussless = new String[11, 2];
     public String cargarformula;
-    Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados;
-    public GameObject panel_elementos_seleccion, LoadPanel;
+    Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados,texto_alerta;
+    public GameObject panel_elementos_seleccion, LoadPanel,Alerta_a;
     Text elementin;
     Text[] element = new Text[11];
     int tefaltamas = 0, tesobran = 0;
@@ -40,6 +40,10 @@ public class botones_laboratorio : MonoBehaviour
     void Update()
     {
 
+    }
+    public void cerrar_panel_alerta_a()
+    {
+        Alerta_a.SetActive(false);
     }
     public void ElementrosAdquiridos()
     {
@@ -220,6 +224,7 @@ public class botones_laboratorio : MonoBehaviour
     public void desactivarpanel()
     {
         panel_elementos_seleccion.SetActive(false);
+        Alerta_a.SetActive(false);
     }
     public void ElementrosAdquirido_Celda1()
     {
@@ -343,6 +348,18 @@ public class botones_laboratorio : MonoBehaviour
         celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
         celdas_elementos_adquiridos.text = verificadores[9, 3];
     }
+    public void ElementrosAdquirido_Celda11()
+    {
+        activarpanel();
+        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+        celdas_elementos_adquiridos.text = verificadores[10, 0];
+        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+        celdas_elementos_adquiridos.text = verificadores[10, 1];
+        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+        celdas_elementos_adquiridos.text = verificadores[10, 2];
+        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+        celdas_elementos_adquiridos.text = verificadores[10, 3];
+    }
     public void siguiente()
     {
         int i2 = 0, index = 0, vacio = 0;
@@ -352,12 +369,24 @@ public class botones_laboratorio : MonoBehaviour
             bandera_de_elementos[recorrdio] = "Este si";
             conjunto[recorrdio] = 0;
         }
+        for (int recorrdio = 0; recorrdio < 11; recorrdio++)
+        {
+            element[recorrdio] = null;
+            elemento[recorrdio] = 0; 
+        }
         int contador = 0;
         for (int i3 = 1; i3 < 12; i3++)
         {
             element[i2] = GameObject.Find("txtdestino" + i3.ToString()).GetComponentInChildren<Text>();
             cantidad_panel_seleccionados = GameObject.Find("txtcantidad_destino" + i3.ToString()).GetComponentInChildren<Text>();
-            elemento[i2] = Int16.Parse(cantidad_panel_seleccionados.text);
+            if (cantidad_panel_seleccionados.text.Equals("") || cantidad_panel_seleccionados.text.Equals("0"))
+            {
+                cantidad_panel_seleccionados.text = "0";
+                vacio++;
+                Debug.Log(vacio.ToString());
+            }
+            elemento[i2] = Int16.Parse(cantidad_panel_seleccionados.text.ToString());
+            
             if (bandera_de_elementos[0] == "Este si")
             {
                 if (element[i2].text != ("C") && element[i2].text != "H" && element[i2].text != "O" && element[i2].text != (""))
@@ -369,10 +398,6 @@ public class botones_laboratorio : MonoBehaviour
                 {
                     bandera_de_elementos[0] = "Este no";
                 }
-            }
-            if (element[i2].text.Equals(""))
-            {
-                vacio++;
             }
             if (bandera_de_elementos[1] == "Este si")
             {
@@ -667,11 +692,15 @@ public class botones_laboratorio : MonoBehaviour
         if (contador == 25)
         {
             Debug.Log("Ninguna formula puede crearce con estos elementos");
+            Alerta_a.SetActive(true);
+            texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+            texto_alerta.text = "Ninguna formula puede crearce con estos elementos";
         }
         else
         {
             if (bandera_de_elementos[0].Equals("Este si"))
             {
+                index = 0;
                 Desifrocompuesto(index);
             }
             if (bandera_de_elementos[1].Equals("Este si"))
@@ -795,133 +824,195 @@ public class botones_laboratorio : MonoBehaviour
 
             }
 
-
+            archivo_almacen = GameObject.Find("Laboratorio").GetComponent<Archivos>();
             if (conjunto[0] == 3)
             {
                 Debug.Log("Aspirina");
-                cargarformula = "ifs_aspirina";
-             
+                variables_indestructibles.estructuracion = "ifs_aspirina";
+                archivo_almacen.guardar_variables();
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[1] == 4)
+            else if (conjunto[1] == 4)
             {
                 Debug.Log("Paracetamol");
-                cargarformula = "ifs_paracetamol";
+                variables_indestructibles.estructuracion = "ifs_paracetamol";
+                archivo_almacen.guardar_variables();
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[2] == 5)
+            else if (conjunto[2] == 5)
             {
                 Debug.Log("Amoxicilina");
-                cargarformula = "ifs_amoxicilina";
+                variables_indestructibles.estructuracion = "ifs_amoxicilina";
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[3] == 6)
+            else if (conjunto[3] == 6)
             {
                 Debug.Log("Cloxacilina");
                 cargarformula = "ifs_cloxacilina";
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[4] == 5)
+            else if (conjunto[4] == 5)
             {
                 Debug.Log("Bortezomib");
                 cargarformula = "ifs_bortezomib";
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[5] == 4)
+            else if (conjunto[5] == 4)
             {
                 Debug.Log("Lenalidomida");
                 cargarformula = "ifs_lenalidomida";
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[6] == 4)
+            else if (conjunto[6] == 4)
             {
                 Debug.Log("Vorinostat");
                 cargarformula = "ifs_vorinostat";
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[7] == 4)
+            else if (conjunto[7] == 4)
             {
                 Debug.Log("Clavulanato");
                 cargarformula = "ifs_clavulanato";
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[8] == 5)
+            else if (conjunto[8] == 5)
             {
                 Debug.Log("Penicilina");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[9] == 4)
+            else if (conjunto[9] == 4)
             {
                 Debug.Log("Eritromicina");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[10] == 5)
+            else if (conjunto[10] == 5)
             {
                 Debug.Log("Levofloxacino");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[11] == 4)
+            else if (conjunto[11] == 4)
             {
                 Debug.Log("Betanecol");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[12] == 5)
+            else if (conjunto[12] == 5)
             {
                 Debug.Log("Metoclopramida");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[13] == 3)
+            else if (conjunto[13] == 3)
             {
                 Debug.Log("Ibuprofeno");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[14] == 5)
+            else if (conjunto[14] == 5)
             {
                 Debug.Log("Sulfasalazina");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[15] == 3)
+            else if (conjunto[15] == 3)
             {
                 Debug.Log("Prednisona");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[16] == 3)
+            else if (conjunto[16] == 3)
             {
                 Debug.Log("Cortisol");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[17] == 5)
+            else if (conjunto[17] == 5)
             {
                 Debug.Log("Ampicilina");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[18] == 5)
+            else if (conjunto[18] == 5)
             {
                 Debug.Log("Piperacilina");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[19] == 5)
+            else if (conjunto[19] == 5)
             {
                 Debug.Log("Tazobactam");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[20] == 3)
+            else if (conjunto[20] == 3)
             {
                 Debug.Log("Metilprednisolona");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[21] == 5)
+            else if (conjunto[21] == 5)
             {
                 Debug.Log("Hidroxicloroquina");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[22] == 5)
+            else if (conjunto[22] == 5)
             {
                 Debug.Log("H_Sulfasalazina");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[23] == 4)
+            else if (conjunto[23] == 4)
             {
                 Debug.Log("Dexametasona");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
-            if (conjunto[24] == 6)
+            else  if (conjunto[24] == 6)
             {
                 Debug.Log("Vitamina B12");
+                LoadScene.sceneToLoad = "Estructuracion";
             }
             else if (tesobran == tefaltamas)
             {
                 Debug.Log("tienes elementos con cantidades mayores y menores a la necesaria");
+                Alerta_a.SetActive(true);
+                texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+                texto_alerta.text = "Formula incompleta o cantidades de elementos mayores/menores a los necesarios";
                 tefaltamas = 0;
                 tesobran = 0;
+                for (int i3 = 1; i3 < 12; i3++)
+                {
+                    element[i3-1] = GameObject.Find("txtdestino" + i3.ToString()).GetComponentInChildren<Text>();
+                    cantidad_panel_seleccionados = GameObject.Find("txtcantidad_destino" + i3.ToString()).GetComponentInChildren<Text>();
+                    if (cantidad_panel_seleccionados.text.Equals("") || cantidad_panel_seleccionados.text.Equals("0"))
+                    {
+                        cantidad_panel_seleccionados.text = "";
+                    }
+                }
             }
             else if (tefaltamas < tesobran)
             {
                 Debug.Log("Tienes una cantidad de elementos necesarios mayor a la requerida " + tesobran + " " + tefaltamas);
+                Alerta_a.SetActive(true);
+                texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+                texto_alerta.text = "Tienes una cantidad de elementos necesarios mayor a la requerida ";
                 tefaltamas = 0;
                 tesobran = 0;
+                for (int i3 = 1; i3 < 12; i3++)
+                {
+                    element[i3 - 1] = GameObject.Find("txtdestino" + i3.ToString()).GetComponentInChildren<Text>();
+                    cantidad_panel_seleccionados = GameObject.Find("txtcantidad_destino" + i3.ToString()).GetComponentInChildren<Text>();
+                    if (cantidad_panel_seleccionados.text.Equals("") || cantidad_panel_seleccionados.text.Equals("0"))
+                    {
+                        cantidad_panel_seleccionados.text = "";
+                    }
+                }
             }
             else if (tesobran < tefaltamas)
             {
                 Debug.Log("Tienes una cantidad de elementos necesarios menor a la requerida " + tefaltamas + " " + tesobran);
+                Alerta_a.SetActive(true);
+                texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+                texto_alerta.text = "Tienes una cantidad de elementos necesarios menor a la requerida ";
                 tefaltamas = 0;
                 tesobran = 0;
+                for (int i3 = 1; i3 < 12; i3++)
+                {
+                    element[i3 - 1] = GameObject.Find("txtdestino" + i3.ToString()).GetComponentInChildren<Text>();
+                    cantidad_panel_seleccionados = GameObject.Find("txtcantidad_destino" + i3.ToString()).GetComponentInChildren<Text>();
+                    if (cantidad_panel_seleccionados.text.Equals("") || cantidad_panel_seleccionados.text.Equals("0"))
+                    {
+                        cantidad_panel_seleccionados.text = "";
+                    }
+                }
             }
         }
 
@@ -947,8 +1038,9 @@ public class botones_laboratorio : MonoBehaviour
                     {
                         tefaltamas++;
                     }
+                    Debug.Log("entre a index 0");
                 }
-                if (element[recorrido].text.Equals("H"))
+                else if (element[recorrido].text.Equals("H"))
                 {
                     if (elemento[recorrido] == 8)
                     {
@@ -963,7 +1055,7 @@ public class botones_laboratorio : MonoBehaviour
                         tefaltamas++;
                     }
                 }
-                if (element[recorrido].text.Equals("O"))
+                else if (element[recorrido].text.Equals("O"))
                 {
                     if (elemento[recorrido] == 4)
                     {
@@ -977,6 +1069,10 @@ public class botones_laboratorio : MonoBehaviour
                     {
                         tefaltamas++;
                     }
+                }
+                else
+                {
+                    recorrido = 11;
                 }
             }
             if (index == 1)

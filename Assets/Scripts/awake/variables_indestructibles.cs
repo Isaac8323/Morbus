@@ -8,7 +8,6 @@ public class variables_indestructibles : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static String estructuracion;
     //archivo
     public static String Usuario;
     public static String[] level = new String[1];
@@ -19,6 +18,7 @@ public class variables_indestructibles : MonoBehaviour
     public static String nivel_organismo_jefes;
     public static String experiencia;
     public static String Sesion;
+    public static String estructuracion;
     //
     void Start()
     {

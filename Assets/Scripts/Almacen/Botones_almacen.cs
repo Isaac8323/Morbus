@@ -40,7 +40,7 @@ public class Botones_almacen : MonoBehaviour
     //}
     //descripciones{
     public GameObject paneldescrip;
-    String[,] verificadores = new String[25, 4];
+    String[,] verificadores = new String[25, 5];
     //}
 
     public GameObject LoadPanel;
@@ -166,6 +166,8 @@ public class Botones_almacen : MonoBehaviour
                         verificadores[o, 0] = Personajes[i, 0];
                         verificadores[o, 1] = Personajes[i, 3];
                         verificadores[o, 2] = Personajes[i, 0];
+                        verificadores[o, 3] = "g" + Personajes[i, 0];
+                        verificadores[o, 4] = Personajes[i, 4];
                         nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
                         nombre.text = Personajes[i, 0];
                     }
@@ -178,6 +180,7 @@ public class Botones_almacen : MonoBehaviour
                         verificadores[o, 0] = Personajes[i, 0];
                         verificadores[o, 1] = Personajes[i, 3];
                         verificadores[o, 2] = Personajes[i, 0];
+                        verificadores[o, 4] = Personajes[i, 4];
                         nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
                         nombre.text = Personajes[i, 0];
                     }
@@ -190,6 +193,7 @@ public class Botones_almacen : MonoBehaviour
                             verificadores[o, 0] = Personajes[i, 0];
                             verificadores[o, 1] = Personajes[i, 3];
                             verificadores[o, 2] = Personajes[i, 0];
+                            verificadores[o, 4] = Personajes[i, 4];
                             nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
                             nombre.text = Personajes[i, 0];
                         }
@@ -200,6 +204,7 @@ public class Botones_almacen : MonoBehaviour
                             verificadores[o, 0] = Personajes[i, 0];
                             verificadores[o, 1] = Personajes[i, 3];
                             verificadores[o, 2] = Personajes[i, 0];
+                            verificadores[o, 4] = Personajes[i, 4];
                             nombre = GameObject.Find("Nombre" + o.ToString()).GetComponentInChildren<Text>();
                             nombre.text = Personajes[i, 0];
                         }
@@ -218,6 +223,8 @@ public class Botones_almacen : MonoBehaviour
                         verificadores[o, 0] = Personajes[i, 0];
                         verificadores[o, 1] = Personajes[i, 3];
                         verificadores[o, 2] = Personajes[i, 0];
+                        verificadores[i, 3] = "g" + Personajes[i, 0];
+                        verificadores[o, 4] = Personajes[i, 4];
                     }
                     else
                     {
@@ -229,6 +236,7 @@ public class Botones_almacen : MonoBehaviour
                         verificadores[o, 0] = Personajes[i, 0];
                         verificadores[o, 1] = Personajes[i, 3];
                         verificadores[o, 2] = Personajes[i, 0];
+                        verificadores[o, 4] = Personajes[i, 4];
                     }
                 }
                 mensj++;
@@ -247,7 +255,7 @@ public class Botones_almacen : MonoBehaviour
     //Personajes:
     public void limpiarverificadores()
     {
-        for (int rep = 0; rep < 4; rep++)
+        for (int rep = 0; rep < 5; rep++)
         {
             for (int i = 0; i < 25; i++)
             {
@@ -273,6 +281,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[i, 1] = Personajes[i, 3];
                     verificadores[i, 2] = Personajes[i, 0];
                     verificadores[i, 3] = "g" + Personajes[i, 0];
+                    verificadores[i, 4] = Personajes[i, 4];
                 }
                 else
                 {
@@ -284,6 +293,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[i, 0] = Personajes[i, 0];
                     verificadores[i, 1] = Personajes[i, 3];
                     verificadores[i, 2] = Personajes[i, 0];
+                    verificadores[i, 4] = Personajes[i, 4];
                 }
             }
             else
@@ -299,6 +309,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[i, 1] = Personajes[i, 3];
                     verificadores[i, 2] = Personajes[i, 0];
                     verificadores[i, 3] = "g" + Personajes[i, 0];
+                    verificadores[i, 4] = Personajes[i, 4];
                 }
                 else
                 {
@@ -310,6 +321,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[i, 0] = Personajes[i, 0];
                     verificadores[i, 1] = Personajes[i, 3];
                     verificadores[i, 2] = Personajes[i, 0];
+                    verificadores[i, 4] = Personajes[i, 4];
                 }
             }
             cantidad.text = null;
@@ -360,6 +372,7 @@ public class Botones_almacen : MonoBehaviour
                 verificadores[i, 1] = Personajes[i, 3];
                 verificadores[i, 2] = Personajes[i, 0];
                 verificadores[i, 3] = "g" + Personajes[i, 0];
+                verificadores[i, 4] = Personajes[i, 4];
             }
             else
             {
@@ -372,6 +385,7 @@ public class Botones_almacen : MonoBehaviour
                 verificadores[i, 0] = Personajes[i, 0];
                 verificadores[i, 1] = Personajes[i, 3];
                 verificadores[i, 2] = Personajes[i, 0];
+                verificadores[i, 4] = Personajes[i, 4];
             }
             cantidad.text = null;
         }
@@ -396,6 +410,7 @@ public class Botones_almacen : MonoBehaviour
                 verificadores[position, 1] = Personajes[i, 3];
                 verificadores[position, 2] = Personajes[i, 0];
                 verificadores[position, 3] = "g" + Personajes[i, 0];
+                verificadores[position, 4] = Personajes[i, 4];
 
             }
             else
@@ -409,6 +424,7 @@ public class Botones_almacen : MonoBehaviour
                 verificadores[position, 0] = Personajes[i, 0];
                 verificadores[position, 1] = Personajes[i, 3];
                 verificadores[position, 2] = Personajes[i, 0];
+                verificadores[position, 4] = Personajes[i, 4];
             }
             position++;
             cantidad.text = null;
@@ -436,6 +452,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[position, 1] = Personajes[i, 3];
                     verificadores[position, 2] = Personajes[i, 0];
                     verificadores[position, 3] = "g" + Personajes[i, 0];
+                    verificadores[position, 4] = Personajes[i, 4];
                 }
                 else
                 {
@@ -448,6 +465,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[position, 0] = Personajes[i, 0];
                     verificadores[position, 1] = Personajes[i, 3];
                     verificadores[position, 2] = Personajes[i, 0];
+                    verificadores[position, 4] = Personajes[i, 4];
                 }
             }
             else
@@ -463,6 +481,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[position, 1] = Personajes[i, 3];
                     verificadores[position, 2] = Personajes[i, 0];
                     verificadores[position, 3] = "g" + Personajes[i, 0];
+                    verificadores[position, 4] = Personajes[i, 4];
                 }
                 else
                 {
@@ -475,6 +494,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[position, 0] = Personajes[i, 0];
                     verificadores[position, 1] = Personajes[i, 3];
                     verificadores[position, 2] = Personajes[i, 0];
+                    verificadores[position, 4] = Personajes[i, 4];
                 }
             }
             position++;
@@ -504,6 +524,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[pos, 0] = Personajes[i, 0];
                     verificadores[pos, 1] = Personajes[i, 3];
                     verificadores[pos, 2] = Personajes[i, 0];
+                    verificadores[pos, 4] = Personajes[i, 4];
 
                 }
                 else
@@ -515,6 +536,7 @@ public class Botones_almacen : MonoBehaviour
                     verificadores[pos, 0] = Personajes[i, 0];
                     verificadores[pos, 1] = Personajes[i, 3];
                     verificadores[pos, 2] = Personajes[i, 0];
+                    verificadores[pos, 4] = Personajes[i, 4];
                 }
                 nombre = GameObject.Find("Nombre" + pos.ToString()).GetComponentInChildren<Text>();
                 nombre.text = Personajes[i, 0];
@@ -543,8 +565,11 @@ public class Botones_almacen : MonoBehaviour
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[0, 0]);
             UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/"+verificadores[0, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[0, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[0, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[0, 2];
         }
@@ -571,8 +596,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[1, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[1, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[1, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[1, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[1, 2];
         }
@@ -595,8 +624,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[2, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[2, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[2, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[2, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[2, 2];
         }
@@ -619,8 +652,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[3, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[3, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[3, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[3, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[3, 2];
         }
@@ -643,8 +680,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[4, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[4, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[4, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[4, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[4, 2];
         }
@@ -667,8 +708,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[5, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[5, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[5, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[5, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[5, 2];
         }
@@ -691,8 +736,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[6, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[6, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[6, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[6, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[6, 2];
         }
@@ -715,8 +764,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[7, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[7, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[7, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[7, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[7, 2];
         }
@@ -739,8 +792,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[8, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[8, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[8, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[8, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[8, 2];
         }
@@ -763,8 +820,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[9, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[9, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[9, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[9, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[9, 2];
         }
@@ -787,8 +848,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[10, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[10, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[10, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[10, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[10, 2];
         }
@@ -811,8 +876,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[11, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[11, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[11, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[11, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[11, 2];
         }
@@ -835,8 +904,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[12, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[12, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[12, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[12, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[12, 2];
         }
@@ -859,8 +932,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[13, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[13, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[13, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[13, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[13, 2];
         }
@@ -883,8 +960,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[14, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[14, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[14, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[14, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[14, 2];
         }
@@ -907,8 +988,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[15, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[15, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[15, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[15, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[15, 2];
         }
@@ -931,8 +1016,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[16, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[16, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[16, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[16, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[16, 2];
         }
@@ -955,8 +1044,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[17, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[17, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[17, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[17, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[17, 2];
         }
@@ -979,8 +1072,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[18, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[18, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[18, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[18, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[18, 2];
         }
@@ -1003,8 +1100,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[19, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[19, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[19, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[19, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[19, 2];
         }
@@ -1027,8 +1128,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[20, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[20, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[20, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[20, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[20, 2];
         }
@@ -1051,8 +1156,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[21, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[21, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[21, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[22, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[21, 2];
         }
@@ -1075,8 +1184,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[22, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[22, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[22, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[22, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[22, 2];
         }
@@ -1099,8 +1212,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[23, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[23, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[23, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[23, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[23, 2];
         }
@@ -1123,8 +1240,12 @@ public class Botones_almacen : MonoBehaviour
             paneldescrip.SetActive(true);
             UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
             UIImage.sprite = Resources.Load<Sprite>(verificadores[24, 0]);
+            UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+            UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[24, 0]);
             cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
             cantidad.text = verificadores[24, 1];
+            cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+            cantidad.text = verificadores[24, 4];
             cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
             cantidad.text = verificadores[24, 2];
         }

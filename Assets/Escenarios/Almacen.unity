@@ -3262,7 +3262,7 @@ GameObject:
   - component: {fileID: 415824144}
   - component: {fileID: 415824143}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_formula
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6256,7 +6256,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 20.799994, y: -221.7}
+  m_AnchoredPosition: {x: 20.799994, y: -231.7}
   m_SizeDelta: {x: 764.6, y: 260.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777477546
@@ -14380,8 +14380,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 248.05, y: 100.249954}
-  m_SizeDelta: {x: 310.1, y: 276.9}
+  m_AnchoredPosition: {x: 249.65009, y: 94.4}
+  m_SizeDelta: {x: 351.5, y: 318.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1797293597
 MonoBehaviour:

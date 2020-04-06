@@ -64,6 +64,7 @@ public class Archivos : MonoBehaviour
         variables_indestructibles.experiencia = Datos.experiencia;
         variables_indestructibles.nivel_organismo_jefes = Datos.nivel_organismo_jefes;
         variables_indestructibles.Sesion = Datos.sesion;
+        variables_indestructibles.estructuracion = Datos.estructuracion;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -113,6 +114,7 @@ public class Archivos : MonoBehaviour
         Datos.experiencia = variables_indestructibles.experiencia;
         Datos.nivel_organismo_jefes = variables_indestructibles.nivel_organismo_jefes;
         Datos.sesion = variables_indestructibles.Sesion;
+        Datos.estructuracion = variables_indestructibles.estructuracion;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -368,25 +370,25 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[1, 3] = "100";
             Datos.Elementos[2, 3] = "100";
             Datos.Elementos[3, 3] = "100";
+            Datos.Elementos[4, 3] = "100";
             Datos.Elementos[5, 3] = "500";
             Datos.Elementos[6, 3] = "15000";
             Datos.Elementos[7, 3] = "15000";
             Datos.Elementos[8, 3] = "25000";
             Datos.Elementos[9, 3] = "50000";
             Datos.Elementos[10, 3] = "50000";
-            Datos.Elementos[4, 3] = "100";
             //Sigla
             Datos.Elementos[0, 4] = "C";
             Datos.Elementos[1, 4] = "H";
             Datos.Elementos[2, 4] = "O";
             Datos.Elementos[3, 4] = "N";
+            Datos.Elementos[4, 4] = "B";
             Datos.Elementos[5, 4] = "S";
             Datos.Elementos[6, 4] = "Ra";
             Datos.Elementos[7, 4] = "F";
             Datos.Elementos[8, 4] = "Cl";
             Datos.Elementos[9, 4] = "Co";
             Datos.Elementos[10, 4] = "P";
-            Datos.Elementos[4, 4] = "B";
             //Nombres de los jefes
             Datos.Jefes[0, 0] = "Cefalea";
             Datos.Jefes[1, 0] = "Adenopatia";
@@ -448,6 +450,7 @@ public class Archivos : MonoBehaviour
             Datos.experiencia = "0";
             Datos.nivel_organismo_jefes = "1";
             Datos.sesion = "";
+            Datos.estructuracion = "";
             fb.Serialize(Informacion, Datos);
             Informacion.Close();
             Debug.Log("Guardé ");
@@ -638,4 +641,5 @@ class DatosdeJuego : System.Object
     public String experiencia;
     public String nivel_organismo_jefes;
     public String sesion;
+    public String estructuracion;
 }
