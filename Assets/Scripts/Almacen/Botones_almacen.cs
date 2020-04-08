@@ -546,6 +546,20 @@ public class Botones_almacen : MonoBehaviour
     }
     //
     //onclickceldas
+    public void celdin(int celd)
+    {
+        paneldescrip.SetActive(true);
+        UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+        UIImage.sprite = Resources.Load<Sprite>("g" + verificadores[celd, 0]);
+        UIImage = GameObject.Find("ImageFormula").GetComponentInChildren<Image>();
+        UIImage.sprite = Resources.Load<Sprite>("Estrucutras/almacen/" + verificadores[celd, 0]);
+        cantidad = GameObject.Find("Textdescripcion").GetComponentInChildren<Text>();
+        cantidad.text = verificadores[celd, 1];
+        cantidad = GameObject.Find("Text_formula").GetComponentInChildren<Text>();
+        cantidad.text = verificadores[celd, 4];
+        cantidad = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+        cantidad.text = verificadores[celd, 2];
+    }
     public void celda0()
     {
         if (!verificadores[0, 3].Equals(""))
@@ -558,6 +572,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[0, 0] == "" || named.Equals("g"))
         {
+            celdin(0);
         }
         else
         {
@@ -590,6 +605,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[1, 0] == "" || named.Equals("g"))
         {
+            celdin(1);
         }
         else
         {
@@ -618,6 +634,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[2, 0] == "" || named.Equals("g"))
         {
+            celdin(2);
         }
         else
         {
@@ -646,6 +663,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[3, 0] == "" || named.Equals("g"))
         {
+            celdin(3);
         }
         else
         {
@@ -674,6 +692,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[4, 0] == "" || named.Equals("g"))
         {
+            celdin(4);
         }
         else
         {
@@ -702,6 +721,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[5, 0] == "" || named.Equals("g"))
         {
+            celdin(5);
         }
         else
         {
@@ -730,6 +750,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[6, 0] == "" || named.Equals("g"))
         {
+            celdin(6);
         }
         else
         {
@@ -758,6 +779,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[7, 0] == "" || named.Equals("g"))
         {
+            celdin(7);
         }
         else
         {
@@ -786,6 +808,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[8, 0] == "" || named.Equals("g"))
         {
+            celdin(8);
         }
         else
         {
@@ -814,6 +837,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[9, 0] == "" || named.Equals("g"))
         {
+            celdin(9);
         }
         else
         {
@@ -842,6 +866,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[10, 0] == "" || named.Equals("g"))
         {
+            celdin(10);
         }
         else
         {
@@ -870,6 +895,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[11, 0] == "" || named.Equals("g"))
         {
+            celdin(11);
         }
         else
         {
@@ -898,6 +924,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[12, 0] == "" || named.Equals("g"))
         {
+            celdin(12);
         }
         else
         {
@@ -926,6 +953,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[13, 0] == "" || named.Equals("g"))
         {
+            celdin(13);
         }
         else
         {
@@ -954,6 +982,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[14, 0] == "" || named.Equals("g"))
         {
+            celdin(14);
         }
         else
         {
@@ -982,6 +1011,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[15, 0] == "" || named.Equals("g"))
         {
+            celdin(15);
         }
         else
         {
@@ -1010,6 +1040,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[16, 0] == "" || named.Equals("g"))
         {
+            celdin(16);
         }
         else
         {
@@ -1038,6 +1069,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[17, 0] == "" || named.Equals("g"))
         {
+            celdin(17);
         }
         else
         {
@@ -1066,6 +1098,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[18, 0] == "" || named.Equals("g"))
         {
+            celdin(18);
         }
         else
         {
@@ -1094,6 +1127,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[19, 0] == "" || named.Equals("g"))
         {
+            celdin(19);
         }
         else
         {
@@ -1122,6 +1156,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[20, 0] == "" || named.Equals("g"))
         {
+            celdin(20);
         }
         else
         {
@@ -1150,6 +1185,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[21, 0] == "" || named.Equals("g"))
         {
+            celdin(21);
         }
         else
         {
@@ -1178,6 +1214,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[22, 0] == "" || named.Equals("g"))
         {
+            celdin(22);
         }
         else
         {
@@ -1206,6 +1243,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[23, 0] == "" || named.Equals("g"))
         {
+            celdin(23);
         }
         else
         {
@@ -1234,6 +1272,7 @@ public class Botones_almacen : MonoBehaviour
         }
         if (verificadores[24, 0] == "" || named.Equals("g"))
         {
+            celdin(24);
         }
         else
         {

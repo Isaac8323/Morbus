@@ -15,7 +15,7 @@ public class Opciones_mapa : MonoBehaviour
 {
     public GameObject LoadPanel, organismo, tutorial, tienda, gym, lab, almacen, santuario, exit;
     String[,] Personajes = new String[25, 8];
-    String[,] Elementos = new String[25, 5];
+    String[,] Elementos = new String[11, 5];
     Text textin;
     void Start()
     {
