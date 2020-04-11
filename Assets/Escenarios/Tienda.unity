@@ -6596,7 +6596,6 @@ MonoBehaviour:
   tienda: {fileID: 0}
   cuadro_imagen: {fileID: 1163643885}
   intercambiopanel: {fileID: 1937040268}
-  LoadPanel: {fileID: 1021263600}
 --- !u!114 &467068135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12806,12 +12805,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986613792}
   m_CullTransparentMesh: 1
---- !u!1 &1021263600 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 502021121162544055, guid: fe9ddcb873823fe4abb5450be8f61c64,
-    type: 3}
-  m_PrefabInstance: {fileID: 1706970482}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1021263601 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 502021121162544054, guid: fe9ddcb873823fe4abb5450be8f61c64,
@@ -25093,7 +25086,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 881880332}
   m_Direction: 2
   m_Value: 0.99405855
-  m_Size: 0.10486355
+  m_Size: 0.10486354
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -27307,7 +27300,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2114539383}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.51897466
+  m_Size: 0.5189746
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:

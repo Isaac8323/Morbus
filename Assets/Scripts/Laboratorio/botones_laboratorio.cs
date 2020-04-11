@@ -9,6 +9,7 @@ using UnityEngine.UI;
 using System.Threading;
 using System.Data.Sql;
 using System.Data;
+using MySql.Data.MySqlClient;
 public class botones_laboratorio : MonoBehaviour
 {
     int suma = 1;
@@ -17,6 +18,7 @@ public class botones_laboratorio : MonoBehaviour
     DatosdeJuego Datos;
     String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[11, 5];
+    String[,] Elementos2 = new String[11, 2];
     String[,] verificadores = new String[11, 4];
     String[,] plussless = new String[11, 2];
     public String cargarformula;
@@ -379,13 +381,8 @@ public class botones_laboratorio : MonoBehaviour
             }
         }
     }
-    public void proceder()
-    {
-        LoadScene.sceneToLoad = "Estructuracion";
-    }
     public void siguiente()
     {
-        int i2 = 0, index = 0, vacio = 0;
         String[] bandera_de_elementos = new String[25];
         for (int recorrdio = 0; recorrdio < 25; recorrdio++)
         {
@@ -397,10 +394,20 @@ public class botones_laboratorio : MonoBehaviour
             element[recorrdio] = null;
             elemento[recorrdio] = 0; 
         }
+        for (int x = 0; x < 2; x++)
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                variables_indestructibles.Elementos2[i, x] = "";
+                archivo_almacen.guardar_variables();
+            }
+        }
         int contador = 0;
+        int i2 = 0, index = 0, vacio = 0;
         for (int i3 = 1; i3 < 12; i3++)
         {
             element[i2] = GameObject.Find("txtdestino" + i3.ToString()).GetComponentInChildren<Text>();
+            variables_indestructibles.Elementos2[i2, 0] = element[i2].text;
             cantidad_panel_seleccionados = GameObject.Find("txtcantidad_destino" + i3.ToString()).GetComponentInChildren<Text>();
             if (cantidad_panel_seleccionados.text.Equals("") || cantidad_panel_seleccionados.text.Equals("0"))
             {
@@ -409,7 +416,7 @@ public class botones_laboratorio : MonoBehaviour
                 Debug.Log(vacio.ToString());
             }
             elemento[i2] = Int16.Parse(cantidad_panel_seleccionados.text.ToString());
-            
+            variables_indestructibles.Elementos2[i2, 1] = elemento[i2].ToString();
             if (bandera_de_elementos[0] == "Este si")
             {
                 if (element[i2].text != ("C") && element[i2].text != "H" && element[i2].text != "O" && element[i2].text != (""))
@@ -794,53 +801,58 @@ public class botones_laboratorio : MonoBehaviour
             }
             if (bandera_de_elementos[14].Equals("Este si"))
             {
-                index = 15;
+                index = 14;
                 Desifrocompuesto(index);
-
             }
             if (bandera_de_elementos[15].Equals("Este si"))
             {
-                index = 16;
+                index = 15;
                 Desifrocompuesto(index);
 
             }
             if (bandera_de_elementos[16].Equals("Este si"))
             {
+                index = 16;
+                Desifrocompuesto(index);
+
+            }
+            if (bandera_de_elementos[17].Equals("Este si"))
+            {
                 index = 17;
                 Desifrocompuesto(index);
             }
-            if (bandera_de_elementos[17].Equals("Este si"))
+            if (bandera_de_elementos[18].Equals("Este si"))
             {
                 index = 18;
                 Desifrocompuesto(index);
             }
-            if (bandera_de_elementos[18].Equals("Este si"))
+            if (bandera_de_elementos[19].Equals("Este si"))
             {
                 index = 19;
                 Desifrocompuesto(index);
 
             }
-            if (bandera_de_elementos[19].Equals("Este si"))
+            if (bandera_de_elementos[20].Equals("Este si"))
             {
                 index = 20;
                 Desifrocompuesto(index);
             }
-            if (bandera_de_elementos[20].Equals("Este si"))
+            if (bandera_de_elementos[21].Equals("Este si"))
             {
                 index = 21;
                 Desifrocompuesto(index);
             }
-            if (bandera_de_elementos[21].Equals("Este si"))
+            if (bandera_de_elementos[22].Equals("Este si"))
             {
                 index = 22;
                 Desifrocompuesto(index);
             }
-            if (bandera_de_elementos[22].Equals("Este si"))
+            if (bandera_de_elementos[23].Equals("Este si"))
             {
                 index = 23;
                 Desifrocompuesto(index);
             }
-            if (bandera_de_elementos[23].Equals("Este si"))
+            if (bandera_de_elementos[24].Equals("Este si"))
             {
                 index = 24;
                 Desifrocompuesto(index);
@@ -1133,10 +1145,6 @@ public class botones_laboratorio : MonoBehaviour
                     {
                         tefaltamas++;
                     }
-                }
-                else
-                {
-                    recorrido = 11;
                 }
             }
             if (index == 1)
@@ -2822,6 +2830,11 @@ public class botones_laboratorio : MonoBehaviour
     {
         LoadScene.sceneToLoad = "Mapajuego";
         LoadPanel.SetActive(true);
+    }
+    public void proceder_to_estruct()
+    {
+           LoadScene.sceneToLoad = "Estructuracion";
+        Debug.Log("scene estructuracion");
     }
 }
 

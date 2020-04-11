@@ -451,6 +451,11 @@ public class Archivos : MonoBehaviour
             Datos.nivel_organismo_jefes = "1";
             Datos.sesion = "";
             Datos.estructuracion = "";
+            for(int x=0;x<2;x++){
+            for(int i = 0; i<11;i++){
+                Datos.Elementos2[i, x] = "";
+            }
+            }
             fb.Serialize(Informacion, Datos);
             Informacion.Close();
             Debug.Log("Guardé ");
@@ -642,4 +647,5 @@ class DatosdeJuego : System.Object
     public String nivel_organismo_jefes;
     public String sesion;
     public String estructuracion;
+    public String[,] Elementos2 = new String[11, 2];
 }
