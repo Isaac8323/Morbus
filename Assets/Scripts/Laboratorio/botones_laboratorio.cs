@@ -22,8 +22,8 @@ public class botones_laboratorio : MonoBehaviour
     String[,] verificadores = new String[11, 4];
     String[,] plussless = new String[11, 2];
     public String cargarformula;
-    Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados,texto_alerta;
-    public GameObject panel_elementos_seleccion, LoadPanel,Alerta_a,panel_confirmacion_final;
+    Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados, texto_alerta;
+    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final;
     Text elementin;
     Image UIImage;
     Text[] element = new Text[11];
@@ -35,8 +35,8 @@ public class botones_laboratorio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         archivo_almacen = GameObject.Find("Laboratorio").GetComponent<Archivos>();
-         archivo_almacen.Cargar_Tienda(Personajes, Elementos);
+        archivo_almacen = GameObject.Find("Laboratorio").GetComponent<Archivos>();
+        archivo_almacen.Cargar_Tienda(Personajes, Elementos);
         archivo_almacen.cargar_variables();
         ElementrosAdquiridos();
     }
@@ -392,7 +392,7 @@ public class botones_laboratorio : MonoBehaviour
         for (int recorrdio = 0; recorrdio < 11; recorrdio++)
         {
             element[recorrdio] = null;
-            elemento[recorrdio] = 0; 
+            elemento[recorrdio] = 0;
         }
         for (int x = 0; x < 2; x++)
         {
@@ -735,8 +735,8 @@ public class botones_laboratorio : MonoBehaviour
             }
             if (bandera_de_elementos[1].Equals("Este si"))
             {
-                  index = 1;
-                 Desifrocompuesto(index);
+                index = 1;
+                Desifrocompuesto(index);
             }
             if (bandera_de_elementos[2].Equals("Este si"))
             {
@@ -884,7 +884,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[3] == 6)
             {
                 Debug.Log("Cloxacilina");
-                variables_indestructibles.estructuracion =  "Cloxacilina";
+                variables_indestructibles.estructuracion = "Cloxacilina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
             }
@@ -919,116 +919,116 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[8] == 5)
             {
                 Debug.Log("Penicilina");
-              variables_indestructibles.estructuracion ="Penicilina";
-              archivo_almacen.guardar_variables();
-              img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Penicilina";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[9] == 4)
             {
                 Debug.Log("Eritromicina");
-             variables_indestructibles.estructuracion ="Eritromicina";
-             archivo_almacen.guardar_variables();
-             img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Eritromicina";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[10] == 5)
             {
                 Debug.Log("Levofloxacino");
-               variables_indestructibles.estructuracion ="Levofloxacino";
-               archivo_almacen.guardar_variables();
-               img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Levofloxacino";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[11] == 4)
             {
                 Debug.Log("Betanecol");
-             variables_indestructibles.estructuracion ="Betanecol";
-             archivo_almacen.guardar_variables();
-             img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Betanecol";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[12] == 5)
             {
                 Debug.Log("Metoclopramida");
-            variables_indestructibles.estructuracion ="Metoclopramida";
-            archivo_almacen.guardar_variables();
-            img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Metoclopramida";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[13] == 3)
             {
                 Debug.Log("Ibuprofeno");
-          variables_indestructibles.estructuracion ="Ibuprofeno";
-          archivo_almacen.guardar_variables();
-          img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Ibuprofeno";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[14] == 5)
             {
                 Debug.Log("Sulfasalazina");
-            variables_indestructibles.estructuracion ="Sulfasalazina";
-            archivo_almacen.guardar_variables();
-            img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Sulfasalazina";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[15] == 3)
             {
                 Debug.Log("Prednisona");
-                variables_indestructibles.estructuracion ="Prednisona";
+                variables_indestructibles.estructuracion = "Prednisona";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
             }
             else if (conjunto[16] == 3)
             {
                 Debug.Log("Cortisol");
-               variables_indestructibles.estructuracion ="Cortisol";
-               archivo_almacen.guardar_variables();
-               img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Cortisol";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[17] == 5)
             {
                 Debug.Log("Ampicilina");
-               variables_indestructibles.estructuracion ="Ampicilina";
-               archivo_almacen.guardar_variables();
-               img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Ampicilina";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[18] == 5)
             {
                 Debug.Log("Piperacilina");
-              variables_indestructibles.estructuracion ="Piperacilina";
-              archivo_almacen.guardar_variables();
-              img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Piperacilina";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[19] == 5)
             {
                 Debug.Log("Tazobactam");
-              variables_indestructibles.estructuracion ="Tazobactam";
-              archivo_almacen.guardar_variables();
-              img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Tazobactam";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[20] == 3)
             {
                 Debug.Log("Metilprednisolona");
-             variables_indestructibles.estructuracion ="Metilprednisolona";
-             archivo_almacen.guardar_variables();
-             img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Metilprednisolona";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[21] == 5)
             {
                 Debug.Log("Hidroxicloroquina");
-             variables_indestructibles.estructuracion ="Hidroxicloroquina";
-             archivo_almacen.guardar_variables();
-             img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Hidroxicloroquina";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[22] == 5)
             {
                 Debug.Log("H_Sulfasalazina");
-              variables_indestructibles.estructuracion ="H_Sulfasalazina";
-              archivo_almacen.guardar_variables();
-              img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "H_Sulfasalazina";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
             else if (conjunto[23] == 4)
             {
                 Debug.Log("Dexametasona");
-               variables_indestructibles.estructuracion ="Dexametasona";
-               archivo_almacen.guardar_variables();
-               img_text_p_confirmacion();
+                variables_indestructibles.estructuracion = "Dexametasona";
+                archivo_almacen.guardar_variables();
+                img_text_p_confirmacion();
             }
-            else  if (conjunto[24] == 6)
+            else if (conjunto[24] == 6)
             {
                 Debug.Log("Vitamina B12");
                 variables_indestructibles.estructuracion = "Vitamina B12";
@@ -1045,7 +1045,7 @@ public class botones_laboratorio : MonoBehaviour
                 tesobran = 0;
                 for (int i3 = 1; i3 < 12; i3++)
                 {
-                    element[i3-1] = GameObject.Find("txtdestino" + i3.ToString()).GetComponentInChildren<Text>();
+                    element[i3 - 1] = GameObject.Find("txtdestino" + i3.ToString()).GetComponentInChildren<Text>();
                     cantidad_panel_seleccionados = GameObject.Find("txtcantidad_destino" + i3.ToString()).GetComponentInChildren<Text>();
                     if (cantidad_panel_seleccionados.text.Equals("") || cantidad_panel_seleccionados.text.Equals("0"))
                     {
@@ -1482,7 +1482,7 @@ public class botones_laboratorio : MonoBehaviour
                     {
                         conjunto[index]++;
                     }
-                    else if (elemento[recorrido] >13)
+                    else if (elemento[recorrido] > 13)
                     {
                         tesobran++;
                     }
@@ -2833,8 +2833,8 @@ public class botones_laboratorio : MonoBehaviour
     }
     public void proceder_to_estruct()
     {
-           LoadScene.sceneToLoad = "Estructuracion";
-        Debug.Log("scene estructuracion");
+        LoadScene.sceneToLoad = "Estructuracion";
+        LoadPanel.SetActive(true);
     }
 }
 
