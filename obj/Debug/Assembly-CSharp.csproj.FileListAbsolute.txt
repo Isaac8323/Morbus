@@ -247,3 +247,6 @@ D:\Users\isaqu\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.csproj.CoreComp
 D:\Users\isaqu\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 D:\Users\isaqu\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.dll
 D:\Users\isaqu\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Mariana\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
+C:\Users\Mariana\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.dll
+C:\Users\Mariana\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.pdb

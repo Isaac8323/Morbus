@@ -19,7 +19,7 @@ public class variables_indestructibles : MonoBehaviour
     public static String experiencia;
     public static String Sesion;
     public static String estructuracion;
-    public static String[,] Elementos2 = new String[11, 2];
+    public static String[,] Elementos2 = new String[11, 3];
     //
     void Start()
     {

@@ -57,6 +57,13 @@ public class Archivos : MonoBehaviour
         Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
 
         Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+        for (int x = 0; x < 3; x++)
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                variables_indestructibles.Elementos2[i,x]=Datos.Elementos2[i, x];
+            }
+        }
         variables_indestructibles.Usuario = Datos.Usuario;
         variables_indestructibles.monedas[0] = Datos.monedas[0];
         variables_indestructibles.level[0] = Datos.level[0];
@@ -128,6 +135,13 @@ public class Archivos : MonoBehaviour
             for (int i = 0; i < 11; i++)
             {
                 Datos.Elementos[i, x] = variables_indestructibles.Elementos[i, x];
+            }
+        }
+        for (int x = 0; x < 3; x++)
+        {
+            for (int i = 0; i < 11; i++)
+            {
+                Datos.Elementos2[i, x] = variables_indestructibles.Elementos2[i,x];
             }
         }
         fb.Serialize(Informacion, Datos);
@@ -451,7 +465,7 @@ public class Archivos : MonoBehaviour
             Datos.nivel_organismo_jefes = "1";
             Datos.sesion = "";
             Datos.estructuracion = "";
-            for(int x=0;x<2;x++){
+            for(int x=0;x<3;x++){
             for(int i = 0; i<11;i++){
                 Datos.Elementos2[i, x] = "";
             }
@@ -647,5 +661,5 @@ class DatosdeJuego : System.Object
     public String nivel_organismo_jefes;
     public String sesion;
     public String estructuracion;
-    public String[,] Elementos2 = new String[11, 2];
+    public String[,] Elementos2 = new String[11, 3];
 }

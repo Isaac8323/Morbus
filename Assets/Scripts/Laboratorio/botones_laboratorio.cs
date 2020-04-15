@@ -18,7 +18,7 @@ public class botones_laboratorio : MonoBehaviour
     DatosdeJuego Datos;
     String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[11, 5];
-    String[,] Elementos2 = new String[11, 2];
+    String[,] Elementos2 = new String[11, 3];
     String[,] verificadores = new String[11, 4];
     String[,] plussless = new String[11, 2];
     public String cargarformula;
@@ -394,7 +394,7 @@ public class botones_laboratorio : MonoBehaviour
             element[recorrdio] = null;
             elemento[recorrdio] = 0;
         }
-        for (int x = 0; x < 2; x++)
+        for (int x = 0; x < 3; x++)
         {
             for (int i = 0; i < 11; i++)
             {
@@ -2833,6 +2833,7 @@ public class botones_laboratorio : MonoBehaviour
     }
     public void proceder_to_estruct()
     {
+        panel_confirmacion_final.SetActive(false);
         LoadScene.sceneToLoad = "Estructuracion";
         LoadPanel.SetActive(true);
     }
