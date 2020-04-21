@@ -1495,7 +1495,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: mouseup_on_element2
+          m_MethodName: enlace_aspirina12
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2260,7 +2260,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina20
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4000,7 +4000,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina3
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4137,7 +4137,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina25
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4428,7 +4428,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina21
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4701,9 +4701,9 @@ MonoBehaviour:
   Element_global: {fileID: 1744481526}
   LoadPanel: {fileID: 1416304823}
   cura:
-  - {fileID: 0}
+  - {fileID: 701284039}
   - {fileID: 1007126367}
-  - {fileID: 0}
+  - {fileID: 2147041090}
   - {fileID: 1056361135}
   - {fileID: 386582322}
   - {fileID: 1750952514}
@@ -5192,7 +5192,7 @@ Transform:
   m_LocalScale: {x: 2.5945947, y: 2.5945947, z: 2.5945947}
   m_Children: []
   m_Father: {fileID: 389898985}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &262431925
 GameObject:
@@ -7705,7 +7705,7 @@ Transform:
   m_LocalScale: {x: 2.5945947, y: 2.5945947, z: 2.5945947}
   m_Children: []
   m_Father: {fileID: 389898985}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &389898981
 GameObject:
@@ -7806,6 +7806,7 @@ RectTransform:
   - {fileID: 1744481530}
   - {fileID: 247558172}
   - {fileID: 894111326}
+  - {fileID: 1416304827}
   - {fileID: 1007126368}
   - {fileID: 1056361136}
   - {fileID: 386582323}
@@ -7814,7 +7815,6 @@ RectTransform:
   - {fileID: 1603530184}
   - {fileID: 598945847}
   - {fileID: 440108342}
-  - {fileID: 1416304827}
   - {fileID: 905648178}
   - {fileID: 1515822160}
   - {fileID: 1838099403}
@@ -7939,8 +7939,8 @@ RectTransform:
   m_Father: {fileID: 834403118}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.0052570924}
+  m_AnchorMax: {x: 1, y: 0.91787463}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8129,7 +8129,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina5
+          m_MethodName: enlace_aspirina7
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9162,7 +9162,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina13
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10227,7 +10227,7 @@ Transform:
   m_LocalScale: {x: 2.5945947, y: 2.5945947, z: 2.5945947}
   m_Children: []
   m_Father: {fileID: 389898985}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &452646000
 GameObject:
@@ -10442,7 +10442,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina10
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10635,7 +10635,7 @@ PrefabInstance:
     - target: {fileID: 502021121162544054, guid: fe9ddcb873823fe4abb5450be8f61c64,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 502021121162544054, guid: fe9ddcb873823fe4abb5450be8f61c64,
         type: 3}
@@ -11347,7 +11347,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina3
+          m_MethodName: enlace_aspirina5
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -12390,7 +12390,7 @@ Transform:
   m_LocalScale: {x: 2.5945947, y: 2.5945947, z: 2.5945947}
   m_Children: []
   m_Father: {fileID: 389898985}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &609460209
 GameObject:
@@ -14190,7 +14190,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina4
+          m_MethodName: enlace_aspirina6
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14573,7 +14573,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina17
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14650,7 +14650,7 @@ GameObject:
   - component: {fileID: 701284042}
   - component: {fileID: 701284041}
   m_Layer: 5
-  m_Name: Struct_UI_Asp
+  m_Name: Struct_UI_Aspirina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14675,7 +14675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -239, y: -24.106018}
+  m_AnchoredPosition: {x: -238.99994, y: -24.105957}
   m_SizeDelta: {x: -478, y: -48.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &701284041
@@ -15232,7 +15232,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina10
+          m_MethodName: enlace_aspirina11
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -18872,7 +18872,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 391018799}
   m_Direction: 2
   m_Value: 0.06016189
-  m_Size: 0.9125939
+  m_Size: 0.91261756
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -19541,7 +19541,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina4
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -19909,7 +19909,7 @@ Transform:
   m_Children:
   - {fileID: 2099368836}
   m_Father: {fileID: 389898985}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1011469248
 GameObject:
@@ -20345,7 +20345,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina24
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21226,7 +21226,7 @@ Transform:
   m_LocalScale: {x: 2.5945947, y: 2.5945947, z: 2.5945947}
   m_Children: []
   m_Father: {fileID: 389898985}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1061836753
 GameObject:
@@ -22023,7 +22023,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina18
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -23045,6 +23045,145 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142706547}
+  m_CullTransparentMesh: 0
+--- !u!1 &1143519608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1143519609}
+  - component: {fileID: 1143519613}
+  - component: {fileID: 1143519612}
+  - component: {fileID: 1143519611}
+  - component: {fileID: 1143519610}
+  m_Layer: 0
+  m_Name: carbon15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1143519609
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143519608}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000015258789}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1941305837}
+  m_Father: {fileID: 1691762253}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 228.5, y: -110.9}
+  m_SizeDelta: {x: 14.49, y: 14.35}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1143519610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143519608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 247558173}
+          m_MethodName: celda_carbon_from_aspirina14
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1143519611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143519608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 247558173}
+          m_MethodName: celda_carbon_from_aspirina15
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &1143519612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143519608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.29411766, g: 0.7019608, b: 0.25882354, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1143519613
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143519608}
   m_CullTransparentMesh: 0
 --- !u!1 &1157188768
 GameObject:
@@ -24244,7 +24383,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina22
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -24594,7 +24733,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina6
+          m_MethodName: enlace_aspirina8
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -24731,7 +24870,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina26
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -31176,7 +31315,7 @@ Transform:
   m_LocalScale: {x: 2.5945947, y: 2.5945947, z: 2.5945947}
   m_Children: []
   m_Father: {fileID: 389898985}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603995141
 GameObject:
@@ -31252,7 +31391,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina23
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -31725,8 +31864,8 @@ RectTransform:
   m_Father: {fileID: 1472957041}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.30981663}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -31962,6 +32101,7 @@ RectTransform:
   - {fileID: 2063902968}
   - {fileID: 1770163916}
   - {fileID: 2052564910}
+  - {fileID: 1143519609}
   m_Father: {fileID: 407953586}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -32153,7 +32293,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina27
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -32438,7 +32578,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina5
+          m_MethodName: enlace_aspirina16
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -32876,7 +33016,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1675088998}
   m_HandleRect: {fileID: 1675088997}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999999
   m_Size: 0.69018334
   m_NumberOfSteps: 1
   m_OnValueChanged:
@@ -33640,7 +33780,7 @@ Transform:
   m_LocalScale: {x: 2.5945947, y: 2.5945947, z: 2.5945947}
   m_Children: []
   m_Father: {fileID: 389898985}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1758377717
 GameObject:
@@ -35674,7 +35814,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina19
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -37035,6 +37175,85 @@ Transform:
   m_Father: {fileID: 389898985}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1941305836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1941305837}
+  - component: {fileID: 1941305839}
+  - component: {fileID: 1941305838}
+  m_Layer: 0
+  m_Name: text_carbon6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1941305837
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941305836}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1143519609}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000011444092, y: 0.42497993}
+  m_SizeDelta: {x: 14.49, y: 15.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1941305838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941305836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1941305839
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941305836}
+  m_CullTransparentMesh: 0
 --- !u!1 &1944365088
 GameObject:
   m_ObjectHideFlags: 0
@@ -40194,7 +40413,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina14
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -40686,7 +40905,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina15
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -40976,12 +41195,12 @@ GameObject:
   - component: {fileID: 2147041092}
   - component: {fileID: 2147041096}
   m_Layer: 5
-  m_Name: Struct_UI_Amox
+  m_Name: Struct_UI_Amoxicilina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2147041091
 RectTransform:
   m_ObjectHideFlags: 0
