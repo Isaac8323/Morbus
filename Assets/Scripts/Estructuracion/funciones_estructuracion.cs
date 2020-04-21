@@ -470,6 +470,7 @@ public class funciones_estructuracion : MonoBehaviour
     }
     public void verificar()
     {
+        int contador_de_enlaces=0;
          Element_global.SetActive(true);
          elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
          if (elementin.text.Equals(""))
@@ -505,8 +506,18 @@ public class funciones_estructuracion : MonoBehaviour
                             Debug.Log("paso  comprovacion 3");
                             //comprovacion 4
                             if(contador_enlaces_aspirina[1]==1 && contador_enlaces_aspirina[19]==1 && contador_enlaces_aspirina[3]==1 && contador_enlaces_aspirina[5]==1 && contador_enlaces_aspirina[21]==1 ){
-                                Debug.Log("Creaste exitosamente a Aspirina");
-                                verificar_final(0);
+                                for (int i = 0; i < 26; i++)
+                            {
+                                if (contador_enlaces_aspirina[i] == 0)
+                                {
+                                    contador_de_enlaces++;
+                                }
+                            }
+                                if (contador_de_enlaces == 21)
+                                {
+                                    Debug.Log("Creaste exitosamente a Aspirina");
+                                    verificar_final(0);
+                                }
                             }
                         }
                     }
@@ -546,8 +557,18 @@ public class funciones_estructuracion : MonoBehaviour
                         //comprovacion 4
                         if (contador_enlaces_aspirina[3] == 1 && contador_enlaces_aspirina[11] == 1 && contador_enlaces_aspirina[9] == 1 &&  contador_enlaces_aspirina[21] == 1)
                         {
-                            Debug.Log("Creaste exitosamente a Paracetamol");
-                            verificar_final(1);
+                            for (int i = 0; i < 22; i++)
+                            {
+                                if (contador_enlaces_aspirina[i] == 0)
+                                {
+                                    contador_de_enlaces++;
+                                }
+                            }
+                                if (contador_de_enlaces == 18)
+                                {
+                                Debug.Log("Creaste exitosamente a Paracetamol");
+                                verificar_final(1);
+                                }
                         }
                     }
                 }
@@ -584,10 +605,20 @@ public class funciones_estructuracion : MonoBehaviour
                     {
                         Debug.Log("paso  comprovacion 3");
                         //comprovacion 4
-                        if (contador_enlaces_aspirina[3] == 1 && contador_enlaces_aspirina[11] == 1 && contador_enlaces_aspirina[9] == 1 && contador_enlaces_aspirina[21] == 1)
+                        if (contador_enlaces_aspirina[3] == 1 && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[12] == 1 && contador_enlaces_aspirina[21] == 1 && contador_enlaces_aspirina[31] == 1 && contador_enlaces_aspirina[55] == 1)
                         {
-                            Debug.Log("Creaste exitosamente a Amoxicilina");
-                            verificar_final(2);
+                            for (int i = 0; i < 56; i++)
+                            {
+                                if (contador_enlaces_aspirina[i] == 0)
+                                {
+                                    contador_de_enlaces++;
+                                }
+                            }
+                            if (contador_de_enlaces == 50)
+                            {
+                                Debug.Log("Creaste exitosamente a Amoxicilina");
+                                verificar_final(2);
+                            }
                         }
                     }
                 }
