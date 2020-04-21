@@ -21,6 +21,7 @@ public class funciones_estructuracion : MonoBehaviour
     public GameObject[] cura = new GameObject[25];
     public GameObject[] enlace_aspirina = new GameObject[26];
     public GameObject[] enlace_paracetamol = new GameObject[22];
+    public GameObject[] enlace_amoxicilina = new GameObject[56];
     Text [] verificadores =new Text[100];
     int banderin,mouseupper;
     int[] cantidad_elementos_celda = new int[200];
@@ -293,7 +294,18 @@ public class funciones_estructuracion : MonoBehaviour
     {
         celda_elemento_form_aspirina(10);
     }
-
+    public void celda_elemento_form_aspirina11()
+    {
+        celda_elemento_form_aspirina(11);
+    }
+    public void celda_elemento_form_aspirina12()
+    {
+        celda_elemento_form_aspirina(12);
+    }
+    public void celda_elemento_form_aspirina13()
+    {
+        celda_elemento_form_aspirina(13);
+    }
 
     public void celda_carbon_from_aspirina(int x)
     {
@@ -428,7 +440,30 @@ public class funciones_estructuracion : MonoBehaviour
     {
         celda_carbon_from_aspirina(8);
     }
-
+    public void celda_carbon_from_aspirina9()
+    {
+        celda_carbon_from_aspirina(9);
+    }
+    public void celda_carbon_from_aspirina10()
+    {
+        celda_carbon_from_aspirina(10);
+    }
+    public void celda_carbon_from_aspirina11()
+    {
+        celda_carbon_from_aspirina(11);
+    }
+    public void celda_carbon_from_aspirina12()
+    {
+        celda_carbon_from_aspirina(12);
+    }
+    public void celda_carbon_from_aspirina13()
+    {
+        celda_carbon_from_aspirina(13);
+    }
+    public void celda_carbon_from_aspirina14()
+    {
+        celda_carbon_from_aspirina(14);
+    }
     public void verificar()
     {
          Element_global.SetActive(true);
@@ -627,6 +662,9 @@ public class funciones_estructuracion : MonoBehaviour
                 else if(elementin.text.Equals("Paracetamol")){
                     ruta = "Estrucutras/Simple/Paracetamol/Enlaces/EN_PA_";
                 }
+                else if (elementin.text.Equals("Amoxicilina")){
+                    ruta = "Estrucutras/Simple/Amoxicilina/Enlaces/EN_AX_";
+                }
          elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
          if (elementin.text.Equals(""))
          {
@@ -644,6 +682,11 @@ public class funciones_estructuracion : MonoBehaviour
                       enlace_paracetamol[activate].SetActive(false);
                       enlace_paracetamol[activate2].SetActive(false);
                  }
+                 else if (nombre_form.Equals("Amoxicilina"))
+                 {
+                     enlace_paracetamol[activate].SetActive(false);
+                     enlace_paracetamol[activate2].SetActive(false);
+                 }
              }
              else if (contador_enlaces_aspirina[x] == 1)
              {
@@ -655,6 +698,10 @@ public class funciones_estructuracion : MonoBehaviour
                  else if (nombre_form.Equals("Paracetamol"))
                  {
                      enlace_paracetamol[activate].SetActive(true);
+                 }
+                 else if (nombre_form.Equals("Amoxicilina"))
+                 {
+                     enlace_amoxicilina[activate].SetActive(true);
                  }
                  UIImage = GameObject.Find("ENA_AS_" + x2.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta+ x2.ToString());
@@ -671,6 +718,10 @@ public class funciones_estructuracion : MonoBehaviour
                  else if (nombre_form.Equals("Paracetamol"))
                  {
                      enlace_paracetamol[activate].SetActive(true);
+                 }
+                 else if (nombre_form.Equals("Amoxicilina"))
+                 {
+                     enlace_amoxicilina[activate].SetActive(true);
                  }
                  UIImage = GameObject.Find("ENA_AS_" + x.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta + x.ToString());
@@ -736,6 +787,66 @@ public class funciones_estructuracion : MonoBehaviour
     public void enlace_aspirina12()
     {
         enlace_as(25,26);
+    }
+    public void enlace_aspirina13()
+    {
+        enlace_as(27, 28);
+    }
+    public void enlace_aspirina14()
+    {
+        enlace_as(29, 30);
+    }
+    public void enlace_aspirina15()
+    {
+        enlace_as(31, 32);
+    }
+    public void enlace_aspirina16()
+    {
+        enlace_as(33, 34);
+    }
+    public void enlace_aspirina17()
+    {
+        enlace_as(35, 36);
+    }
+    public void enlace_aspirina18()
+    {
+        enlace_as(37, 38);
+    }
+    public void enlace_aspirina19()
+    {
+        enlace_as(39, 40);
+    }
+    public void enlace_aspirina20()
+    {
+        enlace_as(41, 42);
+    }
+    public void enlace_aspirina21()
+    {
+        enlace_as(43, 44);
+    }
+    public void enlace_aspirina22()
+    {
+        enlace_as(45, 46);
+    }
+    public void enlace_aspirina23()
+    {
+        enlace_as(47, 48);
+    }
+    public void enlace_aspirina24()
+    {
+        enlace_as(49, 50);
+    }
+    public void enlace_aspirina25()
+    {
+        enlace_as(51, 52);
+    }
+    public void enlace_aspirina26()
+    {
+        enlace_as(53, 54);
+    }
+    public void enlace_aspirina27()
+    {
+        enlace_as(55, 56);
     }
    //Paracetamol functions
 }
