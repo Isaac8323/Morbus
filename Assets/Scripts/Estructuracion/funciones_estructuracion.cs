@@ -22,6 +22,7 @@ public class funciones_estructuracion : MonoBehaviour
     public GameObject[] enlace_aspirina = new GameObject[26];
     public GameObject[] enlace_paracetamol = new GameObject[22];
     public GameObject[] enlace_amoxicilina = new GameObject[56];
+    public GameObject[] enlace_cloxacilina = new GameObject[64];
     Text [] verificadores =new Text[100];
     int banderin,mouseupper;
     int[] cantidad_elementos_celda = new int[200];
@@ -467,6 +468,22 @@ public class funciones_estructuracion : MonoBehaviour
     public void celda_carbon_from_aspirina15()
     {
         celda_carbon_from_aspirina(15);
+    }
+    public void celda_carbon_from_aspirina16()
+    {
+        celda_carbon_from_aspirina(16);
+    }
+    public void celda_carbon_from_aspirina17()
+    {
+        celda_carbon_from_aspirina(17);
+    }
+    public void celda_carbon_from_aspirina18()
+    {
+        celda_carbon_from_aspirina(18);
+    }
+    public void celda_carbon_from_aspirina19()
+    {
+        celda_carbon_from_aspirina(19);
     }
     public void verificar()
     {
@@ -923,6 +940,22 @@ public class funciones_estructuracion : MonoBehaviour
     public void enlace_aspirina27()
     {
         enlace_as(55, 56);
+    }
+    public void enlace_aspirina28()
+    {
+        enlace_as(57, 58);
+    }
+    public void enlace_aspirina29()
+    {
+        enlace_as(59, 60);
+    }
+    public void enlace_aspirina30()
+    {
+        enlace_as(61, 62);
+    }
+    public void enlace_aspirina31()
+    {
+        enlace_as(63, 64);
     }
    //Paracetamol functions
 }
