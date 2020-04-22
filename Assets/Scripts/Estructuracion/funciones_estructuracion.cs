@@ -593,11 +593,11 @@ public class funciones_estructuracion : MonoBehaviour
                 }
                 Debug.Log("paso  comprovacion 1");
                 //comprovacion 2
-                if (verificadores[0].text.Equals("H") && verificadores[1].text.Equals("O") && verificadores[2].text.Equals("N") && verificadores[3].text.Equals("H2") && verificadores[4].text.Equals("N") && verificadores[5].text.Equals("H") && verificadores[6].text.Equals("H") && verificadores[7].text.Equals("S") && verificadores[8].text.Equals("O") && verificadores[9].text.Equals("H") && verificadores[10].text.Equals("O") && verificadores[11].text.Equals("O") && verificadores[12].text.Equals("O") && verificadores[13].text.Equals("O"))
+                if (verificadores[0].text.Equals("H") && verificadores[1].text.Equals("O") && verificadores[2].text.Equals("N") && verificadores[3].text.Equals("H2") && verificadores[4].text.Equals("N") && verificadores[5].text.Equals("H") && verificadores[6].text.Equals("H") && verificadores[7].text.Equals("S") && verificadores[8].text.Equals("O") && verificadores[9].text.Equals("H") && verificadores[10].text.Equals("O") && verificadores[11].text.Equals("N") && verificadores[12].text.Equals("O") && verificadores[13].text.Equals("O"))
                 {
                     Debug.Log("paso  comprovacion 2");
                     //comprovacion 3
-                    for (int i = 0; i < 15; i++)
+                    for (int i = 0; i < 16; i++)
                     {
                         verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
                     }
@@ -605,7 +605,7 @@ public class funciones_estructuracion : MonoBehaviour
                     {
                         Debug.Log("paso  comprovacion 3");
                         //comprovacion 4
-                        if (contador_enlaces_aspirina[3] == 1 && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[12] == 1 && contador_enlaces_aspirina[21] == 1 && contador_enlaces_aspirina[31] == 1 && contador_enlaces_aspirina[55] == 1)
+                        if (contador_enlaces_aspirina[3] == 1 && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[13] == 1 && contador_enlaces_aspirina[21] == 1 && contador_enlaces_aspirina[31] == 1 && contador_enlaces_aspirina[55] == 1)
                         {
                             for (int i = 0; i < 56; i++)
                             {
@@ -648,9 +648,8 @@ public class funciones_estructuracion : MonoBehaviour
                 {
                     if (elementin.text.Equals(variables_indestructibles.Elementos[y, 4]))
                     {
-                        elementin = GameObject.Find("txt_total" + i.ToString()).GetComponent<Text>();
                         int convercion = Int32.Parse(variables_indestructibles.Elementos[y, 1]);
-                        int elemtincantidad = Int32.Parse(elementin.text.ToString());
+                        int elemtincantidad = Int32.Parse(Elementos2[y,1]);
                         convercion = convercion - elemtincantidad;
                         variables_indestructibles.Elementos[y, 1] = convercion.ToString();
                         y = 11;
@@ -662,6 +661,8 @@ public class funciones_estructuracion : MonoBehaviour
         LoadScene.sceneToLoad = "Mapajuego";
         LoadPanel.SetActive(true);
     }
+
+
     public void elementsadd()
     {
         String a = variables_indestructibles.estructuracion.ToLower();
