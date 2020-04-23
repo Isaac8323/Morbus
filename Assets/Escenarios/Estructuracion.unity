@@ -244,7 +244,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9081ca64603f0064780d45ed4f99a0cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08274c1105fb2b54a8b3c1c878671a19, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1945,7 +1945,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina12
+          m_MethodName: mouseup_on_element2
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1962,7 +1962,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina6
+          m_MethodName: enlace_aspirina14
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3930,7 +3930,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina26
+          m_MethodName: enlace_aspirina32
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -4050,7 +4050,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 18934ac659f316646a90da0e3dfad1b8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c4391e8e5ed43840a34a5a18298d489, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4645,7 +4645,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: celda_carbon_from_aspirina15
+          m_MethodName: celda_carbon_from_aspirina17
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -5665,6 +5665,143 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198948050}
+  m_CullTransparentMesh: 0
+--- !u!1 &200851379
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 200851380}
+  - component: {fileID: 200851383}
+  - component: {fileID: 200851382}
+  - component: {fileID: 200851381}
+  m_Layer: 0
+  m_Name: enlace32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &200851380
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200851379}
+  m_LocalRotation: {x: -0, y: -0, z: 0.99999845, w: -0.0018017644}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000015258789}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 627207065}
+  m_Father: {fileID: 1339822255}
+  m_RootOrder: 32
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180.206}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 54.69, y: -9.47}
+  m_SizeDelta: {x: 16.19, y: 40.74}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &200851381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200851379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 247558173}
+          m_MethodName: mouseup_on_element2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 247558173}
+          m_MethodName: enlace_aspirina23
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!114 &200851382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200851379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!222 &200851383
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200851379}
   m_CullTransparentMesh: 0
 --- !u!1 &201990377
 GameObject:
@@ -6981,7 +7118,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina18
+          m_MethodName: enlace_aspirina19
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7373,14 +7510,16 @@ MonoBehaviour:
   - {fileID: 598714720}
   - {fileID: 777997528}
   - {fileID: 1807159439}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 392233419}
+  - {fileID: 76703415}
+  - {fileID: 1977635414}
+  - {fileID: 134346965}
+  - {fileID: 1367835320}
+  - {fileID: 1477344730}
+  - {fileID: 1357396115}
+  - {fileID: 1149527170}
+  - {fileID: 822817371}
+  - {fileID: 1810669365}
 --- !u!114 &247558174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8008,8 +8147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -23.9, y: 2.4}
-  m_SizeDelta: {x: 833.9, y: 395.8}
+  m_AnchoredPosition: {x: -23.9, y: 21.9}
+  m_SizeDelta: {x: 833.9, y: 580.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &269105203
 CanvasRenderer:
@@ -8313,7 +8452,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -8471,7 +8610,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -9454,7 +9593,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina10
+          m_MethodName: enlace_aspirina18
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -9577,7 +9716,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -9719,7 +9858,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina5
+          m_MethodName: enlace_aspirina1
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11092,7 +11231,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina0
+          m_MethodName: enlace_aspirina6
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -11442,7 +11581,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina8
+          m_MethodName: enlace_aspirina3
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -12812,7 +12951,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -13727,7 +13866,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 366ecff007d8fbb46bf3e1a039980f08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a4946f1861bc9640bd6790024d885b1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14786,7 +14925,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina19
+          m_MethodName: enlace_aspirina17
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -15352,7 +15491,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina27
+          m_MethodName: enlace_aspirina30
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -16688,7 +16827,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cec5efdcbdbdf114a87ea405ac3df063, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 94ca734767878ae4681199dbcf5ecc9f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17551,7 +17690,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 94ca734767878ae4681199dbcf5ecc9f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cec5efdcbdbdf114a87ea405ac3df063, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17625,7 +17764,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 04bc4f21897971b4c92d70e82e79df0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b543a8fd71481a4e86753f02b69a382, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17729,7 +17868,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 5b543a8fd71481a4e86753f02b69a382, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 04bc4f21897971b4c92d70e82e79df0c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -18559,6 +18698,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627085401}
   m_CullTransparentMesh: 0
+--- !u!1 &627207064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 627207065}
+  - component: {fileID: 627207067}
+  - component: {fileID: 627207066}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &627207065
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627207064}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 200851380}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &627207066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627207064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &627207067
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 627207064}
+  m_CullTransparentMesh: 0
 --- !u!1 &629235593
 GameObject:
   m_ObjectHideFlags: 0
@@ -19268,7 +19486,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina10
+          m_MethodName: enlace_aspirina11
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -19981,7 +20199,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9abbce76186f8a948a7da40ff364901d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a306add3f613f84eab76ddb824f276f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20072,7 +20290,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina22
+          m_MethodName: enlace_aspirina26
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -21959,7 +22177,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina11
+          m_MethodName: enlace_aspirina9
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -22891,7 +23109,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -23196,7 +23414,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 49afa9e1883111d4e9514e7d3e326335, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 89ae0f9c27a4df2468cdca8d980cf79e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23756,7 +23974,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -24665,7 +24883,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina12
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -25019,6 +25237,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821850792}
+  m_CullTransparentMesh: 0
+--- !u!1 &822817371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822817372}
+  - component: {fileID: 822817374}
+  - component: {fileID: 822817373}
+  m_Layer: 0
+  m_Name: ENA_AS_65
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &822817372
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822817371}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 870711574}
+  m_RootOrder: 64
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015259, y: -0.0022812}
+  m_SizeDelta: {x: 1104.4, y: 621.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &822817373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822817371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 304fa48518c55d04ab311c00feaabeb2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &822817374
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822817371}
   m_CullTransparentMesh: 0
 --- !u!1 &828381711
 GameObject:
@@ -25953,6 +26245,8 @@ RectTransform:
   - {fileID: 1477344731}
   - {fileID: 1357396116}
   - {fileID: 1149527171}
+  - {fileID: 822817372}
+  - {fileID: 1810669366}
   m_Father: {fileID: 1255417753}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28429,7 +28723,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina6
+          m_MethodName: enlace_aspirina4
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -28784,7 +29078,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina20
+          m_MethodName: enlace_aspirina31
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -33065,7 +33359,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 304fa48518c55d04ab311c00feaabeb2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 97fc8a8ad98ca7b42b8a828ce7681428, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -34336,7 +34630,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -34478,7 +34772,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina21
+          m_MethodName: enlace_aspirina29
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -34768,7 +35062,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina14
+          m_MethodName: enlace_aspirina22
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -36787,7 +37081,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3f633659a70f95541bbbe5ced2dcbb23, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1605540afb551604fa89937486ead184, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -37987,7 +38281,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina7
+          m_MethodName: enlace_aspirina2
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -38408,6 +38702,7 @@ RectTransform:
   - {fileID: 1755526808}
   - {fileID: 1534067448}
   - {fileID: 1548305601}
+  - {fileID: 200851380}
   m_Father: {fileID: 1255417753}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38604,7 +38899,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -38729,7 +39024,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 97fc8a8ad98ca7b42b8a828ce7681428, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00c2edf1489d8df44a30dd7e657b6949, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -38957,7 +39252,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: celda_carbon_from_aspirina15
+          m_MethodName: celda_carbon_from_aspirina16
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -39253,7 +39548,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 52545da62afc21c4a868c21275b8cbe9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 18934ac659f316646a90da0e3dfad1b8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -41884,7 +42179,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 00c2edf1489d8df44a30dd7e657b6949, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 52545da62afc21c4a868c21275b8cbe9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -42455,7 +42750,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -42755,7 +43050,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina15
+          m_MethodName: enlace_aspirina21
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -43633,7 +43928,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina3
+          m_MethodName: enlace_aspirina8
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -43907,7 +44202,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina2
+          m_MethodName: enlace_aspirina5
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -45602,7 +45897,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -45973,7 +46268,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 1605540afb551604fa89937486ead184, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 796dd87112e03d14a80d56a68529ba40, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -46639,7 +46934,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2a4946f1861bc9640bd6790024d885b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 366ecff007d8fbb46bf3e1a039980f08, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -47560,7 +47855,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina25
+          m_MethodName: enlace_aspirina27
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -49123,7 +49418,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina4
+          m_MethodName: enlace_aspirina10
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -49260,7 +49555,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina23
+          m_MethodName: enlace_aspirina24
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -49469,7 +49764,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: f3ae3275845f66b4daeb3ea90029d87e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9081ca64603f0064780d45ed4f99a0cb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -49827,7 +50122,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina13
+          m_MethodName: enlace_aspirina20
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -50530,7 +50825,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina1
+          m_MethodName: enlace_aspirina0
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -50729,7 +51024,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 89ae0f9c27a4df2468cdca8d980cf79e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 49afa9e1883111d4e9514e7d3e326335, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -50898,6 +51193,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1807416541}
+  m_CullTransparentMesh: 0
+--- !u!1 &1810669365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1810669366}
+  - component: {fileID: 1810669368}
+  - component: {fileID: 1810669367}
+  m_Layer: 0
+  m_Name: ENA_AS_66
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1810669366
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810669365}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 870711574}
+  m_RootOrder: 65
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015259, y: -0.0022812}
+  m_SizeDelta: {x: 1104.4, y: 621.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1810669367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810669365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: ba59a7ef2132e8945b5977e0dc65450f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1810669368
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810669365}
   m_CullTransparentMesh: 0
 --- !u!1 &1815571209
 GameObject:
@@ -51684,7 +52053,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1311185743}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.66495836
+  m_Size: 0.6649583
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -52253,7 +52622,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: e8364a60c1afe514dae653106a5b7b0d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b1d144679fecd3746a2185b2ba24eed4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -52542,7 +52911,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina17
+          m_MethodName: enlace_aspirina25
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -52679,7 +53048,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina3
+          m_MethodName: enlace_aspirina13
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -54233,7 +54602,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
-    m_FontSize: 150
+    m_FontSize: 142
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
@@ -54506,7 +54875,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 796dd87112e03d14a80d56a68529ba40, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f633659a70f95541bbbe5ced2dcbb23, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -54656,7 +55025,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: celda_carbon_from_aspirina15
+          m_MethodName: celda_carbon_from_aspirina18
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -55532,7 +55901,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 08274c1105fb2b54a8b3c1c878671a19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3ae3275845f66b4daeb3ea90029d87e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -57495,7 +57864,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 2a306add3f613f84eab76ddb824f276f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9abbce76186f8a948a7da40ff364901d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -57793,7 +58162,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina4
+          m_MethodName: enlace_aspirina15
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -58835,7 +59204,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina9
+          m_MethodName: enlace_aspirina7
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -59394,7 +59763,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: b1d144679fecd3746a2185b2ba24eed4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8364a60c1afe514dae653106a5b7b0d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -59751,7 +60120,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 247558173}
-          m_MethodName: enlace_aspirina24
+          m_MethodName: enlace_aspirina28
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
