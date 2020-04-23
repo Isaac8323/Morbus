@@ -957,5 +957,9 @@ public class funciones_estructuracion : MonoBehaviour
     {
         enlace_as(63, 64);
     }
+    public void enlace_aspirina32()
+    {
+        enlace_as(65, 66);
+    }
    //Paracetamol functions
 }
