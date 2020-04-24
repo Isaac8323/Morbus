@@ -23,6 +23,7 @@ public class funciones_estructuracion : MonoBehaviour
     public GameObject[] enlace_paracetamol = new GameObject[22];
     public GameObject[] enlace_amoxicilina = new GameObject[56];
     public GameObject[] enlace_cloxacilina = new GameObject[66];
+    public GameObject[] enlace_bortezomib = new GameObject[58];
     Text [] verificadores =new Text[100];
     int banderin,mouseupper;
     int[] cantidad_elementos_celda = new int[200];
@@ -221,13 +222,29 @@ public class funciones_estructuracion : MonoBehaviour
                         for (int i = 1; i < 12; i++)
                         {
                             elementin = GameObject.Find("txt_elemento" + i.ToString()).GetComponentInChildren<Text>();
-                            if (elemento_text_text.text.Substring(0, 0).Equals(elementin.text) || elemento_text_text.text.Substring(0, 1).Equals(elementin.text))
+                            int largo = elemento_text_text.text.Length;
+                            if (largo == 1)
                             {
-                                elementin = GameObject.Find("txt_total" + i.ToString()).GetComponentInChildren<Text>();
-                                int totalelementonousado = Int32.Parse((elementin.text));
-                                totalelementonousado = totalelementonousado + cantidad_elementos_celda[x];
-                                elementin.text = totalelementonousado.ToString();
-                                i = 12;
+                                if (elemento_text_text.text.Substring(0, 1).Equals(elementin.text) )
+                                {
+                                    elementin = GameObject.Find("txt_total" + i.ToString()).GetComponentInChildren<Text>();
+                                    int totalelementonousado = Int32.Parse((elementin.text));
+                                    totalelementonousado = totalelementonousado + cantidad_elementos_celda[x];
+                                    elementin.text = totalelementonousado.ToString();
+                                    i = 12;
+                                }
+                            }
+                            else if (largo == 2)
+                            {
+                                
+                              if (elemento_text_text.text.Substring(0, 2).Equals(elementin.text))
+                                {
+                                    elementin = GameObject.Find("txt_total" + i.ToString()).GetComponentInChildren<Text>();
+                                    int totalelementonousado = Int32.Parse((elementin.text));
+                                    totalelementonousado = totalelementonousado + cantidad_elementos_celda[x];
+                                    elementin.text = totalelementonousado.ToString();
+                                    i = 12;
+                                }
                             }
                         }
                     }
@@ -643,7 +660,7 @@ public class funciones_estructuracion : MonoBehaviour
         }
         else if (elementin.text.Equals("Cloxacilina"))
         {
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 19; i++)
             {
                 if (bandera_carb[i] == 1)
                 {
@@ -660,7 +677,7 @@ public class funciones_estructuracion : MonoBehaviour
                 }
                 Debug.Log("paso  comprovacion 1");
                 //comprovacion 2
-                if (verificadores[0].text.Equals("Cl") && verificadores[1].text.Equals("N") && verificadores[2].text.Equals("H") && verificadores[3].text.Equals("H") && verificadores[4].text.Equals("S") && verificadores[5].text.Equals("H") && verificadores[6].text.Equals("O") && verificadores[7].text.Equals("O") && verificadores[8].text.Equals("N") && verificadores[9].text.Equals("O") && verificadores[10].text.Equals("O") && verificadores[11].text.Equals("O") && verificadores[12].text.Equals("N"))
+                if (verificadores[0].text.Equals("Cl") && verificadores[1].text.Equals("N") && verificadores[2].text.Equals("H") && verificadores[3].text.Equals("H") && verificadores[4].text.Equals("S") && verificadores[5].text.Equals("O") && verificadores[6].text.Equals("H") && verificadores[7].text.Equals("O") && verificadores[8].text.Equals("N") && verificadores[9].text.Equals("O") && verificadores[10].text.Equals("O") && verificadores[11].text.Equals("O") && verificadores[12].text.Equals("N"))
                 {
                     Debug.Log("paso  comprovacion 2");
                     //comprovacion 3
@@ -668,24 +685,75 @@ public class funciones_estructuracion : MonoBehaviour
                     {
                         verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
                     }
-                    //aqui me quede 22/04/2020
-                    if (verificadores[1].text.Equals("1") && verificadores[2].text.Equals("1") && verificadores[4].text.Equals("1") && verificadores[6].text.Equals("1") && verificadores[9].text.Equals("3") && verificadores[10].text.Equals("3") && verificadores[11].text.Equals("1") && verificadores[13].text.Equals("1") && verificadores[14].text.Equals("1"))
+
+                    if (verificadores[1].text.Equals("1") && verificadores[2].text.Equals("1") && verificadores[3].text.Equals("1") && verificadores[4].text.Equals("1") && verificadores[9].text.Equals("1") && verificadores[12].text.Equals("3") && verificadores[13].text.Equals("3") && verificadores[14].text.Equals("1") && verificadores[17].text.Equals("3"))
                     {
                         Debug.Log("paso  comprovacion 3");
                         //comprovacion 4
-                        if (contador_enlaces_aspirina[3] == 1 && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[13] == 1 && contador_enlaces_aspirina[21] == 1 && contador_enlaces_aspirina[31] == 1 && contador_enlaces_aspirina[55] == 1)
+                        if (contador_enlaces_aspirina[1] == 1 && contador_enlaces_aspirina[9] == 1 && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[17] == 1 && contador_enlaces_aspirina[25] == 1 && contador_enlaces_aspirina[31] == 1 && contador_enlaces_aspirina[41] == 1 && contador_enlaces_aspirina[63] == 1)
                         {
-                            for (int i = 0; i < 56; i++)
+                            for (int i = 0; i < 66; i++)
                             {
                                 if (contador_enlaces_aspirina[i] == 0)
                                 {
                                     contador_de_enlaces++;
                                 }
                             }
-                            if (contador_de_enlaces == 50)
+                            if (contador_de_enlaces == 58)
                             {
-                                Debug.Log("Creaste exitosamente a Amoxicilina");
-                                verificar_final(2);
+                                Debug.Log("Creaste exitosamente a Cloxacilina");
+                                verificar_final(3);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else if (elementin.text.Equals("Bortezomib"))
+        {
+            for (int i = 0; i < 19; i++)
+            {
+                if (bandera_carb[i] == 1)
+                {
+                    bandera_carb[99]++;
+                    Debug.Log(bandera_carb[99].ToString());
+                }
+            }
+            //comprovacion 1
+            if (bandera_carb[99] == 19)
+            {
+                for (int i = 0; i < 13; i++)
+                {
+                    verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                }
+                Debug.Log("paso  comprovacion 1");
+                //comprovacion 2
+                if (verificadores[0].text.Equals("Cl") && verificadores[1].text.Equals("N") && verificadores[2].text.Equals("H") && verificadores[3].text.Equals("H") && verificadores[4].text.Equals("S") && verificadores[5].text.Equals("O") && verificadores[6].text.Equals("H") && verificadores[7].text.Equals("O") && verificadores[8].text.Equals("N") && verificadores[9].text.Equals("O") && verificadores[10].text.Equals("O") && verificadores[11].text.Equals("O") && verificadores[12].text.Equals("N"))
+                {
+                    Debug.Log("paso  comprovacion 2");
+                    //comprovacion 3
+                    for (int i = 0; i < 19; i++)
+                    {
+                        verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+
+                    if (verificadores[1].text.Equals("1") && verificadores[2].text.Equals("1") && verificadores[3].text.Equals("1") && verificadores[4].text.Equals("1") && verificadores[9].text.Equals("1") && verificadores[12].text.Equals("3") && verificadores[13].text.Equals("3") && verificadores[14].text.Equals("1") && verificadores[17].text.Equals("3"))
+                    {
+                        Debug.Log("paso  comprovacion 3");
+                        //comprovacion 4
+                        if (contador_enlaces_aspirina[1] == 1 && contador_enlaces_aspirina[9] == 1 && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[17] == 1 && contador_enlaces_aspirina[25] == 1 && contador_enlaces_aspirina[31] == 1 && contador_enlaces_aspirina[41] == 1 && contador_enlaces_aspirina[63] == 1)
+                        {
+                            for (int i = 0; i < 66; i++)
+                            {
+                                if (contador_enlaces_aspirina[i] == 0)
+                                {
+                                    contador_de_enlaces++;
+                                }
+                            }
+                            if (contador_de_enlaces == 58)
+                            {
+                                Debug.Log("Creaste exitosamente a Bortezomib");
+                                verificar_final(4);
                             }
                         }
                     }
@@ -704,6 +772,7 @@ public class funciones_estructuracion : MonoBehaviour
     }
     public void verificar_final(int numero_del_pj_en_el_archivo)
     {
+        bandera_carb[99] = 0;
         int incremento = Int32.Parse(variables_indestructibles.Personajes[numero_del_pj_en_el_archivo, 2]);
         incremento = incremento + 1;
         variables_indestructibles.Personajes[numero_del_pj_en_el_archivo,2] = incremento.ToString();
@@ -813,6 +882,10 @@ public class funciones_estructuracion : MonoBehaviour
                 {
                     ruta = "Estrucutras/Simple/Cloxacilina/Enlaces/EN_CX_";
                 }
+                else if (elementin.text.Equals("Bortezomib"))
+                {
+                    ruta = "Estrucutras/Simple/Bortezomib/Enlaces/EN_BZ_";
+                }
          elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
          if (elementin.text.Equals(""))
          {
@@ -840,6 +913,12 @@ public class funciones_estructuracion : MonoBehaviour
                      enlace_cloxacilina[activate].SetActive(false);
                      enlace_cloxacilina[activate2].SetActive(false);
                  }
+                 else if (nombre_form.Equals("Bortezomib"))
+                 {
+                     enlace_bortezomib[activate].SetActive(false);
+                     enlace_bortezomib[activate2].SetActive(false);
+                 }
+
              }
              else if (contador_enlaces_aspirina[x] == 1)
              {
@@ -859,6 +938,10 @@ public class funciones_estructuracion : MonoBehaviour
                  else if (nombre_form.Equals("Cloxacilina"))
                  {
                      enlace_cloxacilina[activate].SetActive(true);
+                 }
+                 else if (nombre_form.Equals("Bortezomib"))
+                 {
+                     enlace_bortezomib[activate].SetActive(true);
                  }
                  UIImage = GameObject.Find("ENA_AS_" + x2.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta+ x2.ToString());
@@ -883,6 +966,10 @@ public class funciones_estructuracion : MonoBehaviour
                  else if (nombre_form.Equals("Cloxacilina"))
                  {
                      enlace_cloxacilina[activate].SetActive(true);
+                 }
+                 else if (nombre_form.Equals("Bortezomib"))
+                 {
+                     enlace_bortezomib[activate].SetActive(true);
                  }
                  UIImage = GameObject.Find("ENA_AS_" + x.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta + x.ToString());
