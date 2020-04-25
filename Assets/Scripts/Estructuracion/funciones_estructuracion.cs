@@ -761,6 +761,57 @@ public class funciones_estructuracion : MonoBehaviour
                 }
             }
         }
+        else if (elementin.text.Equals("Lenalidomida"))
+        {
+            for (int i = 0; i < 13; i++)
+            {
+                if (bandera_carb[i] == 1)
+                {
+                    bandera_carb[99]++;
+                    Debug.Log(bandera_carb[99].ToString());
+                }
+            }
+            //comprovacion 1
+            if (bandera_carb[99] == 13)
+            {
+                for (int i = 0; i < 8; i++)
+                {
+                    verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                }
+                Debug.Log("paso  comprovacion 1");
+                //comprovacion 2
+                if (verificadores[0].text.Equals("N") && verificadores[1].text.Equals("H2") && verificadores[2].text.Equals("N") && verificadores[3].text.Equals("O") && verificadores[4].text.Equals("O") && verificadores[5].text.Equals("N") && verificadores[6].text.Equals("H") && verificadores[7].text.Equals("O")) ;
+                {
+                    Debug.Log("paso  comprovacion 2");
+                    //comprovacion 3
+                    for (int i = 0; i < 13; i++)
+                    {
+                        verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+
+                    if (verificadores[0].text.Equals("1") && verificadores[1].text.Equals("1") && verificadores[2].text.Equals("1") && verificadores[5].text.Equals("1") && verificadores[7].text.Equals("2") && verificadores[8].text.Equals("2") && verificadores[10].text.Equals("2") )
+                    {
+                        Debug.Log("paso  comprovacion 3");
+                        //comprovacion 4
+                        if (contador_enlaces_aspirina[1] == 1 && contador_enlaces_aspirina[11] == 1 && contador_enlaces_aspirina[9] == 1 && contador_enlaces_aspirina[21] == 1 && contador_enlaces_aspirina[31] == 1 && contador_enlaces_aspirina[41] == 1)
+                        {
+                            for (int i = 0; i < 42; i++)
+                            {
+                                if (contador_enlaces_aspirina[i] == 0)
+                                {
+                                    contador_de_enlaces++;
+                                }
+                            }
+                            if (contador_de_enlaces == 36)
+                            {
+                                Debug.Log("Creaste exitosamente a Lenalidomida");
+                                verificar_final(5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         }
          else
