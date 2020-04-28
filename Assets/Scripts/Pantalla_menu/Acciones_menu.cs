@@ -102,7 +102,8 @@ public class Acciones_menu : MonoBehaviour
     {
         string usuario, contraseña;
         usuario = Inputfield_ini_us.text;
-        contraseña = Inputfield_ini_con.text;
+        byte[] encryted = System.Text.Encoding.Unicode.GetBytes(Inputfield_ini_con.text);
+        contraseña = Convert.ToBase64String(encryted);
         Inputfield_ini_us.text = "";
         Inputfield_ini_con.text = "";
         MySqlDataReader select2;
@@ -173,8 +174,10 @@ public class Acciones_menu : MonoBehaviour
         string  contraseña, conf_contraseña;
         string repetido;
         usuario = Inputfield_usuario.text;
-        contraseña = Inputfield_contraseña.text;
-        conf_contraseña = Inputfield_conf_contraseña.text;
+        byte[] encryted = System.Text.Encoding.Unicode.GetBytes(Inputfield_contraseña.text);
+        contraseña = Convert.ToBase64String(encryted);
+        encryted = System.Text.Encoding.Unicode.GetBytes(Inputfield_conf_contraseña.text);
+        conf_contraseña = Convert.ToBase64String(encryted);
         Inputfield_usuario.text = "";
         Inputfield_contraseña.text = "";
         Inputfield_conf_contraseña.text = "";

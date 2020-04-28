@@ -368,16 +368,54 @@ public class botones_laboratorio : MonoBehaviour
     }
     public void img_text_p_confirmacion()
     {
-        panel_confirmacion_final.SetActive(true);
         String nameofcura = variables_indestructibles.estructuracion.ToLower();
         for (int i = 0; i < 25; i++)
         {
             if (Personajes[i, 0].Equals(nameofcura))
             {
-                celdas_elementos_adquiridos = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
-                celdas_elementos_adquiridos.text = variables_indestructibles.estructuracion.ToLower();
-                UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
-                UIImage.sprite = Resources.Load<Sprite>(Personajes[i, 0].ToString());
+                int niv = Int32.Parse(variables_indestructibles.level[0]);
+                if (variables_indestructibles.Personajes[i, 1].Equals("easy"))
+                {
+                    panel_confirmacion_final.SetActive(true);
+                    celdas_elementos_adquiridos = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                    celdas_elementos_adquiridos.text = variables_indestructibles.estructuracion.ToLower();
+                    UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+                    UIImage.sprite = Resources.Load<Sprite>(Personajes[i, 0].ToString());
+                }
+                if (variables_indestructibles.Personajes[i, 1].Equals("Complex"))
+                {
+                    if (niv >= 6)
+                    {
+                        panel_confirmacion_final.SetActive(true);
+                        celdas_elementos_adquiridos = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                        celdas_elementos_adquiridos.text = variables_indestructibles.estructuracion.ToLower();
+                        UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+                        UIImage.sprite = Resources.Load<Sprite>(Personajes[i, 0].ToString());
+                    }
+                    else
+                    {
+                        Alerta_a.SetActive(true);
+                        texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+                        texto_alerta.text = "Nivel innecesario para crear personaje Complex";
+                    }
+                }
+                if (variables_indestructibles.Personajes[i, 1].Equals("Hard"))
+                {
+                    if (niv >= 8)
+                    {
+                        panel_confirmacion_final.SetActive(true);
+                        celdas_elementos_adquiridos = GameObject.Find("Texttitulo").GetComponentInChildren<Text>();
+                        celdas_elementos_adquiridos.text = variables_indestructibles.estructuracion.ToLower();
+                        UIImage = GameObject.Find("Imagedescripcion").GetComponentInChildren<Image>();
+                        UIImage.sprite = Resources.Load<Sprite>(Personajes[i, 0].ToString());
+                    }
+                    else
+                    {
+                        Alerta_a.SetActive(true);
+                        texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+                        texto_alerta.text = "Nivel innecesario para crear personaje Hard";
+                    }
+                }
             }
         }
     }

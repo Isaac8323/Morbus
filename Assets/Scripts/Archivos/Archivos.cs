@@ -460,7 +460,7 @@ public class Archivos : MonoBehaviour
 
             Datos.monedas[0] = "15000";
             Datos.bismuto = "3";
-            Datos.level[0] = "3";
+            Datos.level[0] = "6";
             Datos.experiencia = "0";
             Datos.nivel_organismo_jefes = "1";
             Datos.sesion = "";
