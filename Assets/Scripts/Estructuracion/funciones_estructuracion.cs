@@ -28,11 +28,12 @@ public class funciones_estructuracion : MonoBehaviour
     public GameObject[] enlace_vorinostat = new GameObject[38];
     public GameObject[] enlace_clavulanato = new GameObject[30];
     public GameObject[] enlace_penicilina = new GameObject[38];
-    Text [] verificadores =new Text[100];
+    public GameObject[] enlace_eritromicina = new GameObject[102];
+    Text [] verificadores =new Text[500];
     int banderin,mouseupper;
-    int[] cantidad_elementos_celda = new int[200];
-    int[] carbon_number = new int[100];
-    int[] bandera_carb = new int[100];
+    int[] cantidad_elementos_celda = new int[500];
+    int[] carbon_number = new int[500];
+    int[] bandera_carb = new int[500];
     int cantidad_elementos_panel_elementos = 0,starttimer=0,cantidad_carbono_por_formulas=0;
     String element_used;
     float time = 0.1f;
@@ -332,6 +333,126 @@ public class funciones_estructuracion : MonoBehaviour
     {
         celda_elemento_form_aspirina(14);
     }
+    public void celda_elemento_form_aspirina15()
+    {
+        celda_elemento_form_aspirina(15);
+    }
+    public void celda_elemento_form_aspirina16()
+    {
+        celda_elemento_form_aspirina(16);
+    }
+    public void celda_elemento_form_aspirina17()
+    {
+        celda_elemento_form_aspirina(17);
+    }
+    public void celda_elemento_form_aspirina18()
+    {
+        celda_elemento_form_aspirina(18);
+    }
+    public void celda_elemento_form_aspirina19()
+    {
+        celda_elemento_form_aspirina(19);
+    }
+    public void celda_elemento_form_aspirina20()
+    {
+        celda_elemento_form_aspirina(20);
+    }
+    public void celda_elemento_form_aspirina21()
+    {
+        celda_elemento_form_aspirina(21);
+    }
+    public void celda_elemento_form_aspirina22()
+    {
+        celda_elemento_form_aspirina(22);
+    }
+    public void celda_elemento_form_aspirina23()
+    {
+        celda_elemento_form_aspirina(23);
+    }
+    public void celda_elemento_form_aspirina24()
+    {
+        celda_elemento_form_aspirina(24);
+    }
+    public void celda_elemento_form_aspirina25()
+    {
+        celda_elemento_form_aspirina(25);
+    }
+    public void celda_elemento_form_aspirina26()
+    {
+        celda_elemento_form_aspirina(26);
+    }
+    public void celda_elemento_form_aspirina27()
+    {
+        celda_elemento_form_aspirina(27);
+    }
+    public void celda_elemento_form_aspirina28()
+    {
+        celda_elemento_form_aspirina(28);
+    }
+    public void celda_elemento_form_aspirina29()
+    {
+        celda_elemento_form_aspirina(29);
+    }
+    public void celda_elemento_form_aspirina30()
+    {
+        celda_elemento_form_aspirina(30);
+    }
+    public void celda_elemento_form_aspirina31()
+    {
+        celda_elemento_form_aspirina(31);
+    }
+    public void celda_elemento_form_aspirina32()
+    {
+        celda_elemento_form_aspirina(32);
+    }
+    public void celda_elemento_form_aspirina33()
+    {
+        celda_elemento_form_aspirina(33);
+    }
+    public void celda_elemento_form_aspirina34()
+    {
+        celda_elemento_form_aspirina(34);
+    }
+    public void celda_elemento_form_aspirina35()
+    {
+        celda_elemento_form_aspirina(35);
+    }
+    public void celda_elemento_form_aspirina36()
+    {
+        celda_elemento_form_aspirina(36);
+    }
+    public void celda_elemento_form_aspirina37()
+    {
+        celda_elemento_form_aspirina(37);
+    }
+    public void celda_elemento_form_aspirina38()
+    {
+        celda_elemento_form_aspirina(38);
+    }
+    public void celda_elemento_form_aspirina39()
+    {
+        celda_elemento_form_aspirina(39);
+    }
+    public void celda_elemento_form_aspirina40()
+    {
+        celda_elemento_form_aspirina(40);
+    }
+    public void celda_elemento_form_aspirina41()
+    {
+        celda_elemento_form_aspirina(41);
+    }
+    public void celda_elemento_form_aspirina42()
+    {
+        celda_elemento_form_aspirina(42);
+    }
+    public void celda_elemento_form_aspirina43()
+    {
+        celda_elemento_form_aspirina(43);
+    }
+    public void celda_elemento_form_aspirina44()
+    {
+        celda_elemento_form_aspirina(44);
+    }
     public void celda_carbon_from_aspirina(int x)
     {
         Element_global.SetActive(true);
@@ -508,6 +629,22 @@ public class funciones_estructuracion : MonoBehaviour
     public void celda_carbon_from_aspirina19()
     {
         celda_carbon_from_aspirina(19);
+    }
+    public void celda_carbon_from_aspirina20()
+    {
+        celda_carbon_from_aspirina(20);
+    }
+    public void celda_carbon_from_aspirina21()
+    {
+        celda_carbon_from_aspirina(21);
+    }
+    public void celda_carbon_from_aspirina22()
+    {
+        celda_carbon_from_aspirina(22);
+    }
+    public void celda_carbon_from_aspirina23()
+    {
+        celda_carbon_from_aspirina(23);
     }
     public void verificar()
     {
@@ -1205,6 +1342,10 @@ public class funciones_estructuracion : MonoBehaviour
                 {
                     ruta = "Estrucutras/Complex/Penicilina/Enlaces/EN_PNL_";
                 }
+                else if (elementin.text.Equals("Eritromicina"))
+                {
+                    ruta = "Estrucutras/Complex/Eritromicina/Enlaces/EN_ERT_";
+                }
          elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
          if (elementin.text.Equals(""))
          {
@@ -1257,7 +1398,11 @@ public class funciones_estructuracion : MonoBehaviour
                     enlace_penicilina[activate].SetActive(false);
                     enlace_penicilina[activate2].SetActive(false);
                  }
-                 
+                 else if (nombre_form.Equals("eritromicina"))
+                 {
+                    enlace_eritromicina[activate].SetActive(false);
+                    enlace_eritromicina[activate2].SetActive(false);
+                 }    
              }
              else if (contador_enlaces_aspirina[x] == 1)
              {
@@ -1297,6 +1442,10 @@ public class funciones_estructuracion : MonoBehaviour
                  else if (nombre_form.Equals("Penicilina"))
                  {
                      enlace_penicilina[activate].SetActive(true);
+                 }
+                 else if (nombre_form.Equals("eritromicina"))
+                 {
+                     enlace_eritromicina[activate].SetActive(true);
                  }
                  UIImage = GameObject.Find("ENA_AS_" + x2.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta+ x2.ToString());
@@ -1341,6 +1490,10 @@ public class funciones_estructuracion : MonoBehaviour
                  else if (nombre_form.Equals("Penicilina"))
                  {
                      enlace_penicilina[activate].SetActive(true);
+                 }
+                 else if (nombre_form.Equals("eritromicina"))
+                 {
+                     enlace_eritromicina[activate].SetActive(true);
                  }
                  UIImage = GameObject.Find("ENA_AS_" + x.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta + x.ToString());
@@ -1486,6 +1639,78 @@ public class funciones_estructuracion : MonoBehaviour
     public void enlace_aspirina32()
     {
         enlace_as(65, 66);
+    }
+    public void enlace_aspirina33()
+    {
+        enlace_as(67, 68);
+    }
+    public void enlace_aspirina34()
+    {
+        enlace_as(69, 70);
+    }
+    public void enlace_aspirina35()
+    {
+        enlace_as(71, 72);
+    }
+    public void enlace_aspirina36()
+    {
+        enlace_as(73, 74);
+    }
+    public void enlace_aspirina37()
+    {
+        enlace_as(75, 76);
+    }
+    public void enlace_aspirina38()
+    {
+        enlace_as(77, 78);
+    }
+    public void enlace_aspirina39()
+    {
+        enlace_as(79, 80);
+    }
+    public void enlace_aspirina40()
+    {
+        enlace_as(81, 82);
+    }
+    public void enlace_aspirina41()
+    {
+        enlace_as(83, 84);
+    }
+    public void enlace_aspirina42()
+    {
+        enlace_as(85, 86);
+    }
+    public void enlace_aspirina43()
+    {
+        enlace_as(87, 88);
+    }
+    public void enlace_aspirina44()
+    {
+        enlace_as(89, 90);
+    }
+    public void enlace_aspirina45()
+    {
+        enlace_as(91, 92);
+    }
+    public void enlace_aspirina46()
+    {
+        enlace_as(93, 94);
+    }
+    public void enlace_aspirina47()
+    {
+        enlace_as(95, 96);
+    }
+    public void enlace_aspirina48()
+    {
+        enlace_as(97, 98);
+    }
+    public void enlace_aspirina49()
+    {
+        enlace_as(99, 100);
+    }
+    public void enlace_aspirina50()
+    {
+        enlace_as(101, 102);
     }
    //Paracetamol functions
 }
