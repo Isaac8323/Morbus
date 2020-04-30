@@ -1108,6 +1108,87 @@ public class funciones_estructuracion : MonoBehaviour
                 }
             }
         }
+        else if (elementin.text.Equals("Eritromicina"))
+        {
+            for (int i = 0; i < 24; i++)
+            {
+                if (bandera_carb[i] == 1)
+                {
+                    bandera_carb[99]++;
+                    Debug.Log(bandera_carb[99].ToString());
+                }
+            }
+            //comprovacion 1
+            if (bandera_carb[99] == 23)
+            {
+                for (int i = 0; i < 45; i++)
+                {
+                    verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                }
+                Debug.Log("paso  comprovacion 1");
+                //comprovacion 2
+                if (verificadores[0].text.Equals("H5") && verificadores[1].text.Equals("C2") 
+                    && verificadores[2].text.Equals("H3") && verificadores[3].text.Equals("C") 
+                    && verificadores[4].text.Equals("O") && verificadores[5].text.Equals("H") 
+                    && verificadores[6].text.Equals("H3") && verificadores[7].text.Equals("C") 
+                    && verificadores[8].text.Equals("O") && verificadores[9].text.Equals("C") 
+                    && verificadores[10].text.Equals("H3") && verificadores[11].text.Equals("O")
+                    && verificadores[12].text.Equals("H") && verificadores[13].text.Equals("C") 
+                    && verificadores[14].text.Equals("H3") && verificadores[15].text.Equals("H") 
+                    && verificadores[16].text.Equals("O") && verificadores[17].text.Equals("H3") 
+                    && verificadores[18].text.Equals("C") && verificadores[19].text.Equals("N") 
+                    && verificadores[20].text.Equals("C") && verificadores[21].text.Equals("H3")
+                    && verificadores[22].text.Equals("C") && verificadores[23].text.Equals("H3") 
+                    && verificadores[24].text.Equals("O") && verificadores[25].text.Equals("O") 
+                    && verificadores[26].text.Equals("C") && verificadores[27].text.Equals("H3")
+                    && verificadores[28].text.Equals("O") && verificadores[29].text.Equals("O") 
+                    && verificadores[30].text.Equals("C") && verificadores[31].text.Equals("H3") 
+                    && verificadores[32].text.Equals("C") && verificadores[33].text.Equals("H3") 
+                    && verificadores[34].text.Equals("O") && verificadores[35].text.Equals("H") 
+                    && verificadores[36].text.Equals("C") && verificadores[37].text.Equals("H3") 
+                    && verificadores[38].text.Equals("O") && verificadores[39].text.Equals("O")
+                    && verificadores[40].text.Equals("H3") && verificadores[41].text.Equals("C")
+                    && verificadores[42].text.Equals("O") && verificadores[43].text.Equals("O")
+                    && verificadores[44].text.Equals("H"))
+                {
+                    Debug.Log("paso  comprovacion 2");
+                    //comprovacion 3
+                    for (int i = 0; i < 24; i++)
+                    {
+                        verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+
+                    if (verificadores[0].text.Equals("1") && verificadores[2].text.Equals("1") 
+                        && verificadores[4].text.Equals("1") && verificadores[6].text.Equals("1") 
+                        && verificadores[7].text.Equals("2") && verificadores[9].text.Equals("1") 
+                        && verificadores[10].text.Equals("1") && verificadores[11].text.Equals("1") 
+                        && verificadores[12].text.Equals("1") && verificadores[13].text.Equals("2") 
+                        && verificadores[14].text.Equals("1") && verificadores[15].text.Equals("2") 
+                        && verificadores[17].text.Equals("1") && verificadores[18].text.Equals("1") 
+                        && verificadores[19].text.Equals("1") && verificadores[20].text.Equals("1") 
+                        && verificadores[21].text.Equals("1") && verificadores[22].text.Equals("1"))
+                    {
+                        Debug.Log("paso  comprovacion 3");
+                        //comprovacion 4
+                        if (contador_enlaces_aspirina[47] == 1 && contador_enlaces_aspirina[1] == 1)
+                        {
+                            for (int i = 0; i < 102; i++)
+                            {
+                                if (contador_enlaces_aspirina[i] == 0)
+                                {
+                                    contador_de_enlaces++;
+                                }
+                            }
+                            if (contador_de_enlaces == 100)
+                            {
+                                Debug.Log("Creaste exitosamente a Eritromicina");
+                                verificar_final(9);
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         }
          else
@@ -1398,7 +1479,7 @@ public class funciones_estructuracion : MonoBehaviour
                     enlace_penicilina[activate].SetActive(false);
                     enlace_penicilina[activate2].SetActive(false);
                  }
-                 else if (nombre_form.Equals("eritromicina"))
+                 else if (nombre_form.Equals("Eritromicina"))
                  {
                     enlace_eritromicina[activate].SetActive(false);
                     enlace_eritromicina[activate2].SetActive(false);
@@ -1443,7 +1524,7 @@ public class funciones_estructuracion : MonoBehaviour
                  {
                      enlace_penicilina[activate].SetActive(true);
                  }
-                 else if (nombre_form.Equals("eritromicina"))
+                 else if (nombre_form.Equals("Eritromicina"))
                  {
                      enlace_eritromicina[activate].SetActive(true);
                  }
@@ -1491,7 +1572,7 @@ public class funciones_estructuracion : MonoBehaviour
                  {
                      enlace_penicilina[activate].SetActive(true);
                  }
-                 else if (nombre_form.Equals("eritromicina"))
+                 else if (nombre_form.Equals("Eritromicina"))
                  {
                      enlace_eritromicina[activate].SetActive(true);
                  }
