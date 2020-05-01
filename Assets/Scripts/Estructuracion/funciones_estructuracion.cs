@@ -29,6 +29,7 @@ public class funciones_estructuracion : MonoBehaviour
     public GameObject[] enlace_clavulanato = new GameObject[30];
     public GameObject[] enlace_penicilina = new GameObject[38];
     public GameObject[] enlace_eritromicina = new GameObject[102];
+    public GameObject[] enlace_levofloxacino = new GameObject[60];
     Text [] verificadores =new Text[500];
     int banderin,mouseupper;
     int[] cantidad_elementos_celda = new int[500];
@@ -1189,6 +1190,68 @@ public class funciones_estructuracion : MonoBehaviour
                 }
             }
         }
+        else if (elementin.text.Equals("Levofloxacino"))
+        {
+            for (int i = 0; i < 16; i++)
+            {
+                if (bandera_carb[i] == 1)
+                {
+                    bandera_carb[99]++;
+                    Debug.Log(bandera_carb[99].ToString());
+                }
+            }
+            //comprovacion 1
+            if (bandera_carb[99] == 16)
+            {
+                for (int i = 0; i < 14; i++)
+                {
+                    verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                }
+                Debug.Log("paso  comprovacion 1");
+                //comprovacion 2
+                if (verificadores[0].text.Equals("H") && verificadores[1].text.Equals("O")
+                    && verificadores[2].text.Equals("N") && verificadores[3].text.Equals("H3")
+                    && verificadores[4].text.Equals("C") && verificadores[5].text.Equals("H")
+                    && verificadores[6].text.Equals("O") && verificadores[7].text.Equals("N")
+                    && verificadores[8].text.Equals("N") && verificadores[9].text.Equals("C")
+                    && verificadores[10].text.Equals("H3") && verificadores[11].text.Equals("F")
+                    && verificadores[12].text.Equals("O") && verificadores[13].text.Equals("O"))
+                {
+                    Debug.Log("paso  comprovacion 2");
+                    //comprovacion 3
+                    for (int i = 0; i < 16; i++)
+                    {
+                        verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+
+                    if (verificadores[2].text.Equals("1") && verificadores[4].text.Equals("2")
+                        && verificadores[8].text.Equals("2") && verificadores[9].text.Equals("2")
+                        && verificadores[10].text.Equals("2") && verificadores[11].text.Equals("2")
+                        && verificadores[15].text.Equals("1"))
+                    {
+                        Debug.Log("paso  comprovacion 3");
+                        //comprovacion 4
+                        if (contador_enlaces_aspirina[13] == 1 && contador_enlaces_aspirina[1] == 1 
+                            && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[19] == 1
+                            && contador_enlaces_aspirina[35] == 1 && contador_enlaces_aspirina[41] == 1)
+                        {
+                            for (int i = 0; i < 60; i++)
+                            {
+                                if (contador_enlaces_aspirina[i] == 0)
+                                {
+                                    contador_de_enlaces++;
+                                }
+                            }
+                            if (contador_de_enlaces == 54)
+                            {
+                                Debug.Log("Creaste exitosamente a Levofloxacino");
+                                verificar_final(10);
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         }
          else
@@ -1427,6 +1490,10 @@ public class funciones_estructuracion : MonoBehaviour
                 {
                     ruta = "Estrucutras/Complex/Eritromicina/Enlaces/EN_ERT_";
                 }
+                else if (elementin.text.Equals("Levofloxacino"))
+                {
+                    ruta = "Estrucutras/Complex/Levofloxacina/Enlaces/EN_LVX_";
+                }
          elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
          if (elementin.text.Equals(""))
          {
@@ -1484,6 +1551,11 @@ public class funciones_estructuracion : MonoBehaviour
                     enlace_eritromicina[activate].SetActive(false);
                     enlace_eritromicina[activate2].SetActive(false);
                  }    
+                 else if (nombre_form.Equals("Levofloxacino"))
+                 {
+                    enlace_levofloxacino[activate].SetActive(false);
+                    enlace_levofloxacino[activate2].SetActive(false);
+                 }    
              }
              else if (contador_enlaces_aspirina[x] == 1)
              {
@@ -1527,6 +1599,10 @@ public class funciones_estructuracion : MonoBehaviour
                  else if (nombre_form.Equals("Eritromicina"))
                  {
                      enlace_eritromicina[activate].SetActive(true);
+                 }
+                 else if (nombre_form.Equals("Levofloxacino"))
+                 {
+                     enlace_levofloxacino[activate].SetActive(true);
                  }
                  UIImage = GameObject.Find("ENA_AS_" + x2.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta+ x2.ToString());
@@ -1575,6 +1651,10 @@ public class funciones_estructuracion : MonoBehaviour
                  else if (nombre_form.Equals("Eritromicina"))
                  {
                      enlace_eritromicina[activate].SetActive(true);
+                 }
+                 else if (nombre_form.Equals("Levofloxacino"))
+                 {
+                     enlace_levofloxacino[activate].SetActive(true);
                  }
                  UIImage = GameObject.Find("ENA_AS_" + x.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta + x.ToString());
