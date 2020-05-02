@@ -1909,60 +1909,60 @@ public class botones_laboratorio : MonoBehaviour
             {
                 if (element[recorrido].text.Equals("C"))
                 {
-                    if (elemento[recorrido] == 37)
+                    if (elemento[recorrido] == 7)
                     {
                         conjunto[index]++;
                     }
-                    else if (elemento[recorrido] > 37)
+                    else if (elemento[recorrido] > 7)
                     {
                         tesobran++;
                     }
-                    else if (elemento[recorrido] < 37)
+                    else if (elemento[recorrido] < 7)
                     {
                         tefaltamas++;
                     }
                 }
                 if (element[recorrido].text.Equals("H"))
                 {
-                    if (elemento[recorrido] == 67)
+                    if (elemento[recorrido] == 17)
                     {
                         conjunto[index]++;
                     }
-                    else if (elemento[recorrido] > 67)
+                    else if (elemento[recorrido] > 17)
                     {
                         tesobran++;
                     }
-                    else if (elemento[recorrido] < 67)
+                    else if (elemento[recorrido] < 17)
                     {
                         tefaltamas++;
                     }
                 }
                 if (element[recorrido].text.Equals("N"))
                 {
-                    if (elemento[recorrido] == 1)
+                    if (elemento[recorrido] == 2)
                     {
                         conjunto[index]++;
                     }
-                    else if (elemento[recorrido] > 1)
+                    else if (elemento[recorrido] > 2)
                     {
                         tesobran++;
                     }
-                    else if (elemento[recorrido] < 1)
+                    else if (elemento[recorrido] < 2)
                     {
                         tefaltamas++;
                     }
                 }
                 if (element[recorrido].text.Equals("O"))
                 {
-                    if (elemento[recorrido] == 12)
+                    if (elemento[recorrido] == 2)
                     {
                         conjunto[index]++;
                     }
-                    else if (elemento[recorrido] > 12)
+                    else if (elemento[recorrido] > 2)
                     {
                         tesobran++;
                     }
-                    else if (elemento[recorrido] < 12)
+                    else if (elemento[recorrido] < 2)
                     {
                         tefaltamas++;
                     }
