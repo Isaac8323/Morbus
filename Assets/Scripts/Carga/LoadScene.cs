@@ -15,9 +15,6 @@ public class LoadScene : MonoBehaviour
     [SerializeField]
     private Image progressImage;
 
-    [SerializeField]
-    private GameObject backmusic;
-
     Text Title, Hint;
 
     private string[] titulos = new string[16];
@@ -68,7 +65,6 @@ public class LoadScene : MonoBehaviour
     void Start()
     {
         HintGen();
-        backmusic.SetActive(false);
         StartCoroutine(LoadScenes());
     }
 

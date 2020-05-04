@@ -368,17 +368,17 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[9, 1] = "100";
             Datos.Elementos[10, 1] = "100";
             //Descripcion Elemento
-            Datos.Elementos[0, 2] = "elemntin1";
-            Datos.Elementos[1, 2] = "elemntin2";
-            Datos.Elementos[2, 2] = "elemntin3";
-            Datos.Elementos[3, 2] = "elemntin4";
-            Datos.Elementos[4, 2] = "elemntin5";
-            Datos.Elementos[5, 2] = "elemntin6";
-            Datos.Elementos[6, 2] = "elemntin7";
-            Datos.Elementos[7, 2] = "elemntin8";
-            Datos.Elementos[8, 2] = "elemntin9";
-            Datos.Elementos[9, 2] = "elemntin10";
-            Datos.Elementos[10, 2] = "elementin11";
+            Datos.Elementos[0, 2] = "Es un no metal sólido que es el componente fundamental de los compuestos orgánicos y tiene la propiedad de enlazarse con otros átomos de carbono y otras sustancias para formar un número casi infinito de compuestos.";
+            Datos.Elementos[1, 2] = "Es un gas incoloro, inodoro y muy reactivo que se halla en todos los componentes de la materia viva y en muchos minerales, siendo el elemento más abundante en el universo.";
+            Datos.Elementos[2, 2] = "El oxígeno es un elemento clave de la química orgánica, al forma parte del agua (H2O)strong>, de los óxidos, de los seres vivos y de casi todos los ácidos y sustancias orgánicas.";
+            Datos.Elementos[3, 2] = "Es un gas incoloro, inodoro e inerte, compone cuatro quintos del volumen del aire de la atmósfera y se usa para sintetizar amoníaco y otros productos.";
+            Datos.Elementos[4, 2] = "Es un elemento metaloide, semiconductor, trivalente que existe abundantemente en el mineral bórax.";
+            Datos.Elementos[5, 2] = "Es un no metal de color amarillo pálido y olor desagradable, que se encuentra en la naturaleza tanto en forma libre como combinado con otros elementos";
+            Datos.Elementos[6, 2] = "El radio es un alcalinotérreo que se encuentra a nivel de trazas en minas de uranio. Es extremadamente radiactivo, un millón de veces más que el uranio.";
+            Datos.Elementos[7, 2] = "Es un gas a temperatura ambiente, de color verde pálido, formado por moléculas diatómicas F₂. Es el más electronegativo y reactivo de todos los elementos.";
+            Datos.Elementos[8, 2] = "El cloro existe como un gas amarillo-verdoso a temperaturas y presiones ordinarias. Es el segundo en reactividad entre los halógenos, sólo después del flúor, y de aquí que se encuentre libre en la naturaleza sólo a las temperaturas elevadas de los gases volcánicos.";
+            Datos.Elementos[9, 2] = "El cobalto es un metal ferromagnético, de color blanco azulado. Su temperatura de Curie es de 1388 K. Normalmente se encuentra junto con níquel, y ambos suelen formar parte de los meteoritos de hierro.";
+            Datos.Elementos[10, 2] = "Es un no metal multivalente perteneciente al grupo del nitrógeno que se encuentra en la naturaleza combinado en fosfatos inorgánicos y en organismos vivos pero nunca en estado fundamental.";
             //Costo elemento
             Datos.Elementos[0, 3] = "100";
             Datos.Elementos[1, 3] = "100";
@@ -509,7 +509,25 @@ public class Archivos : MonoBehaviour
             Informacion.Close();
         }
     }
-
+    //Fucnión que carga la cantidad de personajes
+    public int[] GetTotalChar()
+    {
+        int[] quant = new int[26];
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            Informacion.Close();
+            for (int x = 0; x < 25; x++)
+            {
+                quant[x] = Convert.ToInt32(Datos.Personajes[x, 2]);
+                Debug.Log(quant[x]);
+            }
+            return quant;
+        }
+        return quant;
+    }
     //Función que carga la vida inicial de los personajes en combate
     public int HealthPoints(int index)
     {
@@ -546,7 +564,68 @@ public class Archivos : MonoBehaviour
         }
         return enemylife;
     }
+    //Función que carga los nombres de los personajes segun su id
+    public string NameCharacter(int id)
+    {
+        string name = "Missing Name";
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            name = Datos.Personajes[id, 0];
+            Informacion.Close();
+            Debug.Log(name);
+            return name;
+        }
+        return name;
+    }
+    //Funcion que devuelve el nombre del jefe mediante su id
+    public string NameBoss(int id)
+    {
+        string name = "Missing Boss";
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            name = Datos.Jefes[id, 0];
+            Informacion.Close();
+            Debug.Log(name);
+            return name;
+        }
+        return name;
+    }
 
+    //Función que carga el nivel del jugador en el Organismo humano
+    public int LevelBoss()
+    {
+        int lvl = 1;
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            lvl = Convert.ToInt32(Datos.nivel_organismo_jefes);
+            Informacion.Close();
+            Debug.Log(lvl);
+            return lvl;
+        }
+        return lvl;
+    }
+
+    //Función que carga las descripciones de los jefes según su nivel
+    public string descBoss(int id)
+    {
+        string desc = "Missing description";
+        fb = new BinaryFormatter();
+        Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+        Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+        desc = Datos.Jefes[id, 1];
+        Informacion.Close();
+        Debug.Log(desc);
+        return desc;
+    }
     public String carga_monedas(String mon)
     {
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))

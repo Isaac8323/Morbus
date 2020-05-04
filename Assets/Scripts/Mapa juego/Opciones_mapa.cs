@@ -34,6 +34,12 @@ public class Opciones_mapa : MonoBehaviour
         
     }
 
+    public void Organismo()
+    {
+        LoadScene.sceneToLoad = "Selection";
+        LoadPanel.SetActive(true);
+    }
+
     public void OverOrganismo()
     {
         textin.text = "Organismo Humano";

@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Actions : MonoBehaviour
 {
-    public Vector3 pos;
-    public Vector3 dest;
-    public Transform mov;
+    private Vector3 pos;
+    private Vector3 dest;
+    private Transform mov;
 
     // Start is called before the first frame update
     void Start()
     {
+        Archivos archivo_battle = GameObject.Find("Organismo").GetComponent<Archivos>();
     }
 
     // Update is called once per frame
