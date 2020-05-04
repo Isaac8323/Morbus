@@ -15,9 +15,9 @@ public class funciones_estructuracion : MonoBehaviour
 {
     String[,] Elementos2 = new String[11, 3];
     Archivos archivo_estructuracion;
-    Text elementin,elemento_text_text;
+    Text elementin, elemento_text_text;
     Image UIImage;
-    public GameObject Element_global,LoadPanel;
+    public GameObject Element_global, LoadPanel;
     public GameObject[] cura = new GameObject[25];
     public GameObject[] enlace_aspirina = new GameObject[26];
     public GameObject[] enlace_paracetamol = new GameObject[22];
@@ -35,6 +35,9 @@ public class funciones_estructuracion : MonoBehaviour
     public GameObject[] enlace_ibuprofeno = new GameObject[30];
     public GameObject[] enlace_sulfasalazina = new GameObject[60];
     public GameObject[] enlace_prednisona = new GameObject[58];
+    public GameObject[] enlace_cortisol = new GameObject[64];
+    public GameObject[] enlace_ampicilina = new GameObject[60];
+    public GameObject[] enlace_piperacilina = new GameObject[80];
     Text [] verificadores =new Text[500];
     int banderin,mouseupper;
     int[] cantidad_elementos_celda = new int[500];
@@ -1559,9 +1562,204 @@ public class funciones_estructuracion : MonoBehaviour
                     }
                 }
             }
+            else if (elementin.text.Equals("Cortisol"))
+            {
+                for (int i = 0; i < 21; i++)
+                {
+                    if (bandera_carb[i] == 1)
+                    {
+                        bandera_carb[99]++;
+                        Debug.Log(bandera_carb[99].ToString());
+                    }
+                }
+                //comprovacion 1
+                if (bandera_carb[99] == 21)
+                {
+                    for (int i = 0; i < 11; i++)
+                    {
+                        verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+                    Debug.Log("paso  comprovacion 1");
+                    //comprovacion 2
+                    if (verificadores[0].text.Equals("O") && verificadores[1].text.Equals("O")
+                        && verificadores[2].text.Equals("H") && verificadores[3].text.Equals("H")
+                        && verificadores[4].text.Equals("O") && verificadores[5].text.Equals("O")
+                        && verificadores[6].text.Equals("H") && verificadores[7].text.Equals("O")
+                        && verificadores[8].text.Equals("H") && verificadores[9].text.Equals("H")
+                        && verificadores[10].text.Equals("H"))
+                    {
+                        Debug.Log("paso  comprovacion 2");
+                        //comprovacion 3
+                        for (int i = 0; i < 21; i++)
+                        {
+                            verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                        }
+
+                        if (verificadores[1].text.Equals("2") && verificadores[2].text.Equals("2")
+                            && verificadores[4].text.Equals("3") && verificadores[6].text.Equals("1")
+                            && verificadores[7].text.Equals("2") && verificadores[9].text.Equals("3")
+                            && verificadores[12].text.Equals("2") && verificadores[13].text.Equals("2")
+                            && verificadores[14].text.Equals("2")
+                            && verificadores[17].text.Equals("2") && verificadores[18].text.Equals("2"))
+                        {
+                            Debug.Log("paso  comprovacion 3");
+                            //comprovacion 4
+                            if (contador_enlaces_aspirina[1] == 1 && contador_enlaces_aspirina[59] == 1
+                                && contador_enlaces_aspirina[9] == 1)
+                            {
+                                for (int i = 0; i < 64; i++)
+                                {
+                                    if (contador_enlaces_aspirina[i] == 0)
+                                    {
+                                        contador_de_enlaces++;
+                                    }
+                                }
+                                if (contador_de_enlaces == 61)
+                                {
+                                    Debug.Log("Creaste exitosamente a Cortisol");
+                                    verificar_final(16);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (elementin.text.Equals("Ampicilina"))
+            {
+                for (int i = 0; i < 14; i++)
+                {
+                    if (bandera_carb[i] == 1)
+                    {
+                        bandera_carb[99]++;
+                        Debug.Log(bandera_carb[99].ToString());
+                    }
+                }
+                //comprovacion 1
+                if (bandera_carb[99] == 14)
+                {
+                    for (int i = 0; i < 19; i++)
+                    {
+                        verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+                    Debug.Log("paso  comprovacion 1");
+                    //comprovacion 2
+                    if (verificadores[0].text.Equals("N") && verificadores[1].text.Equals("H2")
+                        && verificadores[2].text.Equals("H") && verificadores[3].text.Equals("N")
+                        && verificadores[4].text.Equals("H") && verificadores[5].text.Equals("H")
+                        && verificadores[6].text.Equals("S") && verificadores[7].text.Equals("C")
+                        && verificadores[8].text.Equals("H3") && verificadores[9].text.Equals("C")
+                        && verificadores[10].text.Equals("H3") && verificadores[11].text.Equals("O")
+                        && verificadores[12].text.Equals("H") && verificadores[13].text.Equals("O")
+                        && verificadores[14].text.Equals("H") && verificadores[15].text.Equals("N")
+                        && verificadores[16].text.Equals("O") && verificadores[17].text.Equals("O")
+                        && verificadores[18].text.Equals("H"))
+                    {
+                        Debug.Log("paso  comprovacion 2");
+                        //comprovacion 3
+                        for (int i = 0; i < 14; i++)
+                        {
+                            verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                        }
+
+                        if (verificadores[0].text.Equals("1") && verificadores[1].text.Equals("1")
+                            && verificadores[2].text.Equals("1") && verificadores[4].text.Equals("1")
+                            && verificadores[5].text.Equals("1"))
+                        {
+                            Debug.Log("paso  comprovacion 3");
+                            //comprovacion 4
+                            if (contador_enlaces_aspirina[1] == 1 && contador_enlaces_aspirina[9] == 1
+                                && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[31] == 1
+                                && contador_enlaces_aspirina[21] == 1 && contador_enlaces_aspirina[49] == 1)
+                            {
+                                for (int i = 0; i < 60; i++)
+                                {
+                                    if (contador_enlaces_aspirina[i] == 0)
+                                    {
+                                        contador_de_enlaces++;
+                                    }
+                                }
+                                if (contador_de_enlaces == 54)
+                                {
+                                    Debug.Log("Creaste exitosamente a Ampicilina");
+                                    verificar_final(17);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (elementin.text.Equals("Piperacilina"))
+            {
+                for (int i = 0; i < 23; i++)
+                {
+                    if (bandera_carb[i] == 1)
+                    {
+                        bandera_carb[99]++;
+                        Debug.Log(bandera_carb[99].ToString());
+                    }
+                }
+                //comprovacion 1
+                if (bandera_carb[99] == 23)
+                {
+                    for (int i = 0; i < 17; i++)
+                    {
+                        verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+                    Debug.Log("paso  comprovacion 1");
+                    //comprovacion 2
+                    if (verificadores[0].text.Equals("N") && verificadores[1].text.Equals("O")
+                        && verificadores[2].text.Equals("O") && verificadores[3].text.Equals("N")
+                        && verificadores[4].text.Equals("O") && verificadores[5].text.Equals("N")
+                        && verificadores[6].text.Equals("H") && verificadores[7].text.Equals("O")
+                        && verificadores[8].text.Equals("N") && verificadores[9].text.Equals("H")
+                        && verificadores[10].text.Equals("H") && verificadores[11].text.Equals("S")
+                        && verificadores[12].text.Equals("O") && verificadores[13].text.Equals("H")
+                        && verificadores[14].text.Equals("O") && verificadores[15].text.Equals("N")
+                        && verificadores[16].text.Equals("O"))
+                    {
+                        Debug.Log("paso  comprovacion 2");
+                        //comprovacion 3
+                        for (int i = 0; i < 23; i++)
+                        {
+                            verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                        }
+
+                        if (verificadores[0].text.Equals("3") && verificadores[4].text.Equals("1")
+                            && verificadores[6].text.Equals("1") && verificadores[9].text.Equals("1")
+                            && verificadores[10].text.Equals("3") && verificadores[11].text.Equals("3")
+                            && verificadores[15].text.Equals("1") && verificadores[16].text.Equals("1")
+                            && verificadores[17].text.Equals("1") && verificadores[18].text.Equals("1")
+                            && verificadores[19].text.Equals("1") && verificadores[20].text.Equals("2")
+                            && verificadores[21].text.Equals("2") && verificadores[22].text.Equals("2"))
+                        {
+                            Debug.Log("paso  comprovacion 3");
+                            //comprovacion 4
+                            if (contador_enlaces_aspirina[1] == 1 && contador_enlaces_aspirina[9] == 1 &&
+                                contador_enlaces_aspirina[5] == 1 && contador_enlaces_aspirina[69] == 1 &&
+                                contador_enlaces_aspirina[55] == 1 && contador_enlaces_aspirina[19] == 1 &&
+                                contador_enlaces_aspirina[25] == 1 && contador_enlaces_aspirina[39] == 1 &&
+                                contador_enlaces_aspirina[43] == 1)
+                            {
+                                for (int i = 0; i < 80; i++)
+                                {
+                                    if (contador_enlaces_aspirina[i] == 0)
+                                    {
+                                        contador_de_enlaces++;
+                                    }
+                                }
+                                if (contador_de_enlaces == 71)
+                                {
+                                    Debug.Log("Creaste exitosamente a Piperacilina");
+                                    verificar_final(18);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
         }
-         else
+        else
          {
              elementin.text = "";
              mouseupper = 1;
@@ -1821,7 +2019,19 @@ public class funciones_estructuracion : MonoBehaviour
                 {
                     ruta = "Estrucutras/Complex/Prednisolona/Enlaces/EN_PRL_";
                 }
-         elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
+                else if (nombre_form.Equals("Cortisol"))
+                {
+                    ruta = "Estrucutras/Complex/Cortisol/Enlaces/EN_CTS_";
+                }
+                else if (nombre_form.Equals("Ampicilina"))
+                {
+                    ruta = "Estrucutras/Complex/Ampicilina/Enlaces/EN_AM_";
+                }
+                else if (nombre_form.Equals("Piperacilina"))
+                {
+                    ruta = "Estrucutras/Complex/Piperacilina/Enlaces/EN_PRC_";
+                }
+        elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
          if (elementin.text.Equals(""))
          {
              if (contador_enlaces_aspirina[x] == 2)
@@ -1908,6 +2118,21 @@ public class funciones_estructuracion : MonoBehaviour
                     enlace_prednisona[activate].SetActive(false);
                     enlace_prednisona[activate2].SetActive(false);
                 }
+                else if (nombre_form.Equals("Cortisol"))
+                {
+                    enlace_cortisol[activate].SetActive(false);
+                    enlace_cortisol[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Ampicilina"))
+                {
+                    enlace_ampicilina[activate].SetActive(false);
+                    enlace_ampicilina[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Piperacilina"))
+                {
+                    enlace_piperacilina[activate].SetActive(false);
+                    enlace_piperacilina[activate2].SetActive(false);
+                }
 
             }
              else if (contador_enlaces_aspirina[x] == 1)
@@ -1976,6 +2201,18 @@ public class funciones_estructuracion : MonoBehaviour
                 else if (nombre_form.Equals("Prednisona"))
                 {
                     enlace_prednisona[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Cortisol"))
+                {
+                    enlace_cortisol[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Ampicilina"))
+                {
+                    enlace_ampicilina[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Piperacilina"))
+                {
+                    enlace_piperacilina[activate].SetActive(true);
                 }
                 UIImage = GameObject.Find("ENA_AS_" + x2.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta+ x2.ToString());
@@ -2048,6 +2285,18 @@ public class funciones_estructuracion : MonoBehaviour
                 else if (nombre_form.Equals("Prednisona"))
                 {
                     enlace_prednisona[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Cortisol"))
+                {
+                    enlace_cortisol[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Ampicilina"))
+                {
+                    enlace_ampicilina[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Piperacilina"))
+                {
+                    enlace_piperacilina[activate].SetActive(true);
                 }
                 UIImage = GameObject.Find("ENA_AS_" + x.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta + x.ToString());

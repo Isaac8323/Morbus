@@ -654,7 +654,7 @@ public class botones_laboratorio : MonoBehaviour
                     bandera_de_elementos[16] = "Este no";
                     contador++;
                 }
-                if (vacio >= 7)
+                if (vacio >= 9)
                 {
                     bandera_de_elementos[16] = "Este no";
                 }
@@ -2287,15 +2287,15 @@ public class botones_laboratorio : MonoBehaviour
                 }
                 if (element[recorrido].text.Equals("H"))
                 {
-                    if (elemento[recorrido] == 18)
+                    if (elemento[recorrido] == 19)
                     {
                         conjunto[index]++;
                     }
-                    else if (elemento[recorrido] > 18)
+                    else if (elemento[recorrido] > 19)
                     {
                         tesobran++;
                     }
-                    else if (elemento[recorrido] < 18)
+                    else if (elemento[recorrido] < 19)
                     {
                         tefaltamas++;
                     }
@@ -2365,15 +2365,15 @@ public class botones_laboratorio : MonoBehaviour
                 }
                 if (element[recorrido].text.Equals("H"))
                 {
-                    if (elemento[recorrido] == 26)
+                    if (elemento[recorrido] == 27)
                     {
                         conjunto[index]++;
                     }
-                    else if (elemento[recorrido] > 26)
+                    else if (elemento[recorrido] > 27)
                     {
                         tesobran++;
                     }
-                    else if (elemento[recorrido] < 26)
+                    else if (elemento[recorrido] < 27)
                     {
                         tefaltamas++;
                     }

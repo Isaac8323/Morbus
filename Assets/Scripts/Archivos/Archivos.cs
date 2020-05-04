@@ -283,8 +283,8 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[14, 4] = "C18H14N4O5S";
             Datos.Personajes[15, 4] = "C21H26O5";
             Datos.Personajes[16, 4] = "C21H30O5";
-            Datos.Personajes[17, 4] = "C16H18N3O4S";
-            Datos.Personajes[18, 4] = "C23H26N5O7S";
+            Datos.Personajes[17, 4] = "C16H19N3O4S";
+            Datos.Personajes[18, 4] = "C23H27N5O7S";
             Datos.Personajes[19, 4] = "C10H12N4O5S";
             Datos.Personajes[20, 4] = "C22H30O5";
             Datos.Personajes[21, 4] = "C18H26ClN3O";
