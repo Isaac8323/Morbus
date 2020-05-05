@@ -30,6 +30,7 @@ public class botones_laboratorio : MonoBehaviour
     int tefaltamas = 0, tesobran = 0;
     int[] elemento = new int[11];
     int[] conjunto = new int[25];
+    int num_of_scene = 0;
     string dest;
     Archivos archivo_almacen;
     // Start is called before the first frame update
@@ -901,6 +902,7 @@ public class botones_laboratorio : MonoBehaviour
             if (conjunto[0] == 3)
             {
                 Debug.Log("Aspirina");
+                num_of_scene = 0;
                 variables_indestructibles.estructuracion = "Aspirina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -908,6 +910,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[1] == 4)
             {
                 Debug.Log("Paracetamol");
+                num_of_scene = 1;
                 variables_indestructibles.estructuracion = "Paracetamol";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -915,6 +918,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[2] == 5)
             {
                 Debug.Log("Amoxicilina");
+                num_of_scene = 2;
                 variables_indestructibles.estructuracion = "Amoxicilina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -922,6 +926,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[3] == 6)
             {
                 Debug.Log("Cloxacilina");
+                num_of_scene = 3;
                 variables_indestructibles.estructuracion = "Cloxacilina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -929,6 +934,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[4] == 5)
             {
                 Debug.Log("Bortezomib");
+                num_of_scene = 4;
                 variables_indestructibles.estructuracion = "Bortezomib";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -936,6 +942,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[5] == 4)
             {
                 Debug.Log("Lenalidomida");
+                num_of_scene = 5;
                 variables_indestructibles.estructuracion = "Lenalidomida";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -943,6 +950,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[6] == 4)
             {
                 Debug.Log("Vorinostat");
+                num_of_scene = 6;
                 variables_indestructibles.estructuracion = "Vorinostat";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -950,6 +958,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[7] == 4)
             {
                 Debug.Log("Clavulanato");
+                num_of_scene = 7;
                 variables_indestructibles.estructuracion = "Clavulanato";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -957,6 +966,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[8] == 5)
             {
                 Debug.Log("Penicilina");
+                num_of_scene = 8;
                 variables_indestructibles.estructuracion = "Penicilina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -964,6 +974,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[9] == 4)
             {
                 Debug.Log("Eritromicina");
+                num_of_scene = 9;
                 variables_indestructibles.estructuracion = "Eritromicina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -971,6 +982,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[10] == 5)
             {
                 Debug.Log("Levofloxacino");
+                num_of_scene = 10;
                 variables_indestructibles.estructuracion = "Levofloxacino";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -978,6 +990,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[11] == 4)
             {
                 Debug.Log("Betanecol");
+                num_of_scene = 11;
                 variables_indestructibles.estructuracion = "Betanecol";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -985,6 +998,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[12] == 5)
             {
                 Debug.Log("Metoclopramida");
+                num_of_scene = 12;
                 variables_indestructibles.estructuracion = "Metoclopramida";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -992,6 +1006,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[13] == 3)
             {
                 Debug.Log("Ibuprofeno");
+                num_of_scene = 13;
                 variables_indestructibles.estructuracion = "Ibuprofeno";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -999,6 +1014,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[14] == 5)
             {
                 Debug.Log("Sulfasalazina");
+                num_of_scene = 14;
                 variables_indestructibles.estructuracion = "Sulfasalazina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1006,6 +1022,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[15] == 3)
             {
                 Debug.Log("Prednisona");
+                num_of_scene = 15;
                 variables_indestructibles.estructuracion = "Prednisona";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1013,6 +1030,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[16] == 3)
             {
                 Debug.Log("Cortisol");
+                num_of_scene = 16;
                 variables_indestructibles.estructuracion = "Cortisol";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1020,6 +1038,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[17] == 5)
             {
                 Debug.Log("Ampicilina");
+                num_of_scene = 17;
                 variables_indestructibles.estructuracion = "Ampicilina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1027,6 +1046,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[18] == 5)
             {
                 Debug.Log("Piperacilina");
+                num_of_scene = 18;
                 variables_indestructibles.estructuracion = "Piperacilina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1034,6 +1054,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[19] == 5)
             {
                 Debug.Log("Tazobactam");
+                num_of_scene = 19;
                 variables_indestructibles.estructuracion = "Tazobactam";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1041,6 +1062,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[20] == 3)
             {
                 Debug.Log("Metilprednisolona");
+                num_of_scene = 20;
                 variables_indestructibles.estructuracion = "Metilprednisolona";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1048,6 +1070,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[21] == 5)
             {
                 Debug.Log("Hidroxicloroquina");
+                num_of_scene = 21;
                 variables_indestructibles.estructuracion = "Hidroxicloroquina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1055,6 +1078,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[22] == 5)
             {
                 Debug.Log("H_Sulfasalazina");
+                num_of_scene = 22;
                 variables_indestructibles.estructuracion = "H_Sulfasalazina";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1062,6 +1086,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[23] == 4)
             {
                 Debug.Log("Dexametasona");
+                num_of_scene = 23;
                 variables_indestructibles.estructuracion = "Dexametasona";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -1069,6 +1094,7 @@ public class botones_laboratorio : MonoBehaviour
             else if (conjunto[24] == 6)
             {
                 Debug.Log("Vitamina B12");
+                num_of_scene = 24;
                 variables_indestructibles.estructuracion = "Vitamina B12";
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
@@ -2872,7 +2898,7 @@ public class botones_laboratorio : MonoBehaviour
     public void proceder_to_estruct()
     {
         panel_confirmacion_final.SetActive(false);
-        LoadScene.sceneToLoad = "Estructuracion";
+        LoadScene.sceneToLoad = "Estruct"+num_of_scene.ToString();
         LoadPanel.SetActive(true);
     }
 }

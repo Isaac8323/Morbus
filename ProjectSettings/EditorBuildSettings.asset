@@ -36,6 +36,81 @@ EditorBuildSettings:
     path: Assets/Escenarios/Estructuracion.unity
     guid: f35509eecd9d02448ac161c6abe4559b
   - enabled: 1
+    path: Assets/Escenarios/Estruct0.unity
+    guid: 9ac4445c6da628c4a884ae70f2dc635d
+  - enabled: 1
+    path: Assets/Escenarios/Estruct1.unity
+    guid: e9b02ff3a1bd98547bd850d03a844b38
+  - enabled: 1
+    path: Assets/Escenarios/Estruct2.unity
+    guid: 36bc7b1bedb0e1e48a6588a3231bf3e1
+  - enabled: 1
+    path: Assets/Escenarios/Estruct3.unity
+    guid: 2b6d6d26f03a2a34da157ef2f401bf57
+  - enabled: 1
+    path: Assets/Escenarios/Estruct4.unity
+    guid: c34ae18e007915c4fbc977e8ef06dcd2
+  - enabled: 1
+    path: Assets/Escenarios/Estruct5.unity
+    guid: ce293f185000a384089017a3d2435c5a
+  - enabled: 1
+    path: Assets/Escenarios/Estruct6.unity
+    guid: db4331f2b390bd2449318e94d6f9fdfc
+  - enabled: 1
+    path: Assets/Escenarios/Estruct7.unity
+    guid: cfe8c898a3aeda34383d8fc0fd30112b
+  - enabled: 1
+    path: Assets/Escenarios/Estruct8.unity
+    guid: bd6cd69258f7ce642a33e0659903de7b
+  - enabled: 1
+    path: Assets/Escenarios/Estruct9.unity
+    guid: f0020685e94cf344d89742e467b830ac
+  - enabled: 1
+    path: Assets/Escenarios/Estruct10.unity
+    guid: 74308abf816385a498d015dce006f086
+  - enabled: 1
+    path: Assets/Escenarios/Estruct11.unity
+    guid: 2de0cf70c684ce44d91cabe96746a1a5
+  - enabled: 1
+    path: Assets/Escenarios/Estruct12.unity
+    guid: 211ff6d04b39ba34580319438e959e4c
+  - enabled: 1
+    path: Assets/Escenarios/Estruct13.unity
+    guid: c9de36dedace65e41bbe22ef1ab619dd
+  - enabled: 1
+    path: Assets/Escenarios/Estruct14.unity
+    guid: 99f63daa1b4e32241bbe4dcc5cdd0033
+  - enabled: 1
+    path: Assets/Escenarios/Estruct15.unity
+    guid: 2b967872d0d2246499b4fec0c0751b01
+  - enabled: 1
+    path: Assets/Escenarios/Estruct16.unity
+    guid: 23b716ab9ef0c094d8a0f3caf506013d
+  - enabled: 1
+    path: Assets/Escenarios/Estruct17.unity
+    guid: 898192ff34be33a41ab8ee23d0211ad8
+  - enabled: 1
+    path: Assets/Escenarios/Estruct18.unity
+    guid: ad051f3c9eb47ef468bf2c52b475d411
+  - enabled: 1
+    path: Assets/Escenarios/Estruct20.unity
+    guid: 2441f3ea162b1b34b8f01909a93f6ae1
+  - enabled: 1
+    path: Assets/Escenarios/Estruct21.unity
+    guid: 5115490dee2c69d48a88f59defa816db
+  - enabled: 1
+    path: Assets/Escenarios/Estruct19.unity
+    guid: b078755cb9b01fb45b91a597b13ef3d2
+  - enabled: 1
+    path: Assets/Escenarios/Estruct23.unity
+    guid: 1fa04cf30e9dd2b4792cf1120a7483da
+  - enabled: 1
+    path: Assets/Escenarios/Estruct22.unity
+    guid: 7c9e1368e4607af498157cb550660715
+  - enabled: 1
+    path: Assets/Escenarios/Estruct24.unity
+    guid: 91600825569df4e42bbf27830322f2ca
+  - enabled: 1
     path: Assets/Escenarios/CentroEntrenamiento.unity
     guid: 1faa2e2ad5b627d4c87c7c1ececf8a16
   - enabled: 1
