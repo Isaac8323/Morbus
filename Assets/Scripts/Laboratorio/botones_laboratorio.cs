@@ -23,7 +23,7 @@ public class botones_laboratorio : MonoBehaviour
     String[,] plussless = new String[11, 2];
     public String cargarformula;
     Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados, texto_alerta;
-    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final;
+    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel;
     Text elementin;
     Image UIImage;
     Text[] element = new Text[11];
@@ -47,6 +47,12 @@ public class botones_laboratorio : MonoBehaviour
     {
 
     }
+
+    public void OpenLab()
+    {
+        SelectPanel.SetActive(true);
+    }
+
     public void cerrar_panel_alerta_a()
     {
         Alerta_a.SetActive(false);
@@ -229,6 +235,7 @@ public class botones_laboratorio : MonoBehaviour
     }
     public void desactivarpanel()
     {
+        SelectPanel.SetActive(false);
         panel_elementos_seleccion.SetActive(false);
         panel_confirmacion_final.SetActive(false);
         Alerta_a.SetActive(false);

@@ -14302,7 +14302,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2131946192}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5189746
+  m_Size: 0.51897466
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15804,8 +15804,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -872.4, y: 480.07}
-  m_SizeDelta: {x: 124.2, y: 64.733}
+  m_AnchoredPosition: {x: -813.5501, y: 480.07}
+  m_SizeDelta: {x: 241.9, y: 64.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2129752116
 MonoBehaviour:
@@ -15871,7 +15871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Mapa principal
+  m_Text: 'Regresar
 
 '
 --- !u!222 &2129752118

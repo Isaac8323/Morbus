@@ -18,7 +18,7 @@ public class Opciones_mapa : MonoBehaviour
     String[,] Elementos = new String[11, 5];
     Text textin;
     void Start()
-    {
+    {                
         textin = GameObject.Find("Place").GetComponentInChildren<Text>();
         Archivos archivo_mapa = GameObject.Find("Mapa_juego").GetComponent<Archivos>();
         /*archivo_mapa.Borrar();

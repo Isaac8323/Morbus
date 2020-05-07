@@ -5,212 +5,190 @@ using UnityEngine.UI;
 
 public class Selection : MonoBehaviour
 {
-    public GameObject charselect, selection, prevapa, prevdema, prevfgitis, prevfoma, prevrino, prevfarin, 
-        prevdift, prevbron, prevgast, prevhemo, prevcolit, prevcalc, prevles, prevartr, prevesclr, prevane, LoadPanel;
-    public GameObject asp, par, amox, clox, borz, lena, vor, clav, penl, eritr, flox, neco, mclr, feno, zina, lona, sol, 
-        alna, pipe, tazo, mlona, quina, hzina, xsona, b;
-    private Image imgone, imgtwo, imgthree;
-    private Text lblone, lbltwo, lblthree, nameboss, descboss;
-    private Text cantasp, cantpar, cantamox, cantclox, cantborz, cantlena, cantvor, cantclav, cantpenl, canteritr,
-        cantflox, cantneco, cantmclr, cantfeno, cantzina, cantlona, cantsol, cantalna, cantpipe, canttazo, cantmlona,
-        cantquina, canthzina, cantxsona, cantb;
-    private int[] cant;
+    public GameObject[] characters = new GameObject[26]; //Arreglo de gameobjects de las cartas de personajes
+
+    public GameObject[] bosses = new GameObject[17]; //Arreglo de gameobjects de las cartas de los jefes
+
+    public GameObject LoadPanel, panel; //Pantalla de carga, panel de personajes
+
+    private Image[] thumbs = new Image[4]; //Arreglo de imagenes de las miniaturas de personajes
+
+    private Text[] labels = new Text[4]; //Labels de los nombres de personajes elegidos
+
+    private Text nameboss, descboss; //Nombre y descripción del jefe en turno
+
+    public Text[] cants = new Text[26]; //Arreglo de las cantidades de personajes dentro de las tarjetas
+
+    private int[] cant; //Cantidades de personajes leídas del archivo
+
+    private bool[] slots = new bool[4]; //Banderas que indican si el slot ya tiene personaje    
+
+    private string[] tags = { "one", "two", "three", "First", "Sec", "Third" };
+
+    private int[] ides = new int[4];
+
+    //private int
+
     private int slot, boss, id_charone, id_chartwo, id_charthree, id_slot_one, id_slot_two, id_slot_three;
     Archivos archivo_organismo;
 
     void Start()
     {
-        archivo_organismo = GameObject.Find("BossSelection").GetComponent<Archivos>();        
+        archivo_organismo = GameObject.Find("BossSelection").GetComponent<Archivos>();
+
         cant = new int[26];
-        cant = archivo_organismo.GetTotalChar();        
-        imgone = GameObject.Find("FirstChar").GetComponent<Image>();
-        imgtwo = GameObject.Find("SecChar").GetComponent<Image>();
-        imgthree = GameObject.Find("ThirdChar").GetComponent<Image>();
-        imgone.sprite = Resources.Load<Sprite>("none");
-        imgtwo.sprite = Resources.Load<Sprite>("none");
-        imgthree.sprite = Resources.Load<Sprite>("none");
-        lblone = GameObject.Find("lbl_Charone").GetComponent<Text>();
-        lbltwo = GameObject.Find("lbl_Chartwo").GetComponent<Text>();
-        lblthree = GameObject.Find("lbl_Charthree").GetComponent<Text>();
-        lblone.text = "Seleccionar...";
-        lbltwo.text = "Seleccionar...";
-        lblthree.text = "Seleccionar...";
-        nameboss = GameObject.Find("NameBoss").GetComponent<Text>();
-        descboss = GameObject.Find("DescBoss").GetComponent<Text>();
-        boss = archivo_organismo.LevelBoss();
-        nameboss.text = archivo_organismo.NameBoss(boss);
-        descboss.text = archivo_organismo.descBoss(boss);
-        
-        switch (boss)
+        cant = archivo_organismo.GetTotalChar();
+
+        for (int v = 0; v <= 2; v++)
         {
-            case 1:
-                prevapa.SetActive(true);
-                break;
-            case 2:
-                prevdema.SetActive(true);
-                break;
-            case 3:
-                prevfgitis.SetActive(true);
-                break;
-            case 4:
-                prevfoma.SetActive(true);
-                break;
-            case 5:
-                prevrino.SetActive(true);
-                break;
-            case 6:
-                prevfarin.SetActive(true);
-                break;
-            case 7:
-                prevdift.SetActive(true);
-                break;
-            case 8:
-                prevbron.SetActive(true);
-                break;
-            case 9:
-                prevgast.SetActive(true);
-                break;
-            case 10:
-                prevhemo.SetActive(true);
-                break;
-            case 11:
-                prevcolit.SetActive(true);
-                break;
-            case 12:
-                prevcalc.SetActive(true);
-                break;
-            case 13:
-                prevles.SetActive(true);
-                break;
-            case 14:
-                prevartr.SetActive(true);
-                break;
-            case 15:
-                prevesclr.SetActive(true);
-                break;
-            case 16:
-                prevane.SetActive(true);
-                break;
+            thumbs[v] = GameObject.Find(tags[v + 3] + "Char").GetComponent<Image>();
+            thumbs[v].sprite = Resources.Load<Sprite>("none");
+            labels[v] = GameObject.Find("lbl_Char" + tags[v]).GetComponent<Text>();
+            labels[v].text = "Seleccionar...";
         }
-    }
-    
-    void Update()
-    {
-        
+
+        boss = archivo_organismo.LevelBoss();
+        nameboss = GameObject.Find("NameBoss").GetComponent<Text>();
+        nameboss.text = archivo_organismo.NameBoss(boss);
+
+        descboss = GameObject.Find("DescBoss").GetComponent<Text>();
+        descboss.text = archivo_organismo.DescBoss(boss);
+
+        bosses[boss - 1].SetActive(true);
+
     }
 
-    private void ViewCharacters()
+    public void ViewChar()
     {
-        if (cant[0] < 1)
+        panel.SetActive(true);
+        for (int h = 0; h <= 24; h++)
         {
-            asp.SetActive(false);
+            if (cant[h] < 1)
+            {
+                characters[h].SetActive(false);
+            }
+            else
+            {
+                characters[h].SetActive(true);
+                cants[h].text = (cant[h]).ToString();
+            }
         }
-        else
+    }
+
+    private void HideBoss()
+    {
+        for (int d = 0; d <= 15; d++)
         {
-            asp.SetActive(true);
-            cantasp= GameObject.Find("cant_asp").GetComponent<Text>();
-            cantasp.text = (cant[0]).ToString();
+            bosses[d].SetActive(false);
         }
     }
 
     public void Back()
     {
-        HidePrevBoss();
+        HideBoss();
         LoadScene.sceneToLoad = "Mapajuego";
         LoadPanel.SetActive(true);
     }
 
     public void HideChar()
     {
-        charselect.SetActive(false);
+        panel.SetActive(false);
+    }
+
+    private void Put(string character, int id)
+    {
+        thumbs[slot].sprite = Resources.Load<Sprite>(character);
+
     }
 
     private void PutSlot(string character, int id)
-    {
+    {/*
         switch (slot)
         {
             case 1:
                 imgone.sprite = Resources.Load<Sprite>(character);
-                lblone.text = archivo_organismo.NameCharacter(id);
-                cant[id]--;
-                id_slot_one = id;
+                lblone.text = archivo_organismo.NameCharacter(id);                
+                id_slot_one = id;                
+                if (full_s_one == false)
+                {
+                    cant[id]--;
+                    full_s_one = true;
+                }
                 break;
             case 2:
                 imgtwo.sprite = Resources.Load<Sprite>(character);
-                lbltwo.text = archivo_organismo.NameCharacter(id);
-                cant[id]--;
+                lbltwo.text = archivo_organismo.NameCharacter(id);                
                 id_slot_two = id;
+                if(full_s_two == false)
+                {
+                    cant[id]--;
+                    full_s_two = true;
+                }                
                 break;
             case 3:
                 imgthree.sprite = Resources.Load<Sprite>(character);
-                lblthree.text = archivo_organismo.NameCharacter(id);
-                cant[id]--;
+                lblthree.text = archivo_organismo.NameCharacter(id);                
                 id_slot_three = id;
+                if(full_s_three == false)
+                {
+                    cant[id]--;
+                    full_s_three = true;
+                }                
                 break;
-        }
+        }*/
     }
 
-    private void HidePrevBoss()
+    /*public void Select(int id)
     {
-        prevapa.SetActive(false);
-        prevdema.SetActive(false);
-        prevfgitis.SetActive(false);
-        prevfoma.SetActive(false);
-        prevrino.SetActive(false);
-        prevfarin.SetActive(false);
-        prevdift.SetActive(false);
-        prevbron.SetActive(false);
-        prevgast.SetActive(false);
-        prevhemo.SetActive(false);
-        prevcolit.SetActive(false);
-        prevcalc.SetActive(false);
-        prevles.SetActive(false);
-        prevartr.SetActive(false);
-        prevesclr.SetActive(false);
-        prevane.SetActive(false);
-    }
-
-    public void SelectOne()
-    {
-        slot = 1;
+        slot = id;
         charselect.SetActive(true);
         ViewCharacters();
-    }
-
-    public void SelectTwo()
-    {
-        slot = 2;
-        charselect.SetActive(true);
-        ViewCharacters();
-    }
-
-    public void SelectThree()
-    {
-        slot = 3;
-        charselect.SetActive(true);
-        ViewCharacters();
-    }
+    }*/
 
     public void Ready()
     {
-        HidePrevBoss();
+        //HidePrevBoss();
         LoadScene.sceneToLoad = "Battle";
-        LoadPanel.SetActive(true);        
+        LoadPanel.SetActive(true);
     }
 
-    public void MinusOne()
+    /**public void MinusOne()
     {
         imgone.sprite = Resources.Load<Sprite>("none");
         lblone.text = "Seleccionar...";
-        cant[id_slot_one]++;        
+        if(full_s_one == true)
+        {
+            cant[id_slot_one]++;
+            full_s_one = false;
+        }        
     }
 
-    public void ActAsp()
-    {        
-        PutSlot("aspirina", 0);
+    public void MinusTwo()
+    {
+        imgtwo.sprite = Resources.Load<Sprite>("none");
+        lbltwo.text = "Seleccionar...";
+        if (full_s_two == true)
+        {
+            cant[id_slot_two]++;
+            full_s_two = false;
+        }
+    }
+
+    public void MinusThree()
+    {
+        imgthree.sprite = Resources.Load<Sprite>("none");
+        lblthree.text = "Seleccionar...";
+        if (full_s_three == true)
+        {
+            cant[id_slot_three]++;
+            full_s_three = false;
+        }
+    }
+
+    public void SelectChar(int id)
+    {
+        PutSlot(archivo_organismo.NameCharacter(id), id);
         charselect.SetActive(false);
-    }
-
-
+    }*/
 
 }

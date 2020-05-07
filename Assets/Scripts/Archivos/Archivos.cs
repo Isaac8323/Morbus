@@ -462,7 +462,7 @@ public class Archivos : MonoBehaviour
             Datos.bismuto = "3";
             Datos.level[0] = "6";
             Datos.experiencia = "0";
-            Datos.nivel_organismo_jefes = "1";
+            Datos.nivel_organismo_jefes = "2";
             Datos.sesion = "";
             Datos.estructuracion = "";
             for(int x=0;x<3;x++){
@@ -615,15 +615,19 @@ public class Archivos : MonoBehaviour
     }
 
     //Función que carga las descripciones de los jefes según su nivel
-    public string descBoss(int id)
+    public string DescBoss(int id)
     {
         string desc = "Missing description";
-        fb = new BinaryFormatter();
-        Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-        Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-        desc = Datos.Jefes[id, 1];
-        Informacion.Close();
-        Debug.Log(desc);
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {            
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            desc = Datos.Jefes[id, 1];
+            Informacion.Close();
+            Debug.Log(desc);
+            return desc;
+        }
         return desc;
     }
     public String carga_monedas(String mon)

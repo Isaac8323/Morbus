@@ -3394,6 +3394,80 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502983002}
   m_CullTransparentMesh: 0
+--- !u!1 &508049466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508049467}
+  - component: {fileID: 508049469}
+  - component: {fileID: 508049468}
+  m_Layer: 5
+  m_Name: Trophy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &508049467
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508049466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1078365603}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -528, y: 314.15}
+  m_SizeDelta: {x: 268, y: 451.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &508049468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508049466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 47ab3a599aa250b43a46bb939e4dc85e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &508049469
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508049466}
+  m_CullTransparentMesh: 0
 --- !u!1 &522245843
 GameObject:
   m_ObjectHideFlags: 0
@@ -4283,8 +4357,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664793239}
   m_HandleRect: {fileID: 664793238}
   m_Direction: 2
-  m_Value: 0.996986
-  m_Size: 0.83307093
+  m_Value: 0.9969857
+  m_Size: 0.8330708
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6839,6 +6913,7 @@ RectTransform:
   - {fileID: 2041895817}
   - {fileID: 292583332}
   - {fileID: 789968893}
+  - {fileID: 508049467}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7397,7 +7472,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 002fbcb3d6cce2442a7ddd33df463319, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a6972fcef6959db4bac1ecf26082c550, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7443,6 +7518,7 @@ MonoBehaviour:
   LoadPanel: {fileID: 292583331}
   Alerta_a: {fileID: 1353469181}
   panel_confirmacion_final: {fileID: 789968892}
+  SelectPanel: {fileID: 588573722}
 --- !u!114 &1201610029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10196,7 +10272,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1534559684}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1201610028}
+        m_MethodName: OpenLab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1534559684
@@ -11581,7 +11668,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1646392568}
   m_HandleRect: {fileID: 1646392567}
   m_Direction: 2
-  m_Value: 0.99999934
+  m_Value: 0.9999997
   m_Size: 0.8350869
   m_NumberOfSteps: 1
   m_OnValueChanged:
@@ -13481,6 +13568,7 @@ GameObject:
   - component: {fileID: 2041895820}
   - component: {fileID: 2041895819}
   - component: {fileID: 2041895818}
+  - component: {fileID: 2041895821}
   m_Layer: 5
   m_Name: back
   m_TagString: Untagged
@@ -13504,8 +13592,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -868.1, y: 507.2}
-  m_SizeDelta: {x: 183.8, y: 66}
+  m_AnchoredPosition: {x: -838, y: 507.2}
+  m_SizeDelta: {x: 244, y: 66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2041895818
 MonoBehaviour:
@@ -13551,7 +13639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -13571,9 +13659,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Mapa
-
-'
+  m_Text: REgresar
 --- !u!222 &2041895820
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13582,6 +13668,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041895816}
   m_CullTransparentMesh: 0
+--- !u!114 &2041895821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041895816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2062439479
 GameObject:
   m_ObjectHideFlags: 0
