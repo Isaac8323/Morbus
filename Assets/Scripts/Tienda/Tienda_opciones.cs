@@ -13,7 +13,7 @@ using System.Data;
 [System.Serializable]
 public class Tienda_opciones : MonoBehaviour
 {
-    public GameObject paneldescrip, compra, desbloquear, tienda, cuadro_imagen, intercambiopanel;
+    public GameObject paneldescrip, compra, desbloquear, tienda, cuadro_imagen, intercambiopanel, LoadPanel;
     Image UIImage, Imagepanel;
     Text UITexto, titulotext;
     String[,] Personajes = new String[25, 8];
@@ -240,7 +240,8 @@ public class Tienda_opciones : MonoBehaviour
     }
     public void Volver()
     {
-        SceneManager.LoadScene("Mapajuego");
+        LoadScene.sceneToLoad = "Mapajuego";
+        LoadPanel.SetActive(true);
     }
     public void comprar()
     {

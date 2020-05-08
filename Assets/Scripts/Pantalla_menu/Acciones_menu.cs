@@ -10,14 +10,16 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 public class Acciones_menu : MonoBehaviour
 {
-    public GameObject menu_principal, panel_registro, panel_iniciosesion, soundtrack,Borrar_datos,Cargar_datos,Guardar_datos,Cerrar_sesion;
+    public GameObject passed, arenas, easter, loading, admin;
+    public AudioSource ended, title;
+    public GameObject menu_principal, panel_registro, panel_iniciosesion, soundtrack, Borrar_datos, Cargar_datos, Guardar_datos, Cerrar_sesion;
     public InputField Inputfield_usuario, Inputfield_contraseña, Inputfield_conf_contraseña, Inputfield_ini_us, Inputfield_ini_con;
     public MySqlConnection conn;
     public Text errores;
-    public Text  user_loged;
+    public Text user_loged;
     string usuario;
     int id_user = 0;
-  //  String bitmap2;
+    //  String bitmap2;
     Archivos archiv;
     void Start()
     {
@@ -25,6 +27,32 @@ public class Acciones_menu : MonoBehaviour
         conn = adminmysql.ConectarConServidorBaseDatos();
         archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
         archiv.Crear();
+        if (archiv.GetPassStatus().Equals("true"))
+        {
+            ended.Play();
+            passed.SetActive(true);
+        }
+        if (archiv.GetPassStatus().Equals("false"))
+        {
+            title.Play();
+            passed.SetActive(false);
+        }
+        if (archiv.GetArenaStatus().Equals("true"))
+        {
+            arenas.SetActive(true);
+        }
+        if (archiv.GetArenaStatus().Equals("false"))
+        {
+            arenas.SetActive(false);
+        }
+        if (archiv.GetEaster().Equals("false"))
+        {
+            easter.SetActive(false);
+        }
+        if (archiv.GetEaster().Equals("true"))
+        {
+            easter.SetActive(true);
+        }
         archiv.cargar_variables();
         if (variables_indestructibles.Sesion.Equals(""))
         {
@@ -57,7 +85,7 @@ public class Acciones_menu : MonoBehaviour
             Guardar_datos.SetActive(true);
             Cerrar_sesion.SetActive(true);
         }
-    //    bitmap2 = archiv.filetoarraybit();
+        //    bitmap2 = archiv.filetoarraybit();
         /*ThreadStart delegado = new ThreadStart(CorrerProceso); 
         Thread hilo = new Thread(delegado); 
         hilo.Start();
@@ -66,7 +94,7 @@ public class Acciones_menu : MonoBehaviour
     // MENU
     void Update()
     {
-    
+
     }
     public void InicializarPanelRegistro()
     {
@@ -135,7 +163,7 @@ public class Acciones_menu : MonoBehaviour
                     Cerrar_sesion.SetActive(true);
                     variables_indestructibles.Sesion = usuario;
                     archiv.guardar_variables();
-                //    escena();
+                    //    escena();
                 }
                 else
                 {
@@ -171,7 +199,7 @@ public class Acciones_menu : MonoBehaviour
 
     public void Registrar()
     {
-        string  contraseña, conf_contraseña;
+        string contraseña, conf_contraseña;
         string repetido;
         usuario = Inputfield_usuario.text;
         byte[] encryted = System.Text.Encoding.Unicode.GetBytes(Inputfield_contraseña.text);
@@ -227,7 +255,7 @@ public class Acciones_menu : MonoBehaviour
                 }
                 else
                 {
-                    cmd.CommandText = "insert into usuario values ( 0,'" + usuario + "','" + contraseña + "');"; 
+                    cmd.CommandText = "insert into usuario values ( 0,'" + usuario + "','" + contraseña + "');";
                     cmd.ExecuteNonQuery();
                     MySqlDataReader select11;
                     cmd.CommandText = "SELECT id_usuario FROM usuario WHERE nombre_usuario = '" + usuario + "';";
@@ -236,7 +264,7 @@ public class Acciones_menu : MonoBehaviour
                     {
                         while (select11.Read())
                         {
-                             id_user = Int32.Parse(select11["id_usuario"].ToString());
+                            id_user = Int32.Parse(select11["id_usuario"].ToString());
                             Debug.Log(id_user.ToString());
 
                         }
@@ -290,11 +318,12 @@ public class Acciones_menu : MonoBehaviour
         if (select2.HasRows)
         {
             int i = 0;
-                while(select2.Read()){
+            while (select2.Read())
+            {
 
-                   variables_indestructibles.Personajes[i,6]=select2["entrenamiento"].ToString();
- 
-                    variables_indestructibles.Personajes[i, 2] = select2["cantidad"].ToString();
+                variables_indestructibles.Personajes[i, 6] = select2["entrenamiento"].ToString();
+
+                variables_indestructibles.Personajes[i, 2] = select2["cantidad"].ToString();
                 i++;
             }
         }
@@ -302,29 +331,30 @@ public class Acciones_menu : MonoBehaviour
         MySqlDataReader select3;
         cmd.CommandText = "SELECT nivel,experiencia,monedas,bismuto,jefe FROM estadisticas WHERE usuario= '" + id_user + "';";
         select3 = cmd.ExecuteReader();
-             if (select3.HasRows)
+        if (select3.HasRows)
         {
-         while (select3.Read()){
+            while (select3.Read())
+            {
                 variables_indestructibles.level[0] = select3["nivel"].ToString();
-  
+
                 variables_indestructibles.experiencia = select3["experiencia"].ToString();
-            
+
                 variables_indestructibles.monedas[0] = select3["monedas"].ToString();
-            
+
                 variables_indestructibles.bismuto = select3["bismuto"].ToString();
-            
+
                 variables_indestructibles.nivel_organismo_jefes = select3["jefe"].ToString();
-            
-        }
+
+            }
         }
         select3.Close();
-                MySqlDataReader select4;
+        MySqlDataReader select4;
         cmd.CommandText = "SELECT cantidad_elemento FROM elementos WHERE usuario= '" + id_user + "';";
         select4 = cmd.ExecuteReader();
         if (select4.HasRows)
         {
             int i = 0;
-            while(select4.Read())
+            while (select4.Read())
             {
                 variables_indestructibles.Elementos[i, 1] = select4["cantidad_elemento"].ToString();
                 i++;
@@ -343,40 +373,42 @@ public class Acciones_menu : MonoBehaviour
             cmd.CommandText = "UPDATE  personaje SET entrenamiento=" + variables_indestructibles.Personajes[i, 6] + ", cantidad=" + variables_indestructibles.Personajes[i, 2] + " where usuario = " + id_user + " and nombre='" + variables_indestructibles.Personajes[i, 0] + "';";
             cmd.ExecuteNonQuery();
         }
-        cmd.CommandText = "UPDATE estadisticas SET nivel="+variables_indestructibles.level[0]+", experiencia=" + variables_indestructibles.experiencia + ", monedas="+variables_indestructibles.monedas[0]+", bismuto="+variables_indestructibles.bismuto+", jefe="+variables_indestructibles.nivel_organismo_jefes+", laboratorio=0  where usuario = " + id_user + ";";
+        cmd.CommandText = "UPDATE estadisticas SET nivel=" + variables_indestructibles.level[0] + ", experiencia=" + variables_indestructibles.experiencia + ", monedas=" + variables_indestructibles.monedas[0] + ", bismuto=" + variables_indestructibles.bismuto + ", jefe=" + variables_indestructibles.nivel_organismo_jefes + ", laboratorio=0  where usuario = " + id_user + ";";
         cmd.ExecuteNonQuery();
         for (int i = 0; i < 11; i++)
         {
-            cmd.CommandText = "UPDATE elementos SET cantidad_elemento="+variables_indestructibles.Elementos[i,1]+"  where usuario = " + id_user + "  and nombre_elemento='" + variables_indestructibles.Elementos[i, 0] + "';";
+            cmd.CommandText = "UPDATE elementos SET cantidad_elemento=" + variables_indestructibles.Elementos[i, 1] + "  where usuario = " + id_user + "  and nombre_elemento='" + variables_indestructibles.Elementos[i, 0] + "';";
             cmd.ExecuteNonQuery();
         }
     }
     public void delete_user_progre()
     {
-                string comando = "UPDATE  personaje SET entrenamiento=1, cantidad=0 where usuario = " + id_user + ";";
-                MySqlCommand cmd = new MySqlCommand(comando, conn);            
-                cmd.ExecuteNonQuery();
-                cmd.CommandText = "UPDATE estadisticas SET nivel=1, experiencia=0, monedas=0, bismuto=0, jefe=1, laboratorio=0  where usuario = " + id_user + ";";
-                cmd.ExecuteNonQuery();
-                cmd.CommandText = "UPDATE elementos SET cantidad_elemento=0  where usuario = " + id_user + ";";
-                cmd.ExecuteNonQuery();
-            
+        string comando = "UPDATE  personaje SET entrenamiento=1, cantidad=0 where usuario = " + id_user + ";";
+        MySqlCommand cmd = new MySqlCommand(comando, conn);
+        cmd.ExecuteNonQuery();
+        cmd.CommandText = "UPDATE estadisticas SET nivel=1, experiencia=0, monedas=0, bismuto=0, jefe=1, laboratorio=0  where usuario = " + id_user + ";";
+        cmd.ExecuteNonQuery();
+        cmd.CommandText = "UPDATE elementos SET cantidad_elemento=0  where usuario = " + id_user + ";";
+        cmd.ExecuteNonQuery();
+
     }
     public void Continuar()
     {
-     /*                   MySqlDataReader select5;
-                string comando = "SELECT archiv FROM usuarios WHERE usuario = '666';";
-                MySqlCommand cmd = new MySqlCommand(comando, conn);
-                select5 = cmd.ExecuteReader();
-                if (select5.HasRows)
-                {
-                    while (select5.Read()) 
-                    {
-                        bitmap2 = select5["archiv"].ToString();
-                    }
-                }
-                select5.Close();
-        archiv.Creararchivodebd(bitmap2);*/
-        SceneManager.LoadScene("Tutorial");
+        /*                   MySqlDataReader select5;
+                   string comando = "SELECT archiv FROM usuarios WHERE usuario = '666';";
+                   MySqlCommand cmd = new MySqlCommand(comando, conn);
+                   select5 = cmd.ExecuteReader();
+                   if (select5.HasRows)
+                   {
+                       while (select5.Read()) 
+                       {
+                           bitmap2 = select5["archiv"].ToString();
+                       }
+                   }
+                   select5.Close();
+           archiv.Creararchivodebd(bitmap2);*/
+        admin.SetActive(false);
+        LoadScene.sceneToLoad = "Mapajuego";
+        loading.SetActive(true);
     }
 }

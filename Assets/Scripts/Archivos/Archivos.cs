@@ -441,7 +441,7 @@ public class Archivos : MonoBehaviour
             Datos.Jefes[15, 1] = "Esclerosis múltiple (o esclerosis en placas) Enfermedad progresiva del sistema nervioso central que provoca lesiones múltiples en la mielina que recubre los axones de las neuronas y constituye la sustancia blanca, en forma de placas diseminadas; se manifiesta con diversos síntomas como la parálisis de las extremidades inferiores, hormigueo, pérdida de la sensibilidad, etc.";
             Datos.Jefes[16, 1] = "La anemia es una afección en la cual el cuerpo no tiene suficientes glóbulos rojos, los cuales le suministran el oxígeno a los tejidos corporales. Hay muchos tipos de anemia. La anemia perniciosa es una disminución en los glóbulos rojos que ocurre cuando los intestinos no pueden absorber apropiadamente la vitamina B12.";
             //Puntos de vida iniciales de los jefes
-            Datos.Jefes[0, 2] = "25000";
+            /*Datos.Jefes[0, 2] = "25000";
             Datos.Jefes[1, 2] = "150000";
             Datos.Jefes[2, 2] = "200000";
             Datos.Jefes[3, 2] = "250000";
@@ -457,10 +457,11 @@ public class Archivos : MonoBehaviour
             Datos.Jefes[13, 2] = "1450000";
             Datos.Jefes[14, 2] = "1675000";
             Datos.Jefes[15, 2] = "1900000";
-            Datos.Jefes[16, 2] = "2500000";
+            Datos.Jefes[16, 2] = "2500000";*/
 
+            Datos.easter = "false";
             Datos.Arenas = "false";
-            Datos.finished = "false";
+            Datos.finished = "true";
             Datos.monedas[0] = "15000";
             Datos.bismuto = "3";
             Datos.level[0] = "6";
@@ -515,13 +516,47 @@ public class Archivos : MonoBehaviour
     //Función que verifica si ya se completó el organismo humano
     public string GetArenaStatus()
     {
-        string completed="";
+        string completed = "";
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
             fb = new BinaryFormatter();
             Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
             completed = Datos.Arenas;
+            Informacion.Close();
+            Debug.Log(completed);
+            return completed;
+        }
+        return completed;
+    }
+
+    //Función que verifica si se encontró el easter egg para la 3ra estrella
+    public string GetEaster()
+    {
+        string easter="";
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            easter = Datos.easter;
+            Informacion.Close();
+            Debug.Log(easter);
+            return easter;
+        }
+        return easter;
+    }
+
+    //Función que verifica si ya se completó el nivel 20
+    public string GetPassStatus()
+    {
+        string completed = "";
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            completed = Datos.finished;
             Informacion.Close();
             Debug.Log(completed);
             return completed;
@@ -767,4 +802,5 @@ class DatosdeJuego : System.Object
     public String[,] Elementos2 = new String[11, 3];
     public String finished;
     public String Arenas;
+    public String easter;
 }
