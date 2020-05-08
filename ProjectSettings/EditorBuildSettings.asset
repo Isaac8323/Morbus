@@ -116,4 +116,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenarios/Selection.unity
     guid: b3b87aa751e1ab14e80ade7255607e87
+  - enabled: 1
+    path: Assets/Escenarios/Battle.unity
+    guid: 991e15905c6858e4d97f5515cc4dcd2e
   m_configObjects: {}

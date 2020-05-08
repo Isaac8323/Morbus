@@ -465,7 +465,7 @@ public class Archivos : MonoBehaviour
             Datos.bismuto = "3";
             Datos.level[0] = "6";
             Datos.experiencia = "0";
-            Datos.nivel_organismo_jefes = "2";
+            Datos.nivel_organismo_jefes = "16";
             Datos.sesion = "";
             Datos.estructuracion = "";
             for (int x = 0; x < 3; x++)
