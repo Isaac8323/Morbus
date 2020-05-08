@@ -28,31 +28,32 @@ public class Archivos : MonoBehaviour
     }
     public void filetoarraybit()
     {
-      /*  Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-        var data = System.Text.Encoding.UTF8.GetBytes(File.ReadAllText(Application.persistentDataPath + "/Partida.d"));
-        Debug.Log(data);
-        Informacion.Close();
-        return System.Convert.ToBase64String(data);*/
+        /*  Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+          var data = System.Text.Encoding.UTF8.GetBytes(File.ReadAllText(Application.persistentDataPath + "/Partida.d"));
+          Debug.Log(data);
+          Informacion.Close();
+          return System.Convert.ToBase64String(data);*/
     }
-    public void Creararchivodebd(String readText){
+    public void Creararchivodebd(String readText)
+    {
 
-          /*    Informacion.Close();
-            Debug.Log(readText);
-               Informacion = File.Create(Application.persistentDataPath + "/Partida.d");
-             File.WriteAllBytes(Application.persistentDataPath + "/Partida.d",Convert.FromBase64String(readText));
-            byte[] data = Convert.FromBase64String(readText);
-                readText = Encoding.UTF8.GetString(data);
-                readText = System.Text.Encoding.Default.GetString(data);
-                File.AppendAllText(Application.persistentDataPath + "/Partida.d", readText);*/
-            
-                    
+        /*    Informacion.Close();
+          Debug.Log(readText);
+             Informacion = File.Create(Application.persistentDataPath + "/Partida.d");
+           File.WriteAllBytes(Application.persistentDataPath + "/Partida.d",Convert.FromBase64String(readText));
+          byte[] data = Convert.FromBase64String(readText);
+              readText = Encoding.UTF8.GetString(data);
+              readText = System.Text.Encoding.Default.GetString(data);
+              File.AppendAllText(Application.persistentDataPath + "/Partida.d", readText);*/
+
+
     }
 
     //crea un archivo con los siguientes elementos
     public void cargar_variables()
-    {        
+    {
 
-        fb = new BinaryFormatter();        
+        fb = new BinaryFormatter();
 
         Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
 
@@ -61,7 +62,7 @@ public class Archivos : MonoBehaviour
         {
             for (int i = 0; i < 11; i++)
             {
-                variables_indestructibles.Elementos2[i,x]=Datos.Elementos2[i, x];
+                variables_indestructibles.Elementos2[i, x] = Datos.Elementos2[i, x];
             }
         }
         variables_indestructibles.Usuario = Datos.Usuario;
@@ -141,7 +142,7 @@ public class Archivos : MonoBehaviour
         {
             for (int i = 0; i < 11; i++)
             {
-                Datos.Elementos2[i, x] = variables_indestructibles.Elementos2[i,x];
+                Datos.Elementos2[i, x] = variables_indestructibles.Elementos2[i, x];
             }
         }
         fb.Serialize(Informacion, Datos);
@@ -458,6 +459,8 @@ public class Archivos : MonoBehaviour
             Datos.Jefes[15, 2] = "1900000";
             Datos.Jefes[16, 2] = "2500000";
 
+            Datos.Arenas = "false";
+            Datos.finished = "false";
             Datos.monedas[0] = "15000";
             Datos.bismuto = "3";
             Datos.level[0] = "6";
@@ -465,10 +468,12 @@ public class Archivos : MonoBehaviour
             Datos.nivel_organismo_jefes = "2";
             Datos.sesion = "";
             Datos.estructuracion = "";
-            for(int x=0;x<3;x++){
-            for(int i = 0; i<11;i++){
-                Datos.Elementos2[i, x] = "";
-            }
+            for (int x = 0; x < 3; x++)
+            {
+                for (int i = 0; i < 11; i++)
+                {
+                    Datos.Elementos2[i, x] = "";
+                }
             }
             fb.Serialize(Informacion, Datos);
             Informacion.Close();
@@ -476,8 +481,6 @@ public class Archivos : MonoBehaviour
         }
     }
     //mete los datos dentro del archivo
-
-
 
     //funciones de cargar{
 
@@ -509,6 +512,23 @@ public class Archivos : MonoBehaviour
             Informacion.Close();
         }
     }
+    //Función que verifica si ya se completó el organismo humano
+    public string GetArenaStatus()
+    {
+        string completed="";
+        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
+        {
+            fb = new BinaryFormatter();
+            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
+            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
+            completed = Datos.Arenas;
+            Informacion.Close();
+            Debug.Log(completed);
+            return completed;
+        }
+        return completed;
+    }
+
     //Fucnión que carga la cantidad de personajes
     public int[] GetTotalChar()
     {
@@ -619,7 +639,7 @@ public class Archivos : MonoBehaviour
     {
         string desc = "Missing description";
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {            
+        {
             fb = new BinaryFormatter();
             Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
             Datos = fb.Deserialize(Informacion) as DatosdeJuego;
@@ -745,4 +765,6 @@ class DatosdeJuego : System.Object
     public String sesion;
     public String estructuracion;
     public String[,] Elementos2 = new String[11, 3];
+    public String finished;
+    public String Arenas;
 }
