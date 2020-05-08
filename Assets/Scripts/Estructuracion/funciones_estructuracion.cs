@@ -38,6 +38,8 @@ public class funciones_estructuracion : MonoBehaviour
     public GameObject[] enlace_cortisol = new GameObject[64];
     public GameObject[] enlace_ampicilina = new GameObject[60];
     public GameObject[] enlace_piperacilina = new GameObject[80];
+    public GameObject[] enlace_tazobactam = new GameObject[46];
+    public GameObject[] enlace_metilprednisolona = new GameObject[66];
     Text [] verificadores =new Text[500];
     int banderin,mouseupper;
     int[] cantidad_elementos_celda = new int[500];
@@ -109,7 +111,6 @@ public class funciones_estructuracion : MonoBehaviour
                 elementin = GameObject.Find("txt_elemento" + i.ToString()).GetComponentInChildren<Text>();
                 if (element_used.Equals(elementin.text))
                 {
-                    Debug.Log("compatible");
                     elementin = GameObject.Find("txt_total" + i.ToString()).GetComponentInChildren<Text>();
                     int totalelementonousado = Int32.Parse((elementin.text));
                     totalelementonousado = totalelementonousado + 1;
@@ -237,13 +238,25 @@ public class funciones_estructuracion : MonoBehaviour
                         {
                             elementin = GameObject.Find("txt_elemento" + i.ToString()).GetComponentInChildren<Text>();
                             int largo = elemento_text_text.text.Length;
+                            if (largo == 2)
+                            {
+                                try
+                                {
+                                    int es_num = Int32.Parse(elemento_text_text.text.Substring(1, 2));
+                                }
+                                catch(Exception e)
+                                {
+                                    largo = 1;
+                                }
+                                }
                             if (largo == 1)
                             {
-                                if (elemento_text_text.text.Substring(0, 1).Equals(elementin.text) )
+                                if (elemento_text_text.text.Substring(0, 1).Equals(elementin.text))
                                 {
                                     elementin = GameObject.Find("txt_total" + i.ToString()).GetComponentInChildren<Text>();
-                                    int totalelementonousado = Int32.Parse((elementin.text));
+                                    int totalelementonousado = Int32.Parse(elementin.text);
                                     totalelementonousado = totalelementonousado + cantidad_elementos_celda[x];
+                                    Debug.Log(totalelementonousado.ToString()+"zzzzz");
                                     elementin.text = totalelementonousado.ToString();
                                     i = 12;
                                 }
@@ -254,8 +267,9 @@ public class funciones_estructuracion : MonoBehaviour
                               if (elemento_text_text.text.Substring(0, 2).Equals(elementin.text))
                                 {
                                     elementin = GameObject.Find("txt_total" + i.ToString()).GetComponentInChildren<Text>();
-                                    int totalelementonousado = Int32.Parse((elementin.text));
+                                    int totalelementonousado = Int32.Parse(elementin.text);
                                     totalelementonousado = totalelementonousado + cantidad_elementos_celda[x];
+                                    Debug.Log(totalelementonousado.ToString()+"gdgdgd");
                                     elementin.text = totalelementonousado.ToString();
                                     i = 12;
                                 }
@@ -1757,6 +1771,129 @@ public class funciones_estructuracion : MonoBehaviour
                     }
                 }
             }
+            else if (elementin.text.Equals("Tazobactam"))
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    if (bandera_carb[i] == 1)
+                    {
+                        bandera_carb[99]++;
+                        Debug.Log(bandera_carb[99].ToString());
+                    }
+                }
+                //comprovacion 1
+                if (bandera_carb[99] == 10)
+                {
+                    for (int i = 0; i < 12; i++)
+                    {
+                        verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+                    Debug.Log("paso  comprovacion 1");
+                    //comprovacion 2
+                    if (verificadores[0].text.Equals("O") && verificadores[1].text.Equals("H")
+                        && verificadores[2].text.Equals("O") && verificadores[3].text.Equals("S")
+                        && verificadores[4].text.Equals("O") && verificadores[5].text.Equals("N")
+                        && verificadores[6].text.Equals("N") && verificadores[7].text.Equals("N")
+                        && verificadores[8].text.Equals("O") && verificadores[9].text.Equals("H")
+                        && verificadores[10].text.Equals("O") && verificadores[11].text.Equals("N"))
+                    {
+                        Debug.Log("paso  comprovacion 2");
+                        //comprovacion 3
+                        for (int i = 0; i < 10; i++)
+                        {
+                            verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                        }
+
+                        if (verificadores[1].text.Equals("2") && verificadores[4].text.Equals("2")
+                            && verificadores[5].text.Equals("1") && verificadores[6].text.Equals("1")
+                            && verificadores[7].text.Equals("1") && verificadores[9].text.Equals("3"))
+                        {
+                            Debug.Log("paso  comprovacion 3");
+                            //comprovacion 4
+                            if (contador_enlaces_aspirina[1] == 1 && contador_enlaces_aspirina[15] == 1
+                                && contador_enlaces_aspirina[17] == 1 && contador_enlaces_aspirina[43] == 1
+                                && contador_enlaces_aspirina[39] == 1 && contador_enlaces_aspirina[23] == 1)
+                            {
+                                for (int i = 0; i < 46; i++)
+                                {
+                                    if (contador_enlaces_aspirina[i] == 0)
+                                    {
+                                        contador_de_enlaces++;
+                                    }
+                                }
+                                if (contador_de_enlaces == 40)
+                                {
+                                    Debug.Log("Creaste exitosamente a Tazobactam");
+                                    verificar_final(19);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else if (elementin.text.Equals("Metilprednisolona"))
+            {
+                for (int i = 0; i < 22; i++)
+                {
+                    if (bandera_carb[i] == 1)
+                    {
+                        bandera_carb[99]++;
+                        Debug.Log(bandera_carb[99].ToString());
+                    }
+                }
+                //comprovacion 1
+                if (bandera_carb[99] == 22)
+                {
+                    for (int i = 0; i < 11; i++)
+                    {
+                        verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
+                    }
+                    Debug.Log("paso  comprovacion 1");
+                    //comprovacion 2
+                    if (verificadores[0].text.Equals("O") && verificadores[1].text.Equals("H") 
+                        && verificadores[2].text.Equals("O") && verificadores[3].text.Equals("H") 
+                        && verificadores[4].text.Equals("O") && verificadores[5].text.Equals("O") 
+                        && verificadores[6].text.Equals("H") && verificadores[7].text.Equals("O") 
+                        && verificadores[8].text.Equals("H") && verificadores[9].text.Equals("H") 
+                        && verificadores[10].text.Equals("H"))
+                    {
+                        Debug.Log("paso  comprovacion 2");
+                        //comprovacion 3
+                        for (int i = 0; i < 22; i++)
+                        {
+                            verificadores[i] = GameObject.Find("text_carbon" + i.ToString()).GetComponentInChildren<Text>();
+                        }
+
+                        if (verificadores[1].text.Equals("1") && verificadores[2].text.Equals("1") 
+                            && verificadores[4].text.Equals("3") && verificadores[6].text.Equals("1") 
+                            && verificadores[7].text.Equals("2") && verificadores[9].text.Equals("3") 
+                            && verificadores[12].text.Equals("2") && verificadores[14].text.Equals("2")
+                            && verificadores[13].text.Equals("2") && verificadores[17].text.Equals("2")
+                            && verificadores[18].text.Equals("1") && verificadores[19].text.Equals("3")
+                            && verificadores[21].text.Equals("1"))
+                        {
+                            Debug.Log("paso  comprovacion 3");
+                            //comprovacion 4
+                            if (contador_enlaces_aspirina[1] == 1 && contador_enlaces_aspirina[9] == 1 
+                                && contador_enlaces_aspirina[7] == 1 && contador_enlaces_aspirina[61] == 1 )
+                            {
+                                for (int i = 0; i < 66; i++)
+                                {
+                                    if (contador_enlaces_aspirina[i] == 0)
+                                    {
+                                        contador_de_enlaces++;
+                                    }
+                                }
+                                if (contador_de_enlaces == 62)
+                                {
+                                    Debug.Log("Creaste exitosamente a Metilprednisolona");
+                                    verificar_final(20);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
 
         }
         else
@@ -2031,84 +2168,93 @@ public class funciones_estructuracion : MonoBehaviour
                 {
                     ruta = "Estrucutras/Complex/Piperacilina/Enlaces/EN_PRC_";
                 }
+               else if (nombre_form.Equals("Tazobactam"))
+                {
+                    ruta = "Estrucutras/Complex/Tazobactam/Enlaces/EN_TZB_";
+                }
+                else if (nombre_form.Equals("Metilprednisolona"))
+                {
+                    ruta = "Estrucutras/Hard/Metilprednisolona/Enlaces/EN_MNA_";
+                }
         elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
          if (elementin.text.Equals(""))
          {
-             if (contador_enlaces_aspirina[x] == 2)
-             {
-                 contador_enlaces_aspirina[x] = 0;
-                 int activate = x - 1;
-                 int activate2 = x2 - 1;
-                 if (nombre_form.Equals("Aspirina"))
-                 {
-                     enlace_aspirina[activate].SetActive(false);
-                     enlace_aspirina[activate2].SetActive(false);
-                 }
-                 else if(nombre_form.Equals("Paracetamol")){
-                      enlace_paracetamol[activate].SetActive(false);
-                      enlace_paracetamol[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Amoxicilina"))
-                 {
-                     enlace_amoxicilina[activate].SetActive(false);
-                     enlace_amoxicilina[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Cloxacilina"))
-                 {
-                     enlace_cloxacilina[activate].SetActive(false);
-                     enlace_cloxacilina[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Bortezomib"))
-                 {
-                     enlace_bortezomib[activate].SetActive(false);
-                     enlace_bortezomib[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Lenalidomida"))
-                 {
+            if (contador_enlaces_aspirina[x] == 2)
+            {
+                contador_enlaces_aspirina[x] = 0;
+                int activate = x - 1;
+                int activate2 = x2 - 1;
+                if (nombre_form.Equals("Aspirina"))
+                {
+                    enlace_aspirina[activate].SetActive(false);
+                    enlace_aspirina[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Paracetamol"))
+                {
+                    enlace_paracetamol[activate].SetActive(false);
+                    enlace_paracetamol[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Amoxicilina"))
+                {
+                    enlace_amoxicilina[activate].SetActive(false);
+                    enlace_amoxicilina[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Cloxacilina"))
+                {
+                    enlace_cloxacilina[activate].SetActive(false);
+                    enlace_cloxacilina[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Bortezomib"))
+                {
+                    enlace_bortezomib[activate].SetActive(false);
+                    enlace_bortezomib[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Lenalidomida"))
+                {
                     enlace_lenalidomida[activate].SetActive(false);
                     enlace_lenalidomida[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Vorinostat"))
-                 {
+                }
+                else if (nombre_form.Equals("Vorinostat"))
+                {
                     enlace_vorinostat[activate].SetActive(false);
                     enlace_vorinostat[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Clavulanato"))
-                 {
+                }
+                else if (nombre_form.Equals("Clavulanato"))
+                {
                     enlace_clavulanato[activate].SetActive(false);
                     enlace_clavulanato[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Penicilina"))
-                 {
+                }
+                else if (nombre_form.Equals("Penicilina"))
+                {
                     enlace_penicilina[activate].SetActive(false);
                     enlace_penicilina[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Eritromicina"))
-                 {
+                }
+                else if (nombre_form.Equals("Eritromicina"))
+                {
                     enlace_eritromicina[activate].SetActive(false);
                     enlace_eritromicina[activate2].SetActive(false);
-                 }    
-                 else if (nombre_form.Equals("Levofloxacino"))
-                 {
+                }
+                else if (nombre_form.Equals("Levofloxacino"))
+                {
                     enlace_levofloxacino[activate].SetActive(false);
                     enlace_levofloxacino[activate2].SetActive(false);
-                 }    
-                  else if (nombre_form.Equals("Betanecol"))
-                 {
+                }
+                else if (nombre_form.Equals("Betanecol"))
+                {
                     enlace_betanecol[activate].SetActive(false);
                     enlace_betanecol[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Metoclopramida"))
-                 {
-                     enlace_metoclopramida[activate].SetActive(false);
-                     enlace_metoclopramida[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Ibuprofeno"))
-                 {
-                     enlace_ibuprofeno[activate].SetActive(false);
-                     enlace_ibuprofeno[activate2].SetActive(false);
-                 }
-                 else if (nombre_form.Equals("Sulfasalazina"))
+                }
+                else if (nombre_form.Equals("Metoclopramida"))
+                {
+                    enlace_metoclopramida[activate].SetActive(false);
+                    enlace_metoclopramida[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Ibuprofeno"))
+                {
+                    enlace_ibuprofeno[activate].SetActive(false);
+                    enlace_ibuprofeno[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Sulfasalazina"))
                 {
                     enlace_sulfasalazina[activate].SetActive(false);
                     enlace_sulfasalazina[activate2].SetActive(false);
@@ -2133,67 +2279,76 @@ public class funciones_estructuracion : MonoBehaviour
                     enlace_piperacilina[activate].SetActive(false);
                     enlace_piperacilina[activate2].SetActive(false);
                 }
-
+                else if (nombre_form.Equals("Tazobactam"))
+                {
+                    enlace_tazobactam[activate].SetActive(false);
+                    enlace_tazobactam[activate2].SetActive(false);
+                }
+                else if (nombre_form.Equals("Metilprednisolona"))
+                {
+                    enlace_metilprednisolona[activate].SetActive(false);
+                    enlace_metilprednisolona[activate2].SetActive(false);
+                }
             }
-             else if (contador_enlaces_aspirina[x] == 1)
-             {
-                 int activate = x2 - 1;
-                 if (nombre_form.Equals("Aspirina"))
-                 {
-                     enlace_aspirina[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Paracetamol"))
-                 {
-                     enlace_paracetamol[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Amoxicilina"))
-                 {
-                     enlace_amoxicilina[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Cloxacilina"))
-                 {
-                     enlace_cloxacilina[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Bortezomib"))
-                 {
-                     enlace_bortezomib[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Lenalidomida"))
-                 {
-                     enlace_lenalidomida[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Vorinostat"))
-                 {
-                     enlace_vorinostat[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Clavulanato"))
-                 {
-                     enlace_clavulanato[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Penicilina"))
-                 {
-                     enlace_penicilina[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Eritromicina"))
-                 {
-                     enlace_eritromicina[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Levofloxacino"))
-                 {
-                     enlace_levofloxacino[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Betanecol"))
-                 {
-                     enlace_betanecol[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Metoclopramida"))
-                 {
-                     enlace_metoclopramida[activate].SetActive(true);
-                 }
-                 else if (nombre_form.Equals("Ibuprofeno"))
-                 {
-                     enlace_ibuprofeno[activate].SetActive(true);
-                 }
+            else if (contador_enlaces_aspirina[x] == 1)
+            {
+                int activate = x2 - 1;
+                if (nombre_form.Equals("Aspirina"))
+                {
+                    enlace_aspirina[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Paracetamol"))
+                {
+                    enlace_paracetamol[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Amoxicilina"))
+                {
+                    enlace_amoxicilina[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Cloxacilina"))
+                {
+                    enlace_cloxacilina[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Bortezomib"))
+                {
+                    enlace_bortezomib[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Lenalidomida"))
+                {
+                    enlace_lenalidomida[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Vorinostat"))
+                {
+                    enlace_vorinostat[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Clavulanato"))
+                {
+                    enlace_clavulanato[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Penicilina"))
+                {
+                    enlace_penicilina[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Eritromicina"))
+                {
+                    enlace_eritromicina[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Levofloxacino"))
+                {
+                    enlace_levofloxacino[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Betanecol"))
+                {
+                    enlace_betanecol[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Metoclopramida"))
+                {
+                    enlace_metoclopramida[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Ibuprofeno"))
+                {
+                    enlace_ibuprofeno[activate].SetActive(true);
+                }
                 else if (nombre_form.Equals("Sulfasalazina"))
                 {
                     enlace_sulfasalazina[activate].SetActive(true);
@@ -2213,6 +2368,14 @@ public class funciones_estructuracion : MonoBehaviour
                 else if (nombre_form.Equals("Piperacilina"))
                 {
                     enlace_piperacilina[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Tazobactam"))
+                {
+                    enlace_tazobactam[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Metilprednisolona"))
+                {
+                    enlace_metilprednisolona[activate].SetActive(true);
                 }
                 UIImage = GameObject.Find("ENA_AS_" + x2.ToString()).GetComponentInChildren<Image>();
                  UIImage.sprite = Resources.Load<Sprite>(ruta+ x2.ToString());
@@ -2298,9 +2461,17 @@ public class funciones_estructuracion : MonoBehaviour
                 {
                     enlace_piperacilina[activate].SetActive(true);
                 }
+                else if (nombre_form.Equals("Tazobactam"))
+                {
+                    enlace_tazobactam[activate].SetActive(true);
+                }
+                else if (nombre_form.Equals("Metilprednisolona"))
+                {
+                    enlace_metilprednisolona[activate].SetActive(true);
+                }
                 UIImage = GameObject.Find("ENA_AS_" + x.ToString()).GetComponentInChildren<Image>();
-                 UIImage.sprite = Resources.Load<Sprite>(ruta + x.ToString());
-                 contador_enlaces_aspirina[x]++;
+                UIImage.sprite = Resources.Load<Sprite>(ruta + x.ToString());
+                contador_enlaces_aspirina[x]++;
              }
          }
 

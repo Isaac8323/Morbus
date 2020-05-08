@@ -2535,7 +2535,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1184259117}
   m_HandleRect: {fileID: 1184259116}
   m_Direction: 2
-  m_Value: 0.65639216
+  m_Value: 0.656392
   m_Size: 0.7226449
   m_NumberOfSteps: 1
   m_OnValueChanged:
@@ -14191,8 +14191,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 515947119}
   m_HandleRect: {fileID: 515947118}
   m_Direction: 2
-  m_Value: 0.9999998
-  m_Size: 0.6159813
+  m_Value: 1
+  m_Size: 0.61749274
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -18803,6 +18803,7 @@ GameObject:
   - component: {fileID: 1487223016}
   - component: {fileID: 1487223015}
   - component: {fileID: 1487223014}
+  - component: {fileID: 1487223018}
   m_Layer: 0
   m_Name: Image_metoclopramida
   m_TagString: Untagged
@@ -18908,6 +18909,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487223012}
   m_CullTransparentMesh: 0
+--- !u!114 &1487223018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487223012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1719619988}
+          m_MethodName: mouseup_on_element
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1488615585
 GameObject:
   m_ObjectHideFlags: 0
@@ -22715,6 +22747,53 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enlace_tazobactam:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -27401,6 +27480,7 @@ GameObject:
   - component: {fileID: 2023191056}
   - component: {fileID: 2023191055}
   - component: {fileID: 2023191054}
+  - component: {fileID: 2023191060}
   m_Layer: 0
   m_Name: Metoclopramida
   m_TagString: Untagged
@@ -27533,6 +27613,37 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &2023191060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023191052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1719619988}
+          m_MethodName: mouseup_on_element
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &2028947416
 GameObject:
   m_ObjectHideFlags: 0
