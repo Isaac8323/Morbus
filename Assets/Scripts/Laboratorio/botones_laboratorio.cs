@@ -23,7 +23,7 @@ public class botones_laboratorio : MonoBehaviour
     String[,] plussless = new String[11, 2];
     public String cargarformula;
     Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados, texto_alerta;
-    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel;
+    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel,alerta_sulfa;
     Text elementin;
     Image UIImage;
     Text[] element = new Text[11];
@@ -374,6 +374,22 @@ public class botones_laboratorio : MonoBehaviour
         celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
         celdas_elementos_adquiridos.text = verificadores[10, 3];
     }
+    public void sulfa()
+    {
+        num_of_scene = 14;
+        variables_indestructibles.estructuracion = "Sulfasalazina";
+        alerta_sulfa.SetActive(false);
+        archivo_almacen.guardar_variables();
+        img_text_p_confirmacion();
+    }
+    public void h_sulfa()
+    {
+        num_of_scene = 22;
+        variables_indestructibles.estructuracion = "H_Sulfasalazina";
+        alerta_sulfa.SetActive(false);
+        archivo_almacen.guardar_variables();
+        img_text_p_confirmacion();
+    }
     public void img_text_p_confirmacion()
     {
         String nameofcura = variables_indestructibles.estructuracion.ToLower();
@@ -404,7 +420,7 @@ public class botones_laboratorio : MonoBehaviour
                     {
                         Alerta_a.SetActive(true);
                         texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
-                        texto_alerta.text = "Nivel innecesario para crear personaje Complex";
+                        texto_alerta.text = "Nivel insuficiente para crear personaje Complex";
                     }
                 }
                 if (variables_indestructibles.Personajes[i, 1].Equals("Hard"))
@@ -421,7 +437,7 @@ public class botones_laboratorio : MonoBehaviour
                     {
                         Alerta_a.SetActive(true);
                         texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
-                        texto_alerta.text = "Nivel innecesario para crear personaje Hard";
+                        texto_alerta.text = "Nivel insuficiente para crear personaje Hard";
                     }
                 }
             }
@@ -1020,11 +1036,19 @@ public class botones_laboratorio : MonoBehaviour
             }
             else if (conjunto[14] == 5)
             {
-                Debug.Log("Sulfasalazina");
-                num_of_scene = 14;
-                variables_indestructibles.estructuracion = "Sulfasalazina";
-                archivo_almacen.guardar_variables();
-                img_text_p_confirmacion();
+                int niv = Int32.Parse(variables_indestructibles.level[0]);
+                if (niv >= 8)
+                {
+                    alerta_sulfa.SetActive(true);
+                }
+                else
+                {
+                    Debug.Log("Sulfasalazina");
+                    num_of_scene = 14;
+                    variables_indestructibles.estructuracion = "Sulfasalazina";
+                    archivo_almacen.guardar_variables();
+                    img_text_p_confirmacion();
+                }
             }
             else if (conjunto[15] == 3)
             {
