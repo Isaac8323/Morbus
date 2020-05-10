@@ -1487,6 +1487,7 @@ MonoBehaviour:
   Inputfield_ini_con: {fileID: 622602159}
   errores: {fileID: 286988816}
   user_loged: {fileID: 1650559905}
+  init: {fileID: 968926050}
 --- !u!114 &575890298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4986,9 +4987,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.6901961, b: 0, a: 1}
-    m_PressedColor: {r: 0.9150943, g: 0.124702826, b: 0.11654504, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:

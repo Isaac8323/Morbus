@@ -23,7 +23,7 @@ public class botones_laboratorio : MonoBehaviour
     String[,] plussless = new String[11, 2];
     public String cargarformula;
     Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados, texto_alerta;
-    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel,alerta_sulfa;
+    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel, alerta_sulfa;
     Text elementin;
     Image UIImage;
     Text[] element = new Text[11];
@@ -2929,7 +2929,7 @@ public class botones_laboratorio : MonoBehaviour
     public void proceder_to_estruct()
     {
         panel_confirmacion_final.SetActive(false);
-        LoadScene.sceneToLoad = "Estruct"+num_of_scene.ToString();
+        LoadScene.sceneToLoad = "Estruct" + num_of_scene.ToString();
         LoadPanel.SetActive(true);
     }
 }

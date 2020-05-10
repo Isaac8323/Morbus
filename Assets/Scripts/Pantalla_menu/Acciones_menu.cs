@@ -17,6 +17,7 @@ public class Acciones_menu : MonoBehaviour
     public MySqlConnection conn;
     public Text errores;
     public Text user_loged;
+    public Text init;
     string usuario;
     int id_user = 0;
     //  String bitmap2;
@@ -27,33 +28,37 @@ public class Acciones_menu : MonoBehaviour
         conn = adminmysql.ConectarConServidorBaseDatos();
         archiv = GameObject.Find("Administrador_de_bd").GetComponent<Archivos>();
         archiv.Crear();
-        if (archiv.GetPassStatus().Equals("true"))
+        archiv.cargar_variables();
+        if (variables_indestructibles.first.Equals("true"))
+        {
+            init.text = "Iniciar";
+        }
+        if (variables_indestructibles.finished.Equals("true"))
         {
             ended.Play();
             passed.SetActive(true);
         }
-        if (archiv.GetPassStatus().Equals("false"))
+        if (variables_indestructibles.finished.Equals("false"))
         {
             title.Play();
             passed.SetActive(false);
         }
-        if (archiv.GetArenaStatus().Equals("true"))
+        if (variables_indestructibles.Arenas.Equals("true"))
         {
             arenas.SetActive(true);
         }
-        if (archiv.GetArenaStatus().Equals("false"))
+        if (variables_indestructibles.Arenas.Equals("false"))
         {
             arenas.SetActive(false);
         }
-        if (archiv.GetEaster().Equals("false"))
+        if (variables_indestructibles.easter.Equals("false"))
         {
             easter.SetActive(false);
         }
-        if (archiv.GetEaster().Equals("true"))
+        if (variables_indestructibles.easter.Equals("true"))
         {
             easter.SetActive(true);
         }
-        archiv.cargar_variables();
         if (variables_indestructibles.Sesion.Equals(""))
         {
             user_loged.text = "no user loged";

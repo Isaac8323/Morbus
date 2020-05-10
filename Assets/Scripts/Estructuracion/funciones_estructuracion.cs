@@ -2325,7 +2325,7 @@ public class funciones_estructuracion : MonoBehaviour
         {
             ruta = "Estrucutras/Hard/Sulfasalazina/Enlaces/EN_SFZ_";
         }
-       elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
+        elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
         if (elementin.text.Equals(""))
         {
             if (contador_enlaces_aspirina[x] == 2)

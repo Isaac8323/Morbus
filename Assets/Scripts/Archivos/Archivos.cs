@@ -73,6 +73,10 @@ public class Archivos : MonoBehaviour
         variables_indestructibles.nivel_organismo_jefes = Datos.nivel_organismo_jefes;
         variables_indestructibles.Sesion = Datos.sesion;
         variables_indestructibles.estructuracion = Datos.estructuracion;
+        variables_indestructibles.finished = Datos.finished;
+        variables_indestructibles.easter = Datos.easter;
+        variables_indestructibles.Arenas = Datos.Arenas;
+        variables_indestructibles.first = Datos.first;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -123,6 +127,10 @@ public class Archivos : MonoBehaviour
         Datos.nivel_organismo_jefes = variables_indestructibles.nivel_organismo_jefes;
         Datos.sesion = variables_indestructibles.Sesion;
         Datos.estructuracion = variables_indestructibles.estructuracion;
+        Datos.finished = variables_indestructibles.finished;
+        Datos.easter = variables_indestructibles.easter;
+        Datos.Arenas = variables_indestructibles.Arenas;
+        Datos.first = variables_indestructibles.first;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -404,69 +412,16 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[8, 4] = "Cl";
             Datos.Elementos[9, 4] = "Co";
             Datos.Elementos[10, 4] = "P";
-            //Nombres de los jefes
-            Datos.Jefes[0, 0] = "Cefalea";
-            Datos.Jefes[1, 0] = "Adenopatia";
-            Datos.Jefes[2, 0] = "Linfedema";
-            Datos.Jefes[3, 0] = "Linfangitis";
-            Datos.Jefes[4, 0] = "Linfoma";
-            Datos.Jefes[5, 0] = "Rinosinusitis";
-            Datos.Jefes[6, 0] = "F-Amigdalitis";
-            Datos.Jefes[7, 0] = "Difteria";
-            Datos.Jefes[8, 0] = "Bronquitis";
-            Datos.Jefes[9, 0] = "ERGE";
-            Datos.Jefes[10, 0] = "Hemorroides";
-            Datos.Jefes[11, 0] = "Colitis. U.";
-            Datos.Jefes[12, 0] = "Calculos. B.";
-            Datos.Jefes[13, 0] = "L. E. S.";
-            Datos.Jefes[14, 0] = "Artritis. R.";
-            Datos.Jefes[15, 0] = "Esclerosis M.";
-            Datos.Jefes[16, 0] = "Anemia P.";
-            //Descripción de los jefes
-            Datos.Jefes[0, 1] = "Dolor de cabeza intenso y persistente que va acompañado de sensación de pesadez. Las cefaleas pueden estar relacionadas con la tensión nerviosa.";
-            Datos.Jefes[1, 1] = "Glándulas del sistema inmunológico que, por lo general, se agrandan en respuesta a una infección bacteriana o viral.";
-            Datos.Jefes[2, 1] = "Inflamación en un brazo o una pierna ocasionada por una obstrucción del sistema linfático.";
-            Datos.Jefes[3, 1] = "La linfangitis es una inflamación de los canales linfáticos que ocurre como resultado de una infección en un sitio distal del canal.";
-            Datos.Jefes[4, 1] = "El linfoma es un tipo de cáncer del sistema linfático, que es parte de la red del organismo que combate los gérmenes.";
-            Datos.Jefes[5, 1] = "La rinosinusitis es una inflamación de las fosas nasales y de los senos paranasales caracterizada por el bloqueo, la obstrucción y/o la congestión nasal sumado a la secreción nasal o rinorrea que puede drenar por la parte anterior o posterior de la nariz.";
-            Datos.Jefes[6, 1] = "La faringoamigdalitis es la infección aguda de la faringe o las amígdalas palatinas.";
-            Datos.Jefes[7, 1] = "Enfermedad infecciosa aguda, provocada por un bacilo, que afecta a la nariz, la garganta y la laringe y produce fiebre y dificultad para respirar.";
-            Datos.Jefes[8, 1] = "Inflamación del revestimiento de los conductos bronquiales que transportan el aire dentro y fuera de los pulmones.";
-            Datos.Jefes[9, 1] = "La enfermedad por reflujo gastroesofágico (ERGE) es una afección en la cual los contenidos estomacales se devuelven desde el estómago hacia el esófago (tubo de deglución).";
-            Datos.Jefes[10, 1] = "Las hemorroides, también llamadas almorranas, son venas hinchadas en el ano y la parte inferior del recto, similares a las venas varicosas.";
-            Datos.Jefes[11, 1] = "La colitis ulcerosa es una enfermedad inflamatoria del colon (el intestino grueso) y del recto.";
-            Datos.Jefes[12, 1] = "Los cálculos biliares son acumulaciones sólidas de bilis cristalizada que es producida en el hígado, guardada en la vesícula biliar y secretada hacia el intestino a través de los ductos biliares para ayudar a digerir las grasas.";
-            Datos.Jefes[13, 1] = "El lupus eritematoso sistémico (LES) es una enfermedad autoinmunitaria. En esta enfermedad, el sistema inmunitario del cuerpo ataca por error el tejido sano. Este puede afectar la piel, las articulaciones, los riñones, el cerebro y otros órganos.";
-            Datos.Jefes[14, 1] = "La artritis reumatoide es una forma de artritis que causa dolor, inflamación, rigidez y pérdida de la función de las articulaciones. Puede afectar cualquier articulación, pero es común en las muñecas y los dedos.";
-            Datos.Jefes[15, 1] = "Esclerosis múltiple (o esclerosis en placas) Enfermedad progresiva del sistema nervioso central que provoca lesiones múltiples en la mielina que recubre los axones de las neuronas y constituye la sustancia blanca, en forma de placas diseminadas; se manifiesta con diversos síntomas como la parálisis de las extremidades inferiores, hormigueo, pérdida de la sensibilidad, etc.";
-            Datos.Jefes[16, 1] = "La anemia es una afección en la cual el cuerpo no tiene suficientes glóbulos rojos, los cuales le suministran el oxígeno a los tejidos corporales. Hay muchos tipos de anemia. La anemia perniciosa es una disminución en los glóbulos rojos que ocurre cuando los intestinos no pueden absorber apropiadamente la vitamina B12.";
-            //Puntos de vida iniciales de los jefes
-            /*Datos.Jefes[0, 2] = "25000";
-            Datos.Jefes[1, 2] = "150000";
-            Datos.Jefes[2, 2] = "200000";
-            Datos.Jefes[3, 2] = "250000";
-            Datos.Jefes[4, 2] = "300000";
-            Datos.Jefes[5, 2] = "400000";
-            Datos.Jefes[6, 2] = "575000";
-            Datos.Jefes[7, 2] = "650000";
-            Datos.Jefes[8, 2] = "725000";
-            Datos.Jefes[9, 2] = "850000";
-            Datos.Jefes[10, 2] = "975000";
-            Datos.Jefes[11, 2] = "1100000";
-            Datos.Jefes[12, 2] = "1225000";
-            Datos.Jefes[13, 2] = "1450000";
-            Datos.Jefes[14, 2] = "1675000";
-            Datos.Jefes[15, 2] = "1900000";
-            Datos.Jefes[16, 2] = "2500000";*/
 
             Datos.easter = "false";
             Datos.Arenas = "false";
-            Datos.finished = "true";
+            Datos.finished = "false";
+            Datos.first = "true";
             Datos.monedas[0] = "15000";
             Datos.bismuto = "3";
-            Datos.level[0] = "15";
-            Datos.experiencia = "0";
-            Datos.nivel_organismo_jefes = "16";
+            Datos.level[0] = "1";
+            Datos.experiencia = "55000";
+            Datos.nivel_organismo_jefes = "11";
             Datos.sesion = "";
             Datos.estructuracion = "";
             for (int x = 0; x < 3; x++)
@@ -513,178 +468,7 @@ public class Archivos : MonoBehaviour
             Informacion.Close();
         }
     }
-    //Función que verifica si ya se completó el organismo humano
-    public string GetArenaStatus()
-    {
-        string completed = "";
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            completed = Datos.Arenas;
-            Informacion.Close();
-            Debug.Log(completed);
-            return completed;
-        }
-        return completed;
-    }
 
-    //Función que verifica si se encontró el easter egg para la 3ra estrella
-    public string GetEaster()
-    {
-        string easter="";
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            easter = Datos.easter;
-            Informacion.Close();
-            Debug.Log(easter);
-            return easter;
-        }
-        return easter;
-    }
-
-    //Función que verifica si ya se completó el nivel 20
-    public string GetPassStatus()
-    {
-        string completed = "";
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            completed = Datos.finished;
-            Informacion.Close();
-            Debug.Log(completed);
-            return completed;
-        }
-        return completed;
-    }
-
-    //Fucnión que carga la cantidad de personajes
-    public int[] GetTotalChar()
-    {
-        int[] quant = new int[26];
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            Informacion.Close();
-            for (int x = 0; x < 25; x++)
-            {
-                quant[x] = Convert.ToInt32(Datos.Personajes[x, 2]);
-                Debug.Log(quant[x]);
-            }
-            return quant;
-        }
-        return quant;
-    }
-    //Función que carga la vida inicial de los personajes en combate
-    public int HealthPoints(int index)
-    {
-        int life = 0;
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            Debug.Log(Application.persistentDataPath);
-
-            life = Convert.ToInt32(Datos.Personajes[index, 7]);
-            Informacion.Close();
-            Debug.Log(life);
-            return life;
-        }
-        return life;
-    }
-
-    //Función que carga la vida inicial del jefe en combate
-    public int BossLife(int index)
-    {
-        int enemylife = 0;
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            Debug.Log(Application.persistentDataPath);
-            enemylife = Convert.ToInt32(Datos.Jefes[index, 2]);
-            Informacion.Close();
-            Debug.Log(enemylife);
-            return enemylife;
-        }
-        return enemylife;
-    }
-    //Función que carga los nombres de los personajes segun su id
-    public string NameCharacter(int id)
-    {
-        string name = "Missing Name";
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            name = Datos.Personajes[id, 0];
-            Informacion.Close();
-            Debug.Log(name);
-            return name;
-        }
-        return name;
-    }
-    //Funcion que devuelve el nombre del jefe mediante su id
-    public string NameBoss(int id)
-    {
-        string name = "Missing Boss";
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            name = Datos.Jefes[id, 0];
-            Informacion.Close();
-            Debug.Log(name);
-            return name;
-        }
-        return name;
-    }
-
-    //Función que carga el nivel del jugador en el Organismo humano
-    public int LevelBoss()
-    {
-        int lvl = 1;
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            lvl = Convert.ToInt32(Datos.nivel_organismo_jefes);
-            Informacion.Close();
-            Debug.Log(lvl);
-            return lvl;
-        }
-        return lvl;
-    }
-
-    //Función que carga las descripciones de los jefes según su nivel
-    public string DescBoss(int id)
-    {
-        string desc = "Missing description";
-        if (File.Exists(Application.persistentDataPath + "/Partida.d"))
-        {
-            fb = new BinaryFormatter();
-            Informacion = File.OpenRead(Application.persistentDataPath + "/Partida.d");
-            Datos = fb.Deserialize(Informacion) as DatosdeJuego;
-            desc = Datos.Jefes[id, 1];
-            Informacion.Close();
-            Debug.Log(desc);
-            return desc;
-        }
-        return desc;
-    }
     public String carga_monedas(String mon)
     {
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
@@ -747,9 +531,6 @@ public class Archivos : MonoBehaviour
         }
     }
     //}
-
-
-
     public void Cargar_Laboratorio(String[,] Elementos)
     {
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
@@ -783,7 +564,6 @@ public class Archivos : MonoBehaviour
         }
     }
 }
-
 //son las variables que tiene el archivo
 [Serializable()]
 class DatosdeJuego : System.Object
@@ -794,7 +574,6 @@ class DatosdeJuego : System.Object
     public String[,] Personajes = new String[25, 8];
     public String[,] Elementos = new String[11, 5];
     public String bismuto;
-    public String[,] Jefes = new String[17, 3];
     public String experiencia;
     public String nivel_organismo_jefes;
     public String sesion;
@@ -803,4 +582,5 @@ class DatosdeJuego : System.Object
     public String finished;
     public String Arenas;
     public String easter;
+    public String first;
 }

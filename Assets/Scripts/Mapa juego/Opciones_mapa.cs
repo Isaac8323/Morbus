@@ -13,14 +13,17 @@ using System.Data;
 
 public class Opciones_mapa : MonoBehaviour
 {
+    public GameObject centerl, centerc, santuarl, santuarc;
     public GameObject LoadPanel, organismo, tutorial, tienda, gym, lab, almacen, santuario, exit;
+    private int lvl;
     String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[11, 5];
     Text textin;
+    Archivos archivo_mapa;
     void Start()
-    {           
+    {
         textin = GameObject.Find("Place").GetComponentInChildren<Text>();
-        Archivos archivo_mapa = GameObject.Find("Mapa_juego").GetComponent<Archivos>();
+        archivo_mapa = GameObject.Find("Mapa_juego").GetComponent<Archivos>();
         /*archivo_mapa.Borrar();
         archivo_mapa.Crear();*/
         archivo_mapa.cargar_variables();
@@ -32,7 +35,27 @@ public class Opciones_mapa : MonoBehaviour
 
     void Update()
     {
-        
+        lvl = Int32.Parse(variables_indestructibles.level[0]);
+        if (lvl < 8)
+        {
+            centerc.SetActive(true);
+            centerl.SetActive(true);
+        }
+        if (lvl > 7)
+        {
+            centerc.SetActive(false);
+            centerl.SetActive(false);
+        }
+        if (lvl < 15)
+        {
+            santuarc.SetActive(true);
+            santuarl.SetActive(true);
+        }
+        if (lvl > 14)
+        {
+            santuarc.SetActive(false);
+            santuarl.SetActive(false);
+        }
     }
 
     public void Organismo()
@@ -68,13 +91,23 @@ public class Opciones_mapa : MonoBehaviour
     }
     public void Santuario()
     {
-        LoadScene.sceneToLoad = "Santuario_";
-        LoadPanel.SetActive(true);
+        if (lvl > 14)
+        {
+            LoadScene.sceneToLoad = "Santuario_";
+            LoadPanel.SetActive(true);
+        }
     }
     public void OverSantuario()
     {
-        textin.text = "Santuario";
-        santuario.SetActive(true);
+        if (lvl > 14)
+        {
+            textin.text = "Santuario";
+            santuario.SetActive(true);
+        }
+        if (lvl < 15)
+        {
+            textin.text = "Se desbloquea al nivel 15";
+        }
     }
     public void Tienda()
     {
@@ -98,13 +131,24 @@ public class Opciones_mapa : MonoBehaviour
     }
     public void Centro()
     {
-        LoadScene.sceneToLoad = "CentroEntrenamiento";
-        LoadPanel.SetActive(true);
+        if (lvl > 7)
+        {
+            LoadScene.sceneToLoad = "CentroEntrenamiento";
+            LoadPanel.SetActive(true);
+        }        
     }
     public void OverCentro()
     {
-        textin.text = "Centro de entrenamiento";
-        gym.SetActive(true);
+        if (lvl > 7)
+        {
+            textin.text = "Centro de entrenamiento";
+            gym.SetActive(true);
+        }
+        if (lvl < 8)
+        {
+            textin.text = "Se desbloquea al nivel 8";
+        }
+        
     }
     public void OverExit()
     {
@@ -124,7 +168,7 @@ public class Opciones_mapa : MonoBehaviour
         exit.SetActive(false);
     }
     public void Salir()
-    {        
+    {
         LoadScene.sceneToLoad = "Menu";
         LoadPanel.SetActive(true);
     }

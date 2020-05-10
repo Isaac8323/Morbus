@@ -1,24 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.IO;
 using UnityEngine.UI;
 
 public class Actions : MonoBehaviour
 {
+    
     private Vector3 pos;
     private Vector3 dest;
     private Transform mov;
+    public Text[] labels = new Text[3];
+    public Text boss;
+    FightData data;
+    TempData selected;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        Archivos archivo_battle = GameObject.Find("Organismo").GetComponent<Archivos>();
+        selected = GameObject.Find("Reference").GetComponent<TempData>();
+        data = GetComponent<FightData>();
+        boss.text = selected.nameBoss;
+        for (int x = 0; x<3; x++)
+        {
+            labels[x].text = selected.nameChar[x];
+        }
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void Arrow(string bot)
