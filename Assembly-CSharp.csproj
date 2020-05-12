@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Carga\LoadScene.cs" />
     <Compile Include="Assets\Scripts\CentroEntrenamient\funciones_C_Entrenamiento.cs" />
     <Compile Include="Assets\Scripts\db\AdminMYSQL.cs" />
+    <Compile Include="Assets\Scripts\Estructuracion\enlaces__.cs" />
     <Compile Include="Assets\Scripts\Estructuracion\funciones_estructuracion.cs" />
     <Compile Include="Assets\Scripts\Gestor\Bismuto.cs" />
     <Compile Include="Assets\Scripts\Gestor\InstantiateCant.cs" />

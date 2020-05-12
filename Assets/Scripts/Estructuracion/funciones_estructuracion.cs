@@ -479,6 +479,87 @@ public class funciones_estructuracion : MonoBehaviour
     {
         celda_elemento_form_aspirina(44);
     }
+    public void celda_elemento_form_aspirina45()
+    {
+        celda_elemento_form_aspirina(45);
+    }
+    public void celda_elemento_form_aspirina46()
+    {
+        celda_elemento_form_aspirina(46);
+    }
+    public void celda_elemento_form_aspirina47()
+    {
+        celda_elemento_form_aspirina(47);
+    }
+    public void celda_elemento_form_aspirina48()
+    {
+        celda_elemento_form_aspirina(48);
+    }
+    public void celda_elemento_form_aspirina49()
+    {
+        celda_elemento_form_aspirina(49);
+    }
+    public void celda_elemento_form_aspirina50()
+    {
+        celda_elemento_form_aspirina(50);
+    }
+    public void celda_elemento_form_aspirina51()
+    {
+        celda_elemento_form_aspirina(51);
+    }
+    public void celda_elemento_form_aspirina52()
+    {
+        celda_elemento_form_aspirina(52);
+    }
+    public void celda_elemento_form_aspirina53()
+    {
+        celda_elemento_form_aspirina(53);
+    }
+    public void celda_elemento_form_aspirina54()
+    {
+        celda_elemento_form_aspirina(54);
+    }
+    public void celda_elemento_form_aspirina55()
+    {
+        celda_elemento_form_aspirina(55);
+    }
+    public void celda_elemento_form_aspirina56()
+    {
+        celda_elemento_form_aspirina(56);
+    }
+    public void celda_elemento_form_aspirina57()
+    {
+        celda_elemento_form_aspirina(57);
+    }
+    public void celda_elemento_form_aspirina58()
+    {
+        celda_elemento_form_aspirina(58);
+    }
+    public void celda_elemento_form_aspirina59()
+    {
+        celda_elemento_form_aspirina(59);
+    }
+    public void celda_elemento_form_aspirina60()
+    {
+        celda_elemento_form_aspirina(60);
+    }
+    public void celda_elemento_form_aspirina61()
+    {
+        celda_elemento_form_aspirina(61);
+    }
+    public void celda_elemento_form_aspirina62()
+    {
+        celda_elemento_form_aspirina(62);
+    }
+    public void celda_elemento_form_aspirina63()
+    {
+        celda_elemento_form_aspirina(63);
+    }
+    public void celda_elemento_form_aspirina64()
+    {
+        celda_elemento_form_aspirina(64);
+    }
+
     public void celda_carbon_from_aspirina(int x)
     {
         Element_global.SetActive(true);
@@ -3050,5 +3131,6 @@ public class funciones_estructuracion : MonoBehaviour
     {
         enlace_as(101, 102);
     }
+
     //Paracetamol functions
 }
