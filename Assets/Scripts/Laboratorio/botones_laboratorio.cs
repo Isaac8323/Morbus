@@ -777,6 +777,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 6)
                 {
                     bandera_de_elementos[24] = "Este no";
+                    Debug.Log("no se pudo compa");
                 }
             }
             i2++;
@@ -1122,7 +1123,7 @@ public class botones_laboratorio : MonoBehaviour
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
             }
-            else if (conjunto[24] == 6)
+             else if (conjunto[24] == 6)
             {
                 Debug.Log("Vitamina B12");
                 num_of_scene = 24;
@@ -2902,6 +2903,7 @@ public class botones_laboratorio : MonoBehaviour
                     {
                         tefaltamas++;
                     }
+                }
                     if (element[recorrido].text.Equals("P"))
                     {
                         if (elemento[recorrido] == 1)
@@ -2916,8 +2918,7 @@ public class botones_laboratorio : MonoBehaviour
                         {
                             tefaltamas++;
                         }
-                    }
-                }
+                    }   
             }
         }
     }

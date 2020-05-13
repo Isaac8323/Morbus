@@ -195,7 +195,7 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[21, 0] = "hidroxicloroquina";
             Datos.Personajes[22, 0] = "h_sulfasalazina";
             Datos.Personajes[23, 0] = "dexametasona";
-            Datos.Personajes[24, 0] = "vitamina B12";
+            Datos.Personajes[24, 0] = "vitamina b12";
             //Tipo
             Datos.Personajes[0, 1] = "easy";
             Datos.Personajes[1, 1] = "easy";
@@ -419,7 +419,7 @@ public class Archivos : MonoBehaviour
             Datos.first = "true";
             Datos.monedas[0] = "15000";
             Datos.bismuto = "3";
-            Datos.level[0] = "1";
+            Datos.level[0] = "19";
             Datos.experiencia = "55000";
             Datos.nivel_organismo_jefes = "11";
             Datos.sesion = "";
