@@ -17,7 +17,7 @@ public class funciones_estructuracion : MonoBehaviour
     Archivos archivo_estructuracion;
     Text elementin, elemento_text_text;
     Image UIImage;
-    public GameObject Element_global, LoadPanel;
+    public GameObject Element_global, LoadPanel,ayuda, necesito, nonecesito, ok,img_help;
     public GameObject[] cura = new GameObject[25];
     public GameObject[] enlace_aspirina = new GameObject[26];
     public GameObject[] enlace_paracetamol = new GameObject[22];
@@ -44,12 +44,13 @@ public class funciones_estructuracion : MonoBehaviour
     public GameObject[] enlace_h_sulfasalazina = new GameObject[60];
     public GameObject[] enlace_dexametasona = new GameObject[66];
     public GameObject[] enlace_b12 = new GameObject[214];
+
     Text[] verificadores = new Text[500];
     int banderin, mouseupper;
     int[] cantidad_elementos_celda = new int[500];
     int[] carbon_number = new int[500];
     int[] bandera_carb = new int[500];
-    int cantidad_elementos_panel_elementos = 0, starttimer = 0, cantidad_carbono_por_formulas = 0;
+    int cantidad_elementos_panel_elementos = 0, starttimer = 0, cantidad_carbono_por_formulas = 0,dimension_cura=0;
     String element_used;
     float time = 0.1f;
     //aspirina variables
@@ -919,9 +920,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Aspirina");
                                     verificar_final(0);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             //Verificacion de paracetamol
@@ -2397,9 +2418,91 @@ public class funciones_estructuracion : MonoBehaviour
         {
             elementin.text = "";
             mouseupper = 1;
+           
         }
         bandera_carb[99] = 0;
         Element_global.SetActive(false);
+    }
+    public void intentos()
+    {
+        int bandera_intentos = Int32.Parse(variables_indestructibles.Intentos_curas[dimension_cura]);
+        bandera_intentos = bandera_intentos + 1;
+        variables_indestructibles.Intentos_curas[dimension_cura] = bandera_intentos.ToString();
+        Debug.Log(variables_indestructibles.Intentos_curas[dimension_cura] + " " + dimension_cura);
+        if (bandera_intentos == 4)
+        {
+            variables_indestructibles.Intentos_curas[dimension_cura] = "0";
+            archivo_estructuracion.guardar_variables();
+            LoadScene.sceneToLoad = "Mapajuego";
+            LoadPanel.SetActive(true);
+        }
+        else if (bandera_intentos == 3)
+        {
+            int bistmuto_actual = Int32.Parse(variables_indestructibles.bismuto);
+            if (bistmuto_actual > 0)
+            {
+                ayuda.SetActive(true);
+                elemento_text_text = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+                elemento_text_text.text = "Intento No.3 erroneo al estructurar la fórmula: " + elementin.text + " desea recibir ayuda a cambio de 1 Bismuto?";
+                necesito.SetActive(true);
+                nonecesito.SetActive(true);
+            }
+            else
+            {
+                no_recibir_ayuda();
+            }
+        }
+        else
+        {
+            ayuda.SetActive(true);
+            elemento_text_text = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+            elemento_text_text.text = "Fallaste en la estructuracion debes estudiar mejor la formula de: " + elementin.text;
+            ok.SetActive(true);
+            archivo_estructuracion.guardar_variables();
+        }
+    }
+    public void recibir_ayuda()
+    {
+        img_help.SetActive(true);
+       int bm = Int32.Parse(variables_indestructibles.bismuto);
+        bm = bm - 1;
+        variables_indestructibles.bismuto = bm.ToString();
+        archivo_estructuracion.guardar_variables();
+
+        ayuda.SetActive(false);
+    }
+    public void no_recibir_ayuda()
+    {
+        //animacion explosion ir al mapa quitarle los elementos usados al usuario y poner el lab en estado de mantenimiento
+        variables_indestructibles.Intentos_curas[dimension_cura] = "0";
+        ayuda.SetActive(false);
+        //animacion
+        for (int i = 1; i < 12; i++)
+        {
+            elementin = GameObject.Find("txt_elemento" + i.ToString()).GetComponent<Text>();
+            if (!elementin.text.Equals(""))
+            {
+                for (int y = 0; y < 11; y++)
+                {
+                    if (elementin.text.Equals(variables_indestructibles.Elementos[y, 4]))
+                    {
+                        int convercion = Int32.Parse(variables_indestructibles.Elementos[y, 1]);
+                        int elemtincantidad = Int32.Parse(Elementos2[y, 1]);
+                        convercion = convercion - elemtincantidad;
+                        variables_indestructibles.Elementos[y, 1] = convercion.ToString();
+                        y = 11;
+                    }
+                }
+            }
+        }
+        archivo_estructuracion.guardar_variables();
+        LoadScene.sceneToLoad = "Mapajuego";
+        LoadPanel.SetActive(true);
+    }
+    public void oks()
+    {
+        ok.SetActive(false);
+        ayuda.SetActive(false);
     }
     public void verificar_final(int numero_del_pj_en_el_archivo)
     {
@@ -2530,6 +2633,7 @@ public class funciones_estructuracion : MonoBehaviour
             if (variables_indestructibles.Personajes[i, 0].Equals(a))
             {
                 cura[i].SetActive(true);
+                dimension_cura = i;
             }
         }
         elementin = GameObject.Find("text_cura_name").GetComponentInChildren<Text>();

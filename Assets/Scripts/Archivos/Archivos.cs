@@ -65,6 +65,10 @@ public class Archivos : MonoBehaviour
                 variables_indestructibles.Elementos2[i, x] = Datos.Elementos2[i, x];
             }
         }
+        for(int x=0; x <25; x++)
+        {
+            variables_indestructibles.Intentos_curas[x] = Datos.Intentos_curas[x];
+        }
         variables_indestructibles.Usuario = Datos.Usuario;
         variables_indestructibles.monedas[0] = Datos.monedas[0];
         variables_indestructibles.level[0] = Datos.level[0];
@@ -131,6 +135,10 @@ public class Archivos : MonoBehaviour
         Datos.easter = variables_indestructibles.easter;
         Datos.Arenas = variables_indestructibles.Arenas;
         Datos.first = variables_indestructibles.first;
+        for(int x = 0; x < 25; x++)
+        {
+          Datos.Intentos_curas[x] = variables_indestructibles.Intentos_curas[x];
+        }
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -431,6 +439,10 @@ public class Archivos : MonoBehaviour
                     Datos.Elementos2[i, x] = "";
                 }
             }
+            for(int x=0; x < 25; x++)
+            {
+                Datos.Intentos_curas[x] = "0";
+            }
             fb.Serialize(Informacion, Datos);
             Informacion.Close();
             Debug.Log("Guardé ");
@@ -583,4 +595,5 @@ class DatosdeJuego : System.Object
     public String Arenas;
     public String easter;
     public String first;
+    public String[] Intentos_curas = new String[25];
 }
