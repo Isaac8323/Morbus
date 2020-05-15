@@ -991,9 +991,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Paracetamol");
                                     verificar_final(1);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Amoxicilina"))
@@ -1041,9 +1061,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Amoxicilina");
                                     verificar_final(2);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Cloxacilina"))
@@ -1092,9 +1132,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Cloxacilina");
                                     verificar_final(3);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Bortezomib"))
@@ -1143,9 +1203,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Bortezomib");
                                     verificar_final(4);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Lenalidomida"))
@@ -1194,9 +1274,30 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Lenalidomida");
                                     verificar_final(5);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
                             }
+                            else
+                            {
+                                intentos();
+                            }
+
+                        }
+                        else
+                        {
+                            intentos();
                         }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Vorinostat"))
@@ -1245,9 +1346,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Vorinostat");
                                     verificar_final(6);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Clavulanato"))
@@ -1296,9 +1417,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Clavulanato");
                                     verificar_final(7);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Penicilina"))
@@ -1347,9 +1488,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Penicilina");
                                     verificar_final(8);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Eritromicina"))
@@ -1428,9 +1589,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Eritromicina");
                                     verificar_final(9);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Levofloxacino"))
@@ -1490,9 +1671,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Levofloxacino");
                                     verificar_final(10);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Betanecol"))
@@ -1545,9 +1746,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Betanecol");
                                     verificar_final(11);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Metoclopramida"))
@@ -1604,9 +1825,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Metoclopramida");
                                     verificar_final(12);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Ibuprofeno"))
@@ -1661,9 +1902,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Levofloxacino");
                                     verificar_final(13);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Sulfasalazina"))
@@ -1729,9 +1990,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Sulfasalazina");
                                     verificar_final(14);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Prednisona"))
@@ -1792,9 +2073,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Sulfasalazina");
                                     verificar_final(15);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Cortisol"))
@@ -1854,9 +2155,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Cortisol");
                                     verificar_final(16);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Ampicilina"))
@@ -1918,9 +2239,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Ampicilina");
                                     verificar_final(17);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Piperacilina"))
@@ -1987,9 +2328,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Piperacilina");
                                     verificar_final(18);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Tazobactam"))
@@ -2047,9 +2408,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Tazobactam");
                                     verificar_final(19);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Metilprednisolona"))
@@ -2110,9 +2491,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Metilprednisolona");
                                     verificar_final(20);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Hidroxicloroquina"))
@@ -2173,9 +2574,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Hidroxicloroquina");
                                     verificar_final(21);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("H_Sulfasalazina"))
@@ -2241,9 +2662,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a H_Sulfasalazina");
                                     verificar_final(22);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Dexametasona"))
@@ -2304,9 +2745,29 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a Dexametasona");
                                     verificar_final(23);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
                     }
+                    else
+                    {
+                        intentos();
+                    }
+                }
+                else
+                {
+                    intentos();
                 }
             }
             else if (elementin.text.Equals("Vitamina B12"))
@@ -2408,10 +2869,34 @@ public class funciones_estructuracion : MonoBehaviour
                                     Debug.Log("Creaste exitosamente a B12");
                                     verificar_final(24);
                                 }
+                                else
+                                {
+                                    intentos();
+                                }
+                            }
+                            else
+                            {
+                                intentos();
                             }
                         }
+                        else
+                        {
+                            intentos();
+                        }
+                    }
+                    else
+                    {
+                        intentos();
                     }
                 }
+                else
+                {
+                    intentos();
+                }
+            }
+            else
+            {
+                intentos();
             }
         }
         else
