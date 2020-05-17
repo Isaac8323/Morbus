@@ -10,30 +10,172 @@ public class FightData : MonoBehaviour
     public string[] DescBoss = new string[17];
     public int[] LifeBoss = new int[17];
     public int[] atckBoss = new int[17];
+    public string[,] HabChar = new string[25, 4]; //Nombres de habilidades
+    public int[,] HabChars = new int[25, 4]; //Habilidades contra clave
+    public int[,] HabCharsPot = new int[25, 4]; //Habilidades convencionales contra clave
+    public int[] HChar = new int[25]; //Habilidad convencional
     void Start()
     {
+        //Asignación de daño convencional de personajes
+        for (int i = 0; i < 7; i++)
+        {
+            HChar[i] = 4500;
+        }
+        for (int o = 7; o < 20; o++)
+        {
+            HChar[o] = 20000;
+        }
+        for (int n = 20; n < 25; n++)
+        {
+            HChar[n] = 80000;
+        }
+        //Aspirina
+        HabChar[0, 3] = "Inhibi COX-1";
+        HabChar[0, 2] = "Orto fenol";
+        HabChar[0, 1] = "Anti fosforilación";
+        HabChar[0, 0] = "Inhibe I2";
+        //Paracetamol
+        HabChar[1, 3] = "Prostaglan redux";
+        HabChar[1, 2] = "Inhibi COX";
+        HabChar[1, 1] = "AAS attack";
+        HabChar[1, 0] = "Proto AM404";
+        //Amoxicilina
+        HabChar[2, 3] = "Inhibi peptidog";
+        HabChar[2, 2] = "Activ estreptoc";
+        HabChar[2, 1] = "Optamoxy";
+        HabChar[2, 0] = "Curamium";
+        //Cloxacilina
+        HabChar[3, 3] = "Inhibi transpept";
+        HabChar[3, 2] = "Inhibi carboxi";
+        HabChar[3, 1] = "Inhibi peptidog";
+        HabChar[3, 0] = "Activ Bacillus";
+        //Bortezomib
+        HabChar[4, 3] = "Citotoxic";
+        HabChar[4, 2] = "Tumoral Destroy";
+        HabChar[4, 1] = "Inhibi proteasoma";
+        HabChar[4, 0] = "26s Destroy";
+        //Lenalidomida
+        HabChar[5, 3] = "Tumoral Destroy";
+        HabChar[5, 2] = "Antiangionetic";
+        HabChar[5, 1] = "Linfocitus plus";
+        HabChar[5, 0] = "Killer cells";
+        //Vorinostat
+        HabChar[6, 3] = "Epigenetic mod";
+        HabChar[6, 2] = "Histon complex";
+        HabChar[6, 1] = "Cromatin back";
+        HabChar[6, 0] = "Acetilis destroy";
+        //Clavulanato
+        HabChar[7, 3] = "Inhibi lactam";
+        HabChar[7, 2] = "Resistance down";
+        HabChar[7, 1] = "Antimicro activity";
+        HabChar[7, 0] = "Self damage";
+        //Penicilina
+        HabChar[8, 3] = "Bactericide";
+        HabChar[8, 2] = "Osmotic pressure";
+        HabChar[8, 1] = "Cell division";
+        HabChar[8, 0] = "Spheroplasts";
+        //Eritromicina
+        HabChar[9, 3] = "Macrolide";
+        HabChar[9, 2] = "Filip origin";
+        HabChar[9, 1] = "Chlamydia Destroy";
+        HabChar[9, 0] = "Gastric void";
+        //Levofloxacino
+        HabChar[10, 3] = "Inhibi somerasa";
+        HabChar[10, 2] = "Unwinding chains";
+        HabChar[10, 1] = "Packaging ADN";
+        HabChar[10, 0] = "Gram positive";
+        //Betanecol
+        HabChar[11, 3] = "Selective agonist";
+        HabChar[11, 2] = "Non Hydrolyzed";
+        HabChar[11, 1] = "Urinary retention";
+        HabChar[11, 0] = "Cured atony";
+        //Metoclopramida
+        HabChar[12, 3] = "Gastric void";
+        HabChar[12, 2] = "Estasis";
+        HabChar[12, 1] = "Bioavailability redux";
+        HabChar[12, 0] = "D2 Antagonist";
+        //Ibuprofeno
+        HabChar[13, 3] = "Antipiretyc action";
+        HabChar[13, 2] = "Isomeration";
+        HabChar[13, 1] = "Desprotonated";
+        HabChar[13, 0] = "Reprotonated";
+        //Sulfasalazina
+        HabChar[14, 3] = "Immunomodulator";
+        HabChar[14, 2] = "Hepatic reverse";
+        HabChar[14, 1] = "Secretion delay";
+        HabChar[14, 0] = "Sulfabsorb";
+        //Prednisolona
+        HabChar[15, 3] = "Synthetic cort";
+        HabChar[15, 2] = "Gluco effect";
+        HabChar[15, 1] = "Inmunosupressor";
+        HabChar[15, 0] = "Abrupt dose";
+        //Cortisol
+        HabChar[16, 3] = "Steroid horm";
+        HabChar[16, 2] = "Stress";
+        HabChar[16, 1] = "Osseous disform";
+        HabChar[16, 0] = "Insulin destroy";
+        //Ampicilina
+        HabChar[17, 3] = "Betalactamic";
+        HabChar[17, 2] = "Beecham origin";
+        HabChar[17, 1] = "Higher spectrum";
+        HabChar[17, 0] = "Fenil group";
+        //Piperacilina
+        HabChar[18, 3] = "Betalactamic";
+        HabChar[18, 2] = "Extend spectrum";
+        HabChar[18, 1] = "Inhibi lactam";
+        HabChar[18, 0] = "Gram positive";
+        //Tazobactam
+        HabChar[19, 3] = "Inhibi lactam";
+        HabChar[19, 2] = "Inhibi SHV-1";
+        HabChar[19, 1] = "Resistance down";
+        HabChar[19, 0] = "Pseudomonas inf";
+        //Metilprednisolona
+        HabChar[20, 3] = "Synthetic steroid";
+        HabChar[20, 2] = "Inmunosupressor";
+        HabChar[20, 1] = "anti-inflammatory";
+        HabChar[20, 0] = "Inhibi araqui";
+        //Hidroxicloroquina
+        HabChar[21, 3] = "antimalarial";
+        HabChar[21, 2] = "Hydroxil group";
+        HabChar[21, 1] = "Antimalarial action";
+        HabChar[21, 0] = "ph elevation";
+        //H_Sulfasalazina
+        HabChar[22, 3] = "EII special";
+        HabChar[22, 2] = "5-ASA";
+        HabChar[22, 1] = "Inhibi arth";
+        HabChar[22, 0] = "Hepatic cicatrizat";
+        //Dexametasona
+        HabChar[23, 3] = "Glucocorticoid";
+        HabChar[23, 2] = "Tumoral Destroy";
+        HabChar[23, 1] = "Virilization";
+        HabChar[23, 0] = "HPA Axis";
+        //Vitamina B12
+        HabChar[24, 3] = "WatSoluble";
+        HabChar[24, 2] = "ADN Synth";
+        HabChar[24, 1] = "Stomach acid";
+        HabChar[24, 0] = "C-Co Link";
         //Asignación de valores de xp requerida por nivel
         Exp[0] = 0;
         Exp[1] = 50;
-        Exp[2] = 100;
-        Exp[3] = 550;
-        Exp[4] = 600;
-        Exp[5] = 1000;
-        Exp[6] = 2000;
-        Exp[7] = 3000;
-        Exp[8] = 4000;
-        Exp[9] = 5000;
-        Exp[10] = 14000;
-        Exp[11] = 15000;
-        Exp[12] = 19000;
-        Exp[13] = 23000;
-        Exp[14] = 27000;
-        Exp[15] = 31000;
-        Exp[16] = 35000;
-        Exp[17] = 39000;
-        Exp[18] = 47000;
-        Exp[19] = 55000;
-        Exp[20] = 63000;
+        Exp[2] = 150;
+        Exp[3] = 700;
+        Exp[4] = 1300;
+        Exp[5] = 2300;
+        Exp[6] = 4300;
+        Exp[7] = 7300;
+        Exp[8] = 11300;
+        Exp[9] = 16300;
+        Exp[10] = 30300;
+        Exp[11] = 45300;
+        Exp[12] = 64300;
+        Exp[13] = 87300;
+        Exp[14] = 114300;
+        Exp[15] = 145300;
+        Exp[16] = 180300;
+        Exp[17] = 219300;
+        Exp[18] = 266300;
+        Exp[19] = 321300;
+        Exp[20] = 384300;
         //Asignación de nombres de jefes
         NameBoss[0] = "Cefalea";
         NameBoss[1] = "Adenopatía";

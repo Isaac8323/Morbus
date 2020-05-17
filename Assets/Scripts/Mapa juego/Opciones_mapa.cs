@@ -32,7 +32,6 @@ public class Opciones_mapa : MonoBehaviour
         Debug.Log(Personajes[0, 6]);
     }
 
-
     void Update()
     {
         lvl = Int32.Parse(variables_indestructibles.level[0]);

@@ -65,7 +65,7 @@ public class Archivos : MonoBehaviour
                 variables_indestructibles.Elementos2[i, x] = Datos.Elementos2[i, x];
             }
         }
-        for(int x=0; x <25; x++)
+        for (int x = 0; x < 25; x++)
         {
             variables_indestructibles.Intentos_curas[x] = Datos.Intentos_curas[x];
         }
@@ -135,9 +135,9 @@ public class Archivos : MonoBehaviour
         Datos.easter = variables_indestructibles.easter;
         Datos.Arenas = variables_indestructibles.Arenas;
         Datos.first = variables_indestructibles.first;
-        for(int x = 0; x < 25; x++)
+        for (int x = 0; x < 25; x++)
         {
-          Datos.Intentos_curas[x] = variables_indestructibles.Intentos_curas[x];
+            Datos.Intentos_curas[x] = variables_indestructibles.Intentos_curas[x];
         }
         for (int x = 0; x < 8; x++)
         {
@@ -231,17 +231,17 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[23, 1] = "Hard";
             Datos.Personajes[24, 1] = "Hard";
             //Cantidad
-            Datos.Personajes[0, 2] = "0";
-            Datos.Personajes[1, 2] = "0";
-            Datos.Personajes[2, 2] = "0";
-            Datos.Personajes[3, 2] = "0";
-            Datos.Personajes[4, 2] = "0";
+            Datos.Personajes[0, 2] = "5";
+            Datos.Personajes[1, 2] = "5";
+            Datos.Personajes[2, 2] = "5";
+            Datos.Personajes[3, 2] = "5";
+            Datos.Personajes[4, 2] = "5";
             Datos.Personajes[5, 2] = "5";
-            Datos.Personajes[6, 2] = "100";
-            Datos.Personajes[7, 2] = "100";
-            Datos.Personajes[8, 2] = "500";
-            Datos.Personajes[9, 2] = "100";
-            Datos.Personajes[10, 2] = "100";
+            Datos.Personajes[6, 2] = "0";
+            Datos.Personajes[7, 2] = "0";
+            Datos.Personajes[8, 2] = "0";
+            Datos.Personajes[9, 2] = "0";
+            Datos.Personajes[10, 2] = "0";
             Datos.Personajes[11, 2] = "100";
             Datos.Personajes[12, 2] = "100";
             Datos.Personajes[13, 2] = "100";
@@ -323,40 +323,40 @@ public class Archivos : MonoBehaviour
             }
             //Numero de entrenamiento 
             Datos.Personajes[0, 6] = "1";
-            Datos.Personajes[1, 6] = "1";
-            Datos.Personajes[2, 6] = "1";
-            Datos.Personajes[3, 6] = "1";
-            Datos.Personajes[4, 6] = "1";
-            Datos.Personajes[5, 6] = "1";
-            Datos.Personajes[6, 6] = "1";
-            Datos.Personajes[7, 6] = "1";
-            Datos.Personajes[8, 6] = "1";
-            Datos.Personajes[9, 6] = "1";
-            Datos.Personajes[10, 6] = "1";
-            Datos.Personajes[11, 6] = "1";
-            Datos.Personajes[12, 6] = "1";
-            Datos.Personajes[13, 6] = "1";
-            Datos.Personajes[14, 6] = "1";
-            Datos.Personajes[15, 6] = "1";
-            Datos.Personajes[16, 6] = "1";
-            Datos.Personajes[17, 6] = "1";
-            Datos.Personajes[18, 6] = "1";
-            Datos.Personajes[19, 6] = "1";
-            Datos.Personajes[20, 6] = "1";
-            Datos.Personajes[21, 6] = "1";
-            Datos.Personajes[22, 6] = "1";
-            Datos.Personajes[23, 6] = "1";
-            Datos.Personajes[24, 6] = "1";
+            Datos.Personajes[1, 6] = "0";
+            Datos.Personajes[2, 6] = "0";
+            Datos.Personajes[3, 6] = "0";
+            Datos.Personajes[4, 6] = "0";
+            Datos.Personajes[5, 6] = "0";
+            Datos.Personajes[6, 6] = "0";
+            Datos.Personajes[7, 6] = "0";
+            Datos.Personajes[8, 6] = "0";
+            Datos.Personajes[9, 6] = "0";
+            Datos.Personajes[10, 6] = "0";
+            Datos.Personajes[11, 6] = "0";
+            Datos.Personajes[12, 6] = "0";
+            Datos.Personajes[13, 6] = "0";
+            Datos.Personajes[14, 6] = "0";
+            Datos.Personajes[15, 6] = "0";
+            Datos.Personajes[16, 6] = "0";
+            Datos.Personajes[17, 6] = "0";
+            Datos.Personajes[18, 6] = "0";
+            Datos.Personajes[19, 6] = "0";
+            Datos.Personajes[20, 6] = "0";
+            Datos.Personajes[21, 6] = "0";
+            Datos.Personajes[22, 6] = "0";
+            Datos.Personajes[23, 6] = "0";
+            Datos.Personajes[24, 6] = "0";
             //Puntos de vida de los personajes
-            for (int e = 0; e <= 7; e++)
+            for (int e = 0; e < 7; e++)
             {
                 Datos.Personajes[e, 7] = "125000";
             }
-            for (int a = 8; a <= 20; a++)
+            for (int a = 7; a < 20; a++)
             {
                 Datos.Personajes[a, 7] = "450000";
             }
-            for (int o = 21; o <= 24; o++)
+            for (int o = 20; o < 25; o++)
             {
                 Datos.Personajes[o, 7] = "900000";
             }
@@ -373,17 +373,17 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[9, 0] = "Cobalto";
             Datos.Elementos[10, 0] = "Fosforo";
             //Cantidad Elemento
-            Datos.Elementos[0, 1] = "100";
-            Datos.Elementos[1, 1] = "100";
-            Datos.Elementos[2, 1] = "100";
-            Datos.Elementos[3, 1] = "100";
-            Datos.Elementos[4, 1] = "100";
-            Datos.Elementos[5, 1] = "100";
-            Datos.Elementos[6, 1] = "100";
-            Datos.Elementos[7, 1] = "100";
-            Datos.Elementos[8, 1] = "100";
-            Datos.Elementos[9, 1] = "100";
-            Datos.Elementos[10, 1] = "100";
+            Datos.Elementos[0, 1] = "999";
+            Datos.Elementos[1, 1] = "999";
+            Datos.Elementos[2, 1] = "999";
+            Datos.Elementos[3, 1] = "999";
+            Datos.Elementos[4, 1] = "999";
+            Datos.Elementos[5, 1] = "999";
+            Datos.Elementos[6, 1] = "999";
+            Datos.Elementos[7, 1] = "999";
+            Datos.Elementos[8, 1] = "999";
+            Datos.Elementos[9, 1] = "999";
+            Datos.Elementos[10, 1] = "999";
             //Descripcion Elemento
             Datos.Elementos[0, 2] = "Es un no metal sólido que es el componente fundamental de los compuestos orgánicos y tiene la propiedad de enlazarse con otros átomos de carbono y otras sustancias para formar un número casi infinito de compuestos.";
             Datos.Elementos[1, 2] = "Es un gas incoloro, inodoro y muy reactivo que se halla en todos los componentes de la materia viva y en muchos minerales, siendo el elemento más abundante en el universo.";
@@ -425,11 +425,11 @@ public class Archivos : MonoBehaviour
             Datos.Arenas = "false";
             Datos.finished = "false";
             Datos.first = "true";
-            Datos.monedas[0] = "15000";
-            Datos.bismuto = "3";
-            Datos.level[0] = "19";
-            Datos.experiencia = "55000";
-            Datos.nivel_organismo_jefes = "11";
+            Datos.monedas[0] = "1500000";
+            Datos.bismuto = "33";
+            Datos.level[0] = "1";
+            Datos.experiencia = "321300";
+            Datos.nivel_organismo_jefes = "2";
             Datos.sesion = "";
             Datos.estructuracion = "";
             for (int x = 0; x < 3; x++)
@@ -439,7 +439,7 @@ public class Archivos : MonoBehaviour
                     Datos.Elementos2[i, x] = "";
                 }
             }
-            for(int x=0; x < 25; x++)
+            for (int x = 0; x < 25; x++)
             {
                 Datos.Intentos_curas[x] = "0";
             }

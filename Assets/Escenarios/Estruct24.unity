@@ -6127,7 +6127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15, y: -5}
+  m_AnchoredPosition: {x: 2.9, y: -1.14}
   m_SizeDelta: {x: 1104.4, y: 621.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &189781189
@@ -10974,7 +10974,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 685088045}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.2685989
+  m_Size: 0.26859885
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -11577,7 +11577,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.37800002}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000041267456, y: 0.000034750385}
+  m_AnchoredPosition: {x: -0.000080799124, y: -0.000082901}
   m_SizeDelta: {x: 2178.8, y: 1622.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &327579467
@@ -29557,7 +29557,7 @@ MonoBehaviour:
   - {fileID: 0}
   enlace_b12:
   - {fileID: 1012807978}
-  - {fileID: 832293889}
+  - {fileID: 2120499767}
   - {fileID: 832293889}
   - {fileID: 834022432}
   - {fileID: 1152231717}
@@ -29893,7 +29893,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 848050470}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51b6801de956d1d41bd6ed729c58c2f7, type: 3}
+  m_Script: {fileID: 11500000, guid: c70302fda5c164447a05971927ad9b82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &849342516
@@ -41895,7 +41895,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2055145198}
   m_Direction: 2
   m_Value: 0.9999998
-  m_Size: 0.6174927
+  m_Size: 0.61749256
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -72769,7 +72769,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 710005285}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.21178421
+  m_Size: 0.21178417
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:

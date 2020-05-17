@@ -34,7 +34,7 @@ public class variables_indestructibles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void estruct()
     {

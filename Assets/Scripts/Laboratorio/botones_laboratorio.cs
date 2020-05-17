@@ -1123,7 +1123,7 @@ public class botones_laboratorio : MonoBehaviour
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
             }
-             else if (conjunto[24] == 6)
+            else if (conjunto[24] == 6)
             {
                 Debug.Log("Vitamina B12");
                 num_of_scene = 24;
@@ -2904,21 +2904,21 @@ public class botones_laboratorio : MonoBehaviour
                         tefaltamas++;
                     }
                 }
-                    if (element[recorrido].text.Equals("P"))
+                if (element[recorrido].text.Equals("P"))
+                {
+                    if (elemento[recorrido] == 1)
                     {
-                        if (elemento[recorrido] == 1)
-                        {
-                            conjunto[index]++;
-                        }
-                        else if (elemento[recorrido] > 1)
-                        {
-                            tesobran++;
-                        }
-                        else if (elemento[recorrido] < 1)
-                        {
-                            tefaltamas++;
-                        }
-                    }   
+                        conjunto[index]++;
+                    }
+                    else if (elemento[recorrido] > 1)
+                    {
+                        tesobran++;
+                    }
+                    else if (elemento[recorrido] < 1)
+                    {
+                        tefaltamas++;
+                    }
+                }
             }
         }
     }

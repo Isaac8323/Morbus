@@ -11188,8 +11188,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1520431549}
   m_HandleRect: {fileID: 1520431548}
   m_Direction: 2
-  m_Value: 0.9999998
-  m_Size: 0.61749256
+  m_Value: 1
+  m_Size: 0.6174927
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14176,8 +14176,8 @@ MonoBehaviour:
   Element_global: {fileID: 1139698150}
   LoadPanel: {fileID: 104498176}
   ayuda: {fileID: 289841275}
-  necesito: {fileID: 1630028704}
-  nonecesito: {fileID: 133812569}
+  necesito: {fileID: 133812569}
+  nonecesito: {fileID: 1630028704}
   ok: {fileID: 2107739597}
   img_help: {fileID: 209538886}
   cura:

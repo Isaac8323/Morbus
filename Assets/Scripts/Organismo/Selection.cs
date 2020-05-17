@@ -12,6 +12,8 @@ public class Selection : MonoBehaviour
     public GameObject[] bosses = new GameObject[16]; //Arreglo de gameobjects de las cartas de los jefes
     public GameObject[] miniBoss = new GameObject[16]; //Arreglo de las miniaturas de los jefes
     public GameObject LoadPanel, panel, arrowl, arrowr, error; //Pantalla de carga, panel de personajes, flechas para cambiar de organismo, etiqueta de error
+    public GameObject Reference; //G.O. donde se almacena la información temporal de selección
+    public GameObject ReadyButton; //Botón para proceder al enfrentamiento
     private Image[] thumbs = new Image[4]; //Arreglo de imagenes de las miniaturas de personajes
     private Image[] SoonB = new Image[4]; //Arreglo de imagenes de las miniaturas de los 3 jefes siguientes
     public Image[] locks = new Image[16]; //Arreglo de las imagenes de candado de jefes
@@ -34,6 +36,7 @@ public class Selection : MonoBehaviour
 
     void Start()
     {
+        Reference = GameObject.Find("Reference");
         temp = GameObject.Find("Reference").GetComponent<TempData>();
         data = GameObject.Find("Select").GetComponent<FightData>();
         archivo_organismo.cargar_variables();
@@ -87,188 +90,13 @@ public class Selection : MonoBehaviour
             labels[v] = GameObject.Find("lbl_Char" + tags[v]).GetComponent<Text>();
             labels[v].text = "Seleccionar...";
         }
+        VerifyStateBoss();
     }
 
     private void Update()
     {
         nameboss.text = data.NameBoss[bossControl];
         descboss.text = data.DescBoss[bossControl];
-        switch (flagSystem)
-        {
-            case 0:
-                system.text = data.Organisms[0];
-                HideMiniB();
-                for (int b = 0; b <= 3; b++)
-                {
-                    miniBoss[b].SetActive(true);
-                    if (variables_indestructibles.Arenas.Equals("true"))
-                    {
-                        locks[b].enabled = false;
-                        courts[b].enabled = false;
-                        defeats[b].enabled = false;
-                    }
-                    if (variables_indestructibles.Arenas.Equals("false"))
-                    {
-                        if (b < boss - 1)
-                        {
-                            locks[b].enabled = false;
-                            courts[b].enabled = false;
-                            defeats[b].enabled = true;
-                        }
-                        if (b > boss - 1)
-                        {
-                            locks[b].enabled = true;
-                            courts[b].enabled = true;
-                            defeats[b].enabled = false;
-                        }
-                        if (b == boss - 1)
-                        {
-                            locks[b].enabled = false;
-                            courts[b].enabled = false;
-                            defeats[b].enabled = false;
-                        }
-                    }
-                }
-                background.sprite = Resources.Load<Sprite>("SisNervioso");
-                temp.background = 0;
-                break;
-            case 1:
-                if (Int32.Parse(variables_indestructibles.level[0]) > 3)
-                {
-                    system.text = data.Organisms[1];
-                    HideMiniB();
-                    for (int p = 4; p <= 7; p++)
-                    {
-                        miniBoss[p].SetActive(true);
-                        if (variables_indestructibles.Arenas.Equals("true"))
-                        {
-                            locks[p].enabled = false;
-                            courts[p].enabled = false;
-                            defeats[p].enabled = false;
-                        }
-                        if (variables_indestructibles.Arenas.Equals("false"))
-                        {
-                            if (p < boss - 1)
-                            {
-                                locks[p].enabled = false;
-                                courts[p].enabled = false;
-                                defeats[p].enabled = true;
-                            }
-                            if (p > boss - 1)
-                            {
-                                locks[p].enabled = true;
-                                courts[p].enabled = true;
-                                defeats[p].enabled = false;
-                            }
-                            if (p == boss - 1)
-                            {
-                                locks[p].enabled = false;
-                                courts[p].enabled = false;
-                                defeats[p].enabled = false;
-                            }
-                        }
-                    }
-                    background.sprite = Resources.Load<Sprite>("SisRes");
-                    temp.background = 1;
-                }
-                if (Int32.Parse(variables_indestructibles.level[0]) < 4)
-                {
-                    warning.text = "El Sistema Respiratorio se desbloquea al nivel 4";
-                    flagSystem--;
-                }
-                break;
-            case 2:
-                if (Int32.Parse(variables_indestructibles.level[0]) > 8)
-                {
-                    system.text = data.Organisms[2];
-                    HideMiniB();
-                    for (int q = 8; q <= 11; q++)
-                    {
-                        miniBoss[q].SetActive(true);
-                        if (variables_indestructibles.Arenas.Equals("true"))
-                        {
-                            locks[q].enabled = false;
-                            courts[q].enabled = false;
-                            defeats[q].enabled = false;
-                        }
-                        if (variables_indestructibles.Arenas.Equals("false"))
-                        {
-                            if (q < boss - 1)
-                            {
-                                locks[q].enabled = false;
-                                courts[q].enabled = false;
-                                defeats[q].enabled = true;
-                            }
-                            if (q > boss - 1)
-                            {
-                                locks[q].enabled = true;
-                                courts[q].enabled = true;
-                                defeats[q].enabled = false;
-                            }
-                            if (q == boss - 1)
-                            {
-                                locks[q].enabled = false;
-                                courts[q].enabled = false;
-                                defeats[q].enabled = false;
-                            }
-                        }
-                    }
-                    background.sprite = Resources.Load<Sprite>("SisDigestivo");
-                    temp.background = 2;
-                }
-                if (Int32.Parse(variables_indestructibles.level[0]) < 9)
-                {
-                    warning.text = "El Sistema Digestivo se desbloquea al nivel 9";
-                    flagSystem--;
-                }
-                break;
-            case 3:
-                if (Int32.Parse(variables_indestructibles.level[0]) > 12)
-                {
-                    system.text = data.Organisms[3];
-                    HideMiniB();
-                    for (int r = 12; r <= 15; r++)
-                    {
-                        miniBoss[r].SetActive(true);
-                        if (variables_indestructibles.Arenas.Equals("true"))
-                        {
-                            locks[r].enabled = false;
-                            courts[r].enabled = false;
-                            defeats[r].enabled = false;
-                        }
-                        if (variables_indestructibles.Arenas.Equals("false"))
-                        {
-                            if (r < boss - 1)
-                            {
-                                locks[r].enabled = false;
-                                courts[r].enabled = false;
-                                defeats[r].enabled = true;
-                            }
-                            if (r > boss - 1)
-                            {
-                                locks[r].enabled = true;
-                                courts[r].enabled = true;
-                                defeats[r].enabled = false;
-                            }
-                            if (r == boss - 1)
-                            {
-                                locks[r].enabled = false;
-                                courts[r].enabled = false;
-                                defeats[r].enabled = false;
-                            }
-                        }
-
-                    }
-                    background.sprite = Resources.Load<Sprite>("SisInmune");
-                    temp.background = 3;
-                }
-                if (Int32.Parse(variables_indestructibles.level[0]) < 13)
-                {
-                    warning.text = "El Sistema Inmunológico se desbloquea al nivel 13";
-                    flagSystem--;
-                }
-                break;
-        }
     }
 
     public void SelectBoss(int id)
@@ -305,7 +133,210 @@ public class Selection : MonoBehaviour
                 flagSystem++;
             }
         }
+        VerifyStateBoss();
     }
+
+    public void VerifyStateBoss()
+    {
+        switch (flagSystem)
+        {
+            case 0:
+                system.text = data.Organisms[0];
+                HideMiniB();
+                for (int b = 0; b <= 3; b++)
+                {
+                    miniBoss[b].SetActive(true);
+                    if (variables_indestructibles.Arenas.Equals("true"))
+                    {
+                        bossControl = 1;
+                        HideBoss();
+                        bosses[0].SetActive(true);
+                        locks[b].enabled = false;
+                        courts[b].enabled = false;
+                        defeats[b].enabled = false;
+                    }
+                    if (variables_indestructibles.Arenas.Equals("false"))
+                    {
+                        if (b < boss - 1)
+                        {
+                            locks[b].enabled = false;
+                            courts[b].enabled = false;
+                            defeats[b].enabled = true;
+                        }
+                        if (b > boss - 1)
+                        {
+                            locks[b].enabled = true;
+                            courts[b].enabled = true;
+                            defeats[b].enabled = false;
+                        }
+                        if (b == boss - 1)
+                        {
+                            locks[b].enabled = false;
+                            courts[b].enabled = false;
+                            defeats[b].enabled = false;
+                        }
+                    }
+                }
+                background.sprite = Resources.Load<Sprite>("SisNervioso");
+                temp.background = 0;
+                break;
+            case 1:
+                if (Int32.Parse(variables_indestructibles.level[0]) > 3)
+                {
+                    ReadyButton.SetActive(true);
+                    system.text = data.Organisms[1];
+                    HideMiniB();
+                    for (int p = 4; p <= 7; p++)
+                    {
+                        miniBoss[p].SetActive(true);
+                        if (variables_indestructibles.Arenas.Equals("true"))
+                        {
+                            bossControl = 5;
+                            HideBoss();
+                            bosses[4].SetActive(true);
+                            locks[p].enabled = false;
+                            courts[p].enabled = false;
+                            defeats[p].enabled = false;
+                        }
+                        if (variables_indestructibles.Arenas.Equals("false"))
+                        {
+                            if (p < boss - 1)
+                            {
+                                locks[p].enabled = false;
+                                courts[p].enabled = false;
+                                defeats[p].enabled = true;
+                            }
+                            if (p > boss - 1)
+                            {
+                                locks[p].enabled = true;
+                                courts[p].enabled = true;
+                                defeats[p].enabled = false;
+                            }
+                            if (p == boss - 1)
+                            {
+                                locks[p].enabled = false;
+                                courts[p].enabled = false;
+                                defeats[p].enabled = false;
+                            }
+                        }
+                    }
+                    background.sprite = Resources.Load<Sprite>("SisRes");
+                    temp.background = 1;
+                }
+                if (Int32.Parse(variables_indestructibles.level[0]) < 4)
+                {
+                    warning.text = "El siguiente sistema se desbloquea al nivel 4";
+                    flagSystem--;
+                    ReadyButton.SetActive(false);
+                    VerifyStateBoss();
+                }
+                break;
+            case 2:
+                if (Int32.Parse(variables_indestructibles.level[0]) > 8)
+                {
+                    ReadyButton.SetActive(true);
+                    system.text = data.Organisms[2];
+                    HideMiniB();
+                    for (int q = 8; q <= 11; q++)
+                    {
+                        miniBoss[q].SetActive(true);
+                        if (variables_indestructibles.Arenas.Equals("true"))
+                        {
+                            bossControl = 9;
+                            HideBoss();
+                            bosses[8].SetActive(true);
+                            locks[q].enabled = false;
+                            courts[q].enabled = false;
+                            defeats[q].enabled = false;
+                        }
+                        if (variables_indestructibles.Arenas.Equals("false"))
+                        {
+                            if (q < boss - 1)
+                            {
+                                locks[q].enabled = false;
+                                courts[q].enabled = false;
+                                defeats[q].enabled = true;
+                            }
+                            if (q > boss - 1)
+                            {
+                                locks[q].enabled = true;
+                                courts[q].enabled = true;
+                                defeats[q].enabled = false;
+                            }
+                            if (q == boss - 1)
+                            {
+                                locks[q].enabled = false;
+                                courts[q].enabled = false;
+                                defeats[q].enabled = false;
+                            }
+                        }
+                    }
+                    background.sprite = Resources.Load<Sprite>("SisDigestivo");
+                    temp.background = 2;
+                }
+                if (Int32.Parse(variables_indestructibles.level[0]) < 9)
+                {
+                    warning.text = "El siguiente sistema se desbloquea al nivel 9";
+                    flagSystem--;
+                    ReadyButton.SetActive(false);
+                    VerifyStateBoss();
+                }
+                break;
+            case 3:
+                if (Int32.Parse(variables_indestructibles.level[0]) > 12)
+                {
+                    ReadyButton.SetActive(true);
+                    system.text = data.Organisms[3];
+                    HideMiniB();
+                    for (int r = 12; r <= 15; r++)
+                    {
+                        miniBoss[r].SetActive(true);
+                        if (variables_indestructibles.Arenas.Equals("true"))
+                        {
+                            bossControl = 13;
+                            HideBoss();
+                            bosses[12].SetActive(true);
+                            locks[r].enabled = false;
+                            courts[r].enabled = false;
+                            defeats[r].enabled = false;
+                        }
+                        if (variables_indestructibles.Arenas.Equals("false"))
+                        {
+                            if (r < boss - 1)
+                            {
+                                locks[r].enabled = false;
+                                courts[r].enabled = false;
+                                defeats[r].enabled = true;
+                            }
+                            if (r > boss - 1)
+                            {
+                                locks[r].enabled = true;
+                                courts[r].enabled = true;
+                                defeats[r].enabled = false;
+                            }
+                            if (r == boss - 1)
+                            {
+                                locks[r].enabled = false;
+                                courts[r].enabled = false;
+                                defeats[r].enabled = false;
+                            }
+                        }
+
+                    }
+                    background.sprite = Resources.Load<Sprite>("SisInmune");
+                    temp.background = 3;
+                }
+                if (Int32.Parse(variables_indestructibles.level[0]) < 13)
+                {
+                    warning.text = "El siguiente sistema se desbloquea al nivel 13";
+                    flagSystem--;
+                    ReadyButton.SetActive(false);
+                    VerifyStateBoss();
+                }
+                break;
+        }
+    }
+
     //Función que grafica los personajes que el usuario tiene en el archivo y las cantidades de estos
     public void ViewChar()
     {
@@ -335,6 +366,7 @@ public class Selection : MonoBehaviour
     public void Back()
     {
         HideBoss();
+        Destroy(Reference);
         LoadScene.sceneToLoad = "Mapajuego";
         LoadPanel.SetActive(true);
     }
@@ -371,14 +403,89 @@ public class Selection : MonoBehaviour
         if (slots[1] == true && slots[2] == true && slots[3] == true)
         {
             HideBoss();
+            if (variables_indestructibles.Arenas.Equals("false"))
+            {
+                temp.nameBoss = data.NameBoss[Int32.Parse(variables_indestructibles.nivel_organismo_jefes)];
+                temp.lifeBoss = data.LifeBoss[boss];
+                temp.damageBoss = data.atckBoss[boss];
+                temp.idBoss = Int32.Parse(variables_indestructibles.nivel_organismo_jefes);
+            }
+            if (variables_indestructibles.Arenas.Equals("true"))
+            {
+                temp.nameBoss = data.NameBoss[bossControl];
+                temp.lifeBoss = data.LifeBoss[bossControl];
+                temp.damageBoss = data.atckBoss[bossControl];
+                temp.idBoss = bossControl;
+            }
             for (int x = 0; x < 3; x++)
             {
+                temp.idChar[x + 1] = ides[x + 1];
                 temp.nameChar[x] = variables_indestructibles.Personajes[ides[x + 1], 0]; //Le pasa el nombre del personaje al script que no se destruye
                 temp.lifeChar[x] = Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 7]);
+                for (int h = 0; h < 4; h++) //Asignación de daños base
+                {
+                    //Si está potenciada la habilidad se le agrega el "+" al nombre
+                    if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == h + 1)
+                    {
+                        int t = h;
+                        while (t >= 0)
+                        {
+                            temp.HabChar[x, t] = data.HabChar[ides[x + 1], t] + " +";
+                            t--;
+                        }
+                    }
+                    else //Si no está potenciada la habilidad (Para el nombre)
+                    {
+                        temp.HabChar[x, h] = data.HabChar[ides[x + 1], h];
+                    }
+                    temp.damageChar[x, h] = data.HChar[ides[x + 1]]; //Puntos contra patología no clave
+                }
+
+                //Asignación de daños si es Aspirina
+                if (ides[x + 1] == 0)
+                {
+                    if (temp.idBoss == 10) //Si el jefe es Hemorroides
+                    {
+                        //En caso de que esté potenciada
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {
+                            temp.damageChar[x, 0] = 69643;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 0] = 541667;
+                        }
+                        //En caso de que esté potenciada
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {
+                            temp.damageChar[x, 1] = 81250;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 1] = 60937;
+                        }
+                        //En caso de que esté potenciada
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {
+                            temp.damageChar[x, 2] = 97500;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 69643;
+                        }
+                        //En caso de que esté potenciada
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {
+                            temp.damageChar[x, 3] = 97500;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 81250;
+                        }
+                    }
+                }
+
             }
-            temp.nameBoss = data.NameBoss[Int32.Parse(variables_indestructibles.nivel_organismo_jefes)];
-            temp.lifeBoss = data.LifeBoss[boss];
-            temp.damageBoss = data.atckBoss[boss];
             LoadScene.sceneToLoad = "Fight";
             LoadPanel.SetActive(true);
         }

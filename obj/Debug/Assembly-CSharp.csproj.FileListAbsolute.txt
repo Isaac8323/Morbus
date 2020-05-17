@@ -250,3 +250,7 @@ D:\Users\isaqu\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.pdb
 C:\Users\Mariana\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Mariana\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.dll
 C:\Users\Mariana\Documents\GitHub\Morbus\obj\Debug\Assembly-CSharp.pdb
+D:\Users\isaqu\Documents\Morbus\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Users\isaqu\Documents\Morbus\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\Users\isaqu\Documents\Morbus\obj\Debug\Assembly-CSharp.dll
+D:\Users\isaqu\Documents\Morbus\obj\Debug\Assembly-CSharp.pdb

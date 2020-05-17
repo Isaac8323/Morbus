@@ -613,8 +613,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1389943007}
   m_HandleRect: {fileID: 1389943006}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.6549188
+  m_Value: 0.9999997
+  m_Size: 0.6549186
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -711,7 +711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &31185517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6958,8 +6958,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1143450895}
   m_HandleRect: {fileID: 1143450894}
   m_Direction: 2
-  m_Value: 0.047182325
-  m_Size: 0.66495836
+  m_Value: 0.04718254
+  m_Size: 0.66495824
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8757,8 +8757,8 @@ MonoBehaviour:
   Element_global: {fileID: 118624973}
   LoadPanel: {fileID: 1379530436}
   ayuda: {fileID: 1919918345}
-  necesito: {fileID: 1702544841}
-  nonecesito: {fileID: 1633805433}
+  necesito: {fileID: 1633805433}
+  nonecesito: {fileID: 1702544841}
   ok: {fileID: 253632868}
   img_help: {fileID: 31185516}
   cura:
@@ -9981,72 +9981,72 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   enlace_dexametasona:
-  - {fileID: 2010238573}
-  - {fileID: 2003709740}
-  - {fileID: 595855124}
-  - {fileID: 748489867}
-  - {fileID: 1897041769}
-  - {fileID: 941765252}
-  - {fileID: 981916510}
-  - {fileID: 32514925}
-  - {fileID: 1101573816}
-  - {fileID: 457150609}
-  - {fileID: 1755608620}
-  - {fileID: 1782870930}
-  - {fileID: 540650055}
-  - {fileID: 495608941}
-  - {fileID: 757481816}
-  - {fileID: 1615326026}
-  - {fileID: 748527177}
-  - {fileID: 1183943815}
-  - {fileID: 102505968}
-  - {fileID: 1405643373}
-  - {fileID: 124163017}
-  - {fileID: 1152177745}
-  - {fileID: 836520929}
-  - {fileID: 1512047993}
-  - {fileID: 207783993}
-  - {fileID: 1629045555}
-  - {fileID: 1139504045}
-  - {fileID: 380589184}
-  - {fileID: 1041722340}
-  - {fileID: 65923856}
-  - {fileID: 1101214037}
-  - {fileID: 1599093771}
-  - {fileID: 540580073}
-  - {fileID: 465292249}
-  - {fileID: 1757990415}
-  - {fileID: 316565895}
-  - {fileID: 1102606765}
-  - {fileID: 2041399381}
-  - {fileID: 1540269403}
-  - {fileID: 1661715815}
-  - {fileID: 654274504}
-  - {fileID: 744100771}
-  - {fileID: 1229706554}
-  - {fileID: 294343217}
-  - {fileID: 936962277}
-  - {fileID: 618111038}
-  - {fileID: 337984140}
-  - {fileID: 1811878744}
-  - {fileID: 330482864}
-  - {fileID: 89393783}
-  - {fileID: 1463317045}
-  - {fileID: 248926803}
-  - {fileID: 687238536}
-  - {fileID: 1248002607}
-  - {fileID: 1225275738}
-  - {fileID: 1703231105}
-  - {fileID: 1184415875}
-  - {fileID: 586829460}
-  - {fileID: 764037631}
-  - {fileID: 1797677604}
-  - {fileID: 1345266678}
-  - {fileID: 1799634119}
-  - {fileID: 477271667}
-  - {fileID: 185138011}
-  - {fileID: 75224998}
-  - {fileID: 1520267354}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   enlace_b12:
   - {fileID: 0}
   - {fileID: 0}
@@ -15557,7 +15557,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000014517991, y: -0.000003602973}
+  m_AnchoredPosition: {x: -0.000014517991, y: 0.000002309752}
   m_SizeDelta: {x: 834.1, y: 417.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &952107943

@@ -5650,7 +5650,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1851284862}
   m_HandleRect: {fileID: 1851284861}
   m_Direction: 2
-  m_Value: 0.99999964
+  m_Value: 0.9999998
   m_Size: 0.61749256
   m_NumberOfSteps: 1
   m_OnValueChanged:
@@ -20201,8 +20201,8 @@ MonoBehaviour:
   Element_global: {fileID: 689615416}
   LoadPanel: {fileID: 425456532}
   ayuda: {fileID: 1403599702}
-  necesito: {fileID: 1512791976}
-  nonecesito: {fileID: 722967350}
+  necesito: {fileID: 722967350}
+  nonecesito: {fileID: 1512791976}
   ok: {fileID: 1360927155}
   img_help: {fileID: 346360991}
   cura:

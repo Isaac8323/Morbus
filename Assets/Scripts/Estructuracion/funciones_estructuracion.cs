@@ -17,7 +17,7 @@ public class funciones_estructuracion : MonoBehaviour
     Archivos archivo_estructuracion;
     Text elementin, elemento_text_text;
     Image UIImage;
-    public GameObject Element_global, LoadPanel,ayuda, necesito, nonecesito, ok,img_help;
+    public GameObject Element_global, LoadPanel, ayuda, necesito, nonecesito, ok, img_help;
     public GameObject[] cura = new GameObject[25];
     public GameObject[] enlace_aspirina = new GameObject[26];
     public GameObject[] enlace_paracetamol = new GameObject[22];
@@ -50,7 +50,7 @@ public class funciones_estructuracion : MonoBehaviour
     int[] cantidad_elementos_celda = new int[500];
     int[] carbon_number = new int[500];
     int[] bandera_carb = new int[500];
-    int cantidad_elementos_panel_elementos = 0, starttimer = 0, cantidad_carbono_por_formulas = 0,dimension_cura=0;
+    int cantidad_elementos_panel_elementos = 0, starttimer = 0, cantidad_carbono_por_formulas = 0, dimension_cura = 0;
     String element_used;
     float time = 0.1f;
     //aspirina variables
@@ -2811,7 +2811,7 @@ public class funciones_estructuracion : MonoBehaviour
                         && verificadores[38].text.Equals("H2") && verificadores[39].text.Equals("N")
                         && verificadores[40].text.Equals("O") && verificadores[41].text.Equals("H2")
                         && verificadores[42].text.Equals("N") && verificadores[43].text.Equals("O")
-                        && verificadores[44].text.Equals("H3") && verificadores[45].text.Equals("C") 
+                        && verificadores[44].text.Equals("H3") && verificadores[45].text.Equals("C")
                         && verificadores[46].text.Equals("C")
                         && verificadores[47].text.Equals("H3") && verificadores[48].text.Equals("H2")
                         && verificadores[49].text.Equals("N") && verificadores[50].text.Equals("O")
@@ -2903,7 +2903,7 @@ public class funciones_estructuracion : MonoBehaviour
         {
             elementin.text = "";
             mouseupper = 1;
-           
+
         }
         bandera_carb[99] = 0;
         Element_global.SetActive(false);
@@ -2949,7 +2949,7 @@ public class funciones_estructuracion : MonoBehaviour
     public void recibir_ayuda()
     {
         img_help.SetActive(true);
-       int bm = Int32.Parse(variables_indestructibles.bismuto);
+        int bm = Int32.Parse(variables_indestructibles.bismuto);
         bm = bm - 1;
         variables_indestructibles.bismuto = bm.ToString();
         archivo_estructuracion.guardar_variables();
