@@ -70,6 +70,7 @@ public class Archivos : MonoBehaviour
             variables_indestructibles.Intentos_curas[x] = Datos.Intentos_curas[x];
         }
         variables_indestructibles.Usuario = Datos.Usuario;
+        variables_indestructibles.mantenimient = Datos.mantenimient;
         variables_indestructibles.monedas[0] = Datos.monedas[0];
         variables_indestructibles.level[0] = Datos.level[0];
         variables_indestructibles.bismuto = Datos.bismuto;
@@ -135,6 +136,7 @@ public class Archivos : MonoBehaviour
         Datos.easter = variables_indestructibles.easter;
         Datos.Arenas = variables_indestructibles.Arenas;
         Datos.first = variables_indestructibles.first;
+        Datos.mantenimient = variables_indestructibles.mantenimient;
         for (int x = 0; x < 25; x++)
         {
             Datos.Intentos_curas[x] = variables_indestructibles.Intentos_curas[x];
@@ -432,6 +434,7 @@ public class Archivos : MonoBehaviour
             Datos.nivel_organismo_jefes = "2";
             Datos.sesion = "";
             Datos.estructuracion = "";
+            Datos.mantenimient = "0";
             for (int x = 0; x < 3; x++)
             {
                 for (int i = 0; i < 11; i++)
@@ -596,4 +599,5 @@ class DatosdeJuego : System.Object
     public String easter;
     public String first;
     public String[] Intentos_curas = new String[25];
+    public String mantenimient;
 }

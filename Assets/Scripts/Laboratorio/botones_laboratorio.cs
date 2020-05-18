@@ -23,7 +23,7 @@ public class botones_laboratorio : MonoBehaviour
     String[,] plussless = new String[11, 2];
     public String cargarformula;
     Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados, texto_alerta;
-    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel, alerta_sulfa;
+    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel, alerta_sulfa,destroyd,mante;
     Text elementin;
     Image UIImage;
     Text[] element = new Text[11];
@@ -39,6 +39,15 @@ public class botones_laboratorio : MonoBehaviour
         archivo_almacen = GameObject.Find("Laboratorio").GetComponent<Archivos>();
         archivo_almacen.Cargar_Tienda(Personajes, Elementos);
         archivo_almacen.cargar_variables();
+        if (variables_indestructibles.mantenimient.Equals("1"))
+        {
+            destroyd.SetActive(true);
+            mante.SetActive(true);
+        }
+        else
+        {
+
+        }
         ElementrosAdquiridos();
     }
 
@@ -47,7 +56,13 @@ public class botones_laboratorio : MonoBehaviour
     {
 
     }
-
+    public void fueguito()
+    {
+        mante.SetActive(false);
+        SelectPanel.SetActive(false);
+        LoadScene.sceneToLoad = "Mgfire";
+        LoadPanel.SetActive(true);
+    }
     public void OpenLab()
     {
         SelectPanel.SetActive(true);

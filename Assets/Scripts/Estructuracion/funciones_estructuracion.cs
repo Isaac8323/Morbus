@@ -17,7 +17,7 @@ public class funciones_estructuracion : MonoBehaviour
     Archivos archivo_estructuracion;
     Text elementin, elemento_text_text;
     Image UIImage;
-    public GameObject Element_global, LoadPanel, ayuda, necesito, nonecesito, ok, img_help;
+    public GameObject Element_global, LoadPanel, ayuda, necesito, nonecesito, ok, img_help,felicidades,ok_Explotion,veri;
     public GameObject[] cura = new GameObject[25];
     public GameObject[] enlace_aspirina = new GameObject[26];
     public GameObject[] enlace_paracetamol = new GameObject[22];
@@ -2920,6 +2920,7 @@ public class funciones_estructuracion : MonoBehaviour
             archivo_estructuracion.guardar_variables();
             LoadScene.sceneToLoad = "Mapajuego";
             LoadPanel.SetActive(true);
+            
         }
         else if (bandera_intentos == 3)
         {
@@ -2931,6 +2932,7 @@ public class funciones_estructuracion : MonoBehaviour
                 elemento_text_text.text = "Intento No.3 erroneo al estructurar la fórmula: " + elementin.text + " desea recibir ayuda a cambio de 1 Bismuto?";
                 necesito.SetActive(true);
                 nonecesito.SetActive(true);
+                veri.SetActive(false);
             }
             else
             {
@@ -2944,6 +2946,7 @@ public class funciones_estructuracion : MonoBehaviour
             elemento_text_text.text = "Fallaste en la estructuracion debes estudiar mejor la formula de: " + elementin.text;
             ok.SetActive(true);
             archivo_estructuracion.guardar_variables();
+            veri.SetActive(false);
         }
     }
     public void recibir_ayuda()
@@ -2953,7 +2956,7 @@ public class funciones_estructuracion : MonoBehaviour
         bm = bm - 1;
         variables_indestructibles.bismuto = bm.ToString();
         archivo_estructuracion.guardar_variables();
-
+        veri.SetActive(true);
         ayuda.SetActive(false);
     }
     public void no_recibir_ayuda()
@@ -2980,14 +2983,28 @@ public class funciones_estructuracion : MonoBehaviour
                 }
             }
         }
+        ayuda.SetActive(true);
+        necesito.SetActive(false);
+        nonecesito.SetActive(false);
+        ok.SetActive(false);
+        veri.SetActive(true);
+        ok_Explotion.SetActive(true);
+        variables_indestructibles.mantenimient = "1";
         archivo_estructuracion.guardar_variables();
-        LoadScene.sceneToLoad = "Mapajuego";
+        elementin = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+        elementin.text = "Tu laboratorio a explotado";
+    }
+    public void aexplotion()
+    {
+        ayuda.SetActive(false);
+        LoadScene.sceneToLoad = "Explotion";
         LoadPanel.SetActive(true);
     }
     public void oks()
     {
         ok.SetActive(false);
         ayuda.SetActive(false);
+        veri.SetActive(true);
     }
     public void verificar_final(int numero_del_pj_en_el_archivo)
     {
@@ -3105,11 +3122,16 @@ public class funciones_estructuracion : MonoBehaviour
             }
         }
         archivo_estructuracion.guardar_variables();
+        felicidades.SetActive(true);
+        elementin = GameObject.Find("felicidades_name").GetComponent<Text>();
+        elementin.text = variables_indestructibles.Personajes[numero_del_pj_en_el_archivo, 0];
+    }
+
+    public void agenial()
+    {
         LoadScene.sceneToLoad = "Mapajuego";
         LoadPanel.SetActive(true);
     }
-
-
     public void elementsadd()
     {
         String a = variables_indestructibles.estructuracion.ToLower();
