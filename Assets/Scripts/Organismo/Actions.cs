@@ -10,27 +10,30 @@ public class Actions : MonoBehaviour
     public int turno;
     private Animator animate; //Animator que ira ejecutando las animaciones de cada personaje
     private Animation anim;
-    public Animator[] clics = new Animator[3];
+    public Animator clics;
+    public Animator[] AniHabs = new Animator[6];
     private Vector3 pos; //Posición del texto en el que se enfocará el puntero >>
     private Vector3 dest; //Coordenadas a donde irá el puntero >>
     private Transform mov; //Posición a donde irá el puntero >>
-    public GameObject[] Goclics = new GameObject[3]; //Objetos que contienen los efectos de clic
+    public GameObject Goclics; //Objeto que contiene los efectos de clic
     public GameObject[] Characters = new GameObject[3]; //G.O.'s donde se instanciaran los personajes
+    public GameObject[] AnimHabs = new GameObject[6];
     public GameObject PanelHabs; //Panel de habilidades de personajes
-    public GameObject[] character = new GameObject[25]; //Prefabs de los personajes que serán instanciados
+    public GameObject[] character = new GameObject[26]; //Prefabs de los personajes que serán instanciados
     public Text[] habilities = new Text[4]; //Text's donde irá la habilidad del personaje en turno
     public Text[] damages = new Text[4]; //Text's donde irá el daño correspondiente de la habilidad  del personaje en turno
     public Text[] labels = new Text[3]; //Text's donde irán los nombres de los personajes
     public Text[] lifeChar = new Text[3]; //Text's donde irá la vida total de cada personaje
     public Text[] lifeAct = new Text[3]; //Text's donde irá la vida restante de cada personaje
     public Text lifeBoss, actBoss; //Vida del jefe, vida restante del jefe
-    public Image[] turn = new Image[3]; //Barra que indica el turno actual del personaje
     public Image[] preview = new Image[3]; //Miniatura del personaje
     public Image[] BarChar = new Image[3]; //Barra de vida de cada personaje
     public Image BarBoss; //Barra de vida del jefe
     public Text boss; //Text que contiene el nombre del jefe actual
-    private string[,] HabPS = new string[4, 4]; //Nombres de las habilidades de cada personaje
-    private int[,] HabP = new int[4, 4]; //Puntos de las habilidades de cada personaje
+    private string[,] HabPS = new string[3, 4]; //Nombres de las habilidades de cada personaje
+    private string actanim;
+    private bool acthab; //Verifica si la habilidad está potenciada en el text que se presióno (habilidad)
+    private int[,] HabP = new int[3, 4]; //Puntos de las habilidades de cada personaje
     private int[] PP = new int[4]; //Contador para el uso de habilidades de cada personaje
     private float[] percentC = new float[3]; //Valor para graficar la vida de cada personaje
     private float percentB; //Valor para graficar la vida de cada personaje
@@ -72,30 +75,20 @@ public class Actions : MonoBehaviour
         {
             case 0:
                 animate = GameObject.Find("Char01").GetComponentInChildren<Animator>();
-                ShowHabs(selected.idChar[turno + 1], PP[turno]);
-                /*Character[0].MyTurn = true;
-                Character[1].MyTurn = false;
-                Character[2].MyTurn = false;*/
+                ShowHabs(turno, PP[turno]);
+                ImgTurn("Name01");
                 break;
             case 1:
                 animate = GameObject.Find("Char02").GetComponentInChildren<Animator>();
-                ShowHabs(selected.idChar[turno + 1], PP[turno]);
-                /*Character[0].MyTurn = false;
-                Character[1].MyTurn = true;
-                Character[2].MyTurn = false;*/
+                ShowHabs(turno, PP[turno]);
+                ImgTurn("Name02");
                 break;
             case 2:
                 animate = GameObject.Find("Char03").GetComponentInChildren<Animator>();
-                ShowHabs(selected.idChar[turno + 1], PP[turno]);
-                /*Character[0].MyTurn = false;
-                Character[1].MyTurn = false;
-                Character[2].MyTurn = true;*/
+                ShowHabs(turno, PP[turno]);
+                ImgTurn("Name03");
                 break;
             case 3:
-                /*Character[0].MyTurn = false;
-                Character[1].MyTurn = false;
-                Character[2].MyTurn = false;
-                BossS.MyTurn = true;*/
                 break;
         }
         for (int y = 0; y < 3; y++)
@@ -188,44 +181,83 @@ public class Actions : MonoBehaviour
         }
     }
 
-    private IEnumerator DoAnim(string name)
+    private IEnumerator DoAnim()
     {
-        animate.SetBool(name, true);
-        yield return new WaitForSeconds(0.5f);
+        animate.SetBool(actanim, true);
+        yield return new WaitForSeconds(0.3f);
         StartCoroutine(Clic(variables_indestructibles.Personajes[selected.idChar[turno], 1]));
-        Points();
-        Turn();
     }
 
     IEnumerator Clic(string type)
     {
-        int pos = 0;
-        switch (type)
+        Goclics.SetActive(true);
+        clics.SetBool("Cliceasy", true);
+        yield return new WaitForSeconds(0.2f);
+        StartCoroutine(AnimHab(selected.idChar[turno + 1]));
+        Goclics.SetActive(false);
+        clics.SetBool("Cliceasy", false);
+    }
+
+    IEnumerator AnimHab(int id)
+    {
+        int hab = 0;
+        switch(variables_indestructibles.Personajes[id, 1])
         {
             case "easy":
-                pos = 0;
+                hab = 0;
+                if (acthab == true)
+                {
+                    hab = 1;
+                }
                 break;
             case "Complex":
-                pos = 1;
+                hab = 2;
+                if (acthab == true)
+                {
+                    hab = 3;
+                }
                 break;
             case "Hard":
-                pos = 2;
+                hab = 4;
+                if (acthab == true)
+                {
+                    //hab = 5;
+                }
                 break;
         }
-        Goclics[pos].SetActive(true);
-        clics[pos].SetBool("Clic" + type, true);
-        yield return new WaitForSeconds(0.2f);
-        clics[pos].SetBool("Clic" + type, false);
-        Goclics[pos].SetActive(false);
+        AnimHabs[hab].SetActive(true);
+        AniHabs[hab].SetBool("Attack", true);
+        yield return new WaitForSeconds(1.8f);
+        AnimHabs[hab].SetActive(false);
+        AniHabs[hab].SetBool("Attack", false);
+        animate.SetBool(actanim, false);
+        Points();
+        Turn();
     }
 
     public void UseHab(int id)
     {
         if (habilities[id].text != "Cargando...")
         {
+            if (habilities[id].text.Contains("+")){
+                acthab = true;
+            }
+            else
+            {
+                acthab = false;
+            }
             animate = Characters[turno].GetComponentInChildren<Animator>();
-            StartCoroutine(DoAnim("Hab0" + (id + 1).ToString()));
+            actanim = "Hab0" + (id + 1).ToString();
+            StartCoroutine(DoAnim());
         }
+    }
+
+    public void ImgTurn(string space)
+    {
+        mov = GameObject.Find(space).GetComponent<Transform>();
+        pos = mov.transform.position;
+        dest = new Vector3(pos.x, pos.y, pos.z);
+        GameObject.Find("Turn01").transform.position = dest;
     }
 
     public void Arrow(string bot)

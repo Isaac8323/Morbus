@@ -70,7 +70,6 @@ public class Archivos : MonoBehaviour
             variables_indestructibles.Intentos_curas[x] = Datos.Intentos_curas[x];
         }
         variables_indestructibles.Usuario = Datos.Usuario;
-        variables_indestructibles.mantenimient = Datos.mantenimient;
         variables_indestructibles.monedas[0] = Datos.monedas[0];
         variables_indestructibles.level[0] = Datos.level[0];
         variables_indestructibles.bismuto = Datos.bismuto;
@@ -82,6 +81,7 @@ public class Archivos : MonoBehaviour
         variables_indestructibles.easter = Datos.easter;
         variables_indestructibles.Arenas = Datos.Arenas;
         variables_indestructibles.first = Datos.first;
+        variables_indestructibles.mantenimient = Datos.mantenimient;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -239,11 +239,11 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[3, 2] = "5";
             Datos.Personajes[4, 2] = "5";
             Datos.Personajes[5, 2] = "5";
-            Datos.Personajes[6, 2] = "0";
-            Datos.Personajes[7, 2] = "0";
-            Datos.Personajes[8, 2] = "0";
-            Datos.Personajes[9, 2] = "0";
-            Datos.Personajes[10, 2] = "0";
+            Datos.Personajes[6, 2] = "1";
+            Datos.Personajes[7, 2] = "1";
+            Datos.Personajes[8, 2] = "1";
+            Datos.Personajes[9, 2] = "1";
+            Datos.Personajes[10, 2] = "1";
             Datos.Personajes[11, 2] = "100";
             Datos.Personajes[12, 2] = "100";
             Datos.Personajes[13, 2] = "100";

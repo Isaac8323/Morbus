@@ -17,11 +17,13 @@ public class mgfirescript : MonoBehaviour
     float[] time = new float [6];
     int[] fuegos_activados = new int[6];
     int[] banders = new int[6];
-    public GameObject extintor, fuego1, fuego2, fuego3, fuego4, fuego5, fuego6, LoadPanel;
+    public GameObject extintor, fuego1, fuego2, fuego3, fuego4, fuego5, fuego6, LoadPanel, panel;
+    private Animator ext;
     Archivos a;
     // Start is called before the first frame update
     void Start()
     {
+        ext = GameObject.Find("ext").GetComponent<Animator>();
         a = GameObject.Find("EnLlamas").GetComponent<Archivos>();
         a.cargar_variables();
         time[0] = 3.0f;
@@ -45,7 +47,8 @@ public class mgfirescript : MonoBehaviour
         {
             variables_indestructibles.mantenimient = "0";
             a.guardar_variables();
-            LoadScene.sceneToLoad = "Laboratorio";
+            panel.SetActive(true);
+            LoadScene.sceneToLoad = "Mapajuego";
             LoadPanel.SetActive(true);
         }
         if (!Input.GetMouseButton(0))
@@ -71,6 +74,7 @@ public class mgfirescript : MonoBehaviour
                 {
                     Debug.Log("fuego 1 apagado");
                     banders[0] = 0;
+                    ext.SetBool("Push", false);
                     fuego1.SetActive(false);
                     //Do Something after clock hits 0
                 }
@@ -86,6 +90,7 @@ public class mgfirescript : MonoBehaviour
                 {
                     Debug.Log("fuego 2 apagado");
                     banders[1] = 0;
+                    ext.SetBool("Push", false);
                     fuego2.SetActive(false);
                     //Do Something after clock hits 0
                 }
@@ -101,6 +106,7 @@ public class mgfirescript : MonoBehaviour
                 {
                     Debug.Log("fuego 3 apagado");
                     banders[2] = 0;
+                    ext.SetBool("Push", false);
                     fuego3.SetActive(false);
                     //Do Something after clock hits 0
                 }
@@ -116,6 +122,7 @@ public class mgfirescript : MonoBehaviour
                 {
                     Debug.Log("fuego 4 apagado");
                     banders[3] = 0;
+                    ext.SetBool("Push", false);
                     fuego4.SetActive(false);
                     //Do Something after clock hits 0
                 }
@@ -131,6 +138,7 @@ public class mgfirescript : MonoBehaviour
                 {
                     Debug.Log("fuego 5 apagado");
                     banders[4] = 0;
+                    ext.SetBool("Push", false);
                     fuego5.SetActive(false);
                     //Do Something after clock hits 0
                 }
@@ -146,6 +154,7 @@ public class mgfirescript : MonoBehaviour
                 {
                     Debug.Log("fuego 6 apagado");
                     banders[5] = 0;
+                    ext.SetBool("Push", false);
                     fuego6.SetActive(false);
                     //Do Something after clock hits 0
                 }
@@ -181,6 +190,16 @@ public class mgfirescript : MonoBehaviour
     public void f6()
     {
         fuegos_activados[5] = 1;
+    }
+
+    public void startAnim()
+    {
+        ext.SetBool("Push", true);
+    }
+
+    public void stopAnim()
+    {
+        ext.SetBool("Push", false);
     }
 }
 

@@ -23,7 +23,7 @@ public class botones_laboratorio : MonoBehaviour
     String[,] plussless = new String[11, 2];
     public String cargarformula;
     Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados, texto_alerta;
-    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel, alerta_sulfa,destroyd,mante;
+    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel, alerta_sulfa, destroyd, mante;
     Text elementin;
     Image UIImage;
     Text[] element = new Text[11];
@@ -799,10 +799,10 @@ public class botones_laboratorio : MonoBehaviour
         }
         if (contador == 25)
         {
-            Debug.Log("Ninguna formula puede crearce con estos elementos");
+            Debug.Log("Ninguna formula puede crearse con estos elementos");
             Alerta_a.SetActive(true);
             texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
-            texto_alerta.text = "Ninguna formula puede crearce con estos elementos";
+            texto_alerta.text = "Ninguna formula puede crearse con estos elementos";
         }
         else
         {
@@ -1166,10 +1166,10 @@ public class botones_laboratorio : MonoBehaviour
             }
             else if (tefaltamas < tesobran)
             {
-                Debug.Log("Tienes una cantidad de elementos necesarios mayor a la requerida " + tesobran + " " + tefaltamas);
+                Debug.Log("Tienes una cantidad de elementos mayor a la requerida " + tesobran + " " + tefaltamas);
                 Alerta_a.SetActive(true);
                 texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
-                texto_alerta.text = "Tienes una cantidad de elementos necesarios mayor a la requerida ";
+                texto_alerta.text = "Tienes una cantidad de elementos mayor a la requerida ";
                 tefaltamas = 0;
                 tesobran = 0;
                 for (int i3 = 1; i3 < 12; i3++)
@@ -1184,10 +1184,10 @@ public class botones_laboratorio : MonoBehaviour
             }
             else if (tesobran < tefaltamas)
             {
-                Debug.Log("Tienes una cantidad de elementos necesarios menor a la requerida " + tefaltamas + " " + tesobran);
+                Debug.Log("Tienes una cantidad de elementos menor a la requerida " + tefaltamas + " " + tesobran);
                 Alerta_a.SetActive(true);
                 texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
-                texto_alerta.text = "Tienes una cantidad de elementos necesarios menor a la requerida ";
+                texto_alerta.text = "Tienes una cantidad de elementos menor a la requerida ";
                 tefaltamas = 0;
                 tesobran = 0;
                 for (int i3 = 1; i3 < 12; i3++)

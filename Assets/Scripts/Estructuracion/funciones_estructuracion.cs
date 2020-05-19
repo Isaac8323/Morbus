@@ -17,7 +17,7 @@ public class funciones_estructuracion : MonoBehaviour
     Archivos archivo_estructuracion;
     Text elementin, elemento_text_text;
     Image UIImage;
-    public GameObject Element_global, LoadPanel, ayuda, necesito, nonecesito, ok, img_help,felicidades,ok_Explotion,veri;
+    public GameObject Element_global, LoadPanel, ayuda, necesito, nonecesito, ok, img_help, felicidades, ok_Explotion, veri;
     public GameObject[] cura = new GameObject[25];
     public GameObject[] enlace_aspirina = new GameObject[26];
     public GameObject[] enlace_paracetamol = new GameObject[22];
@@ -2920,7 +2920,7 @@ public class funciones_estructuracion : MonoBehaviour
             archivo_estructuracion.guardar_variables();
             LoadScene.sceneToLoad = "Mapajuego";
             LoadPanel.SetActive(true);
-            
+
         }
         else if (bandera_intentos == 3)
         {
