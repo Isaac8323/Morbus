@@ -10,6 +10,8 @@ using System.Threading;
 using System.Data.Sql;
 using System.Data;
 using MySql.Data.MySqlClient;
+using Random = System.Random;
+
 public class botones_laboratorio : MonoBehaviour
 {
     int suma = 1;
@@ -55,6 +57,27 @@ public class botones_laboratorio : MonoBehaviour
     void Update()
     {
 
+    }
+    public void arandomisador()
+    {
+        Random random = new Random();
+        int num = random.Next(2);
+        Debug.Log(num.ToString());
+        if(num == 0)
+        {
+           fueguito();
+        }
+        else
+        {
+            suciedad();
+        }
+    }
+    public void suciedad()
+    {
+        mante.SetActive(false);
+        SelectPanel.SetActive(false);
+        LoadScene.sceneToLoad = "Mgclean";
+        LoadPanel.SetActive(true);
     }
     public void fueguito()
     {
