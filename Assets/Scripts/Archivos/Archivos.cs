@@ -90,7 +90,7 @@ public class Archivos : MonoBehaviour
                 if (variables_indestructibles.Personajes[i, x] == null)
                 {
                     prueba = 1;
-                    Debug.Log("Personaje " + x.ToString() + " fila " + i.ToString());
+                    //Debug.Log("Personaje " + x.ToString() + " fila " + i.ToString());
                 }
             }
         }
@@ -103,13 +103,13 @@ public class Archivos : MonoBehaviour
                 if (variables_indestructibles.Elementos[i, x] == null)
                 {
                     prueba = 1;
-                    Debug.Log("Elemento " + x.ToString() + " fila " + i.ToString());
-                    Debug.Log(Datos.Elementos[i, x]);
+                    //Debug.Log("Elemento " + x.ToString() + " fila " + i.ToString());
+                    //Debug.Log(Datos.Elementos[i, x]);
                 }
             }
         }
-        Debug.Log("entre2");
-        Debug.Log(Datos.Personajes[19, 2]);
+        //Debug.Log("entre2");
+        //Debug.Log(Datos.Personajes[19, 2]);
         Informacion.Close();
         if (prueba == 1)
         {
@@ -165,11 +165,11 @@ public class Archivos : MonoBehaviour
         }
         fb.Serialize(Informacion, Datos);
         Informacion.Close();
-        Debug.Log("Guardé funcion guardar");
+        //Debug.Log("Guardé funcion guardar");
     }
     public void Crear()
     {
-        Debug.Log(Application.persistentDataPath);
+        //Debug.Log(Application.persistentDataPath);
         if (File.Exists(Application.persistentDataPath + "/Partida.d"))
         {
             Debug.Log("Ya tienes un archivo we");

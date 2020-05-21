@@ -34,10 +34,6 @@ public class Levels : MonoBehaviour
                 usr.text = exp.ToString();
                 res = ((100 * act) / total) / 100;
                 bar.fillAmount = res;
-                Debug.Log(total.ToString());
-                Debug.Log(exp.ToString());
-                Debug.Log(newrq.ToString());
-                Debug.Log("Perc: " + res.ToString());
             }
         }
         if (exp >= data.Exp[20])

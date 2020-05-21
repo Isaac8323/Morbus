@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\Gestor\Levels.cs" />
     <Compile Include="Assets\Scripts\Gestor\Monedas.cs" />
     <Compile Include="Assets\Scripts\Laboratorio\botones_laboratorio.cs" />
+    <Compile Include="Assets\Scripts\Mapa juego\InstTutMapa.cs" />
     <Compile Include="Assets\Scripts\Mapa juego\Opciones_mapa.cs" />
     <Compile Include="Assets\Scripts\Mgfire\mgfirescript.cs" />
     <Compile Include="Assets\Scripts\Organismo\Actions.cs" />
@@ -90,7 +91,7 @@
     <Compile Include="Assets\Scripts\Tienda\Tienda_opciones.cs" />
     <Compile Include="Assets\Scripts\Tutorial\Dialog_manager.cs" />
     <Compile Include="Assets\Scripts\Tutorial\Dialogs.cs" />
-    <Compile Include="Assets\Scripts\Tutorial\Omitir_Tutorial.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\DialogTrigger.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

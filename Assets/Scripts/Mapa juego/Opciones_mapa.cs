@@ -15,6 +15,7 @@ public class Opciones_mapa : MonoBehaviour
 {
     public GameObject centerl, centerc, santuarl, santuarc;
     public GameObject LoadPanel, organismo, tutorial, tienda, gym, lab, almacen, santuario, exit;
+    public GameObject tuto;
     private int lvl;
     String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[11, 5];
@@ -30,6 +31,14 @@ public class Opciones_mapa : MonoBehaviour
         archivo_mapa.Cargar_Tienda(Personajes, Elementos);
         Debug.Log("entre");
         Debug.Log(Personajes[0, 6]);
+        if (variables_indestructibles.first.Equals("false"))
+        {
+            tuto.SetActive(false);
+        }
+        if (variables_indestructibles.first.Equals("true"))
+        {
+            tuto.SetActive(true);
+        }
     }
 
     void Update()

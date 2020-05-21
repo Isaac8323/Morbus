@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-
 public class Dialogs
 {
-    public string name;
-    [TextArea(3, 10)]
-    public string[] listaOraciones;
+    [TextArea(3,10)]
+    public string[] sentences;
 }
+

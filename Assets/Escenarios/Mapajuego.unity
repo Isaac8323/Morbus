@@ -1177,6 +1177,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748260495}
   m_CullTransparentMesh: 0
+--- !u!1 &847766564
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847766565}
+  - component: {fileID: 847766568}
+  - component: {fileID: 847766567}
+  - component: {fileID: 847766566}
+  m_Layer: 5
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &847766565
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847766564}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 851585831}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -614.1, y: -190.84998}
+  m_SizeDelta: {x: 280, y: 280}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &847766566
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847766564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 07fd9d388c268034db11154ac3b87ff5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &847766567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847766564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 7e5724224899f3743b8f54ea32c0ccb6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &847766568
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847766564}
+  m_CullTransparentMesh: 0
 --- !u!1 &851585830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,6 +1285,7 @@ GameObject:
   - component: {fileID: 851585832}
   - component: {fileID: 851585836}
   - component: {fileID: 851585835}
+  - component: {fileID: 851585838}
   m_Layer: 5
   m_Name: Mapa_juego
   m_TagString: Untagged
@@ -1220,6 +1315,7 @@ RectTransform:
   - {fileID: 78676107}
   - {fileID: 1529469222}
   - {fileID: 978553672}
+  - {fileID: 847766565}
   m_Father: {fileID: 991163875}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1253,6 +1349,7 @@ MonoBehaviour:
   almacen: {fileID: 1863092820}
   santuario: {fileID: 544444357}
   exit: {fileID: 1916795884}
+  tuto: {fileID: 1862482163}
 --- !u!114 &851585833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1312,6 +1409,168 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c7b124f457a59e40ba8defadecd2b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &851585838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851585830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f72b1dcc7a2024382dc350f894477f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    sentences:
+    - "\xA1Hey!, bienvenido a Morbus, encantada de conocerte, me llamo Clara (como
+      podr\xE1s notar...). Mi funci\xF3n aqu\xED es la de gu\xEDarte a lo largo de
+      tu traves\xEDa en este extra\xF1o lugar. Tal vez te preguntar\xE1s que ha pasado
+      aqu\xED, bueno te contar\xE9..."
+    - "Tal vez ya hayas escuhado de esto, pero sucedi\xF3 algo que todos nos tem\xEDamos
+      que pasar\xEDa alg\xFAn d\xEDa. Resulta que el uso indebido de los antibi\xF3ticos
+      al rededor del mundo ha causado que la inmunidad en contra de ellos se desarrollara
+      en ciertos agentes pat\xF3genos..."
+    - "Dichos agentes pat\xF3genos con el tiempo han sido fatales para pacientes que
+      padecerion enfermedades causadas por estos, por lo que se decidi\xF3 aumentar
+      las medidas para prevenir el desarrollo de inmunidad contra los antibi\xF3ticos..."
+    - "Dichas medidas tuvieron que ver en su mayor\xEDa con la limitaci\xF3n del uso
+      de antibi\xF3ticos, lo cual claro caus\xF3 que la taza de mortalidad aumentara
+      al rededor del mundo en estos a\xF1os, como podr\xE1s darte cuenta han sido
+      tiempos muy muy dif\xEDciles..."
+    - "Otras medidas para combatir enfermedades tuvieron que ser puestas a prueba,
+      y, lamentablemente la mayor\xEDa de estas no resultaban ser efectivas para los
+      agentes biol\xF3gicos infecciosos."
+    - "En fin... \xFAltimamente hemos observado que, de alguna manera inexplicable,
+      estos agentes han decrementado su inmunidad. No sabemos con exactitud que fue
+      lo que lo provoc\xF3, claro que tenemos especulaciones que recaen en nuestras
+      medidas de prevenci\xF3n, pero a\xFAn no estamos seguros."
+    - "As\xED que hemos decidido poner a prueba una vez m\xE1s el uso de antibi\xF3ticos
+      para ver como reaccionan esta vez, creemos que perdieron esa inmunidad, as\xED
+      que deber\xEDan contrarrestar las enfermedades de sus hu\xE9spedes..."
+    - "Entonces... tu trabajo aqu\xED ser\xE1 desarrollar en el laboratorio los antibi\xF3ticos
+      que con el tiempo se dejaron de utilizar, tu sabes, como empezar de cero..."
+    - "Despu\xE9s de crearlos los pondr\xE1s a prueba contra enfermedades dentro de
+      los pacientes que tenemos en el sector. S\xE9 que suena poco \xE9tico, pero
+      no lograremos nada sin experimentar y acabar con esta tragedia de una vez por
+      todas."
+    - "Bueno, bueno, s\xE9 que eres un novato y no tienes idea de lo que est\xE1s
+      viendo, te lo explicar\xE9 tambi\xE9n..."
+    - "Como puedes ver existen 6 secciones en el juego, que corresponden a los sectores
+      de esta \xE1rea, el primero de ellos es la secci\xF3n de tutoriales..."
+    - "Aqu\xED est\xE1..."
+    - "Bueno, aqu\xED dentro me podr\xE1s encontrar para repetirte cualquier cosa
+      que no te haya quedado claro, tendr\xE1s disponibles cada una de las explicaciones
+      que te dar\xE9 a lo largo del juego..."
+    - "Por si alg\xFAn detalle se te olvida o me callaste por error con el bot\xF3n
+      omitir, a veces ese tipo de cosas suceden..."
+    - "Bueno prosiguiendo con las secciones, la siguiente de llas es la tienda, sonar\xE1
+      raro pero aqu\xED puedes comprar elementos, antibi\xF3ticos y hasta podr\xE1s
+      hacer intercambios...."
+    - "Se encuentra aqu\xED..."
+    - "Entra cuando quieras y compra los elementos que necesites para fabricar las
+      curas que necesites, tambi\xE9n hay un par de estas en venta por si te interesa..."
+    - Y si te sobra alguna cura que hayas fabricado puedes intercambiarla por recursos
+      en el juego...
+    - "Bueno, acerca de los recursos, pues al fin y al cabo vivimos en un entorno
+      capitalista, as\xED que tendr\xE1s que ingeniartelas para conseguir dinero y
+      poder realizar transacciones..."
+    - "El dinero aqu\xED consta de monedas y bismutos, a lo mejor lo has visto antes,
+      hablo de los cristales de bismuto, no me preguntes por qu\xE9 pero tienen m\xE1s
+      valor que las monedas."
+    - "Bueno, continuando con las secciones, como puedes notar hay un par que no est\xE1n
+      disponibles para ti por el momento, y esto es debido a tu nivel de experiencia,
+      si te lo dije antes, eres un novato..."
+    - "Ver\xE1s, tienes una barra de experiencia la cual se encuentra en la parte
+      superior derecha de tu pantalla, en el mapa del juego, en el cual estamos en
+      este momento, \xA1vamos!, no es dif\xEDcil de ubicar..."
+    - "Bien dependiendo de la cantidad de experiencia que vayas obteniendo subir\xE1
+      tu barra de xp, y una vez que est\xE9 llena, pasar\xE1s de nivel. La cantidad
+      necesaria para esto se indica en los numeros arriba de esta."
+    - "Y en la parte derecha se encuentra el n\xFAmero que representa el nivel actual
+      en el que te encuentras, se supone que empiezas por el nivel 1..."
+    - "En f\xEDn, el sistema te indicar\xE1 qu\xE9 niveles necesitas para desbloquear
+      qu\xE9 tipo de cosas en el juego..."
+    - "Bueno, a continuaci\xF3n se encuentra el laboratorio farmac\xE9utico, este
+      es el lugar m\xE1s importante en este sector, ya que es aqu\xED donde llevar\xE1s
+      a cabo la fabricaci\xF3n de compuestos."
+    - "Es este de aqu\xED, yo creo que s\xED lo ves..."
+    - "Bueno, pues lo dicho, aqu\xED dentro es el lugar donde pasar\xE1s un buen rato
+      de tensi\xF3n y estr\xE9s, no me culpes, hacer medicamentos no es una tarea
+      sencilla..."
+    - "Despu\xE9s tenemos la secci\xF3n almac\xE9n, en el cual, bueno, su nombre lo
+      dice, es un lugar donde almacenas todas las curas que hayas logrado desarrollar
+      a lo largo del juego..."
+    - Aunque tiene un par de cosas curiosas...
+    - "Miralo, est\xE1 ah\xED..."
+    - "Te dec\xEDa que es algo peculiar, por que bueno, no solo es un almac\xE9n,
+      si no que cuenta adem\xE1s con el archivo de todas las curas con las que se
+      experimentar\xE1 en esta misi\xF3n, es ah\xED d\xF3nde te dar\xE1s cuenta qu\xE9
+      es lo que te hace falta para armar una..."
+    - "Hablo de que ah\xED tendr\xE1s disponible el nombre, descripci\xF3n, f\xF3rmula
+      estructrural, f\xF3rmula molecular y una im\xE1gen de cada una de ellas."
+    - "Y te preguntar\xE1s, \xBFpara qu\xE9 quiero ver la im\xE1gen de un medicamento?..."
+    - Bueno, algo que no sabes es que en este lugar los medicamentos no son como te
+      imaginabas...
+    - "Quiero decir, en realidad son seres, \xA1muy parecidos a nosotros!..."
+    - "Lo s\xE9, lo s\xE9, s\xE9 que suena extra\xF1o, pero son muy buena onda, y
+      nos ayudan a erradicar enfermedades. Yo creo que hasta les puedes tomar cari\xF1o..."
+    - "Son muy buenos sujetos despu\xE9s de todo... no me preguntes por qu\xE9 es
+      as\xED, las cosas funcionan diferente por ac\xE1..."
+    - "Bueno, bueno, bueno, ya por \xFAltimo tenemos la secci\xF3n de organismo humano..."
+    - "Tal vez te preguntes por qu\xE9 ese nombre, pero es que en serio, entrar\xE1s
+      al organismo humano del paciente, es m\xE1s divertido de lo que pueda parecerte
+      en un principio."
+    - "As\xED que bueno, entras aqu\xED y visitas el sistema en el que se encuentra
+      el problema o la enfermedad...\t"
+    - "Bueno podr\xE1s ir avanzando entre sistemas mientras vayas derrotando a las
+      enfermedades, por que claro, los medicamentos hacen su trabajo enfrentando cara
+      a cara a las patolog\xEDas, \xA1te dije que eran incre\xEDbles!..."
+    - "Cada medicamento tiene sus propiedades curativas distintas y efectividad contra
+      cierto tipo de enfermedades, as\xED que tendr\xE1s que ser algo estrat\xE9gico
+      en cuanto a quien pondr\xE1s a enfrentar la enfermedad."
+    - "Tienes que enfrentar a cada una con un equipo de 3 curas, ni m\xE1s ni menos.
+      Pero ser\xE1 un equipo selecto seg\xFAn la enfermedad."
+    - "Bueno, una vez derrotada tendr\xE1s tus recompensas monetarias y de experiencia..."
+    - "\xA1Ahhh!, esa idea si te gust\xF3... jajaja"
+    - "Tendr\xE1s recompenzas derrotando enfermedades y conseguiendo las curas, algo
+      justo para m\xED..."
+    - "Bueno ya debes estar cansado de estarme escuchando decir tantas cosas, \xBFqu\xE9
+      te parece si comenzamos haciendo tu primera cura?..."
+    - "Suena emocionante, \xBFA que s\xED?..."
+    - "Bueno, vayamos al laboratorio entonces, \xA1Ven conmigo!.."
+    - 
+    - 
+    - 
+    - 
+    - 
+  load: {fileID: 1908607699}
+  tut: {fileID: 1862482163}
+  focus: {fileID: 847766564}
+  clara: {fileID: 886606173}
+  panel: {fileID: 1542650170}
+  pointer: {fileID: 847766566}
+  animclara: {fileID: 886606172}
+  key: {fileID: 1041890840}
+  displayText: {fileID: 1715766880}
+--- !u!95 &886606172 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1115852343540395384, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135260390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &886606173 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1115852343540395385, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135260390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &959045485
@@ -1532,6 +1791,7 @@ RectTransform:
   - {fileID: 851585831}
   - {fileID: 2023509517}
   - {fileID: 1908607700}
+  - {fileID: 1862482164}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1577,6 +1837,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991163871}
   m_CullTransparentMesh: 0
+--- !u!95 &1041890840 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1115852342380461818, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135260390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1078011055
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,6 +2137,180 @@ RectTransform:
   m_AnchoredPosition: {x: 1.2, y: -2.3999}
   m_SizeDelta: {x: 174.3, y: 174.3}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1135260390
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 991163875}
+    m_Modifications:
+    - target: {fileID: 1115852343702282021, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_Name
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282021, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 959.99994
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 576
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8749999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8749999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8749999
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343540395367, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2546967757817749232, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b4f89dbe079ff62408e2176f2c9d40b1, type: 3}
 --- !u!1 &1231935346
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,6 +3879,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 3749946729513969083, guid: 953806e89a45d844996f7cec6afdacf6, type: 3}
+--- !u!114 &1542650170 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4788752097022728248, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135260390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1558052831
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,6 +4109,18 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
+--- !u!114 &1715766880 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135260390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1723257650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4107,6 +4571,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851562989}
   m_CullTransparentMesh: 0
+--- !u!1 &1862482163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1115852343702282021, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135260390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1862482164 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1135260390}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1863092820
 GameObject:
   m_ObjectHideFlags: 0

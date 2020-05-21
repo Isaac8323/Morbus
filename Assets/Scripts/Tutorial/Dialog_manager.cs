@@ -5,36 +5,39 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class Dialog_manager : MonoBehaviour
 {
+    public int cont = 0;
+    public int NoTutorial; // 1.Intro, 2.Creacion de curas, 3.Compras, 4.Combates, 5.Centro de entrenamiento, 6.Arenas, 7.Nivel20, 8.Arenas desb
     public Animator animator;
-    public Dialogs dialogos;
-
-    Queue<string> sentences; //Listado de oraciones que cambia constantemente
-
+    public Animator key;
+    private Queue<string> sentences; //Listado de oraciones que cambia constantemente
     public GameObject panelDialogo; //Espacio en donde se mostrará el texto 
     public GameObject clara;
     public TextMeshProUGUI displayText; //Texto que representará el conjunto de oraciones
-    string activeSentence; //Valor de la oración actual
+    public string activeSentence; //Valor de la oración actual
     public float typingSpeed; //rapidez de desplazamiento de texto
-    int cont=0;
     AudioSource myAudio; //Declaración del recurso de sonido
     public AudioClip speakSound; //Se reproduce a la par que aparece el texto
 
     private void Awake()
-    {        
+    {
         sentences = new Queue<string>(); //Crea la sentencia u oración actual
         myAudio = GetComponent<AudioSource>(); //Toma el valor del audio que se reproduce mientras se muestra el texto        
-        StartDialogue();        
+    }
+
+    public void Skip()
+    {
+        Destroy(GameObject.Find("Tutorial"));
     }
 
     void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 
-    void StartDialogue()
+    public void StartDialogue(Dialogs dialogs)
     {
         sentences.Clear(); //Limpia el queue con la oración anterior
-        foreach(string sentence in dialogos.listaOraciones)
+        foreach(string sentence in dialogs.sentences)
         {
             sentences.Enqueue(sentence); //Tomar la oración y la añade al queue para ser presentada
         }
@@ -52,7 +55,11 @@ public class Dialog_manager : MonoBehaviour
         activeSentence = sentences.Dequeue(); //Saca la oración del listado y la pasa a activeSentence
         displayText.text = activeSentence;
         StopAllCoroutines();
-        StartCoroutine(TypeTheSentence(activeSentence));        
+        StartCoroutine(TypeTheSentence(activeSentence));
+        if (sentences.Count == 0)
+        {
+            Destroy(GameObject.Find("Tutorial"));
+        }
     }
 
     IEnumerator TypeTheSentence(string sentence)
@@ -68,33 +75,10 @@ public class Dialog_manager : MonoBehaviour
 
     void Update()
     {
-        animator.SetBool("Silencio", false);
-        if (Input.GetMouseButtonUp(0) && displayText.text == activeSentence) //Detecta el clic izquierdo del ratón y verifica que la oración anterior haya terminado
+        if (Input.GetKey(KeyCode.Return) && displayText.text == activeSentence) //Detecta el clic izquierdo del ratón y verifica que la oración anterior haya terminado
         {            
             DisplayNextSentence();
-            if (cont == 4)
-            {
-                Debug.Log("Aquí aparece la flecha");
-
-            }
-            if (cont == 6)
-            {
-                Debug.Log("Aquí desaparece");
-            }
-            if (cont < 15)
-            {
-                cont++;
-            }
-            else
-            {
-                cont = 0;
-                SceneManager.LoadScene("Mapajuego");
-            }
-            
-        }
-        if (displayText.text == activeSentence)
-        {
-            animator.SetBool("Silencio", true);
+            cont++;
         }
     }
 }
