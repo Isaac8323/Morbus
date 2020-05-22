@@ -82,6 +82,7 @@ public class Archivos : MonoBehaviour
         variables_indestructibles.Arenas = Datos.Arenas;
         variables_indestructibles.first = Datos.first;
         variables_indestructibles.mantenimient = Datos.mantenimient;
+        variables_indestructibles.Tutorial = Datos.Tutorial;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -137,6 +138,7 @@ public class Archivos : MonoBehaviour
         Datos.Arenas = variables_indestructibles.Arenas;
         Datos.first = variables_indestructibles.first;
         Datos.mantenimient = variables_indestructibles.mantenimient;
+        Datos.Tutorial = variables_indestructibles.Tutorial;
         for (int x = 0; x < 25; x++)
         {
             Datos.Intentos_curas[x] = variables_indestructibles.Intentos_curas[x];
@@ -435,6 +437,7 @@ public class Archivos : MonoBehaviour
             Datos.sesion = "";
             Datos.estructuracion = "";
             Datos.mantenimient = "0";
+            Datos.Tutorial = "0";
             for (int x = 0; x < 3; x++)
             {
                 for (int i = 0; i < 11; i++)
@@ -600,4 +603,5 @@ class DatosdeJuego : System.Object
     public String first;
     public String[] Intentos_curas = new String[25];
     public String mantenimient;
+    public String Tutorial;
 }

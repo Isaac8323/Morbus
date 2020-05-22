@@ -11,9 +11,11 @@ public class InstTutMapa : MonoBehaviour
     public Image clara, panel;
     public Animator pointer, animclara, key;
     public TextMeshProUGUI displayText;
+    public Archivos arcTut;
 
     void Start()
     {
+        arcTut.cargar_variables();
         if (tut)
         {
             if (tut.activeInHierarchy == true)
@@ -24,126 +26,104 @@ public class InstTutMapa : MonoBehaviour
         }
     }
 
+    private void HideClara(string anim)
+    {
+        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
+        clara.enabled = false;
+        focus.SetActive(true);
+        pointer.SetBool(anim, true);
+    }
+
     void Update()
     {
         if (tut)
         {
             if (tut.activeInHierarchy == true)
             {
-                if (FindObjectOfType<Dialog_manager>().cont == 13 || FindObjectOfType<Dialog_manager>().cont == 47)
+                int cont = FindObjectOfType<Dialog_manager>().cont;
+                switch (variables_indestructibles.Tutorial)
                 {
-                    key.SetBool("Texting", true);
-                    animclara.SetBool("Verguenza", true);
-                }
-                else if (FindObjectOfType<Dialog_manager>().cont == 45 || FindObjectOfType<Dialog_manager>().cont == 48)
-                {
-                    key.SetBool("Texting", true);
-                    animclara.SetBool("Happy", true);
-                }
-                else
-                {
-                    key.SetBool("Texting", true);
-                    animclara.SetBool("Silencio", false);
-                }
-                if (displayText.text == FindObjectOfType<Dialog_manager>().activeSentence)
-                {
-                    if (FindObjectOfType<Dialog_manager>().cont == 13 || FindObjectOfType<Dialog_manager>().cont == 47)
-                    {
-                        animclara.SetBool("SilVerguenza", true);
-                        key.SetBool("Texting", false);
-                    }
-                    else if (FindObjectOfType<Dialog_manager>().cont == 45 || FindObjectOfType<Dialog_manager>().cont == 48)
-                    {
-                        key.SetBool("Texting", false);
-                        animclara.SetBool("SilHappy", true);
-                    }
-                    else
-                    {
-                        animclara.SetBool("Silencio", true);
-                        key.SetBool("Texting", false);
-                    }
-                }
-                switch (FindObjectOfType<Dialog_manager>().cont)
-                {
-                    case 11:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
-                        clara.enabled = false;
-                        focus.SetActive(true);
-                        pointer.SetBool("Tutorial", true);
+                    case "0":
+                        if (cont == 13 || cont == 47)
+                        {
+                            key.SetBool("Texting", true);
+                            animclara.SetBool("Verguenza", true);
+                        }
+                        else if (cont == 45 || cont == 48)
+                        {
+                            key.SetBool("Texting", true);
+                            animclara.SetBool("Happy", true);
+                        }
+                        else
+                        {
+                            key.SetBool("Texting", true);
+                            animclara.SetBool("Silencio", false);
+                        }
+                        if (displayText.text == FindObjectOfType<Dialog_manager>().activeSentence)
+                        {
+                            if (cont == 13 || cont == 47)
+                            {
+                                animclara.SetBool("SilVerguenza", true);
+                                key.SetBool("Texting", false);
+                            }
+                            else if (cont == 45 || cont == 48)
+                            {
+                                key.SetBool("Texting", false);
+                                animclara.SetBool("SilHappy", true);
+                            }
+                            else
+                            {
+                                animclara.SetBool("Silencio", true);
+                                key.SetBool("Texting", false);
+                            }
+                        }
+                        if (cont == 13 || cont == 18 || cont == 28 || cont == 33 || cont == 42)
+                        {
+                            panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.5f);
+                            panel.enabled = true;
+                            clara.enabled = true;
+                            focus.SetActive(false);
+                        }
+                        if (cont == 14 || cont == 48)
+                        {
+                            animclara.SetBool("SilVerguenza", false);
+                            animclara.SetBool("Verguenza", false);
+                        }
+                        if (cont == 46 || cont == 49)
+                        {
+                            animclara.SetBool("Happy", false);
+                            animclara.SetBool("SilHappy", false);
+                        }
+                        switch (FindObjectOfType<Dialog_manager>().cont)
+                        {
+                            case 11:
+                                HideClara("Tutorial");
+                                break;
+                            case 15:
+                                HideClara("Tienda");
+                                break;
+                            case 26:
+                                HideClara("Laboratorio");
+                                break;
+                            case 30:
+                                HideClara("Almacen");
+                                break;
+                            case 40:
+                                HideClara("Arena");
+                                break;
+                            case 50:
+                                variables_indestructibles.Tutorial = "1";
+                                arcTut.guardar_variables();
+                                LoadScene.sceneToLoad = "Laboratorio";
+                                load.SetActive(true);
+                                break;
+                        }
                         break;
-                    case 13:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.5f);
-                        panel.enabled = true;
-                        clara.enabled = true;
-                        focus.SetActive(false);
-                        break;
-                    case 14:
-                        animclara.SetBool("SilVerguenza", false);
-                        animclara.SetBool("Verguenza", false);
-                        break;
-                    case 15:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
-                        clara.enabled = false;
-                        focus.SetActive(true);
-                        pointer.SetBool("Tienda", true);
-                        break;
-                    case 18:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.5f);
-                        panel.enabled = true;
-                        clara.enabled = true;
-                        focus.SetActive(false);
-                        break;
-                    case 26:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
-                        clara.enabled = false;
-                        focus.SetActive(true);
-                        pointer.SetBool("Laboratorio", true);
-                        break;
-                    case 28:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.5f);
-                        panel.enabled = true;
-                        clara.enabled = true;
-                        focus.SetActive(false);
-                        break;
-                    case 30:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
-                        clara.enabled = false;
-                        focus.SetActive(true);
-                        pointer.SetBool("Almacen", true);
-                        break;
-                    case 33:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.5f);
-                        panel.enabled = true;
-                        clara.enabled = true;
-                        focus.SetActive(false);
-                        break;
-                    case 40:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
-                        clara.enabled = false;
-                        focus.SetActive(true);
-                        pointer.SetBool("Arena", true);
-                        break;
-                    case 42:
-                        panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.5f);
-                        panel.enabled = true;
-                        clara.enabled = true;
-                        focus.SetActive(false);
-                        break;
-                    case 46:
-                        animclara.SetBool("Happy", false);
-                        animclara.SetBool("SilHappy", false);
-                        break;
-                    case 48:
-                        animclara.SetBool("SilVerguenza", false);
-                        animclara.SetBool("Verguenza", false);
-                        break;
-                    case 50:
-                        LoadScene.sceneToLoad = "Laboratorio";
-                        load.SetActive(true);
+                    case "1":
+
                         break;
                 }
             }
         }
-
     }
 }

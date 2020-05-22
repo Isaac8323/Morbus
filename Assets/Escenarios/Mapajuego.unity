@@ -1555,6 +1555,7 @@ MonoBehaviour:
   animclara: {fileID: 886606172}
   key: {fileID: 1041890840}
   displayText: {fileID: 1715766880}
+  arcTut: {fileID: 851585835}
 --- !u!95 &886606172 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1115852343540395384, guid: b4f89dbe079ff62408e2176f2c9d40b1,
@@ -1790,8 +1791,8 @@ RectTransform:
   m_Children:
   - {fileID: 851585831}
   - {fileID: 2023509517}
-  - {fileID: 1908607700}
   - {fileID: 1862482164}
+  - {fileID: 1908607700}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2192,7 +2193,7 @@ PrefabInstance:
     - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
         type: 3}
@@ -3417,7 +3418,7 @@ PrefabInstance:
     - target: {fileID: 6612797901414040188, guid: 68ab4d84840f4d94799e6cb05e3ccc8f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6612797901414040188, guid: 68ab4d84840f4d94799e6cb05e3ccc8f,
         type: 3}

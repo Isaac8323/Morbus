@@ -27,6 +27,7 @@ public class variables_indestructibles : MonoBehaviour
     public static String easter;
     public static String first;
     public static String mantenimient;
+    public static String Tutorial;
     //
     void Start()
     {
