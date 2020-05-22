@@ -28,6 +28,9 @@ public class variables_indestructibles : MonoBehaviour
     public static String first;
     public static String mantenimient;
     public static String Tutorial;
+    public static String Trophy;
+    public static String Skin;
+    public static String TempTut;
     //
     void Start()
     {

@@ -83,6 +83,9 @@ public class Archivos : MonoBehaviour
         variables_indestructibles.first = Datos.first;
         variables_indestructibles.mantenimient = Datos.mantenimient;
         variables_indestructibles.Tutorial = Datos.Tutorial;
+        variables_indestructibles.Trophy = Datos.Trophy;
+        variables_indestructibles.Skin = Datos.Skin;
+        variables_indestructibles.TempTut = Datos.TempTut;
         for (int x = 0; x < 8; x++)
         {
             for (int i = 0; i < 25; i++)
@@ -139,6 +142,9 @@ public class Archivos : MonoBehaviour
         Datos.first = variables_indestructibles.first;
         Datos.mantenimient = variables_indestructibles.mantenimient;
         Datos.Tutorial = variables_indestructibles.Tutorial;
+        Datos.Trophy = variables_indestructibles.Trophy;
+        Datos.Skin = variables_indestructibles.Skin;
+        Datos.TempTut = variables_indestructibles.TempTut;
         for (int x = 0; x < 25; x++)
         {
             Datos.Intentos_curas[x] = variables_indestructibles.Intentos_curas[x];
@@ -377,17 +383,17 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[9, 0] = "Cobalto";
             Datos.Elementos[10, 0] = "Fosforo";
             //Cantidad Elemento
-            Datos.Elementos[0, 1] = "999";
-            Datos.Elementos[1, 1] = "999";
-            Datos.Elementos[2, 1] = "999";
-            Datos.Elementos[3, 1] = "999";
-            Datos.Elementos[4, 1] = "999";
-            Datos.Elementos[5, 1] = "999";
-            Datos.Elementos[6, 1] = "999";
-            Datos.Elementos[7, 1] = "999";
-            Datos.Elementos[8, 1] = "999";
-            Datos.Elementos[9, 1] = "999";
-            Datos.Elementos[10, 1] = "999";
+            Datos.Elementos[0, 1] = "9";
+            Datos.Elementos[1, 1] = "8";
+            Datos.Elementos[2, 1] = "4";
+            Datos.Elementos[3, 1] = "0";
+            Datos.Elementos[4, 1] = "0";
+            Datos.Elementos[5, 1] = "0";
+            Datos.Elementos[6, 1] = "0";
+            Datos.Elementos[7, 1] = "0";
+            Datos.Elementos[8, 1] = "0";
+            Datos.Elementos[9, 1] = "0";
+            Datos.Elementos[10, 1] = "0";
             //Descripcion Elemento
             Datos.Elementos[0, 2] = "Es un no metal sólido que es el componente fundamental de los compuestos orgánicos y tiene la propiedad de enlazarse con otros átomos de carbono y otras sustancias para formar un número casi infinito de compuestos.";
             Datos.Elementos[1, 2] = "Es un gas incoloro, inodoro y muy reactivo que se halla en todos los componentes de la materia viva y en muchos minerales, siendo el elemento más abundante en el universo.";
@@ -438,6 +444,9 @@ public class Archivos : MonoBehaviour
             Datos.estructuracion = "";
             Datos.mantenimient = "0";
             Datos.Tutorial = "0";
+            Datos.Trophy = "false";
+            Datos.Skin = "false";
+            Datos.TempTut = "false";
             for (int x = 0; x < 3; x++)
             {
                 for (int i = 0; i < 11; i++)
@@ -604,4 +613,7 @@ class DatosdeJuego : System.Object
     public String[] Intentos_curas = new String[25];
     public String mantenimient;
     public String Tutorial;
+    public String Trophy;
+    public String Skin;
+    public String TempTut;
 }

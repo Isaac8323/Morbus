@@ -1549,6 +1549,18 @@ MonoBehaviour:
   load: {fileID: 1908607699}
   tut: {fileID: 1862482163}
   focus: {fileID: 847766564}
+  plus: {fileID: 0}
+  less: {fileID: 0}
+  next: {fileID: 0}
+  dt: {fileID: 0}
+  pan: {fileID: 0}
+  back: {fileID: 0}
+  proceed: {fileID: 0}
+  help: {fileID: 0}
+  celdas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   clara: {fileID: 886606173}
   panel: {fileID: 1542650170}
   pointer: {fileID: 847766566}
@@ -2275,11 +2287,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.8749999
       objectReference: {fileID: 0}
-    - target: {fileID: 1115852343540395367, guid: b4f89dbe079ff62408e2176f2c9d40b1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2305,10 +2312,45 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1115852343540395367, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2546967757817749232, guid: b4f89dbe079ff62408e2176f2c9d40b1,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342515570177, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342515570177, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342515570177, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342515570177, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 851585838}
+    - target: {fileID: 1115852342515570177, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Omitir
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342515570177, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f89dbe079ff62408e2176f2c9d40b1, type: 3}

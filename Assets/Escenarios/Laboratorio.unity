@@ -2310,6 +2310,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237977318}
   m_CullTransparentMesh: 0
+--- !u!1 &291872676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1115852342866935058, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504279948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &311729792
 GameObject:
   m_ObjectHideFlags: 0
@@ -4993,7 +4999,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664793239}
   m_HandleRect: {fileID: 664793238}
   m_Direction: 2
-  m_Value: 0.9969854
+  m_Value: 0.9969857
   m_Size: 0.8330708
   m_NumberOfSteps: 1
   m_OnValueChanged:
@@ -8423,6 +8429,7 @@ MonoBehaviour:
   alerta_sulfa: {fileID: 229946618}
   destroyd: {fileID: 968889348}
   mante: {fileID: 1111970851}
+  tuto: {fileID: 1504279950}
 --- !u!114 &1201610029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8480,29 +8487,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialog:
     sentences:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    - "Bien, este es tu espacio de trabajo, en donde primeramente tendr\xE1s que seleccionar
+      los elementos que usar\xE1s en tus experimentos, hay un panel con dos listas
+      en \xE9l, una de elementos adquiridos y otra de seleccionados."
+    - El panel de elementos adquiridos se encuentra en el lado izquierdo, y contiene
+      todos aquellos elementos que hayas comprado en la tienda del juego, distribuidos
+      en estas celdas...
+    - "Vamos, es bastante sencillo... Aqu\xED aparecer\xE1n El nombre y el s\xEDmbolo
+      del elemento en cuesti\xF3n."
+    - De ser el caso que tengas tanta variedad de elementos que no se ven todos a
+      primera vista, puedes desplazarte en las listas con las barras de desplazamiento
+      que se encuentran del lado derecho de cada una...
+    - "Una vez ubiques tus elementos podr\xE1s ver la descripci\xF3n de cada uno y
+      la cantidad dando clic en la celda correspondiente."
+    - "Se ve tal que as\xED..."
+    - "En este peque\xF1o panel tambi\xE9n se encuentran un par de botones con los
+      s\xEDmbolos \"+\" y \"-\" respectivamente...."
+    - "Ah\xED, m\xEDralos..."
+    - "Al hacer clic en el bot\xF3n de \"+\" a\xF1adir\xE1s un elemento del tipo correspondiente
+      seg\xFAn la celda que hayas clicado. Este a la vez se agregar\xE1 a la lista
+      de la derecha, la de elementos seleccionados..."
+    - "De la misma manera al presionar el bot\xF3n \"-\" la cantidad de elementos
+      del tipo correspondiente disminuir\xE1 en 1, es muy sencillo de utilizar a mi
+      parecer..."
+    - "Bien, por ser tu primera vez, yo seleccionar\xE9 los elementos por t\xED, que
+      por cierto van de parte m\xEDa, te he dado C9H8O4, \xA1los necesarios para estructurar
+      la f\xF3rmula de Aspirina!, \xBFqu\xE9 te parece?, de seguro la conoces..."
+    - "Bueno una vez seleccionados hay que presionar este peque\xF1o bot\xF3n que
+      dice \"siguiente\", \xA1no te preocupes!, lo presionar\xE9 por t\xED jejeje...."
+    - "Bueno una vez hecho esto, hay que confirmar que estamos seguros de lo que hemos
+      seleccionado, \xA1siempre que sea el caso claro!..."
+    - "Y al darle en aceptar nos saldr\xE1 esta ventanita, con la im\xE1gen de la
+      cura que estamos a punto de estructurar, de nuevo, si est\xE1s seguro, le das
+      en proceder."
+    - Que yo lo presiono tranquilo...
+    - "Aqu\xED vamos..."
+    - '...'
     - 
     - 
     - 
   load: {fileID: 1934597939}
   tut: {fileID: 1504279950}
   focus: {fileID: 859070359}
+  plus: {fileID: 860621132}
+  less: {fileID: 577241242}
+  next: {fileID: 361700437}
+  dt: {fileID: 1568754379}
+  pan: {fileID: 291872676}
+  back: {fileID: 2041723933}
+  proceed: {fileID: 1298565834}
+  celdas:
+  - {fileID: 196801613}
+  - {fileID: 387923304}
+  - {fileID: 918143209}
   clara: {fileID: 1504279955}
   panel: {fileID: 1504279956}
   pointer: {fileID: 859070361}
@@ -10870,7 +10907,7 @@ PrefabInstance:
     - target: {fileID: 1115852343702282021, guid: b4f89dbe079ff62408e2176f2c9d40b1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1115852343702282041, guid: b4f89dbe079ff62408e2176f2c9d40b1,
         type: 3}
@@ -11067,6 +11104,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 135.87
       objectReference: {fileID: 0}
+    - target: {fileID: 1115852342866935058, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4f89dbe079ff62408e2176f2c9d40b1, type: 3}
 --- !u!224 &1504279949 stripped
@@ -11102,7 +11144,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1504279948}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1568754379}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -11138,7 +11180,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1504279948}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2041723933}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
@@ -11507,6 +11549,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1564723510}
   m_CullTransparentMesh: 0
+--- !u!1 &1568754379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1115852342797799671, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504279948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1575432615
 GameObject:
   m_ObjectHideFlags: 0
@@ -12776,8 +12824,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1646392568}
   m_HandleRect: {fileID: 1646392567}
   m_Direction: 2
-  m_Value: 0.9999997
-  m_Size: 0.8350869
+  m_Value: 0.99999934
+  m_Size: 0.8350868
   m_NumberOfSteps: 1
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14879,6 +14927,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038629069}
   m_CullTransparentMesh: 0
+--- !u!1 &2041723933 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2546967757817749232, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1504279948}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2041895816
 GameObject:
   m_ObjectHideFlags: 0

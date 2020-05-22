@@ -25,7 +25,7 @@ public class botones_laboratorio : MonoBehaviour
     String[,] plussless = new String[11, 2];
     public String cargarformula;
     Text celdas_elementos_adquiridos, add, totalelemtnos_panel_seleccion, cantidad_panel_seleccionados, texto_alerta;
-    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel, alerta_sulfa, destroyd, mante;
+    public GameObject panel_elementos_seleccion, LoadPanel, Alerta_a, panel_confirmacion_final, SelectPanel, alerta_sulfa, destroyd, mante, tuto;
     Text elementin;
     Image UIImage;
     Text[] element = new Text[11];
@@ -51,6 +51,17 @@ public class botones_laboratorio : MonoBehaviour
 
         }
         ElementrosAdquiridos();
+        if (variables_indestructibles.first.Equals("false"))
+        {
+            tuto.SetActive(false);
+        }
+        if (variables_indestructibles.first.Equals("true"))
+        {
+            if (variables_indestructibles.Tutorial.Equals("1"))
+            {
+                tuto.SetActive(true);
+            }
+        }
     }
 
     // Update is called once per frame

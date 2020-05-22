@@ -37,7 +37,10 @@ public class Opciones_mapa : MonoBehaviour
         }
         if (variables_indestructibles.first.Equals("true"))
         {
-            tuto.SetActive(true);
+            if (variables_indestructibles.Tutorial.Equals("0"))
+            {
+                tuto.SetActive(true);
+            }
         }
     }
 

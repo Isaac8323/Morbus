@@ -667,7 +667,7 @@ MonoBehaviour:
   clara: {fileID: 1115852343540395367}
   displayText: {fileID: 1115852342797799625}
   activeSentence: 
-  typingSpeed: 0.02
+  typingSpeed: 0.001
   speakSound: {fileID: 8300000, guid: 76c3417eba0045442aed0eb3728cbc96, type: 3}
 --- !u!82 &1115852343540395386
 AudioSource:
