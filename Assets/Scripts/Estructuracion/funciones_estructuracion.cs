@@ -15,7 +15,7 @@ public class funciones_estructuracion : MonoBehaviour
 {
     String[,] Elementos2 = new String[11, 3];
     Archivos archivo_estructuracion;
-    Text elementin, elemento_text_text;
+    Text elementin, elemento_text_text,check_elementos;
     Image UIImage;
     public GameObject Element_global, LoadPanel, ayuda, necesito, nonecesito, ok, img_help, felicidades, ok_Explotion, veri;
     public GameObject[] cura = new GameObject[25];
@@ -59,6 +59,7 @@ public class funciones_estructuracion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        veri.SetActive(false);
         archivo_estructuracion = GameObject.Find("Estructuracion").GetComponent<Archivos>();
         archivo_estructuracion.cargar_variables();
         elementsadd();
@@ -66,7 +67,6 @@ public class funciones_estructuracion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
 
         if (banderin == 1)
         {
@@ -87,6 +87,7 @@ public class funciones_estructuracion : MonoBehaviour
                     banderin = 0;
                     starttimer = 0;
                     time = 0.1f;
+                    achecar_elementos();
                     click_other_shit();
                     Element_global.SetActive(false);
                     //Do Something after clock hits 0
@@ -95,7 +96,30 @@ public class funciones_estructuracion : MonoBehaviour
             Element_global.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
         }
     }
-
+    public void achecar_elementos()
+    {
+        int cont = 0;
+        for (int i = 1; i < 12; i++) {
+            check_elementos = GameObject.Find("txt_total"+i.ToString()).GetComponent<Text>();
+            if (check_elementos.text.Equals(""))
+            {
+                check_elementos.text = "0";
+                if (check_elementos.text.Equals("0"))
+                {
+                    cont++;
+                }
+                check_elementos.text = "";
+            }
+            else if (check_elementos.text.Equals("0"))
+            {
+                cont++;
+            }
+            if (cont == 11)
+            {
+                veri.SetActive(true);
+            }
+        }
+    }
     public void mouseup_on_element()
     {
         mouseupper = 1;
@@ -3012,16 +3036,20 @@ public class funciones_estructuracion : MonoBehaviour
         int incremento = Int32.Parse(variables_indestructibles.Personajes[numero_del_pj_en_el_archivo, 2]);
         incremento = incremento + 1;
         int suma_exp = Int32.Parse(variables_indestructibles.experiencia);
+        int exp_ganada = 0;
         if (variables_indestructibles.Personajes[numero_del_pj_en_el_archivo, 1].Equals("easy"))
         {
+            exp_ganada = 800;
             suma_exp = suma_exp + 800;
         }
         else if (variables_indestructibles.Personajes[numero_del_pj_en_el_archivo, 1].Equals("Complex"))
         {
+            exp_ganada = 2000;
             suma_exp = suma_exp + 2000;
         }
         else if (variables_indestructibles.Personajes[numero_del_pj_en_el_archivo, 1].Equals("Hard"))
         {
+            exp_ganada = 10000;
             suma_exp = suma_exp + 10000;
         }
         variables_indestructibles.experiencia = suma_exp.ToString();
@@ -3125,6 +3153,8 @@ public class funciones_estructuracion : MonoBehaviour
         felicidades.SetActive(true);
         elementin = GameObject.Find("felicidades_name").GetComponent<Text>();
         elementin.text = variables_indestructibles.Personajes[numero_del_pj_en_el_archivo, 0];
+        elementin = GameObject.Find("exp_por_pj").GetComponent<Text>();
+        elementin.text = "+"+exp_ganada.ToString()+" de experiencia";
     }
 
     public void agenial()

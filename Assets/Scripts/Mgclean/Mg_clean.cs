@@ -17,6 +17,7 @@ public class Mg_clean : MonoBehaviour
     int[] time = new int[6];
     int[] fuegos_activados = new int[6];
     int[] banders = new int[6];
+    int presionable = 0;
     public GameObject trapido, recogedor, v1, v2, m1, m2, m3, LoadPanel, panel;
     private Animator ext;
     bool seguidor = false, trapitotrue = false;
@@ -53,12 +54,7 @@ public class Mg_clean : MonoBehaviour
         }
         if (!Input.GetMouseButton(0))
         {
-            Debug.Log("no click");
-            fuegos_activados[0] = 0;
-            fuegos_activados[1] = 0;
-            fuegos_activados[2] = 0;
-            fuegos_activados[3] = 0;
-            fuegos_activados[4] = 0;
+
         }
         else
         {
@@ -66,8 +62,12 @@ public class Mg_clean : MonoBehaviour
             {
                 if (time[0] >= 0)
                 {
-                    time[0] -= 1 ;
-                    return;
+                    if (presionable == 0)
+                    {
+                        Debug.Log("entre");
+                        time[0] -= 1;
+                        return;
+                    }
                 }
                 else
                 {
@@ -173,6 +173,7 @@ public class Mg_clean : MonoBehaviour
         if (trapitotrue == false)
         {
             fuegos_activados[0] = 1;
+            presionable = 1;
             Debug.Log("1");
         }
     }
@@ -181,6 +182,7 @@ public class Mg_clean : MonoBehaviour
         if (trapitotrue == false)
         {
             fuegos_activados[1] = 1;
+            presionable = 1;
         }
     }
     public void m_1()
@@ -188,6 +190,7 @@ public class Mg_clean : MonoBehaviour
         if (trapitotrue == true)
         {
             fuegos_activados[2] = 1;
+            presionable = 1;
         }
     }
     public void m_2()
@@ -195,6 +198,7 @@ public class Mg_clean : MonoBehaviour
         if(trapitotrue == true)
         {
             fuegos_activados[3] = 1;
+            presionable = 1;
         }
     }
     public void m_3()
@@ -202,6 +206,24 @@ public class Mg_clean : MonoBehaviour
         if(trapitotrue == true)
         {
             fuegos_activados[4] = 1;
+            presionable = 1;
+        }
+    }
+    public void controlador_pressbutton()
+    {
+        Debug.Log("0 todos");
+        presionable = 0;
+        if (fuegos_activados[0]==1 || fuegos_activados[1] == 1 || fuegos_activados[2] == 1 || fuegos_activados[3] == 1 || fuegos_activados[4] == 1)
+        {
+
+        }
+        else {
+            presionable = 0;
+            fuegos_activados[0] = 0;
+            fuegos_activados[1] = 0;
+            fuegos_activados[2] = 0;
+            fuegos_activados[3] = 0;
+            fuegos_activados[4] = 0;
         }
     }
 
