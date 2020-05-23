@@ -51,17 +51,15 @@ public class botones_laboratorio : MonoBehaviour
 
         }
         ElementrosAdquiridos();
-        if (variables_indestructibles.first.Equals("false"))
+        if (variables_indestructibles.Tutorial.Equals("1"))
+        {
+            tuto.SetActive(true);
+        }
+        else
         {
             tuto.SetActive(false);
         }
-        if (variables_indestructibles.first.Equals("true"))
-        {
-            if (variables_indestructibles.Tutorial.Equals("1"))
-            {
-                tuto.SetActive(true);
-            }
-        }
+
     }
 
     // Update is called once per frame
@@ -74,9 +72,9 @@ public class botones_laboratorio : MonoBehaviour
         Random random = new Random();
         int num = random.Next(2);
         Debug.Log(num.ToString());
-        if(num == 0)
+        if (num == 0)
         {
-           fueguito();
+            fueguito();
         }
         else
         {

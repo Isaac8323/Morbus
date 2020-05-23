@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class Dialog_manager : MonoBehaviour
 {
     public int cont = 0;
-    public int NoTutorial; // 1.Intro, 2.Creacion de curas, 3.Compras, 4.Combates, 5.Centro de entrenamiento, 6.Arenas, 7.Nivel20, 8.Arenas desb
     public Animator animator;
     public Animator key;
     private Queue<string> sentences; //Listado de oraciones que cambia constantemente

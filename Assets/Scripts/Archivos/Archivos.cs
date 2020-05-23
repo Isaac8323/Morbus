@@ -435,10 +435,10 @@ public class Archivos : MonoBehaviour
             Datos.Arenas = "false";
             Datos.finished = "false";
             Datos.first = "true";
-            Datos.monedas[0] = "1500000";
-            Datos.bismuto = "33";
+            Datos.monedas[0] = "40000";
+            Datos.bismuto = "0";
             Datos.level[0] = "1";
-            Datos.experiencia = "321300";
+            Datos.experiencia = "0";
             Datos.nivel_organismo_jefes = "2";
             Datos.sesion = "";
             Datos.estructuracion = "";

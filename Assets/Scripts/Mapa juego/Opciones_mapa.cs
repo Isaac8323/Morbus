@@ -42,6 +42,16 @@ public class Opciones_mapa : MonoBehaviour
                 tuto.SetActive(true);
             }
         }
+        if (variables_indestructibles.Tutorial.Equals("3"))
+        {
+            LoadScene.sceneToLoad = "Tienda";
+            LoadPanel.SetActive(true);
+        }
+        if (variables_indestructibles.Tutorial.Equals("4"))
+        {
+            LoadScene.sceneToLoad = "Selection";
+            LoadPanel.SetActive(true);
+        }
     }
 
     void Update()

@@ -131,4 +131,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenarios/Explotion.unity
     guid: ee459be9456a74e4cafe906756230ab5
+  - enabled: 1
+    path: Assets/Escenarios/TestFight.unity
+    guid: b943e2b1cf515774d9d129846ead6093
   m_configObjects: {}

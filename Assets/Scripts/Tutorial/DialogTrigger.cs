@@ -4,10 +4,20 @@ using UnityEngine;
 
 public class DialogTrigger : MonoBehaviour
 {
-    public Dialogs dialog;
+    private Archivos arc;
+    public GameObject tuto;
 
     public void Start()
     {
-        FindObjectOfType<Dialog_manager>().StartDialogue(dialog);
+        arc = GameObject.Find("Estructuracion").GetComponent<Archivos>();
+        arc.cargar_variables();
+        if (variables_indestructibles.Tutorial.Equals("2"))
+        {
+            tuto.SetActive(true);
+        }
+        else
+        {
+            tuto.SetActive(false);
+        }
     }
 }

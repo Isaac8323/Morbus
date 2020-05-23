@@ -13,7 +13,7 @@ using System.Data;
 [System.Serializable]
 public class Tienda_opciones : MonoBehaviour
 {
-    public GameObject paneldescrip, compra, desbloquear, tienda, cuadro_imagen, intercambiopanel, LoadPanel;
+    public GameObject paneldescrip, compra, desbloquear, tienda, cuadro_imagen, intercambiopanel, LoadPanel, tuto;
     Image UIImage, Imagepanel;
     Text UITexto, titulotext;
     String[,] Personajes = new String[25, 8];
@@ -28,6 +28,7 @@ public class Tienda_opciones : MonoBehaviour
     void Start()
     {
         archivo_tienda = GameObject.Find("Tienda").GetComponent<Archivos>();
+        archivo_tienda.cargar_variables();
         archivo_tienda.Cargar_Tienda(Personajes, Elementos);
         bis = archivo_tienda.carga_bismuto(bis1);
         Debug.Log(Personajes[0, 2]);
@@ -39,6 +40,14 @@ public class Tienda_opciones : MonoBehaviour
         String leve = archivo_tienda.carga_level(lv);
         nivel = Int32.Parse(leve);
         personajes();
+        if (variables_indestructibles.Tutorial.Equals("3"))
+        {
+            tuto.SetActive(true);
+        }
+        else
+        {
+            tuto.SetActive(false);
+        }
     }
 
     // Update is called once per frame

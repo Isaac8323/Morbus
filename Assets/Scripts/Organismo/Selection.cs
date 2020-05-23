@@ -13,7 +13,7 @@ public class Selection : MonoBehaviour
     public GameObject[] miniBoss = new GameObject[16]; //Arreglo de las miniaturas de los jefes
     public GameObject LoadPanel, panel, arrowl, arrowr, error; //Pantalla de carga, panel de personajes, flechas para cambiar de organismo, etiqueta de error
     public GameObject Reference; //G.O. donde se almacena la información temporal de selección
-    public GameObject ReadyButton; //Botón para proceder al enfrentamiento
+    public GameObject ReadyButton, tut; //Botón para proceder al enfrentamiento
     private Image[] thumbs = new Image[4]; //Arreglo de imagenes de las miniaturas de personajes
     private Image[] SoonB = new Image[4]; //Arreglo de imagenes de las miniaturas de los 3 jefes siguientes
     public Image[] locks = new Image[16]; //Arreglo de las imagenes de candado de jefes
@@ -40,6 +40,14 @@ public class Selection : MonoBehaviour
         temp = GameObject.Find("Reference").GetComponent<TempData>();
         data = GameObject.Find("Select").GetComponent<FightData>();
         archivo_organismo.cargar_variables();
+        if (variables_indestructibles.Tutorial.Equals("4"))
+        {
+            tut.SetActive(true);
+        }
+        else
+        {
+            tut.SetActive(false);
+        }
         if (variables_indestructibles.Arenas.Equals("true"))
         {
             arrowl.SetActive(true);
