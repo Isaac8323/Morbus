@@ -15,7 +15,7 @@ public class funciones_estructuracion : MonoBehaviour
 {
     String[,] Elementos2 = new String[11, 3];
     Archivos archivo_estructuracion;
-    Text elementin, elemento_text_text,check_elementos;
+    Text elementin, elemento_text_text, check_elementos;
     Image UIImage;
     public GameObject Element_global, LoadPanel, ayuda, necesito, nonecesito, ok, img_help, felicidades, ok_Explotion, veri;
     public GameObject[] cura = new GameObject[25];
@@ -99,8 +99,9 @@ public class funciones_estructuracion : MonoBehaviour
     public void achecar_elementos()
     {
         int cont = 0;
-        for (int i = 1; i < 12; i++) {
-            check_elementos = GameObject.Find("txt_total"+i.ToString()).GetComponent<Text>();
+        for (int i = 1; i < 12; i++)
+        {
+            check_elementos = GameObject.Find("txt_total" + i.ToString()).GetComponent<Text>();
             if (check_elementos.text.Equals(""))
             {
                 check_elementos.text = "0";
@@ -1482,15 +1483,15 @@ public class funciones_estructuracion : MonoBehaviour
                     for (int i = 0; i < 10; i++)
                     {
                         verificadores[i] = GameObject.Find("elemento_usado" + i.ToString()).GetComponentInChildren<Text>();
-                        Debug.Log(i.ToString() + " "+ verificadores[i].text );
+                        Debug.Log(i.ToString() + " " + verificadores[i].text);
                     }
                     Debug.Log("paso  comprovacion 1");
                     //comprovacion 2
-                    
-                    if (verificadores[0].text.Equals("O") && verificadores[1].text.Equals("N") 
-                        && verificadores[2].text.Equals("H") && verificadores[3].text.Equals("H") 
-                        && verificadores[4].text.Equals("S") && verificadores[5].text.Equals("H") 
-                        && verificadores[6].text.Equals("O") && verificadores[7].text.Equals("O") 
+
+                    if (verificadores[0].text.Equals("O") && verificadores[1].text.Equals("N")
+                        && verificadores[2].text.Equals("H") && verificadores[3].text.Equals("H")
+                        && verificadores[4].text.Equals("S") && verificadores[5].text.Equals("H")
+                        && verificadores[6].text.Equals("O") && verificadores[7].text.Equals("O")
                         && verificadores[8].text.Equals("N") && verificadores[9].text.Equals("O"))
                     {
                         Debug.Log("paso  comprovacion 2");
@@ -3165,7 +3166,7 @@ public class funciones_estructuracion : MonoBehaviour
         elementin = GameObject.Find("felicidades_name").GetComponent<Text>();
         elementin.text = variables_indestructibles.Personajes[numero_del_pj_en_el_archivo, 0];
         elementin = GameObject.Find("exp_por_pj").GetComponent<Text>();
-        elementin.text = "+"+exp_ganada.ToString()+" de experiencia";
+        elementin.text = "+" + exp_ganada.ToString() + " de experiencia";
     }
 
     public void agenial()

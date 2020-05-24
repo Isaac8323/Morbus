@@ -13,7 +13,7 @@ using System.Data;
 public class Santuario_op : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject empezar_buton, confirmacion, LoadPanel;
+    public GameObject empezar_buton, confirmacion, LoadPanel, tut;
     Image UIImage, Imagepanel;
     Text UITexto, titulotext;
     String[,] Personajes = new String[25, 8];
@@ -30,6 +30,15 @@ public class Santuario_op : MonoBehaviour
         archivo_santuario = GameObject.Find("Santuario").GetComponent<Archivos>();
         archivo_santuario.Cargar_Tienda(Personajes, Elementos);
         bis = archivo_santuario.carga_bismuto(bis1);
+        archivo_santuario.cargar_variables();
+        if (variables_indestructibles.Tutorial.Equals("7"))
+        {
+            tut.SetActive(true);
+        }
+        else
+        {
+            tut.SetActive(false);
+        }
         UITexto = GameObject.Find("bismuto").GetComponentInChildren<Text>();
         UITexto.text = bis + " Bi";
         Debug.Log("entre");

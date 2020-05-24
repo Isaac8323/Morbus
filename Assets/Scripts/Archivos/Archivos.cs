@@ -240,7 +240,7 @@ public class Archivos : MonoBehaviour
             Datos.Personajes[22, 1] = "Hard";
             Datos.Personajes[23, 1] = "Hard";
             Datos.Personajes[24, 1] = "Hard";
-            //Cantidad
+            //Cantidad, todos deberían se 0
             Datos.Personajes[0, 2] = "5";
             Datos.Personajes[1, 2] = "5";
             Datos.Personajes[2, 2] = "5";
@@ -383,17 +383,17 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[9, 0] = "Cobalto";
             Datos.Elementos[10, 0] = "Fosforo";
             //Cantidad Elemento
-            Datos.Elementos[0, 1] = "100";
-            Datos.Elementos[1, 1] = "100";
-            Datos.Elementos[2, 1] = "100";
-            Datos.Elementos[3, 1] = "100";
-            Datos.Elementos[4, 1] = "100";
-            Datos.Elementos[5, 1] = "100";
-            Datos.Elementos[6, 1] = "100";
-            Datos.Elementos[7, 1] = "100";
-            Datos.Elementos[8, 1] = "100";
-            Datos.Elementos[9, 1] = "0";
-            Datos.Elementos[10, 1] = "0";
+            Datos.Elementos[0, 1] = "999"; //Deben ser 9
+            Datos.Elementos[1, 1] = "999"; //Deben ser 8
+            Datos.Elementos[2, 1] = "999"; //Deben ser 4
+            Datos.Elementos[3, 1] = "999"; //Las demás deben ser 0
+            Datos.Elementos[4, 1] = "999";
+            Datos.Elementos[5, 1] = "999";
+            Datos.Elementos[6, 1] = "999";
+            Datos.Elementos[7, 1] = "999";
+            Datos.Elementos[8, 1] = "999";
+            Datos.Elementos[9, 1] = "999";
+            Datos.Elementos[10, 1] = "999";
             //Descripcion Elemento
             Datos.Elementos[0, 2] = "Es un no metal sólido que es el componente fundamental de los compuestos orgánicos y tiene la propiedad de enlazarse con otros átomos de carbono y otras sustancias para formar un número casi infinito de compuestos.";
             Datos.Elementos[1, 2] = "Es un gas incoloro, inodoro y muy reactivo que se halla en todos los componentes de la materia viva y en muchos minerales, siendo el elemento más abundante en el universo.";
@@ -431,22 +431,22 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[9, 4] = "Co";
             Datos.Elementos[10, 4] = "P";
 
-            Datos.easter = "false";
-            Datos.Arenas = "false";
-            Datos.finished = "false";
-            Datos.first = "true";
-            Datos.monedas[0] = "40000";
-            Datos.bismuto = "0";
-            Datos.level[0] = "15";
-            Datos.experiencia = "0";
-            Datos.nivel_organismo_jefes = "2";
+            Datos.easter = "false";//Debe ser false
+            Datos.Arenas = "false";//Debe ser false
+            Datos.finished = "false";//Debe ser false
+            Datos.first = "false";//Debe ser true
+            Datos.monedas[0] = "40000";//Debe ser 40000
+            Datos.bismuto = "99"; //Debe ser 0
+            Datos.level[0] = "1"; //Debe ser 1
+            Datos.experiencia = "266300"; //Debe ser 0, 
+            Datos.nivel_organismo_jefes = "2"; //Debe ser 1
             Datos.sesion = "";
             Datos.estructuracion = "";
             Datos.mantenimient = "0";
-            Datos.Tutorial = "0";
-            Datos.Trophy = "false";
-            Datos.Skin = "false";
-            Datos.TempTut = "false";
+            Datos.Tutorial = "7";//Debe ser 0, para no ver ninguno poner valor arriba de 9
+            Datos.Trophy = "false";//Debe ser false
+            Datos.Skin = "false";//Debe ser false
+            Datos.TempTut = "false";//No sirve para nada
             for (int x = 0; x < 3; x++)
             {
                 for (int i = 0; i < 11; i++)

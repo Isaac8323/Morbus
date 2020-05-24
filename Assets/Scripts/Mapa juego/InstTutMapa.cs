@@ -32,6 +32,18 @@ public class InstTutMapa : MonoBehaviour
         }
     }
 
+    public void Sacrifice()
+    {
+        variables_indestructibles.Tutorial = "8";
+        arcTut.guardar_variables();
+    }
+
+    public void Train()
+    {
+        variables_indestructibles.Tutorial = "7";
+        arcTut.guardar_variables();
+    }
+
     public void Lab()
     {
         LoadScene.sceneToLoad = "Laboratorio";
@@ -324,7 +336,7 @@ public class InstTutMapa : MonoBehaviour
                                 panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
                                 clara.enabled = true;
                                 break;
-                            case 15:
+                            case 16:
                                 variables_indestructibles.Tutorial = "4";
                                 arcTut.guardar_variables();
                                 break;
@@ -385,14 +397,16 @@ public class InstTutMapa : MonoBehaviour
                             case 14:
                                 if (stopfour == false)
                                 {
+                                    //nombre de clara
                                     clara.enabled = false;
                                     panel.enabled = false;
                                     dt.SetActive(false);
                                     displayText.enabled = false;
                                     stopfour = true;
                                 }
-                            break;
+                                break;
                             case 19:
+                                variables_indestructibles.Tutorial = "6";
                                 variables_indestructibles.first = "false";
                                 arcTut.guardar_variables();
                                 LoadScene.sceneToLoad = "Mapajuego";
@@ -402,6 +416,77 @@ public class InstTutMapa : MonoBehaviour
                         break;
                     case "6":
                         //Entrenamiento
+                        if (cont == 1 || cont == 13)
+                        {
+                            key.SetBool("Texting", true);
+                            animclara.SetBool("Happy", true);
+                        }
+                        else
+                        {
+                            key.SetBool("Texting", true);
+                            animclara.SetBool("Silencio", false);
+                        }
+                        if (displayText.text == FindObjectOfType<Dialog_manager>().activeSentence)
+                        {
+                            if (cont == 1 || cont == 13)
+                            {
+                                key.SetBool("Texting", false);
+                                animclara.SetBool("SilHappy", true);
+                            }
+                            else
+                            {
+                                animclara.SetBool("Silencio", true);
+                                key.SetBool("Texting", false);
+                            }
+
+                        }
+                        if (cont == 2)
+                        {
+                            animclara.SetBool("Happy", false);
+                            animclara.SetBool("SilHappy", false);
+                        }
+                        switch (cont)
+                        {
+                            case 7:
+                                panel.enabled = false;
+                                ExecuteEvents.Execute<IPointerClickHandler>(celdas[0], new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                                panel.enabled = true;
+                                panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
+                                break;
+                            case 13:
+                                Train();
+                                break;
+                        }
+                        break;
+                    case "7":
+                        //Santuario
+                        key.SetBool("Texting", true);
+                        animclara.SetBool("Silencio", false);
+                        if (displayText.text == FindObjectOfType<Dialog_manager>().activeSentence)
+                        {
+                            animclara.SetBool("Silencio", true);
+                            key.SetBool("Texting", false);
+                        }
+                        switch (cont)
+                        {
+                            case 4:
+                                panel.enabled = false;
+                                ExecuteEvents.Execute<IPointerClickHandler>(celdas[0], new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                                panel.enabled = true;
+                                panel.color = new Color(panel.color.r, panel.color.g, panel.color.b, 0.2f);
+                                break;
+                            case 8:
+                                panel.enabled = false;
+                                ExecuteEvents.Execute<IPointerClickHandler>(celdas[1], new PointerEventData(EventSystem.current), ExecuteEvents.pointerClickHandler);
+                                panel.enabled = true;
+                                break;
+                            case 12:
+                                Sacrifice();
+                                break;
+                        }
+                        break;
+                    case "8":
+                        //Nivel máximo
                         break;
                 }
             }

@@ -3246,31 +3246,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.7422867
       objectReference: {fileID: 0}
-    - target: {fileID: 1115852343540395366, guid: b4f89dbe079ff62408e2176f2c9d40b1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -98
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115852343540395366, guid: b4f89dbe079ff62408e2176f2c9d40b1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -325
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115852342515570190, guid: b4f89dbe079ff62408e2176f2c9d40b1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 514
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115852342515570190, guid: b4f89dbe079ff62408e2176f2c9d40b1,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 306
-      objectReference: {fileID: 0}
-    - target: {fileID: 1115852342515570191, guid: b4f89dbe079ff62408e2176f2c9d40b1,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -3294,6 +3269,31 @@ PrefabInstance:
     - target: {fileID: 1115852342797799625, guid: b4f89dbe079ff62408e2176f2c9d40b1,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343540395366, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -98
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852343540395366, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -325
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342515570190, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 514
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342515570190, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 306
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115852342515570191, guid: b4f89dbe079ff62408e2176f2c9d40b1,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5887,7 +5887,7 @@ MonoBehaviour:
     - "Bueno, \xA1felicidades por vencer a tu primer jefe!, ya tienes las bases para
       adentrarte en la arena del Organismo Humano, espero que todo vaya bien y logres
       vencer a todas las patolog\xEDas."
-    - "Ya te dejo en paz por fin, eres libre de hacer lo que quieras por ac\xE1, \xA1buena
+    - "Ya te dejo en paz por fin, eres libre experimentar por t\xED mismo, \xA1buena
       suerte con todo!, y si te olvidas de algo por el camino no dudes en visitar
       la secci\xF3n de tutoriales para repasar lo que te he ense\xF1ado..."
     - "Bueno, \xA1nos vemos!, nos veremos un par de veces m\xE1s, pero solo fugazmente,

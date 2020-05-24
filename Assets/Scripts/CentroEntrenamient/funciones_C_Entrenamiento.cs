@@ -13,10 +13,10 @@ using System.Data;
 
 public class funciones_C_Entrenamiento : MonoBehaviour
 {
-    public GameObject ConfPanel, warning, btnConfirm, MessConf, notEnought, LoadPanel;
+    public GameObject ConfPanel, warning, btnConfirm, MessConf, notEnought, LoadPanel, tut;
     public GameObject[] slots = new GameObject[25];
     public Image[] Prev = new Image[25];
-    public Image Prevform, ImgChar;
+    public Image Prevform, ImgChar, struc;
     public Text Nameform, NameChar, NoTrain, cost;
     public Sprite[] Formula = new Sprite[25];
     public Text[] Name = new Text[25];
@@ -31,6 +31,14 @@ public class funciones_C_Entrenamiento : MonoBehaviour
         MessConf.SetActive(false);
         arcEnt = GameObject.Find("Tienda").GetComponent<Archivos>();
         arcEnt.cargar_variables();
+        if (variables_indestructibles.Tutorial.Equals("6"))
+        {
+            tut.SetActive(true);
+        }
+        else
+        {
+            tut.SetActive(false);
+        }
         for (int x = 0; x < 25; x++)
         {
             if (Int32.Parse(variables_indestructibles.Personajes[x, 2]) > 0)
@@ -157,6 +165,7 @@ public class funciones_C_Entrenamiento : MonoBehaviour
             warning.SetActive(false);
             btnConfirm.SetActive(true);
         }
+        struc.sprite = Formula[id];
         ImgChar.sprite = Resources.Load<Sprite>(variables_indestructibles.Personajes[id, 0]);
         Nameform.text = variables_indestructibles.Personajes[id, 4];
         Prevform.sprite = Formula[id];
