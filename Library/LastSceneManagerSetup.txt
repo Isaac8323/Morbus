@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Escenarios/Mapajuego.unity
+- path: Assets/Escenarios/Estruct24.unity
   isLoaded: 1
   isActive: 1
