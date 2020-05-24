@@ -383,15 +383,15 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[9, 0] = "Cobalto";
             Datos.Elementos[10, 0] = "Fosforo";
             //Cantidad Elemento
-            Datos.Elementos[0, 1] = "9";
-            Datos.Elementos[1, 1] = "8";
-            Datos.Elementos[2, 1] = "4";
-            Datos.Elementos[3, 1] = "0";
-            Datos.Elementos[4, 1] = "0";
-            Datos.Elementos[5, 1] = "0";
-            Datos.Elementos[6, 1] = "0";
-            Datos.Elementos[7, 1] = "0";
-            Datos.Elementos[8, 1] = "0";
+            Datos.Elementos[0, 1] = "100";
+            Datos.Elementos[1, 1] = "100";
+            Datos.Elementos[2, 1] = "100";
+            Datos.Elementos[3, 1] = "100";
+            Datos.Elementos[4, 1] = "100";
+            Datos.Elementos[5, 1] = "100";
+            Datos.Elementos[6, 1] = "100";
+            Datos.Elementos[7, 1] = "100";
+            Datos.Elementos[8, 1] = "100";
             Datos.Elementos[9, 1] = "0";
             Datos.Elementos[10, 1] = "0";
             //Descripcion Elemento
@@ -437,7 +437,7 @@ public class Archivos : MonoBehaviour
             Datos.first = "true";
             Datos.monedas[0] = "40000";
             Datos.bismuto = "0";
-            Datos.level[0] = "1";
+            Datos.level[0] = "15";
             Datos.experiencia = "0";
             Datos.nivel_organismo_jefes = "2";
             Datos.sesion = "";
