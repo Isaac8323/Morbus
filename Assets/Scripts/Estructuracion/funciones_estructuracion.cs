@@ -96,12 +96,30 @@ public class funciones_estructuracion : MonoBehaviour
             Element_global.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
         }
     }
+    public void amandar_verificacion()
+    {
+        verificar();
+    }
+    public void amandar_btn_verificar()
+    {
+        ayuda.SetActive(true);
+        check_elementos = GameObject.Find("Error").GetComponentInChildren<Text>();
+        check_elementos.text = "";
+        check_elementos = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+        check_elementos.text = "¿Esta segudo?";
+        necesito.SetActive(true);
+        nonecesito.SetActive(true);
+        check_elementos = GameObject.Find("Text_sulfa").GetComponentInChildren<Text>();
+        check_elementos.text = "No";
+        check_elementos = GameObject.Find("Text_h_sulfa").GetComponentInChildren<Text>();
+        check_elementos.text = "Si";
+    }
     public void achecar_elementos()
     {
         int cont = 0;
         for (int i = 1; i < 12; i++)
         {
-            check_elementos = GameObject.Find("txt_total" + i.ToString()).GetComponent<Text>();
+            check_elementos = GameObject.Find("txt_total" + i.ToString()).GetComponentInChildren<Text>();
             if (check_elementos.text.Equals(""))
             {
                 check_elementos.text = "0";
@@ -118,6 +136,10 @@ public class funciones_estructuracion : MonoBehaviour
             if (cont == 11)
             {
                 veri.SetActive(true);
+            }
+            else
+            {
+                veri.SetActive(false);
             }
         }
     }
@@ -589,6 +611,7 @@ public class funciones_estructuracion : MonoBehaviour
 
     public void celda_carbon_from_aspirina(int x)
     {
+        Debug.Log("entre a achecar");
         Element_global.SetActive(true);
         elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
         elemento_text_text = GameObject.Find("text_carbon" + x.ToString()).GetComponentInChildren<Text>();
@@ -682,7 +705,7 @@ public class funciones_estructuracion : MonoBehaviour
         elementin = GameObject.Find("txt_elemento_global").GetComponentInChildren<Text>();
         elementin.text = "";
         Element_global.SetActive(false);
-
+        achecar_elementos();
     }
     public void celda_carbon_from_aspirina0()
     {
@@ -2985,7 +3008,7 @@ public class funciones_estructuracion : MonoBehaviour
             veri.SetActive(false);
         }
     }
-    public void recibir_ayuda()
+    public void seleccino_recibir()
     {
         img_help.SetActive(true);
         int bm = Int32.Parse(variables_indestructibles.bismuto);
@@ -2995,7 +3018,7 @@ public class funciones_estructuracion : MonoBehaviour
         veri.SetActive(true);
         ayuda.SetActive(false);
     }
-    public void no_recibir_ayuda()
+    public void no_seleccino_recibir()
     {
         //animacion explosion ir al mapa quitarle los elementos usados al usuario y poner el lab en estado de mantenimiento
         variables_indestructibles.Intentos_curas[dimension_cura] = "0";
@@ -3023,12 +3046,55 @@ public class funciones_estructuracion : MonoBehaviour
         necesito.SetActive(false);
         nonecesito.SetActive(false);
         ok.SetActive(false);
-        veri.SetActive(true);
         ok_Explotion.SetActive(true);
+        veri.SetActive(false);
         variables_indestructibles.mantenimient = "1";
         archivo_estructuracion.guardar_variables();
         elementin = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
         elementin.text = "Tu laboratorio a explotado";
+    }
+
+    public void recibir_ayuda()
+    {
+        check_elementos = GameObject.Find("Text_h_sulfa").GetComponentInChildren<Text>();
+        //check_elementos.text = "Recibir ayuda";
+        if (check_elementos.text.Equals("Si"))
+        {
+
+            check_elementos = GameObject.Find("Error").GetComponentInChildren<Text>();
+            check_elementos.text = "¡ERROR!";
+            check_elementos = GameObject.Find("Text_sulfa").GetComponentInChildren<Text>();
+            check_elementos.text = "No la necesito";
+            check_elementos = GameObject.Find("Text_h_sulfa").GetComponentInChildren<Text>();
+            check_elementos.text = "Recibir ayuda";
+            necesito.SetActive(false);
+            nonecesito.SetActive(false);
+            ayuda.SetActive(false);
+            amandar_verificacion();
+        }
+        else
+        {
+            seleccino_recibir();
+        }
+    }
+    public void no_recibir_ayuda()
+    {
+        check_elementos = GameObject.Find("Text_sulfa").GetComponentInChildren<Text>();
+      //  check_elementos.text = "No la necesito";
+        if (check_elementos.text.Equals("No"))
+        {
+            check_elementos = GameObject.Find("Error").GetComponentInChildren<Text>();
+            check_elementos.text = "¡ERROR!";
+            check_elementos = GameObject.Find("Text_sulfa").GetComponentInChildren<Text>();
+            check_elementos.text = "No la necesito";
+            check_elementos = GameObject.Find("Text_h_sulfa").GetComponentInChildren<Text>();
+            check_elementos.text = "Recibir ayuda";
+            ayuda.SetActive(false);
+        }
+        else
+        {
+            no_seleccino_recibir();
+        }
     }
     public void aexplotion()
     {

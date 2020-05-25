@@ -32,7 +32,8 @@ public class botones_laboratorio : MonoBehaviour
     int tefaltamas = 0, tesobran = 0;
     int[] elemento = new int[11];
     int[] conjunto = new int[25];
-    int num_of_scene = 0;
+    int num_of_scene = 0,formula, estavacio =0;
+    int[] nulos = new int[25];
     string dest;
     Archivos archivo_almacen;
     // Start is called before the first frame update
@@ -102,12 +103,26 @@ public class botones_laboratorio : MonoBehaviour
 
     public void cerrar_panel_alerta_a()
     {
-        Alerta_a.SetActive(false);
+        texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+       if( texto_alerta.text.Equals("Solo puedes crear formulas que esten el del juego: Tu laboratorio a explotado"))
+        {
+            variables_indestructibles.mantenimient = "1";
+           archivo_almacen.guardar_variables();
+            Alerta_a.SetActive(false);
+            aexplotion();
+        }
+        else
+        {
+            Alerta_a.SetActive(false);
+        }
     }
     public void ElementrosAdquiridos()
     {
         int posicion = 1;
-        for (int i = 0; i < 11; i++)
+        int cont = 0,ymasuno=1,i=0;
+        int bandera = 0;
+        Debug.Log("entre a ELEMENTOSADQUIRIDOS()");
+        for ( i = 0; i < 11; i++)
         {
             if (Elementos[i, 1] != "0")
             {
@@ -120,6 +135,35 @@ public class botones_laboratorio : MonoBehaviour
                 verificadores[posicion - 1, 2] = Elementos[i, 1];
                 verificadores[posicion - 1, 3] = Elementos[i, 2];
                 posicion++;
+            }
+            celdas_elementos_adquiridos = GameObject.Find("txtelemento" + (ymasuno).ToString()).GetComponentInChildren<Text>();
+            Debug.Log(celdas_elementos_adquiridos.text);
+            for (int a = 1; a < 12; a++)
+            {
+               totalelemtnos_panel_seleccion = GameObject.Find("txtelemento" + (a).ToString()).GetComponentInChildren<Text>();
+                if (totalelemtnos_panel_seleccion.text.Equals(celdas_elementos_adquiridos.text))
+                {
+                    cont++;
+                    Debug.Log(cont.ToString());
+                }
+                if (cont >=2)
+                {
+                    totalelemtnos_panel_seleccion.text = "";
+                    totalelemtnos_panel_seleccion = GameObject.Find("textnombre_elemento" + (a).ToString()).GetComponentInChildren<Text>();
+                    totalelemtnos_panel_seleccion.text = "";
+                }
+            }
+            ymasuno++;
+            cont = 0;
+            if (i == 10)
+            {
+                if (bandera == 0)
+                {
+                    bandera = 1;
+                    i = 0;
+                    ymasuno = 1;
+                    posicion = 1;
+                }
             }
         }
     }
@@ -177,7 +221,7 @@ public class botones_laboratorio : MonoBehaviour
                     sumapanelseleccionados = Int16.Parse(cantidad_panel_seleccionados.text);
                     sumapanelseleccionados++;
                     cantidad_panel_seleccionados.text = sumapanelseleccionados.ToString();
-                    for (; busqueda < 10; busqueda++)
+                    for (; busqueda < 11; busqueda++)
                     {
                         if (add.text.Equals(Elementos[busqueda, 4]))
                         {
@@ -290,152 +334,221 @@ public class botones_laboratorio : MonoBehaviour
     public void ElementrosAdquirido_Celda1()
     {
 
-        activarpanel();
-
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[0, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[0, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[0, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[0, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento1").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[0, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[0, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[0, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[0, 3];
+        }
     }
     public void ElementrosAdquirido_Celda2()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[1, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[1, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[1, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[1, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento2").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[1, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[1, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[1, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[1, 3];
+        }
     }
     public void ElementrosAdquirido_Celda3()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[2, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[2, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[2, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[2, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento3").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[2, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[2, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[2, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[2, 3];
+        }
     }
     public void ElementrosAdquirido_Celda4()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[3, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[3, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[3, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[3, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento4").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[3, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[3, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[3, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[3, 3];
+        }
     }
     public void ElementrosAdquirido_Celda5()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[4, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[4, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[4, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[4, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento5").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[4, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[4, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[4, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[4, 3];
+        }
     }
     public void ElementrosAdquirido_Celda6()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[5, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[5, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[5, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[5, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento6").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[5, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[5, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[5, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[5, 3];
+        }
     }
     public void ElementrosAdquirido_Celda7()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[6, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[6, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[6, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[6, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento7").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[6, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[6, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[6, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[6, 3];
+        }
     }
     public void ElementrosAdquirido_Celda8()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[7, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[7, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[7, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[7, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento8").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[7, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[7, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[7, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[7, 3];
+        }
     }
     public void ElementrosAdquirido_Celda9()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[8, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[8, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[8, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[8, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento9").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[8, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[8, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[8, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[8, 3];
+        }
     }
     public void ElementrosAdquirido_Celda10()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[9, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[9, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[9, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[9, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento10").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[9, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[9, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[9, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[9, 3];
+        }
     }
     public void ElementrosAdquirido_Celda11()
     {
-        activarpanel();
-        celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[10, 0];
-        celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[10, 1];
-        celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[10, 2];
-        celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
-        celdas_elementos_adquiridos.text = verificadores[10, 3];
+        totalelemtnos_panel_seleccion = GameObject.Find("txtelemento11").GetComponentInChildren<Text>();
+        if (!totalelemtnos_panel_seleccion.text.Equals(""))
+        {
+            activarpanel();
+            celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[10, 0];
+            celdas_elementos_adquiridos = GameObject.Find("Text_panel_seleccion").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[10, 1];
+            celdas_elementos_adquiridos = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[10, 2];
+            celdas_elementos_adquiridos = GameObject.Find("descripcion_elemento").GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = verificadores[10, 3];
+        }
     }
     public void sulfa()
     {
-        num_of_scene = 14;
-        variables_indestructibles.estructuracion = "Sulfasalazina";
-        alerta_sulfa.SetActive(false);
-        archivo_almacen.guardar_variables();
-        img_text_p_confirmacion();
+        texto_alerta = GameObject.Find("Text_sulfa").GetComponentInChildren<Text>();
+        if (texto_alerta.text.Equals("No"))
+        {
+
+            alerta_sulfa.SetActive(false);
+        }
+        else
+        {
+            num_of_scene = 14;
+            variables_indestructibles.estructuracion = "Sulfasalazina";
+            alerta_sulfa.SetActive(false);
+            archivo_almacen.guardar_variables();
+            img_text_p_confirmacion();
+        }
     }
     public void h_sulfa()
     {
-        num_of_scene = 22;
-        variables_indestructibles.estructuracion = "H_Sulfasalazina";
-        alerta_sulfa.SetActive(false);
-        archivo_almacen.guardar_variables();
-        img_text_p_confirmacion();
+        texto_alerta = GameObject.Find("Text_h_sulfa").GetComponentInChildren<Text>();
+        if (texto_alerta.text.Equals("Si"))
+            
+        {
+            texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+            texto_alerta.text = "¿Cual formula desea hacer?";
+            texto_alerta = GameObject.Find("Text_sulfa").GetComponentInChildren<Text>();
+            texto_alerta.text = "Sulfazalina";
+            texto_alerta = GameObject.Find("Text_h_sulfa").GetComponentInChildren<Text>();
+            texto_alerta.text = "H_Sulfazalina";
+            alerta_sulfa.SetActive(false);
+            siguiente();
+        }
+        else
+        {
+            num_of_scene = 22;
+            variables_indestructibles.estructuracion = "H_Sulfasalazina";
+            alerta_sulfa.SetActive(false);
+            archivo_almacen.guardar_variables();
+            img_text_p_confirmacion();
+        }
+
     }
     public void img_text_p_confirmacion()
     {
@@ -490,13 +603,27 @@ public class botones_laboratorio : MonoBehaviour
             }
         }
     }
+    public void btnsiguiente()
+    {
+        alerta_sulfa.SetActive(true);
+        texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+        texto_alerta.text = "¿Esta seguro?";
+        texto_alerta = GameObject.Find("Text_sulfa").GetComponentInChildren<Text>();
+        texto_alerta.text = "No";
+        texto_alerta = GameObject.Find("Text_h_sulfa").GetComponentInChildren<Text>();
+        texto_alerta.text = "Si";
+
+    }
+
     public void siguiente()
     {
+        
         String[] bandera_de_elementos = new String[25];
         for (int recorrdio = 0; recorrdio < 25; recorrdio++)
         {
             bandera_de_elementos[recorrdio] = "Este si";
             conjunto[recorrdio] = 0;
+            nulos[recorrdio] = 0;
         }
         for (int recorrdio = 0; recorrdio < 11; recorrdio++)
         {
@@ -528,6 +655,7 @@ public class botones_laboratorio : MonoBehaviour
             variables_indestructibles.Elementos2[i2, 1] = elemento[i2].ToString();
             if (bandera_de_elementos[0] == "Este si")
             {
+
                 if (element[i2].text != ("C") && element[i2].text != "H" && element[i2].text != "O" && element[i2].text != (""))
                 {
                     bandera_de_elementos[0] = "Este no";
@@ -536,6 +664,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 9)
                 {
                     bandera_de_elementos[0] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[1] == "Este si")
@@ -548,6 +677,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 8)
                 {
                     bandera_de_elementos[1] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[2] == "Este si")
@@ -560,6 +690,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[2] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[3] == "Este si")
@@ -572,6 +703,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 6)
                 {
                     bandera_de_elementos[3] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[4] == "Este si")
@@ -584,6 +716,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[4] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[5] == "Este si")
@@ -596,6 +729,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 8)
                 {
                     bandera_de_elementos[5] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[6] == "Este si")
@@ -608,6 +742,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 8)
                 {
                     bandera_de_elementos[6] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[7] == "Este si")
@@ -620,6 +755,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 8)
                 {
                     bandera_de_elementos[7] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[8] == "Este si")
@@ -632,6 +768,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[8] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[9] == "Este si")
@@ -644,6 +781,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 8)
                 {
                     bandera_de_elementos[9] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[10] == "Este si")
@@ -656,6 +794,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[10] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[11] == "Este si")
@@ -668,6 +807,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 8)
                 {
                     bandera_de_elementos[11] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[12] == "Este si")
@@ -680,6 +820,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[12] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[13] == "Este si")
@@ -692,6 +833,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 9)
                 {
                     bandera_de_elementos[13] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[14] == "Este si")
@@ -704,6 +846,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[14] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[15] == "Este si")
@@ -716,6 +859,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 9)
                 {
                     bandera_de_elementos[15] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[16] == "Este si")
@@ -728,6 +872,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 9)
                 {
                     bandera_de_elementos[16] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[17] == "Este si")
@@ -740,6 +885,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[17] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[18] == "Este si")
@@ -752,6 +898,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[18] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[19] == "Este si")
@@ -764,6 +911,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[19] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[20] == "Este si")
@@ -776,6 +924,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 9)
                 {
                     bandera_de_elementos[20] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[21] == "Este si")
@@ -788,6 +937,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[21] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[22] == "Este si")
@@ -800,6 +950,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 7)
                 {
                     bandera_de_elementos[22] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[23] == "Este si")
@@ -812,6 +963,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 8)
                 {
                     bandera_de_elementos[23] = "Este no";
+                    contador++;
                 }
             }
             if (bandera_de_elementos[24] == "Este si")
@@ -824,6 +976,7 @@ public class botones_laboratorio : MonoBehaviour
                 if (vacio >= 6)
                 {
                     bandera_de_elementos[24] = "Este no";
+                    contador++;
                     Debug.Log("no se pudo compa");
                 }
             }
@@ -834,7 +987,7 @@ public class botones_laboratorio : MonoBehaviour
             Debug.Log("Ninguna formula puede crearse con estos elementos");
             Alerta_a.SetActive(true);
             texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
-            texto_alerta.text = "Ninguna formula puede crearse con estos elementos";
+            texto_alerta.text = "Solo puedes crear formulas que esten el del juego: Tu laboratorio a explotado";
         }
         else
         {
@@ -970,6 +1123,15 @@ public class botones_laboratorio : MonoBehaviour
             }
 
             archivo_almacen = GameObject.Find("Laboratorio").GetComponent<Archivos>();
+            estavacio = 0;
+            for (int i = 1; i < 12; i++)
+            {
+                texto_alerta = GameObject.Find("txtdestino" + i.ToString()).GetComponentInChildren<Text>();
+                if (texto_alerta.text.Equals(""))
+                {
+                    estavacio++;
+                }
+            }
             if (conjunto[0] == 3)
             {
                 Debug.Log("Aspirina");
@@ -1178,6 +1340,12 @@ public class botones_laboratorio : MonoBehaviour
                 archivo_almacen.guardar_variables();
                 img_text_p_confirmacion();
             }
+            else if(estavacio==11){
+                Debug.Log("Ninguna formula puede crearse con estos elementos");
+                Alerta_a.SetActive(true);
+                texto_alerta = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
+                texto_alerta.text = "Solo puedes crear formulas que esten el del juego: Tu laboratorio a explotado";
+            }
             else if (tesobran == tefaltamas)
             {
                 Debug.Log("tienes elementos con cantidades mayores y menores a la necesaria");
@@ -1234,6 +1402,13 @@ public class botones_laboratorio : MonoBehaviour
             }
         }
 
+    }
+
+    public void aexplotion()
+    {
+        Alerta_a.SetActive(false);
+        LoadScene.sceneToLoad = "Explotion";
+        LoadPanel.SetActive(true);
     }
 
     public void Desifrocompuesto(int index)

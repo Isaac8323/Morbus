@@ -383,17 +383,17 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[9, 0] = "Cobalto";
             Datos.Elementos[10, 0] = "Fosforo";
             //Cantidad Elemento
-            Datos.Elementos[0, 1] = "999"; //Deben ser 9
-            Datos.Elementos[1, 1] = "999"; //Deben ser 8
-            Datos.Elementos[2, 1] = "999"; //Deben ser 4
-            Datos.Elementos[3, 1] = "999"; //Las demás deben ser 0
-            Datos.Elementos[4, 1] = "999";
-            Datos.Elementos[5, 1] = "999";
-            Datos.Elementos[6, 1] = "999";
-            Datos.Elementos[7, 1] = "999";
-            Datos.Elementos[8, 1] = "999";
-            Datos.Elementos[9, 1] = "999";
-            Datos.Elementos[10, 1] = "999";
+            Datos.Elementos[0, 1] = "5"; //Deben ser 9
+            Datos.Elementos[1, 1] = "5"; //Deben ser 8
+            Datos.Elementos[2, 1] = "5"; //Deben ser 4
+            Datos.Elementos[3, 1] = "5"; //Las demás deben ser 0
+            Datos.Elementos[4, 1] = "5";
+            Datos.Elementos[5, 1] = "5";
+            Datos.Elementos[6, 1] = "5";
+            Datos.Elementos[7, 1] = "5";
+            Datos.Elementos[8, 1] = "4";
+            Datos.Elementos[9, 1] = "5";
+            Datos.Elementos[10, 1] = "5";
             //Descripcion Elemento
             Datos.Elementos[0, 2] = "Es un no metal sólido que es el componente fundamental de los compuestos orgánicos y tiene la propiedad de enlazarse con otros átomos de carbono y otras sustancias para formar un número casi infinito de compuestos.";
             Datos.Elementos[1, 2] = "Es un gas incoloro, inodoro y muy reactivo que se halla en todos los componentes de la materia viva y en muchos minerales, siendo el elemento más abundante en el universo.";
@@ -437,7 +437,7 @@ public class Archivos : MonoBehaviour
             Datos.first = "false";//Debe ser true
             Datos.monedas[0] = "40000";//Debe ser 40000
             Datos.bismuto = "99"; //Debe ser 0
-            Datos.level[0] = "1"; //Debe ser 1
+            Datos.level[0] = "20"; //Debe ser 1
             Datos.experiencia = "266300"; //Debe ser 0, 
             Datos.nivel_organismo_jefes = "2"; //Debe ser 1
             Datos.sesion = "";

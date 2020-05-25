@@ -18,7 +18,7 @@ public class Mg_clean : MonoBehaviour
     int[] fuegos_activados = new int[6];
     int[] banders = new int[6];
     int presionable = 0;
-    public GameObject trapido, recogedor, v1, v2, m1, m2, m3, LoadPanel, panel;
+    public GameObject trapido, recogedor, v1, v2, m1, m2, m3, LoadPanel, panel,felicidades;
     private Animator ext;
     bool seguidor = false, trapitotrue = false;
     Archivos a;
@@ -48,24 +48,27 @@ public class Mg_clean : MonoBehaviour
         {
             variables_indestructibles.mantenimient = "0";
             a.guardar_variables();
-            panel.SetActive(true);
-            LoadScene.sceneToLoad = "Mapajuego";
-            LoadPanel.SetActive(true);
+            felicidades.SetActive(true);
         }
         if (!Input.GetMouseButton(0))
         {
-
+            fuegos_activados[0] = 0;
+            fuegos_activados[1] = 0;
+            fuegos_activados[2] = 0;
+            fuegos_activados[3] = 0;
+            fuegos_activados[4] = 0;
         }
         else
         {
             if (fuegos_activados[0] == 1)
             {
-                if (time[0] >= 0)
+                if (time[0] >= 1)
                 {
-                    if (presionable == 0)
+                    if (presionable == 1)
                     {
                         Debug.Log("entre");
-                        time[0] -= 1;
+                        presionable = 0;
+                        time[0]--;
                         return;
                     }
                 }
@@ -77,13 +80,18 @@ public class Mg_clean : MonoBehaviour
                     v1.SetActive(false);
                     //Do Something after clock hits 0
                 }
+
             }
             if (fuegos_activados[1] == 1)
             {
-                if (time[1] >= 0)
+                if (time[1] >= 1)
                 {
-                    time[1] -= 1;
-                    return;
+                    if (presionable == 1)
+                    {
+                        presionable = 0;
+                        time[1]--;
+                        return;
+                    }
                 }
                 else
                 {
@@ -96,10 +104,14 @@ public class Mg_clean : MonoBehaviour
             }
             if (fuegos_activados[2] == 1)
             {
-                if (time[2] >= 0)
+                if (time[2] >= 1)
                 {
-                    time[2] -= 1;
-                    return;
+                    if (presionable == 1)
+                    {
+                        presionable = 0;
+                        time[2]--;
+                        return;
+                    }
                 }
                 else
                 {
@@ -112,10 +124,14 @@ public class Mg_clean : MonoBehaviour
             }
             if (fuegos_activados[3] == 1)
             {
-                if (time[3] >= 0)
+                if (time[3] >= 1)
                 {
-                    time[3] -= 1;
-                    return;
+                    if (presionable == 1)
+                    {
+                        presionable = 0;
+                        time[3]--;
+                        return;
+                    }
                 }
                 else
                 {
@@ -128,15 +144,19 @@ public class Mg_clean : MonoBehaviour
             }
             if (fuegos_activados[4] == 1)
             {
-                if (time[4] >= 0)
+                if (time[4] >= 1)
                 {
-                    time[4] -= 1;
-                    return;
+                    if (presionable == 1)
+                    {
+                        presionable = 0;
+                        time[4] -= 1;
+                        return;
+                    }
                 }
                 else
                 {
                     Debug.Log("mencha 3 limpiada");
-                    banders[4] = 0;
+                    banders[4]--;
                     //   ext.SetBool("Push", false);
                     m3.SetActive(false);
                     //Do Something after clock hits 0
@@ -154,6 +174,13 @@ public class Mg_clean : MonoBehaviour
                 recogedor.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
             }
         }
+    }
+    public void ir_al_mapa()
+    {
+        felicidades.SetActive(false);
+        panel.SetActive(true);
+        LoadScene.sceneToLoad = "Mapajuego";
+        LoadPanel.SetActive(true);
     }
     public void trapito_activo (){
         recogedor.SetActive(false);
@@ -179,10 +206,11 @@ public class Mg_clean : MonoBehaviour
     }
     public void v_2()
     {
-        if (trapitotrue == false)
+        if (trapitotrue == false )
         {
             fuegos_activados[1] = 1;
             presionable = 1;
+            Debug.Log("2");
         }
     }
     public void m_1()
@@ -191,6 +219,7 @@ public class Mg_clean : MonoBehaviour
         {
             fuegos_activados[2] = 1;
             presionable = 1;
+            Debug.Log("3");
         }
     }
     public void m_2()
@@ -213,18 +242,12 @@ public class Mg_clean : MonoBehaviour
     {
         Debug.Log("0 todos");
         presionable = 0;
-        if (fuegos_activados[0]==1 || fuegos_activados[1] == 1 || fuegos_activados[2] == 1 || fuegos_activados[3] == 1 || fuegos_activados[4] == 1)
-        {
-
-        }
-        else {
-            presionable = 0;
             fuegos_activados[0] = 0;
             fuegos_activados[1] = 0;
             fuegos_activados[2] = 0;
             fuegos_activados[3] = 0;
             fuegos_activados[4] = 0;
-        }
+        
     }
 
   /*  public void startAnim()
