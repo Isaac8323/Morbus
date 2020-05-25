@@ -17,7 +17,7 @@ public class mgfirescript : MonoBehaviour
     float[] time = new float [6];
     int[] fuegos_activados = new int[6];
     int[] banders = new int[6];
-    public GameObject extintor, fuego1, fuego2, fuego3, fuego4, fuego5, fuego6, LoadPanel, panel;
+    public GameObject extintor, fuego1, fuego2, fuego3, fuego4, fuego5, fuego6, LoadPanel, panel, felicidades;
     private Animator ext;
     Archivos a;
     // Start is called before the first frame update
@@ -47,9 +47,7 @@ public class mgfirescript : MonoBehaviour
         {
             variables_indestructibles.mantenimient = "0";
             a.guardar_variables();
-            panel.SetActive(true);
-            LoadScene.sceneToLoad = "Mapajuego";
-            LoadPanel.SetActive(true);
+            felicidades.SetActive(true);
         }
         if (!Input.GetMouseButton(0))
         {
@@ -161,6 +159,13 @@ public class mgfirescript : MonoBehaviour
             }
         }
         extintor.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
+    }
+    public void ir_al_mapa()
+    {
+        felicidades.SetActive(false);
+        panel.SetActive(true);
+        LoadScene.sceneToLoad = "Mapajuego";
+        LoadPanel.SetActive(true);
     }
     public void OnMouseDown()
     {

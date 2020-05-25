@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Escenarios/Tutorial.unity
+- path: Assets/Escenarios/Mgfire.unity
   isLoaded: 1
   isActive: 1
