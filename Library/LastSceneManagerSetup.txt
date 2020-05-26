@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Escenarios/Mgfire.unity
+- path: Assets/Escenarios/Menu.unity
   isLoaded: 1
   isActive: 1

@@ -14,6 +14,7 @@ public class FightData : MonoBehaviour
     public int[,] HabChars = new int[25, 4]; //Habilidades contra clave
     public int[,] HabCharsPot = new int[25, 4]; //Habilidades convencionales contra clave
     public int[] HChar = new int[25]; //Habilidad convencional
+
     void Start()
     {
         //Asignación de daño convencional de personajes
@@ -233,15 +234,15 @@ public class FightData : MonoBehaviour
         //Asignación de daño de los jefes
         for (int x = 0; x < 5; x++)
         {
-            atckBoss[x] = 8333;
+            atckBoss[x] = 24999; //8333
         }
         for (int g = 5; g < 13; g++)
         {
-            atckBoss[g] = 30000;
+            atckBoss[g] = 90000; //30000
         }
         for (int b = 13; b < 17; b++)
         {
-            atckBoss[b] = 200000;
+            atckBoss[b] = 200000; //200000
         }
     }
 }

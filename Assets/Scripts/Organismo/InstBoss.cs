@@ -12,6 +12,7 @@ public class InstBoss : MonoBehaviour
     void Start()
     {
         selected = GameObject.Find("Reference").GetComponent<TempData>();
+
         //panel = GameObject.Find("Habilities").GetComponent<GameObject>();
         //var newPrefab = Instantiate(boss[selected.idBoss], transform.position, Quaternion.identity);
         //newPrefab.transform.parent = gameObject.transform;

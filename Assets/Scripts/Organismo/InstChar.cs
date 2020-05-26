@@ -35,7 +35,7 @@ public class InstChar : MonoBehaviour
         /*var newPrefab = Instantiate(character[id], transform.position, Quaternion.identity);
         newPrefab.transform.parent = gameObject.transform;
         newPrefab.transform.localScale = new Vector3(1, 1, 1);*/
-        anim.SetBool("Appear", true);
+        //anim.SetBool("Appear", true);
 
         for (int i = 0; i < 4; i++)
         {
@@ -45,7 +45,7 @@ public class InstChar : MonoBehaviour
 
     void Update()
     {
-        if (MyTurn == true)
+        /*if (MyTurn == true)
         {
             turn.enabled = true;
             PanelHabs.SetActive(true);
@@ -57,6 +57,6 @@ public class InstChar : MonoBehaviour
         if (MyTurn == false)
         {
             turn.enabled = false;
-        }
+        }*/
     }
 }

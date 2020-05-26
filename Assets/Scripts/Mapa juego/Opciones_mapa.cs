@@ -13,10 +13,10 @@ using System.Data;
 
 public class Opciones_mapa : MonoBehaviour
 {
-    public GameObject centerl, centerc, santuarl, santuarc;
+    public GameObject centerl, centerc, santuarl, santuarc, congrats, bcongrats;
     public GameObject LoadPanel, organismo, tutorial, tienda, gym, lab, almacen, santuario, exit;
     public GameObject tuto;
-    private int lvl;
+    private int lvl, exp;
     String[,] Personajes = new String[25, 8];
     String[,] Elementos = new String[11, 5];
     Text textin;
@@ -28,6 +28,14 @@ public class Opciones_mapa : MonoBehaviour
         /*archivo_mapa.Borrar();
         archivo_mapa.Crear();*/
         archivo_mapa.cargar_variables();
+        congrats.SetActive(false);
+        bcongrats.SetActive(false);
+        exp = Int32.Parse(variables_indestructibles.experiencia);
+        if (exp >= 384300 && variables_indestructibles.TempTut == "false")
+        {
+            congrats.SetActive(true);
+            bcongrats.SetActive(true);
+        }
         archivo_mapa.Cargar_Tienda(Personajes, Elementos);
         Debug.Log("entre");
         Debug.Log(Personajes[0, 6]);
@@ -77,6 +85,14 @@ public class Opciones_mapa : MonoBehaviour
             santuarc.SetActive(false);
             santuarl.SetActive(false);
         }
+    }
+
+    public void Cool()
+    {
+        variables_indestructibles.TempTut = "true";
+        archivo_mapa.guardar_variables();
+        //LoadScene.sceneToLoad = "End";
+        //LoadPanel.SetActive(true);
     }
 
     public void Organismo()
@@ -156,7 +172,7 @@ public class Opciones_mapa : MonoBehaviour
         {
             LoadScene.sceneToLoad = "CentroEntrenamiento";
             LoadPanel.SetActive(true);
-        }        
+        }
     }
     public void OverCentro()
     {
@@ -169,7 +185,7 @@ public class Opciones_mapa : MonoBehaviour
         {
             textin.text = "Se desbloquea al nivel 8";
         }
-        
+
     }
     public void OverExit()
     {

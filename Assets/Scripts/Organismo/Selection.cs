@@ -448,43 +448,45 @@ public class Selection : MonoBehaviour
                     }
                     temp.damageChar[x, h] = data.HChar[ides[x + 1]]; //Puntos contra patología no clave
                 }
-
-                //Asignación de daños si es Aspirina
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Aspirina 0
                 if (ides[x + 1] == 0)
                 {
+                    //Un jefe****************************************************************************
                     if (temp.idBoss == 10) //Si el jefe es Hemorroides
                     {
-                        //En caso de que esté potenciada
+                        //Habilidad No. 1 --------------------------------------------------------
                         if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
-                        {
+                        {//En caso de que esté potenciada *
                             temp.damageChar[x, 0] = 69643;
                         }
-                        else //Caso de que no esté potenciada
-                        {
+                        else
+                        {//Caso de que no esté potenciada
                             temp.damageChar[x, 0] = 541667;
                         }
-                        //En caso de que esté potenciada
+                        //Habilidad No. 2 --------------------------------------------------------
                         if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
-                        {
+                        {//En caso de que esté potenciada *
                             temp.damageChar[x, 1] = 81250;
                         }
-                        else //Caso de que no esté potenciada
-                        {
+                        else
+                        {//Caso de que no esté potenciada
                             temp.damageChar[x, 1] = 60937;
                         }
-                        //En caso de que esté potenciada
+                        //Habilidad No. 3 --------------------------------------------------------
                         if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
-                        {
+                        {//En caso de que esté potenciada *
                             temp.damageChar[x, 2] = 97500;
                         }
-                        else //Caso de que no esté potenciada
-                        {
+                        else
+                        {//Caso de que no esté potenciada
                             temp.damageChar[x, 2] = 69643;
                         }
-                        //En caso de que esté potenciada
+                        //Habilidad No. 4 --------------------------------------------------------
+                        //En caso de que esté potenciada *
                         if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
                         {
-                            temp.damageChar[x, 3] = 97500;
+                            temp.damageChar[x, 3] = 121875;
                         }
                         else //Caso de que no esté potenciada
                         {
@@ -492,7 +494,1653 @@ public class Selection : MonoBehaviour
                         }
                     }
                 }
-
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Paracetamol 1
+                if (ides[x + 1] == 1)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 10) //Si el jefe es Hemorroides
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 69643;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 54166;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 81250;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 60937;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 97500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 69643;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 121875;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 81250;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Amoxicilina 2
+                if (ides[x + 1] == 2)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 8) //Si el jefe es Bronquitis
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 51786;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 40278;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 60417;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 45312;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 72500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 51786;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 90625;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 60417;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 5) //Si el jefe es Rinosinusitis
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 28571;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 22222;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 33333;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 25000;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 40000;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 28571;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 50000;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 33333;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 2) //Si el jefe es Linfedema
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 14286;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 11111;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 16667;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 12500;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 20000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 14286;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 25000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 16667;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Cloxaxilina 3
+                if (ides[x + 1] == 3)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 1) //Si el jefe es Adenopatía
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 10714;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 8333;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 12500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 9375;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 15000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 10714;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 18750;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 12500;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 3) //Si el jefe es Linfangitis
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 17857;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 13889;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 20833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 15625;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 25000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 17857;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 31250;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 20833;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 2) //Si el jefe es Linfedema
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 14286;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 11111;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 20000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 16667;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 22500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 14286;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 25000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 16667;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Bortezomib 4
+                if (ides[x + 1] == 4)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 1) //Si el jefe es Adenopatía
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 10714;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 8333;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 12500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 9375;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 15000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 10714;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 18750;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 12500;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Lenalidomida 5
+                if (ides[x + 1] == 5)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 4) //Si el jefe es Linfoma
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 21428;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 16667;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 25000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 18750;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 30000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 21428;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 37500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 25000;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Vorinostat 6
+                if (ides[x + 1] == 6)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 4) //Si el jefe es Linfoma
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 21428;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 16667;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 25000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 18750;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 30000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 21428;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 37500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 25000;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Clavulanato 7
+                if (ides[x + 1] == 7)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 5) //Si el jefe es Rinosinusitis
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 33333;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 28571;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 40000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 33333;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 50000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 40000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 66666;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 50000;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Penicilina 8
+                if (ides[x + 1] == 8)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 7) //Si el jefe es Difteria
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 46428;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 36111;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 54167;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 40062;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 65000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 46428;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 81250;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 54167;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 6) //Si el jefe es Faringoamigdalitis
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 47916;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 41071;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 57500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 47916;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 71875;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 57500;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 95833;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 71875;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 2) //Si el jefe es Linfedema
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 16666;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 14285;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 20000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 16666;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 25000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 20000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 33333;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 25000;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Eritromicina 9 
+                if (ides[x + 1] == 9)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 7) //Si el jefe es Difteria
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 46428;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 36111;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 54167;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 40062;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 65000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 46428;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 81250;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 54167;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 2) //Si el jefe es Linfedema
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 16666;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 14285;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 20000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 16666;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 25000;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 20000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 33333;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 25000;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 9) //Si el jefe es Reflujo gastroesofágico
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 60714;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 47222;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 70833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 53125;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 85000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 60714;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 106250;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 70833;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Levofloxacino 10
+                if (ides[x + 1] == 10)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 8) //Si el jefe es Bronquitis
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 60416;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 51785;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 72500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 60416;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 90625;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 72500;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 120833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 90625;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 12) //Si el jefe es Cálculos Biliares
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 102083;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 87500;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 122500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 102083;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 153125;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 122500;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 204166;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 153125;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Betanecol 11
+                if (ides[x + 1] == 11)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 9) //Si el jefe es Reflujo gastroesofágico
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 60714;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 47222;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 70833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 53125;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 85000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 60714;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 106250;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 70833;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Metoclopramida 12
+                if (ides[x + 1] == 12)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 9) //Si el jefe es Reflujo gastroesofágico
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 60714;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 47222;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 70833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 53125;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 85000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 60714;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 106250;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 70833;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Ibuprofeno 13
+                if (ides[x + 1] == 13)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 10) //Si el jefe es Hemorroides
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 81250;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 69642;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 97500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 81250;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 121875;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 97500;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 162500;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 121875;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Sulfasalazina 14
+                if (ides[x + 1] == 14)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 11) //Si el jefe es Colitis ulcerosa
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 78571;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 61111;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 91667;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 68750;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 110000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 78571;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 137500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 91666;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 14) //Si el jefe es Artritis reumatoide
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 119643;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 93055;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 139583;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 104687;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 167500;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 119643;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 209375;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 139583;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Prednisolona 15
+                if (ides[x + 1] == 15)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 11) //Si el jefe es Colitis ulcerosa
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 91666;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 78571;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 110000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 91666;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 137500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 110000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 183333;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 137500;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 13) //Si el jefe es Lupus eritematoso sistémico
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 120833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 103571;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 145000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 120833;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 181250;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 145000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 241666;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 181250;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Cortisol 16
+                if (ides[x + 1] == 16)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 11) //Si el jefe es Colitis ulcerosa
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 78571;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 61111;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 91667;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 68750;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 110000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 78571;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 137500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 91666;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 13) //Si el jefe es Lupus eritematoso sistémico
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 120833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 103571;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 145000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 120833;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 181250;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 145000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 241666;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 181250;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Ampicilina 17
+                if (ides[x + 1] == 17)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 12) //Si el jefe es Cálculos Biliares
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 87500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 68055;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 102083;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 76562;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 122500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 87500;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        //En caso de que esté potenciada *
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {
+                            temp.damageChar[x, 3] = 153125;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 102083;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Piperacilina 18
+                if (ides[x + 1] == 18)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 12) //Si el jefe es Cálculos Biliares
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 87500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 68055;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 102083;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 76562;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 122500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 87500;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        //En caso de que esté potenciada *
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {
+                            temp.damageChar[x, 3] = 153125;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 102083;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Tazobactam 19
+                if (ides[x + 1] == 19)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 12) //Si el jefe es Cálculos Biliares
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 87500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 68055;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 102083;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 76562;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 122500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 87500;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        //En caso de que esté potenciada *
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {
+                            temp.damageChar[x, 3] = 153125;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 102083;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Metilprednisolona 20
+                if (ides[x + 1] == 20)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 13) //Si el jefe es Lupus eritematoso sistémico
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 120833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 103571;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 145000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 120833;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 181250;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 145000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 241667;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 181250;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 15) //Si el jefe es Esclerosis múltiple
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 135714;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 105555;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 158333;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 118750;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 190000;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 135714;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 237500;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 158333;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Hidroxicloroquina 21
+                if (ides[x + 1] == 21)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 13) //Si el jefe es Lupus eritematoso sistémico
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 120833;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 103571;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 145000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 120833;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 181250;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 145000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        //En caso de que esté potenciada *
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {
+                            temp.damageChar[x, 3] = 241667;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 181250;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Sulfasalazina 22
+                if (ides[x + 1] == 22)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 11) //Si el jefe es Colitis ulcerosa
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 91667;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 78571;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 110000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 91667;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 137500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 110000;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 183333;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 3] = 137500;
+                        }
+                    }
+                    //Otro jefe****************************************************************************
+                    if (temp.idBoss == 14) //Si el jefe es Artritis reumatoide
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 139583;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 119643;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 167500;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 139583;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 209375;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 2] = 167500;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 3] = 279167;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 209375;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Dexametasona 23
+                if (ides[x + 1] == 23)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 15) //Si el jefe es Esclerosis múltiple
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 135714;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 105555;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 158333;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 118750;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 190000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 135714;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        //En caso de que esté potenciada *
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {
+                            temp.damageChar[x, 3] = 237500;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 158333;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
+                //Asignación de daños si es Vitamina B12 24
+                if (ides[x + 1] == 24)
+                {
+                    //Un jefe****************************************************************************
+                    if (temp.idBoss == 16) //Si el jefe es Anemia perniciosa
+                    {
+                        //Habilidad No. 1 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 1)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 0] = 178571;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 0] = 138889;
+                        }
+                        //Habilidad No. 2 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 2)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 1] = 208333;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 1] = 156250;
+                        }
+                        //Habilidad No. 3 --------------------------------------------------------
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 3)
+                        {//En caso de que esté potenciada *
+                            temp.damageChar[x, 2] = 250000;
+                        }
+                        else
+                        {//Caso de que no esté potenciada
+                            temp.damageChar[x, 2] = 178571;
+                        }
+                        //Habilidad No. 4 --------------------------------------------------------
+                        //En caso de que esté potenciada *
+                        if (Int32.Parse(variables_indestructibles.Personajes[ides[x + 1], 6]) == 4)
+                        {
+                            temp.damageChar[x, 3] = 312500;
+                        }
+                        else //Caso de que no esté potenciada
+                        {
+                            temp.damageChar[x, 3] = 208333;
+                        }
+                    }
+                }
+                //------------------------------------------------------------------------------------------------------------
             }
             LoadScene.sceneToLoad = "Fight";
             LoadPanel.SetActive(true);

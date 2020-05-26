@@ -32,31 +32,57 @@ public class Botones_almacen : MonoBehaviour
     //filtros{
     Image UIImage;
     Text cantidad, nombre;
-    public GameObject panelcoleccion;
+    public GameObject panelcoleccion, trophy;
     int panelcolcc = 0;
     //}
     //coleccion{
     int pos = 0;
     //}
     //descripciones{
-    public GameObject paneldescrip;
+    public GameObject paneldescrip, troppanel, trophie;
     String[,] verificadores = new String[25, 5];
     //}
-
+    Archivos archivo_almacen;
     public GameObject LoadPanel;
 
     void Start()
     {
         //     AdminMYSQL adminmysql = GameObject.Find("Almacen").GetComponent<AdminMYSQL>();
         //    conn1 = adminmysql.ConectarConServidorBaseDatos();
-        Archivos archivo_almacen = GameObject.Find("Almacen").GetComponent<Archivos>();
+        trophy.SetActive(false);
+        trophie.SetActive(false);
+        archivo_almacen = GameObject.Find("Almacen").GetComponent<Archivos>();
         archivo_almacen.Cargar_Almacen(Usuario, Personajes);
+        archivo_almacen.cargar_variables();
         personajes();
     }
     void Update()
     {
 
     }
+
+    public void Keep()
+    {
+        variables_indestructibles.Trophy = "true";
+        archivo_almacen.guardar_variables();
+        trophie.SetActive(false);
+    }
+
+    public void Fuse()
+    {
+        variables_indestructibles.Skin = "true";
+        archivo_almacen.guardar_variables();
+        trophie.SetActive(false);
+    }
+
+    public void colTroph()
+    {
+        if(Int32.Parse(variables_indestructibles.experiencia) >= 384300 && variables_indestructibles.Trophy.Equals("false") && variables_indestructibles.Skin.Equals("false"))
+        {
+            trophy.SetActive(true);
+        }
+    }
+
     //Autocompletado:
     public void boton1()
     {
