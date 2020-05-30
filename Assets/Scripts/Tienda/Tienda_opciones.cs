@@ -194,6 +194,11 @@ public class Tienda_opciones : MonoBehaviour
         UITexto.text = null;
         UITexto = GameObject.Find("fototext").GetComponentInChildren<Text>();
         UITexto.text = null;
+        compra.SetActive(false);
+        desbloquear.SetActive(true);
+        UITexto = GameObject.Find("desbloquear").GetComponentInChildren<Text>();
+        UITexto.text = null;
+        desbloquear.SetActive(false);
 
     }
     public void intercambiar()
