@@ -383,17 +383,17 @@ public class Archivos : MonoBehaviour
             Datos.Elementos[9, 0] = "Cobalto";
             Datos.Elementos[10, 0] = "Fosforo";
             //Cantidad Elemento
-            Datos.Elementos[0, 1] = "0"; //Deben ser 9
-            Datos.Elementos[1, 1] = "0"; //Deben ser 8
-            Datos.Elementos[2, 1] = "0"; //Deben ser 4
-            Datos.Elementos[3, 1] = "0"; //Las demás deben ser 0
-            Datos.Elementos[4, 1] = "0";
-            Datos.Elementos[5, 1] = "0";
-            Datos.Elementos[6, 1] = "0";
-            Datos.Elementos[7, 1] = "0";
-            Datos.Elementos[8, 1] = "0";
-            Datos.Elementos[9, 1] = "0";
-            Datos.Elementos[10, 1] = "0";
+            Datos.Elementos[0, 1] = "9"; //Deben ser 9
+            Datos.Elementos[1, 1] = "9"; //Deben ser 8
+            Datos.Elementos[2, 1] = "9"; //Deben ser 4
+            Datos.Elementos[3, 1] = "9"; //Las demás deben ser 0
+            Datos.Elementos[4, 1] = "9";
+            Datos.Elementos[5, 1] = "9";
+            Datos.Elementos[6, 1] = "9";
+            Datos.Elementos[7, 1] = "9";
+            Datos.Elementos[8, 1] = "9";
+            Datos.Elementos[9, 1] = "9";
+            Datos.Elementos[10, 1] = "9";
             //Descripcion Elemento
             Datos.Elementos[0, 2] = "Es un no metal sólido que es el componente fundamental de los compuestos orgánicos y tiene la propiedad de enlazarse con otros átomos de carbono y otras sustancias para formar un número casi infinito de compuestos.";
             Datos.Elementos[1, 2] = "Es un gas incoloro, inodoro y muy reactivo que se halla en todos los componentes de la materia viva y en muchos minerales, siendo el elemento más abundante en el universo.";

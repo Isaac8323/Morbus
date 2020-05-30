@@ -106,7 +106,7 @@ public class funciones_estructuracion : MonoBehaviour
         check_elementos = GameObject.Find("Error").GetComponentInChildren<Text>();
         check_elementos.text = "";
         check_elementos = GameObject.Find("us/pass/incorrectos").GetComponentInChildren<Text>();
-        check_elementos.text = "¿Esta segudo?";
+        check_elementos.text = "¿Esta seguro?";
         necesito.SetActive(true);
         nonecesito.SetActive(true);
         check_elementos = GameObject.Find("Text_sulfa").GetComponentInChildren<Text>();

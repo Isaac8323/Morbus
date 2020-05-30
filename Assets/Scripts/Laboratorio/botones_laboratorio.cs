@@ -127,9 +127,18 @@ public class botones_laboratorio : MonoBehaviour
         int cont = 0,ymasuno=1,i=0;
         int bandera = 0;
         Debug.Log("entre a ELEMENTOSADQUIRIDOS()");
-        for ( i = 0; i < 11; i++)
+        for (i = 0; i < 11; i++)
         {
-            if (Elementos[i, 1] != "0")
+            celdas_elementos_adquiridos = GameObject.Find("txtelemento" + posicion.ToString()).GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = "";
+            celdas_elementos_adquiridos = GameObject.Find("textnombre_elemento" + posicion.ToString()).GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text ="";
+            posicion++;
+        }
+        posicion = 1;
+            for (i = 0; i < 11; i++)
+        {
+            if (!Elementos[i, 1].Equals("0"))
             {
                 celdas_elementos_adquiridos = GameObject.Find("txtelemento" + posicion.ToString()).GetComponentInChildren<Text>();
                 celdas_elementos_adquiridos.text = Elementos[i, 4];
@@ -145,41 +154,38 @@ public class botones_laboratorio : MonoBehaviour
             Debug.Log(celdas_elementos_adquiridos.text);
             for (int a = 1; a < 12; a++)
             {
-               totalelemtnos_panel_seleccion = GameObject.Find("txtelemento" + (a).ToString()).GetComponentInChildren<Text>();
-                if (totalelemtnos_panel_seleccion.text.Equals(celdas_elementos_adquiridos.text))
+                totalelemtnos_panel_seleccion = GameObject.Find("txtelemento" + (a).ToString()).GetComponentInChildren<Text>();
+                if (!totalelemtnos_panel_seleccion.text.Equals(""))
                 {
-                    cont++;
-                    Debug.Log(cont.ToString());
-                }
-                if (cont >=2)
-                {
-                    totalelemtnos_panel_seleccion.text = "";
-                    totalelemtnos_panel_seleccion = GameObject.Find("textnombre_elemento" + (a).ToString()).GetComponentInChildren<Text>();
-                    totalelemtnos_panel_seleccion.text = "";
+                    if (totalelemtnos_panel_seleccion.text.Equals(celdas_elementos_adquiridos.text))
+                    {
+                        cont++;
+                        Debug.Log(cont.ToString());
+                    }
+                    if (cont >= 2)
+                    {
+                        totalelemtnos_panel_seleccion.text = "";
+                        totalelemtnos_panel_seleccion = GameObject.Find("textnombre_elemento" + (a).ToString()).GetComponentInChildren<Text>();
+                        totalelemtnos_panel_seleccion.text = "";
+                        bandera = 1;
+
+                    }
                 }
             }
             ymasuno++;
             cont = 0;
-            if (i == 10)
-            {
-                if (bandera == 0)
-                {
-                    bandera = 1;
-                    i = 0;
-                    ymasuno = 1;
-                    posicion = 1;
-                }
-            }
         }
+
     }
     public void plus()
     {
-        int i = 1, restaelementospanelselecion = 0, sumapanelseleccionados = 0, busqueda = 0;
+        int i = 1, restaelementospanelselecion = 0, sumapanelseleccionados = 0, busqueda = 0,escero=1,posiciondelaresta=0;
         celdas_elementos_adquiridos = GameObject.Find("texto_elementoselect").GetComponentInChildren<Text>();
         totalelemtnos_panel_seleccion = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
         if (totalelemtnos_panel_seleccion.text.Equals("0"))
         {
             Debug.Log("Nel perro");
+            ElementrosAdquiridos();
         }
         else
         {
@@ -210,10 +216,14 @@ public class botones_laboratorio : MonoBehaviour
                         {
                             restaelementospanelselecion = Int16.Parse(Elementos[busqueda, 1]);
                             restaelementospanelselecion = restaelementospanelselecion - 1;
+                            escero = restaelementospanelselecion;
+                            Debug.Log("escero: "+escero.ToString());
+                            posiciondelaresta = busqueda + 1;
                             Elementos[busqueda, 1] = restaelementospanelselecion.ToString();
                             totalelemtnos_panel_seleccion = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
                             totalelemtnos_panel_seleccion.text = Elementos[busqueda, 1];
                             ElementrosAdquiridos();
+                           
                         }
                     }
 
@@ -232,6 +242,9 @@ public class botones_laboratorio : MonoBehaviour
                         {
                             restaelementospanelselecion = Int16.Parse(Elementos[busqueda, 1]);
                             restaelementospanelselecion = restaelementospanelselecion - 1;
+                            escero = restaelementospanelselecion;
+                            posiciondelaresta = busqueda+1;
+                            Debug.Log("escero: " + escero.ToString());
                             Elementos[busqueda, 1] = restaelementospanelselecion.ToString();
                             totalelemtnos_panel_seleccion = GameObject.Find("total_seleccionados").GetComponentInChildren<Text>();
                             totalelemtnos_panel_seleccion.text = Elementos[busqueda, 1];
@@ -242,6 +255,14 @@ public class botones_laboratorio : MonoBehaviour
                 }
                 i++;
             }
+        }
+        if(escero == 0)
+        {
+            celdas_elementos_adquiridos = GameObject.Find("txtelemento" + posiciondelaresta.ToString()).GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text = "";
+            celdas_elementos_adquiridos = GameObject.Find("textnombre_elemento" + posiciondelaresta.ToString()).GetComponentInChildren<Text>();
+            celdas_elementos_adquiridos.text ="";
+            plus();
         }
     }
     public void less()
